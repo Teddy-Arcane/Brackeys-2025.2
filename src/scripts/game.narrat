@@ -1,4 +1,25 @@
 main:
   "Hello world"
+  // set the players name based on the result of a function
+  set data.player.name (run ask_player_name)
   set_screen game 0 slide-top 1000
-  "(This game is empty so nothing will happen past this point. Open game.narrat to start editing)"
+  "(The players name is %{data.player.name})"
+
+  // variable names are arbitrary. you can add as much
+  // bullshit to the `data` object as you like. think
+  // data.faction1.rep
+  // data.faction1.influence
+  // data.faction2.rep
+  // data.faction2.influence
+  // data.faction3.rep
+  // data.faction3.influence
+
+  // you can see this in action here, where the variable
+  // being used is deeply nested
+  set data.fdsafdsafdsafd.fdsafdsaf.fdsafdsaf.fdsfdf.fdsfd (run ask_player_name)
+  set_screen game 0 slide-top 1000
+  "(The players name is %{data.fdsafdsafdsafd.fdsafdsaf.fdsafdsaf.fdsfdf.fdsfd})"
+
+ask_player_name:
+  var playerName (text_field "What's your name?") 
+  return $playerName 
