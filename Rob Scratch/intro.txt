@@ -1,0 +1,5 @@
+Intro sequence
+narrate "You awake once more within The Garden, the faux birds chirp, blipping in and out of this semblance of peace."
+narrate "The marble bench you lay upon has that slick plastic warmth, tacky even within this deluded place."
+narrate "You reach out your hand and your dossier had always been there. You might as well flip through it. Something to do while you exit this stasis, the artificial sun rapidly setting."
+Dossier
