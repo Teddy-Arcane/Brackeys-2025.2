@@ -1,5 +1,31 @@
 Intro sequence
+set_stat noble_lord_progress 1
+set_stat noble_lady_progress 1
+set_stat merchant_bartender_progress 1
+set_stat merchant_business_progress_1
+set_stat military_hero_progress 1
+set_stat military_officer_progress 1
+set_stat civilian_icon_progress 1
+set_stat civilian_eagre_progress 1
+set_stat suscpicion 1
+
+
 narrate "You awake once more within The Garden, the faux birds chirp, blipping in and out of this semblance of peace."
 narrate "The marble bench you lay upon has that slick plastic warmth, tacky even within this deluded place."
-narrate "You reach out your hand and your dossier had always been there. You might as well flip through it. Something to do while you exit this stasis, the artificial sun rapidly setting."
-Dossier
+narrate "You reach out your hand and your dossier had always been there."
+narrate "You might as well flip through it as the too-fast setting of the artificial sun heralds the end of your stasis."
+narrate "Cracking open the plexiglass envelope you skim the details of your coming task-"
+narrate "boilerplate detailing your role as a Prior Facilitator to the Executor-"
+narrate "a planetary governance realignment-"
+narrate "an assasination, exciting-"
+narrate "disparate populace, unruly-"
+narrate "A sidebar on one sheet contains a tiny grainy video of a swirling white planet."
+narrate "It couldn't be-"
+narrate "The Planet Sclera, rapt in her terrible caustic silica storms-"
+narrate "-the singular city, Credence, cowering in its sinkhole - 100 clicks across."
+narrate "Resembling a great eye, turned away from its sun in shame."
+narrate "This couldn't be happening."
+narrate "Somehow, despite the odds, they had brought you home."
+narrate "It had to be a mistake. Nobody could know. How would they have-"
+narrate "If they found out, they'd have you killed for their mistake."
+narrate "Your hands start shaking, and a cold sweat breaks even in this artificial place where your body isn't..."
