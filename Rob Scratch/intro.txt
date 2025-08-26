@@ -28,4 +28,16 @@ narrate "This couldn't be happening."
 narrate "Somehow, despite the odds, they had brought you home."
 narrate "It had to be a mistake. Nobody could know. How would they have-"
 narrate "If they found out, they'd have you killed for their mistake."
-narrate "Your hands start shaking, and a cold sweat breaks even in this artificial place where your body isn't..."
+narrate "Your hands start shaking, and a cold sweat breaks even in this place where your body isn't..."
+...
+Juddering for a few minutes as you enter the atmosphere, The Garden flickers out leaving you in a chill almost-darkness within your pod.
+You pat yourself down and smooth out any creases in your garment as moist breathable air is pumped in.
+More shaking announces your landing. Industrial machinery screams, the click-clack of heels on stone floor, the roar of a distant crowd...
+And then you emerge from the pod in the manner rehearsed, stepping forward into a deep bow.
+The taste of the air here is a familiar stale in your mouth as you nod your way through perfunctory introductions.
+You were really home on Sclera, where you took the Vow of Impartial Service so many years ago.
+How could you possibly be balanced in deciding who should rule your home!
+The Corroborance was so meticulous, always triple-checks and fastidious forms-
+Or rather, they never made a mistake anyone heard about.
+Had you been sent here to die? Who's toes had you stepped on?
+
