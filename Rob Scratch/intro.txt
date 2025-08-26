@@ -39,5 +39,8 @@ You were really home on Sclera, where you took the Vow of Impartial Service so m
 How could you possibly be balanced in deciding who should rule your home!
 The Corroborance was so meticulous, always triple-checks and fastidious forms-
 Or rather, they never made a mistake anyone heard about.
-Had you been sent here to die? Who's toes had you stepped on?
-
+Had you been sent here to die? Whose toes had you stepped on?
+  Choice: Could it be the Envoy from Barlow Station?
+  Choice: Maybe the Grand Clement at Murtagh Point?
+  Choice: The attendant from the banquet at Incisor?
+Regardless, you find yourself in mortal danger. You will have to keep your origin under wraps both here and in your report.
