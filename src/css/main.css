@@ -13,7 +13,10 @@
 
 .auto-button,
 .save-button,
-#menu-menu-button {
+#menu-menu-button,
+div.settings-category:nth-child(4),
+h2.nrt-text,
+#setting-fontChoice {
   display: none !important;
 }
 
@@ -47,6 +50,19 @@
 
 .tab-active {
   text-shadow: none;
+}
+
+.setting-item.setting-focused {
+  background: none;
+  border: none;
+}
+
+.menu-content > div:nth-child(2) {
+  margin-top: 50px;
+}
+
+.tabs-controller__tabs {
+  margin-top: 25px;
 }
 
 /* CRT EFFECT */
