@@ -8,9 +8,9 @@ dialogPanel:
   timeBetweenLines: 100
   overlayMode: true
   rightOffset: 100
-  bottomOffset: 50
+  bottomOffset: 0
   width: 475
-  height: 680
+  height: 720
   allowHistoryToggling: false # This will add a button with the auto/skip button that allows the player to toggle viewing dialog history.
   historyLength: 200 # The number of dialogue lines to keep in the history
   hideDuringTransition: true # Setting this to true will make the dialog panel hide during screen transitions

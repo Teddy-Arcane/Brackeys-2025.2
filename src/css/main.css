@@ -65,6 +65,15 @@ h2.nrt-text,
   margin-top: 25px;
 }
 
+.dialog-picture {
+  background-color: transparent !important;
+  border: none;
+  right: 700px !important;
+  bottom: 0px !important;
+  height: 687px !important;
+  width: 480px !important;
+}
+
 /* CRT EFFECT */
 .crt::before {
   content: " ";
