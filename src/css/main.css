@@ -12,3 +12,16 @@
 }
 
 /* Add any other CSS you want here */
+.auto-button,
+.save-button,
+#menu-menu-button {
+  display: none !important;
+}
+
+#system-menu-button {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-top: 10px;
+  margin-left: 10px;
+}
