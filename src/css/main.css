@@ -74,6 +74,15 @@ h2.nrt-text,
   width: 480px !important;
 }
 
+#engine-splash-title {
+  font-size: 3.5em !important;
+}
+
+.setting-item:hover {
+  background: none;
+  border: none;
+}
+
 /* CRT EFFECT */
 .crt::before {
   content: " ";
