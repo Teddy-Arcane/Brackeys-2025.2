@@ -1,5 +1,71 @@
-files: {}
+files:
+  # menu music
+  menu_music:
+    loop: true
+    src: "audio/Navidson.ogg"
+  # drones - these are our background tracks and should be played
+  # with `music play <name>`
+  crisis:
+    loop: true
+    src: "audio/drones/Crisis.ogg"
+  garden:
+    loop: true
+    src: "audio/drones/Garden.ogg"
+  nobility:
+    loop: true
+    src: "audio/drones/Nobility.ogg"
+  military:
+    loop: true
+    src: "audio/drones/Military.ogg"
+  merchants:
+    loop: true
+    src: "audio/drones/Merchants.ogg"
+  civilian:
+    loop: true
+    src: "audio/drones/Civilians.ogg"
+  end_pos:
+    loop: true
+    src: "audio/drones/EndPos.ogg"
+  end_neg:
+    loop: true
+    src: "audio/drones/EndNeg.ogg"
+  # motifs - these are character motifs, designed to be played the
+  # first time a character appears in a scene, these are played with
+  # `sound play <soundname>`.
+  # make sure the right faction drone is playing or this may sound
+  # dissonant as fuck!
+  motif_intrigue:
+    loop: false
+    src: "audio/motifs/Intrigue.ogg"
+  motif_executor:
+    loop: false
+    src: "audio/motifs/Executor.ogg"
+  motif_feeble_lord:
+    loop: false
+    src: "audio/motifs/FeebleLord.ogg"
+  motif_scheming_lady:
+    loop: false
+    src: "audio/motifs/SchemingLady.ogg"
+  motif_bartender:
+    loop: false
+    src: "audio/motifs/Bartender.ogg"
+  motif_business_suit:
+    loop: false
+    src: "audio/motifs/BusinessSuit.ogg"
+  motif_folk_hero:
+    loop: false
+    src: "audio/motifs/FolkHero.ogg"
+  motif_officer:
+    loop: false
+    src: "audio/motifs/Officer.ogg"
+  motif_reluctant_icon:
+    loop: false
+    src: "audio/motifs/ReluctantIcon.ogg"
+  motif_eager_organizer:
+    loop: false
+    src: "audio/motifs/EagerOrganizer.ogg"
 options:
+  defaultMusic: menu_music
   volume: 0.5
   musicFadeInTime: 0.5
   musicFadeInDelay: 0.5
