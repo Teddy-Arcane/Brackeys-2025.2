@@ -1,1 +1,4 @@
-I know who you are
+Cafe Diamante seems quieter than usual this time, only a couple of patrons mill around in the booths at the back of the bar.
+talk merchant_bartender "Ahaha, a Babylon Soda on ice for my favourite Facilitator! Come, lets chat."
+...
+Hours pass

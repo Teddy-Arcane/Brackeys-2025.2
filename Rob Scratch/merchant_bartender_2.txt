@@ -1,1 +1,14 @@
-Restrictions griping
+You head back over to Cafe Diamante, glad for any excuse to get out of the chamber.
+talk merchant_bartender "Ahaha, I knew you would be back! I presume you have questions for me, Facilitator?"
+talk facilitator "You have a broad portfolio, Mr Sera-Gabbro, and quite the reputation. I am sure we will have much to discuss."
+talk merchant_bartender "Well I'm not going to be modest, if that's in your report! I've put in work to make this little city sparkle."
+talk facilitator "So I can see. How's is business? Any challenges?"
+talk merchant_bartender "I make do with what I have, not my place to complain. With that said-"
+He picks up a glass, breathes into it, and starts cleaning it with a rag.
+talk merchant_bartender "-the recent trade inspections have made things more interesting. It's harder to keep the wheels greased, you understand?"
+talk facilitator "Whoever is chosen as leader would have significant sway over that."
+talk merchant_bartender "Oho, is that so?"
+talk merchant_bartender "I suppose it's not like old Berwyn D'linear kept his nose clean, even by noble standards."
+You're taken aback. They would speak so coarsely of the newly-dead?
+They lean in close over the bar.
+talk merchant_bartender "I should know, I have his receipts."

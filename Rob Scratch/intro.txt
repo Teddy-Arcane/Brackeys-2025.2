@@ -47,4 +47,4 @@ choice:
       "Surely that gown wasn't so expensive as to justify this?"
     "The attendant from the banquet at Incisor 7?":
       "How could you have known that was the wrong fork!"
-"Regardless, you find yourself in mortal danger. You will have to keep your origin under wraps both here and in your report."
+"Regardless, you find yourself in mortal danger. You will have to keep your origin under wraps both here and in your report to the Executor. There will be Corroborance eyes everywhere."
