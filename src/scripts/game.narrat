@@ -1,50 +1,195 @@
 main:
-	set data.civilian_eagre_progress 0
-	set data.civilian_icon_progress 0
-	set data.merchant_bartender_progress 0
-	set data.merchant_business_progress 0
-	set data.military_hero_progress 0
-	set data.military_officer_progress 0
-	set data.noble_lady_progress 0
-	set data.noble_lord_progress 0
-	set data.civilian_eagre_influence 0
-	set data.civilian_icon_influence 0
-	set data.merchant_bartender_influence 0
-	set data.merchant_business_influence 0
-	set data.military_hero_influence 0
-	set data.military_officer_influence 0
-	set data.noble_lady_influence 0
-	set data.noble_lord_influence 0
-	set data.suspicion 0
-	set data.time 0
-
+  set data.civilian_eagre_progress 0
+  set data.civilian_icon_progress 0
+  set data.merchant_bartender_progress 0
+  set data.merchant_business_progress 0
+  set data.military_hero_progress 0
+  set data.military_officer_progress 0
+  set data.noble_lady_progress 0
+  set data.noble_lord_progress 0
+  set data.civilian_eagre_influence 0
+  set data.civilian_icon_influence 0
+  set data.merchant_bartender_influence 0
+  set data.merchant_business_influence 0
+  set data.military_hero_influence 0
+  set data.military_officer_influence 0
+  set data.noble_lady_influence 0
+  set data.noble_lord_influence 0
+  set data.suspicion 0
+  set data.time 0
   jump timekeeper
-timekeeper:
-  if (== $data.time 0) jump intro
-  if (== $data.time 0) jump morning_1
-  if (== $data.time 2) jump afternoon_2
-  if (== $data.time 3) jump crisis_1
-  if (== $data.time 4) jump morning_2
-  if (== $data.time 5) jump afternoon_2
-  if (== $data.time 6) jump crisis_2
-  if (== $data.time 7) jump morning_3
-  if (== $data.time 8) jump afternoon_3
-  if (== $data.time 9) jump crisis_3
-  if (== $data.time 10) jump morning_4
-  if (== $data.time 11) jump afternoon_4
-  if (== $data.time 12) jump crisis_4
-  if (== $data.time 13) jump morning_5
-  if (== $data.time 14) jump afternoon_5
-  if (== $data.time 15) jump crisis_5
-  if (== $data.time 16) jump morning_6
-  if (== $data.time 17) jump afternoon_6
-  if (== $data.time 18) jump crisis_6
-  if (== $data.time 19) jump morning_7
-  if (== $data.time 20) jump afternoon_7
-  if (== $data.time 21) jump crisis_7
-  if (== $data.time 22) jump endgame
-  if (== $data.time 23) jump credits
 
+timekeeper:
+  if (== $data.time 0): 
+    jump intro
+  if (== $data.time 1): 
+    jump morning_1
+  if (== $data.time 2): 
+    jump afternoon_2
+  if (== $data.time 3): 
+    jump crisis_1
+  if (== $data.time 4): 
+    jump morning_2
+  if (== $data.time 5): 
+    jump afternoon_2
+  if (== $data.time 6): 
+    jump crisis_2
+  if (== $data.time 7): 
+    jump morning_3
+  if (== $data.time 8): 
+    jump afternoon_3
+  if (== $data.time 9): 
+    jump crisis_3
+  if (== $data.time 10): 
+    jump morning_4
+  if (== $data.time 11): 
+    jump afternoon_4
+  if (== $data.time 12): 
+    jump crisis_4
+  if (== $data.time 13): 
+    jump morning_5
+  if (== $data.time 14): 
+    jump afternoon_5
+  if (== $data.time 15): 
+    jump crisis_5
+  if (== $data.time 16): 
+    jump morning_6
+  if (== $data.time 17): 
+    jump afternoon_6
+  if (== $data.time 18): 
+    jump crisis_6
+  if (== $data.time 19): 
+    jump morning_7
+  if (== $data.time 20): 
+    jump afternoon_7
+  if (== $data.time 21): 
+    jump crisis_7
+  if (== $data.time 22): 
+    jump endgame
+  if (== $data.time 23): 
+    jump credits
+
+get_stage:
+  "civilian_eagre":
+    if (== $data.civilian_eagre_progress = 0): 
+      jump civilian_eagre_1
+    if (== $data.civilian_eagre_progress = 1): 
+      jump civilian_eagre_2
+    if (== $data.civilian_eagre_progress = 2): 
+      jump civilian_eagre_3
+    if (== $data.civilian_eagre_progress = 3): 
+      jump civilian_eagre_4
+    if (== $data.civilian_eagre_progress = 4): 
+      jump civilian_eagre_5
+    if (== $data.civilian_eagre_progress = 5): 
+      jump civilian_eagre_6
+    if (== $data.civilian_eagre_progress = 6): 
+      jump civilian_eagre_7
+  "civilian_icon":
+    if (== $data.civilian_icon_progress = 0): 
+      jump civilian_icon_1
+    if (== $data.civilian_icon_progress = 1): 
+      jump civilian_icon_2
+    if (== $data.civilian_icon_progress = 2): 
+      jump civilian_icon_3
+    if (== $data.civilian_icon_progress = 3): 
+      jump civilian_icon_4
+    if (== $data.civilian_icon_progress = 4): 
+      jump civilian_icon_5
+    if (== $data.civilian_icon_progress = 5): 
+      jump civilian_icon_6
+    if (== $data.civilian_icon_progress = 6): 
+      jump civilian_icon_7
+  "merchant_bartender":
+    if (== $data.merchant_bartender_progress = 0): 
+      jump merchant_bartender_1
+    if (== $data.merchant_bartender_progress = 1): 
+      jump merchant_bartender_2
+    if (== $data.merchant_bartender_progress = 2): 
+      jump merchant_bartender_3
+    if (== $data.merchant_bartender_progress = 3): 
+      jump merchant_bartender_4
+    if (== $data.merchant_bartender_progress = 4): 
+      jump merchant_bartender_5
+    if (== $data.merchant_bartender_progress = 5): 
+      jump merchant_bartender_6
+    if (== $data.merchant_bartender_progress = 6): 
+      jump merchant_bartender_7
+  "merchant_business":
+    if (== $data.merchant_business_progress = 0): 
+      jump merchant_business_1
+    if (== $data.merchant_business_progress = 1): 
+      jump merchant_business_2
+    if (== $data.merchant_business_progress = 2): 
+      jump merchant_business_3
+    if (== $data.merchant_business_progress = 3): 
+      jump merchant_business_4
+    if (== $data.merchant_business_progress = 4): 
+      jump merchant_business_5
+    if (== $data.merchant_business_progress = 5): 
+      jump merchant_business_6
+    if (== $data.merchant_business_progress = 6): 
+      jump merchant_business_7
+  "military_hero":
+    if (== $data.military_hero_progress = 0): 
+      jump military_hero_1
+    if (== $data.military_hero_progress = 1): 
+      jump military_hero_2
+    if (== $data.military_hero_progress = 2): 
+      jump military_hero_3
+    if (== $data.military_hero_progress = 3): 
+      jump military_hero_4
+    if (== $data.military_hero_progress = 4): 
+      jump military_hero_5
+    if (== $data.military_hero_progress = 5): 
+      jump military_hero_6
+    if (== $data.military_hero_progress = 6): 
+      jump military_hero_7
+  "military_officer":
+    if (== $data.military_officer_progress = 0): 
+      jump military_officer_1
+    if (== $data.military_officer_progress = 1): 
+      jump military_officer_2
+    if (== $data.military_officer_progress = 2): 
+      jump military_officer_3
+    if (== $data.military_officer_progress = 3): 
+      jump military_officer_4
+    if (== $data.military_officer_progress = 4): 
+      jump military_officer_5
+    if (== $data.military_officer_progress = 5): 
+      jump military_officer_6
+    if (== $data.military_officer_progress = 6): 
+      jump military_officer_7
+  "noble_lady":
+    if (== $data.noble_lady_progress = 0): 
+      jump noble_lady_1
+    if (== $data.noble_lady_progress = 1): 
+      jump noble_lady_2
+    if (== $data.noble_lady_progress = 2): 
+      jump noble_lady_3
+    if (== $data.noble_lady_progress = 3): 
+      jump noble_lady_4
+    if (== $data.noble_lady_progress = 4): 
+      jump noble_lady_5
+    if (== $data.noble_lady_progress = 5): 
+      jump noble_lady_6
+    if (== $data.noble_lady_progress = 6): 
+      jump noble_lady_7
+  "noble_lord":
+    if (== $data.noble_lord_progress = 0): 
+      jump noble_lord_1
+    if (== $data.noble_lord_progress = 1): 
+      jump noble_lord_2
+    if (== $data.noble_lord_progress = 2): 
+      jump noble_lord_3
+    if (== $data.noble_lord_progress = 3): 
+      jump noble_lord_4
+    if (== $data.noble_lord_progress = 4): 
+      jump noble_lord_5
+    if (== $data.noble_lord_progress = 5): 
+      jump noble_lord_6
+    if (== $data.noble_lord_progress = 6): 
+      jump noble_lord_7
 
 intro:
   "You awake once more within The Garden, the faux birds chirp, blipping in and out of this semblance of peace."
@@ -74,1264 +219,412 @@ intro:
   "How could you possibly be balanced in deciding who should rule your home!"
   "The Corroborance was so meticulous, always triple-checks and fastidious forms-"
   "Or rather, they never made a mistake anyone heard about."
-  
   choice:
-      "Had you been sent here to die? Whose toes had you stepped on?"
-      "Could it be the Envoy from Barlow Station?":
-        "You always suspected she had it in for you."
-      "Maybe the Grand Clement at Murtagh Point?":
-        "Surely that gown wasn't so expensive as to justify this?"
-      "The attendant from the banquet at Incisor 7?":
-        "How could you have known that was the wrong fork!"
+    "Had you been sent here to die? Whose toes had you stepped on?"
+    "Could it be the Envoy from Barlow Station?":
+      "You always suspected she had it in for you."
+    "Maybe the Grand Clement at Murtagh Point?":
+      "Surely that gown wasn't so expensive as to justify this?"
+    "The attendant from the banquet at Incisor 7?":
+      "How could you have known that was the wrong fork!"
   "Regardless, you find yourself in mortal danger. You will have to keep your origin under wraps both here and in your report."
-  
   add data.time 1
   jump timekeeper
 
 morning_1:
-  add data.time 1
-  choice:
-    "Morning comes. Who will you speak with?"
-    "civilian_eagre":
-      if (== $data.civilian_eagre_progress = 0) jump civilian_eagre_1
-      if (== $data.civilian_eagre_progress = 1) jump civilian_eagre_2
-      if (== $data.civilian_eagre_progress = 2) jump civilian_eagre_3
-      if (== $data.civilian_eagre_progress = 3) jump civilian_eagre_4
-      if (== $data.civilian_eagre_progress = 4) jump civilian_eagre_5
-      if (== $data.civilian_eagre_progress = 5) jump civilian_eagre_6
-      if (== $data.civilian_eagre_progress = 6) jump civilian_eagre_7
-    "civilian_icon":
-      if (== $data.civilian_icon_progress = 0) jump civilian_icon_1
-      if (== $data.civilian_icon_progress = 1) jump civilian_icon_2
-      if (== $data.civilian_icon_progress = 2) jump civilian_icon_3
-      if (== $data.civilian_icon_progress = 3) jump civilian_icon_4
-      if (== $data.civilian_icon_progress = 4) jump civilian_icon_5
-      if (== $data.civilian_icon_progress = 5) jump civilian_icon_6
-      if (== $data.civilian_icon_progress = 6) jump civilian_icon_7
-    "merchant_bartender":
-      if (== $data.merchant_bartender_progress = 0) jump merchant_bartender_1
-      if (== $data.merchant_bartender_progress = 1) jump merchant_bartender_2
-      if (== $data.merchant_bartender_progress = 2) jump merchant_bartender_3
-      if (== $data.merchant_bartender_progress = 3) jump merchant_bartender_4
-      if (== $data.merchant_bartender_progress = 4) jump merchant_bartender_5
-      if (== $data.merchant_bartender_progress = 5) jump merchant_bartender_6
-      if (== $data.merchant_bartender_progress = 6) jump merchant_bartender_7
-    "merchant_business":
-      if (== $data.merchant_business_progress = 0) jump merchant_business_1
-      if (== $data.merchant_business_progress = 1) jump merchant_business_2
-      if (== $data.merchant_business_progress = 2) jump merchant_business_3
-      if (== $data.merchant_business_progress = 3) jump merchant_business_4
-      if (== $data.merchant_business_progress = 4) jump merchant_business_5
-      if (== $data.merchant_business_progress = 5) jump merchant_business_6
-      if (== $data.merchant_business_progress = 6) jump merchant_business_7
-    "military_hero":
-      if (== $data.military_hero_progress = 0) jump military_hero_1
-      if (== $data.military_hero_progress = 1) jump military_hero_2
-      if (== $data.military_hero_progress = 2) jump military_hero_3
-      if (== $data.military_hero_progress = 3) jump military_hero_4
-      if (== $data.military_hero_progress = 4) jump military_hero_5
-      if (== $data.military_hero_progress = 5) jump military_hero_6
-      if (== $data.military_hero_progress = 6) jump military_hero_7
-    "military_officer":
-      if (== $data.military_officer_progress = 0) jump military_officer_1
-      if (== $data.military_officer_progress = 1) jump military_officer_2
-      if (== $data.military_officer_progress = 2) jump military_officer_3
-      if (== $data.military_officer_progress = 3) jump military_officer_4
-      if (== $data.military_officer_progress = 4) jump military_officer_5
-      if (== $data.military_officer_progress = 5) jump military_officer_6
-      if (== $data.military_officer_progress = 6) jump military_officer_7
-    "noble_lady":
-      if (== $data.noble_lady_progress = 0) jump noble_lady_1
-      if (== $data.noble_lady_progress = 1) jump noble_lady_2
-      if (== $data.noble_lady_progress = 2) jump noble_lady_3
-      if (== $data.noble_lady_progress = 3) jump noble_lady_4
-      if (== $data.noble_lady_progress = 4) jump noble_lady_5
-      if (== $data.noble_lady_progress = 5) jump noble_lady_6
-      if (== $data.noble_lady_progress = 6) jump noble_lady_7
-    "noble_lord":
-      if (== $data.noble_lord_progress = 0) jump noble_lord_1
-      if (== $data.noble_lord_progress = 1) jump noble_lord_2
-      if (== $data.noble_lord_progress = 2) jump noble_lord_3
-      if (== $data.noble_lord_progress = 3) jump noble_lord_4
-      if (== $data.noble_lord_progress = 4) jump noble_lord_5
-      if (== $data.noble_lord_progress = 5) jump noble_lord_6
-      if (== $data.noble_lord_progress = 6) jump noble_lord_7
+  "Afternoon comes. Who will you speak with?"
+  jump get_stage
+
 morning_2:
-  add data.time 1
-  choice:
-    "Morning comes. Who will you speak with?"
-    "civilian_eagre":
-      if (== $data.civilian_eagre_progress = 0) jump civilian_eagre_1
-      if (== $data.civilian_eagre_progress = 1) jump civilian_eagre_2
-      if (== $data.civilian_eagre_progress = 2) jump civilian_eagre_3
-      if (== $data.civilian_eagre_progress = 3) jump civilian_eagre_4
-      if (== $data.civilian_eagre_progress = 4) jump civilian_eagre_5
-      if (== $data.civilian_eagre_progress = 5) jump civilian_eagre_6
-      if (== $data.civilian_eagre_progress = 6) jump civilian_eagre_7
-    "civilian_icon":
-      if (== $data.civilian_icon_progress = 0) jump civilian_icon_1
-      if (== $data.civilian_icon_progress = 1) jump civilian_icon_2
-      if (== $data.civilian_icon_progress = 2) jump civilian_icon_3
-      if (== $data.civilian_icon_progress = 3) jump civilian_icon_4
-      if (== $data.civilian_icon_progress = 4) jump civilian_icon_5
-      if (== $data.civilian_icon_progress = 5) jump civilian_icon_6
-      if (== $data.civilian_icon_progress = 6) jump civilian_icon_7
-    "merchant_bartender":
-      if (== $data.merchant_bartender_progress = 0) jump merchant_bartender_1
-      if (== $data.merchant_bartender_progress = 1) jump merchant_bartender_2
-      if (== $data.merchant_bartender_progress = 2) jump merchant_bartender_3
-      if (== $data.merchant_bartender_progress = 3) jump merchant_bartender_4
-      if (== $data.merchant_bartender_progress = 4) jump merchant_bartender_5
-      if (== $data.merchant_bartender_progress = 5) jump merchant_bartender_6
-      if (== $data.merchant_bartender_progress = 6) jump merchant_bartender_7
-    "merchant_business":
-      if (== $data.merchant_business_progress = 0) jump merchant_business_1
-      if (== $data.merchant_business_progress = 1) jump merchant_business_2
-      if (== $data.merchant_business_progress = 2) jump merchant_business_3
-      if (== $data.merchant_business_progress = 3) jump merchant_business_4
-      if (== $data.merchant_business_progress = 4) jump merchant_business_5
-      if (== $data.merchant_business_progress = 5) jump merchant_business_6
-      if (== $data.merchant_business_progress = 6) jump merchant_business_7
-    "military_hero":
-      if (== $data.military_hero_progress = 0) jump military_hero_1
-      if (== $data.military_hero_progress = 1) jump military_hero_2
-      if (== $data.military_hero_progress = 2) jump military_hero_3
-      if (== $data.military_hero_progress = 3) jump military_hero_4
-      if (== $data.military_hero_progress = 4) jump military_hero_5
-      if (== $data.military_hero_progress = 5) jump military_hero_6
-      if (== $data.military_hero_progress = 6) jump military_hero_7
-    "military_officer":
-      if (== $data.military_officer_progress = 0) jump military_officer_1
-      if (== $data.military_officer_progress = 1) jump military_officer_2
-      if (== $data.military_officer_progress = 2) jump military_officer_3
-      if (== $data.military_officer_progress = 3) jump military_officer_4
-      if (== $data.military_officer_progress = 4) jump military_officer_5
-      if (== $data.military_officer_progress = 5) jump military_officer_6
-      if (== $data.military_officer_progress = 6) jump military_officer_7
-    "noble_lady":
-      if (== $data.noble_lady_progress = 0) jump noble_lady_1
-      if (== $data.noble_lady_progress = 1) jump noble_lady_2
-      if (== $data.noble_lady_progress = 2) jump noble_lady_3
-      if (== $data.noble_lady_progress = 3) jump noble_lady_4
-      if (== $data.noble_lady_progress = 4) jump noble_lady_5
-      if (== $data.noble_lady_progress = 5) jump noble_lady_6
-      if (== $data.noble_lady_progress = 6) jump noble_lady_7
-    "noble_lord":
-      if (== $data.noble_lord_progress = 0) jump noble_lord_1
-      if (== $data.noble_lord_progress = 1) jump noble_lord_2
-      if (== $data.noble_lord_progress = 2) jump noble_lord_3
-      if (== $data.noble_lord_progress = 3) jump noble_lord_4
-      if (== $data.noble_lord_progress = 4) jump noble_lord_5
-      if (== $data.noble_lord_progress = 5) jump noble_lord_6
-      if (== $data.noble_lord_progress = 6) jump noble_lord_7
+  "Afternoon comes. Who will you speak with?"
+  jump get_stage
+
 morning_3:
-  add data.time 1
-  choice:
-    "Morning comes. Who will you speak with?"
-    "civilian_eagre":
-      if (== $data.civilian_eagre_progress = 0) jump civilian_eagre_1
-      if (== $data.civilian_eagre_progress = 1) jump civilian_eagre_2
-      if (== $data.civilian_eagre_progress = 2) jump civilian_eagre_3
-      if (== $data.civilian_eagre_progress = 3) jump civilian_eagre_4
-      if (== $data.civilian_eagre_progress = 4) jump civilian_eagre_5
-      if (== $data.civilian_eagre_progress = 5) jump civilian_eagre_6
-      if (== $data.civilian_eagre_progress = 6) jump civilian_eagre_7
-    "civilian_icon":
-      if (== $data.civilian_icon_progress = 0) jump civilian_icon_1
-      if (== $data.civilian_icon_progress = 1) jump civilian_icon_2
-      if (== $data.civilian_icon_progress = 2) jump civilian_icon_3
-      if (== $data.civilian_icon_progress = 3) jump civilian_icon_4
-      if (== $data.civilian_icon_progress = 4) jump civilian_icon_5
-      if (== $data.civilian_icon_progress = 5) jump civilian_icon_6
-      if (== $data.civilian_icon_progress = 6) jump civilian_icon_7
-    "merchant_bartender":
-      if (== $data.merchant_bartender_progress = 0) jump merchant_bartender_1
-      if (== $data.merchant_bartender_progress = 1) jump merchant_bartender_2
-      if (== $data.merchant_bartender_progress = 2) jump merchant_bartender_3
-      if (== $data.merchant_bartender_progress = 3) jump merchant_bartender_4
-      if (== $data.merchant_bartender_progress = 4) jump merchant_bartender_5
-      if (== $data.merchant_bartender_progress = 5) jump merchant_bartender_6
-      if (== $data.merchant_bartender_progress = 6) jump merchant_bartender_7
-    "merchant_business":
-      if (== $data.merchant_business_progress = 0) jump merchant_business_1
-      if (== $data.merchant_business_progress = 1) jump merchant_business_2
-      if (== $data.merchant_business_progress = 2) jump merchant_business_3
-      if (== $data.merchant_business_progress = 3) jump merchant_business_4
-      if (== $data.merchant_business_progress = 4) jump merchant_business_5
-      if (== $data.merchant_business_progress = 5) jump merchant_business_6
-      if (== $data.merchant_business_progress = 6) jump merchant_business_7
-    "military_hero":
-      if (== $data.military_hero_progress = 0) jump military_hero_1
-      if (== $data.military_hero_progress = 1) jump military_hero_2
-      if (== $data.military_hero_progress = 2) jump military_hero_3
-      if (== $data.military_hero_progress = 3) jump military_hero_4
-      if (== $data.military_hero_progress = 4) jump military_hero_5
-      if (== $data.military_hero_progress = 5) jump military_hero_6
-      if (== $data.military_hero_progress = 6) jump military_hero_7
-    "military_officer":
-      if (== $data.military_officer_progress = 0) jump military_officer_1
-      if (== $data.military_officer_progress = 1) jump military_officer_2
-      if (== $data.military_officer_progress = 2) jump military_officer_3
-      if (== $data.military_officer_progress = 3) jump military_officer_4
-      if (== $data.military_officer_progress = 4) jump military_officer_5
-      if (== $data.military_officer_progress = 5) jump military_officer_6
-      if (== $data.military_officer_progress = 6) jump military_officer_7
-    "noble_lady":
-      if (== $data.noble_lady_progress = 0) jump noble_lady_1
-      if (== $data.noble_lady_progress = 1) jump noble_lady_2
-      if (== $data.noble_lady_progress = 2) jump noble_lady_3
-      if (== $data.noble_lady_progress = 3) jump noble_lady_4
-      if (== $data.noble_lady_progress = 4) jump noble_lady_5
-      if (== $data.noble_lady_progress = 5) jump noble_lady_6
-      if (== $data.noble_lady_progress = 6) jump noble_lady_7
-    "noble_lord":
-      if (== $data.noble_lord_progress = 0) jump noble_lord_1
-      if (== $data.noble_lord_progress = 1) jump noble_lord_2
-      if (== $data.noble_lord_progress = 2) jump noble_lord_3
-      if (== $data.noble_lord_progress = 3) jump noble_lord_4
-      if (== $data.noble_lord_progress = 4) jump noble_lord_5
-      if (== $data.noble_lord_progress = 5) jump noble_lord_6
-      if (== $data.noble_lord_progress = 6) jump noble_lord_7
+  "Afternoon comes. Who will you speak with?"
+  jump get_stage
+
 morning_4:
-  add data.time 1
-  choice:
-    "Morning comes. Who will you speak with?"
-    "civilian_eagre":
-      if (== $data.civilian_eagre_progress = 0) jump civilian_eagre_1
-      if (== $data.civilian_eagre_progress = 1) jump civilian_eagre_2
-      if (== $data.civilian_eagre_progress = 2) jump civilian_eagre_3
-      if (== $data.civilian_eagre_progress = 3) jump civilian_eagre_4
-      if (== $data.civilian_eagre_progress = 4) jump civilian_eagre_5
-      if (== $data.civilian_eagre_progress = 5) jump civilian_eagre_6
-      if (== $data.civilian_eagre_progress = 6) jump civilian_eagre_7
-    "civilian_icon":
-      if (== $data.civilian_icon_progress = 0) jump civilian_icon_1
-      if (== $data.civilian_icon_progress = 1) jump civilian_icon_2
-      if (== $data.civilian_icon_progress = 2) jump civilian_icon_3
-      if (== $data.civilian_icon_progress = 3) jump civilian_icon_4
-      if (== $data.civilian_icon_progress = 4) jump civilian_icon_5
-      if (== $data.civilian_icon_progress = 5) jump civilian_icon_6
-      if (== $data.civilian_icon_progress = 6) jump civilian_icon_7
-    "merchant_bartender":
-      if (== $data.merchant_bartender_progress = 0) jump merchant_bartender_1
-      if (== $data.merchant_bartender_progress = 1) jump merchant_bartender_2
-      if (== $data.merchant_bartender_progress = 2) jump merchant_bartender_3
-      if (== $data.merchant_bartender_progress = 3) jump merchant_bartender_4
-      if (== $data.merchant_bartender_progress = 4) jump merchant_bartender_5
-      if (== $data.merchant_bartender_progress = 5) jump merchant_bartender_6
-      if (== $data.merchant_bartender_progress = 6) jump merchant_bartender_7
-    "merchant_business":
-      if (== $data.merchant_business_progress = 0) jump merchant_business_1
-      if (== $data.merchant_business_progress = 1) jump merchant_business_2
-      if (== $data.merchant_business_progress = 2) jump merchant_business_3
-      if (== $data.merchant_business_progress = 3) jump merchant_business_4
-      if (== $data.merchant_business_progress = 4) jump merchant_business_5
-      if (== $data.merchant_business_progress = 5) jump merchant_business_6
-      if (== $data.merchant_business_progress = 6) jump merchant_business_7
-    "military_hero":
-      if (== $data.military_hero_progress = 0) jump military_hero_1
-      if (== $data.military_hero_progress = 1) jump military_hero_2
-      if (== $data.military_hero_progress = 2) jump military_hero_3
-      if (== $data.military_hero_progress = 3) jump military_hero_4
-      if (== $data.military_hero_progress = 4) jump military_hero_5
-      if (== $data.military_hero_progress = 5) jump military_hero_6
-      if (== $data.military_hero_progress = 6) jump military_hero_7
-    "military_officer":
-      if (== $data.military_officer_progress = 0) jump military_officer_1
-      if (== $data.military_officer_progress = 1) jump military_officer_2
-      if (== $data.military_officer_progress = 2) jump military_officer_3
-      if (== $data.military_officer_progress = 3) jump military_officer_4
-      if (== $data.military_officer_progress = 4) jump military_officer_5
-      if (== $data.military_officer_progress = 5) jump military_officer_6
-      if (== $data.military_officer_progress = 6) jump military_officer_7
-    "noble_lady":
-      if (== $data.noble_lady_progress = 0) jump noble_lady_1
-      if (== $data.noble_lady_progress = 1) jump noble_lady_2
-      if (== $data.noble_lady_progress = 2) jump noble_lady_3
-      if (== $data.noble_lady_progress = 3) jump noble_lady_4
-      if (== $data.noble_lady_progress = 4) jump noble_lady_5
-      if (== $data.noble_lady_progress = 5) jump noble_lady_6
-      if (== $data.noble_lady_progress = 6) jump noble_lady_7
-    "noble_lord":
-      if (== $data.noble_lord_progress = 0) jump noble_lord_1
-      if (== $data.noble_lord_progress = 1) jump noble_lord_2
-      if (== $data.noble_lord_progress = 2) jump noble_lord_3
-      if (== $data.noble_lord_progress = 3) jump noble_lord_4
-      if (== $data.noble_lord_progress = 4) jump noble_lord_5
-      if (== $data.noble_lord_progress = 5) jump noble_lord_6
-      if (== $data.noble_lord_progress = 6) jump noble_lord_7
+  "Afternoon comes. Who will you speak with?"
+  jump get_stage
+
 morning_5:
-  add data.time 1
-  choice:
-    "Morning comes. Who will you speak with?"
-    "civilian_eagre":
-      if (== $data.civilian_eagre_progress = 0) jump civilian_eagre_1
-      if (== $data.civilian_eagre_progress = 1) jump civilian_eagre_2
-      if (== $data.civilian_eagre_progress = 2) jump civilian_eagre_3
-      if (== $data.civilian_eagre_progress = 3) jump civilian_eagre_4
-      if (== $data.civilian_eagre_progress = 4) jump civilian_eagre_5
-      if (== $data.civilian_eagre_progress = 5) jump civilian_eagre_6
-      if (== $data.civilian_eagre_progress = 6) jump civilian_eagre_7
-    "civilian_icon":
-      if (== $data.civilian_icon_progress = 0) jump civilian_icon_1
-      if (== $data.civilian_icon_progress = 1) jump civilian_icon_2
-      if (== $data.civilian_icon_progress = 2) jump civilian_icon_3
-      if (== $data.civilian_icon_progress = 3) jump civilian_icon_4
-      if (== $data.civilian_icon_progress = 4) jump civilian_icon_5
-      if (== $data.civilian_icon_progress = 5) jump civilian_icon_6
-      if (== $data.civilian_icon_progress = 6) jump civilian_icon_7
-    "merchant_bartender":
-      if (== $data.merchant_bartender_progress = 0) jump merchant_bartender_1
-      if (== $data.merchant_bartender_progress = 1) jump merchant_bartender_2
-      if (== $data.merchant_bartender_progress = 2) jump merchant_bartender_3
-      if (== $data.merchant_bartender_progress = 3) jump merchant_bartender_4
-      if (== $data.merchant_bartender_progress = 4) jump merchant_bartender_5
-      if (== $data.merchant_bartender_progress = 5) jump merchant_bartender_6
-      if (== $data.merchant_bartender_progress = 6) jump merchant_bartender_7
-    "merchant_business":
-      if (== $data.merchant_business_progress = 0) jump merchant_business_1
-      if (== $data.merchant_business_progress = 1) jump merchant_business_2
-      if (== $data.merchant_business_progress = 2) jump merchant_business_3
-      if (== $data.merchant_business_progress = 3) jump merchant_business_4
-      if (== $data.merchant_business_progress = 4) jump merchant_business_5
-      if (== $data.merchant_business_progress = 5) jump merchant_business_6
-      if (== $data.merchant_business_progress = 6) jump merchant_business_7
-    "military_hero":
-      if (== $data.military_hero_progress = 0) jump military_hero_1
-      if (== $data.military_hero_progress = 1) jump military_hero_2
-      if (== $data.military_hero_progress = 2) jump military_hero_3
-      if (== $data.military_hero_progress = 3) jump military_hero_4
-      if (== $data.military_hero_progress = 4) jump military_hero_5
-      if (== $data.military_hero_progress = 5) jump military_hero_6
-      if (== $data.military_hero_progress = 6) jump military_hero_7
-    "military_officer":
-      if (== $data.military_officer_progress = 0) jump military_officer_1
-      if (== $data.military_officer_progress = 1) jump military_officer_2
-      if (== $data.military_officer_progress = 2) jump military_officer_3
-      if (== $data.military_officer_progress = 3) jump military_officer_4
-      if (== $data.military_officer_progress = 4) jump military_officer_5
-      if (== $data.military_officer_progress = 5) jump military_officer_6
-      if (== $data.military_officer_progress = 6) jump military_officer_7
-    "noble_lady":
-      if (== $data.noble_lady_progress = 0) jump noble_lady_1
-      if (== $data.noble_lady_progress = 1) jump noble_lady_2
-      if (== $data.noble_lady_progress = 2) jump noble_lady_3
-      if (== $data.noble_lady_progress = 3) jump noble_lady_4
-      if (== $data.noble_lady_progress = 4) jump noble_lady_5
-      if (== $data.noble_lady_progress = 5) jump noble_lady_6
-      if (== $data.noble_lady_progress = 6) jump noble_lady_7
-    "noble_lord":
-      if (== $data.noble_lord_progress = 0) jump noble_lord_1
-      if (== $data.noble_lord_progress = 1) jump noble_lord_2
-      if (== $data.noble_lord_progress = 2) jump noble_lord_3
-      if (== $data.noble_lord_progress = 3) jump noble_lord_4
-      if (== $data.noble_lord_progress = 4) jump noble_lord_5
-      if (== $data.noble_lord_progress = 5) jump noble_lord_6
-      if (== $data.noble_lord_progress = 6) jump noble_lord_7
+  "Afternoon comes. Who will you speak with?"
+  jump get_stage
+
 morning_6:
-  add data.time 1
-  choice:
-    "Morning comes. Who will you speak with?"
-    "civilian_eagre":
-      if (== $data.civilian_eagre_progress = 0) jump civilian_eagre_1
-      if (== $data.civilian_eagre_progress = 1) jump civilian_eagre_2
-      if (== $data.civilian_eagre_progress = 2) jump civilian_eagre_3
-      if (== $data.civilian_eagre_progress = 3) jump civilian_eagre_4
-      if (== $data.civilian_eagre_progress = 4) jump civilian_eagre_5
-      if (== $data.civilian_eagre_progress = 5) jump civilian_eagre_6
-      if (== $data.civilian_eagre_progress = 6) jump civilian_eagre_7
-    "civilian_icon":
-      if (== $data.civilian_icon_progress = 0) jump civilian_icon_1
-      if (== $data.civilian_icon_progress = 1) jump civilian_icon_2
-      if (== $data.civilian_icon_progress = 2) jump civilian_icon_3
-      if (== $data.civilian_icon_progress = 3) jump civilian_icon_4
-      if (== $data.civilian_icon_progress = 4) jump civilian_icon_5
-      if (== $data.civilian_icon_progress = 5) jump civilian_icon_6
-      if (== $data.civilian_icon_progress = 6) jump civilian_icon_7
-    "merchant_bartender":
-      if (== $data.merchant_bartender_progress = 0) jump merchant_bartender_1
-      if (== $data.merchant_bartender_progress = 1) jump merchant_bartender_2
-      if (== $data.merchant_bartender_progress = 2) jump merchant_bartender_3
-      if (== $data.merchant_bartender_progress = 3) jump merchant_bartender_4
-      if (== $data.merchant_bartender_progress = 4) jump merchant_bartender_5
-      if (== $data.merchant_bartender_progress = 5) jump merchant_bartender_6
-      if (== $data.merchant_bartender_progress = 6) jump merchant_bartender_7
-    "merchant_business":
-      if (== $data.merchant_business_progress = 0) jump merchant_business_1
-      if (== $data.merchant_business_progress = 1) jump merchant_business_2
-      if (== $data.merchant_business_progress = 2) jump merchant_business_3
-      if (== $data.merchant_business_progress = 3) jump merchant_business_4
-      if (== $data.merchant_business_progress = 4) jump merchant_business_5
-      if (== $data.merchant_business_progress = 5) jump merchant_business_6
-      if (== $data.merchant_business_progress = 6) jump merchant_business_7
-    "military_hero":
-      if (== $data.military_hero_progress = 0) jump military_hero_1
-      if (== $data.military_hero_progress = 1) jump military_hero_2
-      if (== $data.military_hero_progress = 2) jump military_hero_3
-      if (== $data.military_hero_progress = 3) jump military_hero_4
-      if (== $data.military_hero_progress = 4) jump military_hero_5
-      if (== $data.military_hero_progress = 5) jump military_hero_6
-      if (== $data.military_hero_progress = 6) jump military_hero_7
-    "military_officer":
-      if (== $data.military_officer_progress = 0) jump military_officer_1
-      if (== $data.military_officer_progress = 1) jump military_officer_2
-      if (== $data.military_officer_progress = 2) jump military_officer_3
-      if (== $data.military_officer_progress = 3) jump military_officer_4
-      if (== $data.military_officer_progress = 4) jump military_officer_5
-      if (== $data.military_officer_progress = 5) jump military_officer_6
-      if (== $data.military_officer_progress = 6) jump military_officer_7
-    "noble_lady":
-      if (== $data.noble_lady_progress = 0) jump noble_lady_1
-      if (== $data.noble_lady_progress = 1) jump noble_lady_2
-      if (== $data.noble_lady_progress = 2) jump noble_lady_3
-      if (== $data.noble_lady_progress = 3) jump noble_lady_4
-      if (== $data.noble_lady_progress = 4) jump noble_lady_5
-      if (== $data.noble_lady_progress = 5) jump noble_lady_6
-      if (== $data.noble_lady_progress = 6) jump noble_lady_7
-    "noble_lord":
-      if (== $data.noble_lord_progress = 0) jump noble_lord_1
-      if (== $data.noble_lord_progress = 1) jump noble_lord_2
-      if (== $data.noble_lord_progress = 2) jump noble_lord_3
-      if (== $data.noble_lord_progress = 3) jump noble_lord_4
-      if (== $data.noble_lord_progress = 4) jump noble_lord_5
-      if (== $data.noble_lord_progress = 5) jump noble_lord_6
-      if (== $data.noble_lord_progress = 6) jump noble_lord_7
+  "Afternoon comes. Who will you speak with?"
+  jump get_stage
+
 morning_7:
-  add data.time 1
-  choice:
-    "Morning comes. Who will you speak with?"
-    "civilian_eagre":
-      if (== $data.civilian_eagre_progress = 0) jump civilian_eagre_1
-      if (== $data.civilian_eagre_progress = 1) jump civilian_eagre_2
-      if (== $data.civilian_eagre_progress = 2) jump civilian_eagre_3
-      if (== $data.civilian_eagre_progress = 3) jump civilian_eagre_4
-      if (== $data.civilian_eagre_progress = 4) jump civilian_eagre_5
-      if (== $data.civilian_eagre_progress = 5) jump civilian_eagre_6
-      if (== $data.civilian_eagre_progress = 6) jump civilian_eagre_7
-    "civilian_icon":
-      if (== $data.civilian_icon_progress = 0) jump civilian_icon_1
-      if (== $data.civilian_icon_progress = 1) jump civilian_icon_2
-      if (== $data.civilian_icon_progress = 2) jump civilian_icon_3
-      if (== $data.civilian_icon_progress = 3) jump civilian_icon_4
-      if (== $data.civilian_icon_progress = 4) jump civilian_icon_5
-      if (== $data.civilian_icon_progress = 5) jump civilian_icon_6
-      if (== $data.civilian_icon_progress = 6) jump civilian_icon_7
-    "merchant_bartender":
-      if (== $data.merchant_bartender_progress = 0) jump merchant_bartender_1
-      if (== $data.merchant_bartender_progress = 1) jump merchant_bartender_2
-      if (== $data.merchant_bartender_progress = 2) jump merchant_bartender_3
-      if (== $data.merchant_bartender_progress = 3) jump merchant_bartender_4
-      if (== $data.merchant_bartender_progress = 4) jump merchant_bartender_5
-      if (== $data.merchant_bartender_progress = 5) jump merchant_bartender_6
-      if (== $data.merchant_bartender_progress = 6) jump merchant_bartender_7
-    "merchant_business":
-      if (== $data.merchant_business_progress = 0) jump merchant_business_1
-      if (== $data.merchant_business_progress = 1) jump merchant_business_2
-      if (== $data.merchant_business_progress = 2) jump merchant_business_3
-      if (== $data.merchant_business_progress = 3) jump merchant_business_4
-      if (== $data.merchant_business_progress = 4) jump merchant_business_5
-      if (== $data.merchant_business_progress = 5) jump merchant_business_6
-      if (== $data.merchant_business_progress = 6) jump merchant_business_7
-    "military_hero":
-      if (== $data.military_hero_progress = 0) jump military_hero_1
-      if (== $data.military_hero_progress = 1) jump military_hero_2
-      if (== $data.military_hero_progress = 2) jump military_hero_3
-      if (== $data.military_hero_progress = 3) jump military_hero_4
-      if (== $data.military_hero_progress = 4) jump military_hero_5
-      if (== $data.military_hero_progress = 5) jump military_hero_6
-      if (== $data.military_hero_progress = 6) jump military_hero_7
-    "military_officer":
-      if (== $data.military_officer_progress = 0) jump military_officer_1
-      if (== $data.military_officer_progress = 1) jump military_officer_2
-      if (== $data.military_officer_progress = 2) jump military_officer_3
-      if (== $data.military_officer_progress = 3) jump military_officer_4
-      if (== $data.military_officer_progress = 4) jump military_officer_5
-      if (== $data.military_officer_progress = 5) jump military_officer_6
-      if (== $data.military_officer_progress = 6) jump military_officer_7
-    "noble_lady":
-      if (== $data.noble_lady_progress = 0) jump noble_lady_1
-      if (== $data.noble_lady_progress = 1) jump noble_lady_2
-      if (== $data.noble_lady_progress = 2) jump noble_lady_3
-      if (== $data.noble_lady_progress = 3) jump noble_lady_4
-      if (== $data.noble_lady_progress = 4) jump noble_lady_5
-      if (== $data.noble_lady_progress = 5) jump noble_lady_6
-      if (== $data.noble_lady_progress = 6) jump noble_lady_7
-    "noble_lord":
-      if (== $data.noble_lord_progress = 0) jump noble_lord_1
-      if (== $data.noble_lord_progress = 1) jump noble_lord_2
-      if (== $data.noble_lord_progress = 2) jump noble_lord_3
-      if (== $data.noble_lord_progress = 3) jump noble_lord_4
-      if (== $data.noble_lord_progress = 4) jump noble_lord_5
-      if (== $data.noble_lord_progress = 5) jump noble_lord_6
-      if (== $data.noble_lord_progress = 6) jump noble_lord_7
+  "Afternoon comes. Who will you speak with?"
+  jump get_stage
+
 afternoon_1:
-  add data.time 1
-  choice:
-    "Afternoon comes. Who will you speak with?"
-    "civilian_eagre":
-      if (== $data.civilian_eagre_progress = 0) jump civilian_eagre_1
-      if (== $data.civilian_eagre_progress = 1) jump civilian_eagre_2
-      if (== $data.civilian_eagre_progress = 2) jump civilian_eagre_3
-      if (== $data.civilian_eagre_progress = 3) jump civilian_eagre_4
-      if (== $data.civilian_eagre_progress = 4) jump civilian_eagre_5
-      if (== $data.civilian_eagre_progress = 5) jump civilian_eagre_6
-      if (== $data.civilian_eagre_progress = 6) jump civilian_eagre_7
-    "civilian_icon":
-      if (== $data.civilian_icon_progress = 0) jump civilian_icon_1
-      if (== $data.civilian_icon_progress = 1) jump civilian_icon_2
-      if (== $data.civilian_icon_progress = 2) jump civilian_icon_3
-      if (== $data.civilian_icon_progress = 3) jump civilian_icon_4
-      if (== $data.civilian_icon_progress = 4) jump civilian_icon_5
-      if (== $data.civilian_icon_progress = 5) jump civilian_icon_6
-      if (== $data.civilian_icon_progress = 6) jump civilian_icon_7
-    "merchant_bartender":
-      if (== $data.merchant_bartender_progress = 0) jump merchant_bartender_1
-      if (== $data.merchant_bartender_progress = 1) jump merchant_bartender_2
-      if (== $data.merchant_bartender_progress = 2) jump merchant_bartender_3
-      if (== $data.merchant_bartender_progress = 3) jump merchant_bartender_4
-      if (== $data.merchant_bartender_progress = 4) jump merchant_bartender_5
-      if (== $data.merchant_bartender_progress = 5) jump merchant_bartender_6
-      if (== $data.merchant_bartender_progress = 6) jump merchant_bartender_7
-    "merchant_business":
-      if (== $data.merchant_business_progress = 0) jump merchant_business_1
-      if (== $data.merchant_business_progress = 1) jump merchant_business_2
-      if (== $data.merchant_business_progress = 2) jump merchant_business_3
-      if (== $data.merchant_business_progress = 3) jump merchant_business_4
-      if (== $data.merchant_business_progress = 4) jump merchant_business_5
-      if (== $data.merchant_business_progress = 5) jump merchant_business_6
-      if (== $data.merchant_business_progress = 6) jump merchant_business_7
-    "military_hero":
-      if (== $data.military_hero_progress = 0) jump military_hero_1
-      if (== $data.military_hero_progress = 1) jump military_hero_2
-      if (== $data.military_hero_progress = 2) jump military_hero_3
-      if (== $data.military_hero_progress = 3) jump military_hero_4
-      if (== $data.military_hero_progress = 4) jump military_hero_5
-      if (== $data.military_hero_progress = 5) jump military_hero_6
-      if (== $data.military_hero_progress = 6) jump military_hero_7
-    "military_officer":
-      if (== $data.military_officer_progress = 0) jump military_officer_1
-      if (== $data.military_officer_progress = 1) jump military_officer_2
-      if (== $data.military_officer_progress = 2) jump military_officer_3
-      if (== $data.military_officer_progress = 3) jump military_officer_4
-      if (== $data.military_officer_progress = 4) jump military_officer_5
-      if (== $data.military_officer_progress = 5) jump military_officer_6
-      if (== $data.military_officer_progress = 6) jump military_officer_7
-    "noble_lady":
-      if (== $data.noble_lady_progress = 0) jump noble_lady_1
-      if (== $data.noble_lady_progress = 1) jump noble_lady_2
-      if (== $data.noble_lady_progress = 2) jump noble_lady_3
-      if (== $data.noble_lady_progress = 3) jump noble_lady_4
-      if (== $data.noble_lady_progress = 4) jump noble_lady_5
-      if (== $data.noble_lady_progress = 5) jump noble_lady_6
-      if (== $data.noble_lady_progress = 6) jump noble_lady_7
-    "noble_lord":
-      if (== $data.noble_lord_progress = 0) jump noble_lord_1
-      if (== $data.noble_lord_progress = 1) jump noble_lord_2
-      if (== $data.noble_lord_progress = 2) jump noble_lord_3
-      if (== $data.noble_lord_progress = 3) jump noble_lord_4
-      if (== $data.noble_lord_progress = 4) jump noble_lord_5
-      if (== $data.noble_lord_progress = 5) jump noble_lord_6
-      if (== $data.noble_lord_progress = 6) jump noble_lord_7
+  "Afternoon comes. Who will you speak with?"
+  jump get_stage
+
 afternoon_2:
-  add data.time 1
-  choice:
-    "Afternoon comes. Who will you speak with?"
-    "civilian_eagre":
-      if (== $data.civilian_eagre_progress = 0) jump civilian_eagre_1
-      if (== $data.civilian_eagre_progress = 1) jump civilian_eagre_2
-      if (== $data.civilian_eagre_progress = 2) jump civilian_eagre_3
-      if (== $data.civilian_eagre_progress = 3) jump civilian_eagre_4
-      if (== $data.civilian_eagre_progress = 4) jump civilian_eagre_5
-      if (== $data.civilian_eagre_progress = 5) jump civilian_eagre_6
-      if (== $data.civilian_eagre_progress = 6) jump civilian_eagre_7
-    "civilian_icon":
-      if (== $data.civilian_icon_progress = 0) jump civilian_icon_1
-      if (== $data.civilian_icon_progress = 1) jump civilian_icon_2
-      if (== $data.civilian_icon_progress = 2) jump civilian_icon_3
-      if (== $data.civilian_icon_progress = 3) jump civilian_icon_4
-      if (== $data.civilian_icon_progress = 4) jump civilian_icon_5
-      if (== $data.civilian_icon_progress = 5) jump civilian_icon_6
-      if (== $data.civilian_icon_progress = 6) jump civilian_icon_7
-    "merchant_bartender":
-      if (== $data.merchant_bartender_progress = 0) jump merchant_bartender_1
-      if (== $data.merchant_bartender_progress = 1) jump merchant_bartender_2
-      if (== $data.merchant_bartender_progress = 2) jump merchant_bartender_3
-      if (== $data.merchant_bartender_progress = 3) jump merchant_bartender_4
-      if (== $data.merchant_bartender_progress = 4) jump merchant_bartender_5
-      if (== $data.merchant_bartender_progress = 5) jump merchant_bartender_6
-      if (== $data.merchant_bartender_progress = 6) jump merchant_bartender_7
-    "merchant_business":
-      if (== $data.merchant_business_progress = 0) jump merchant_business_1
-      if (== $data.merchant_business_progress = 1) jump merchant_business_2
-      if (== $data.merchant_business_progress = 2) jump merchant_business_3
-      if (== $data.merchant_business_progress = 3) jump merchant_business_4
-      if (== $data.merchant_business_progress = 4) jump merchant_business_5
-      if (== $data.merchant_business_progress = 5) jump merchant_business_6
-      if (== $data.merchant_business_progress = 6) jump merchant_business_7
-    "military_hero":
-      if (== $data.military_hero_progress = 0) jump military_hero_1
-      if (== $data.military_hero_progress = 1) jump military_hero_2
-      if (== $data.military_hero_progress = 2) jump military_hero_3
-      if (== $data.military_hero_progress = 3) jump military_hero_4
-      if (== $data.military_hero_progress = 4) jump military_hero_5
-      if (== $data.military_hero_progress = 5) jump military_hero_6
-      if (== $data.military_hero_progress = 6) jump military_hero_7
-    "military_officer":
-      if (== $data.military_officer_progress = 0) jump military_officer_1
-      if (== $data.military_officer_progress = 1) jump military_officer_2
-      if (== $data.military_officer_progress = 2) jump military_officer_3
-      if (== $data.military_officer_progress = 3) jump military_officer_4
-      if (== $data.military_officer_progress = 4) jump military_officer_5
-      if (== $data.military_officer_progress = 5) jump military_officer_6
-      if (== $data.military_officer_progress = 6) jump military_officer_7
-    "noble_lady":
-      if (== $data.noble_lady_progress = 0) jump noble_lady_1
-      if (== $data.noble_lady_progress = 1) jump noble_lady_2
-      if (== $data.noble_lady_progress = 2) jump noble_lady_3
-      if (== $data.noble_lady_progress = 3) jump noble_lady_4
-      if (== $data.noble_lady_progress = 4) jump noble_lady_5
-      if (== $data.noble_lady_progress = 5) jump noble_lady_6
-      if (== $data.noble_lady_progress = 6) jump noble_lady_7
-    "noble_lord":
-      if (== $data.noble_lord_progress = 0) jump noble_lord_1
-      if (== $data.noble_lord_progress = 1) jump noble_lord_2
-      if (== $data.noble_lord_progress = 2) jump noble_lord_3
-      if (== $data.noble_lord_progress = 3) jump noble_lord_4
-      if (== $data.noble_lord_progress = 4) jump noble_lord_5
-      if (== $data.noble_lord_progress = 5) jump noble_lord_6
-      if (== $data.noble_lord_progress = 6) jump noble_lord_7
+  "Afternoon comes. Who will you speak with?"
+  jump get_stage
+
 afternoon_3:
-  add data.time 1
-  choice:
-    "Afternoon comes. Who will you speak with?"
-    "civilian_eagre":
-      if (== $data.civilian_eagre_progress = 0) jump civilian_eagre_1
-      if (== $data.civilian_eagre_progress = 1) jump civilian_eagre_2
-      if (== $data.civilian_eagre_progress = 2) jump civilian_eagre_3
-      if (== $data.civilian_eagre_progress = 3) jump civilian_eagre_4
-      if (== $data.civilian_eagre_progress = 4) jump civilian_eagre_5
-      if (== $data.civilian_eagre_progress = 5) jump civilian_eagre_6
-      if (== $data.civilian_eagre_progress = 6) jump civilian_eagre_7
-    "civilian_icon":
-      if (== $data.civilian_icon_progress = 0) jump civilian_icon_1
-      if (== $data.civilian_icon_progress = 1) jump civilian_icon_2
-      if (== $data.civilian_icon_progress = 2) jump civilian_icon_3
-      if (== $data.civilian_icon_progress = 3) jump civilian_icon_4
-      if (== $data.civilian_icon_progress = 4) jump civilian_icon_5
-      if (== $data.civilian_icon_progress = 5) jump civilian_icon_6
-      if (== $data.civilian_icon_progress = 6) jump civilian_icon_7
-    "merchant_bartender":
-      if (== $data.merchant_bartender_progress = 0) jump merchant_bartender_1
-      if (== $data.merchant_bartender_progress = 1) jump merchant_bartender_2
-      if (== $data.merchant_bartender_progress = 2) jump merchant_bartender_3
-      if (== $data.merchant_bartender_progress = 3) jump merchant_bartender_4
-      if (== $data.merchant_bartender_progress = 4) jump merchant_bartender_5
-      if (== $data.merchant_bartender_progress = 5) jump merchant_bartender_6
-      if (== $data.merchant_bartender_progress = 6) jump merchant_bartender_7
-    "merchant_business":
-      if (== $data.merchant_business_progress = 0) jump merchant_business_1
-      if (== $data.merchant_business_progress = 1) jump merchant_business_2
-      if (== $data.merchant_business_progress = 2) jump merchant_business_3
-      if (== $data.merchant_business_progress = 3) jump merchant_business_4
-      if (== $data.merchant_business_progress = 4) jump merchant_business_5
-      if (== $data.merchant_business_progress = 5) jump merchant_business_6
-      if (== $data.merchant_business_progress = 6) jump merchant_business_7
-    "military_hero":
-      if (== $data.military_hero_progress = 0) jump military_hero_1
-      if (== $data.military_hero_progress = 1) jump military_hero_2
-      if (== $data.military_hero_progress = 2) jump military_hero_3
-      if (== $data.military_hero_progress = 3) jump military_hero_4
-      if (== $data.military_hero_progress = 4) jump military_hero_5
-      if (== $data.military_hero_progress = 5) jump military_hero_6
-      if (== $data.military_hero_progress = 6) jump military_hero_7
-    "military_officer":
-      if (== $data.military_officer_progress = 0) jump military_officer_1
-      if (== $data.military_officer_progress = 1) jump military_officer_2
-      if (== $data.military_officer_progress = 2) jump military_officer_3
-      if (== $data.military_officer_progress = 3) jump military_officer_4
-      if (== $data.military_officer_progress = 4) jump military_officer_5
-      if (== $data.military_officer_progress = 5) jump military_officer_6
-      if (== $data.military_officer_progress = 6) jump military_officer_7
-    "noble_lady":
-      if (== $data.noble_lady_progress = 0) jump noble_lady_1
-      if (== $data.noble_lady_progress = 1) jump noble_lady_2
-      if (== $data.noble_lady_progress = 2) jump noble_lady_3
-      if (== $data.noble_lady_progress = 3) jump noble_lady_4
-      if (== $data.noble_lady_progress = 4) jump noble_lady_5
-      if (== $data.noble_lady_progress = 5) jump noble_lady_6
-      if (== $data.noble_lady_progress = 6) jump noble_lady_7
-    "noble_lord":
-      if (== $data.noble_lord_progress = 0) jump noble_lord_1
-      if (== $data.noble_lord_progress = 1) jump noble_lord_2
-      if (== $data.noble_lord_progress = 2) jump noble_lord_3
-      if (== $data.noble_lord_progress = 3) jump noble_lord_4
-      if (== $data.noble_lord_progress = 4) jump noble_lord_5
-      if (== $data.noble_lord_progress = 5) jump noble_lord_6
-      if (== $data.noble_lord_progress = 6) jump noble_lord_7
+  "Afternoon comes. Who will you speak with?"
+  jump get_stage
+
 afternoon_4:
-  add data.time 1
-  choice:
-    "Afternoon comes. Who will you speak with?"
-    "civilian_eagre":
-      if (== $data.civilian_eagre_progress = 0) jump civilian_eagre_1
-      if (== $data.civilian_eagre_progress = 1) jump civilian_eagre_2
-      if (== $data.civilian_eagre_progress = 2) jump civilian_eagre_3
-      if (== $data.civilian_eagre_progress = 3) jump civilian_eagre_4
-      if (== $data.civilian_eagre_progress = 4) jump civilian_eagre_5
-      if (== $data.civilian_eagre_progress = 5) jump civilian_eagre_6
-      if (== $data.civilian_eagre_progress = 6) jump civilian_eagre_7
-    "civilian_icon":
-      if (== $data.civilian_icon_progress = 0) jump civilian_icon_1
-      if (== $data.civilian_icon_progress = 1) jump civilian_icon_2
-      if (== $data.civilian_icon_progress = 2) jump civilian_icon_3
-      if (== $data.civilian_icon_progress = 3) jump civilian_icon_4
-      if (== $data.civilian_icon_progress = 4) jump civilian_icon_5
-      if (== $data.civilian_icon_progress = 5) jump civilian_icon_6
-      if (== $data.civilian_icon_progress = 6) jump civilian_icon_7
-    "merchant_bartender":
-      if (== $data.merchant_bartender_progress = 0) jump merchant_bartender_1
-      if (== $data.merchant_bartender_progress = 1) jump merchant_bartender_2
-      if (== $data.merchant_bartender_progress = 2) jump merchant_bartender_3
-      if (== $data.merchant_bartender_progress = 3) jump merchant_bartender_4
-      if (== $data.merchant_bartender_progress = 4) jump merchant_bartender_5
-      if (== $data.merchant_bartender_progress = 5) jump merchant_bartender_6
-      if (== $data.merchant_bartender_progress = 6) jump merchant_bartender_7
-    "merchant_business":
-      if (== $data.merchant_business_progress = 0) jump merchant_business_1
-      if (== $data.merchant_business_progress = 1) jump merchant_business_2
-      if (== $data.merchant_business_progress = 2) jump merchant_business_3
-      if (== $data.merchant_business_progress = 3) jump merchant_business_4
-      if (== $data.merchant_business_progress = 4) jump merchant_business_5
-      if (== $data.merchant_business_progress = 5) jump merchant_business_6
-      if (== $data.merchant_business_progress = 6) jump merchant_business_7
-    "military_hero":
-      if (== $data.military_hero_progress = 0) jump military_hero_1
-      if (== $data.military_hero_progress = 1) jump military_hero_2
-      if (== $data.military_hero_progress = 2) jump military_hero_3
-      if (== $data.military_hero_progress = 3) jump military_hero_4
-      if (== $data.military_hero_progress = 4) jump military_hero_5
-      if (== $data.military_hero_progress = 5) jump military_hero_6
-      if (== $data.military_hero_progress = 6) jump military_hero_7
-    "military_officer":
-      if (== $data.military_officer_progress = 0) jump military_officer_1
-      if (== $data.military_officer_progress = 1) jump military_officer_2
-      if (== $data.military_officer_progress = 2) jump military_officer_3
-      if (== $data.military_officer_progress = 3) jump military_officer_4
-      if (== $data.military_officer_progress = 4) jump military_officer_5
-      if (== $data.military_officer_progress = 5) jump military_officer_6
-      if (== $data.military_officer_progress = 6) jump military_officer_7
-    "noble_lady":
-      if (== $data.noble_lady_progress = 0) jump noble_lady_1
-      if (== $data.noble_lady_progress = 1) jump noble_lady_2
-      if (== $data.noble_lady_progress = 2) jump noble_lady_3
-      if (== $data.noble_lady_progress = 3) jump noble_lady_4
-      if (== $data.noble_lady_progress = 4) jump noble_lady_5
-      if (== $data.noble_lady_progress = 5) jump noble_lady_6
-      if (== $data.noble_lady_progress = 6) jump noble_lady_7
-    "noble_lord":
-      if (== $data.noble_lord_progress = 0) jump noble_lord_1
-      if (== $data.noble_lord_progress = 1) jump noble_lord_2
-      if (== $data.noble_lord_progress = 2) jump noble_lord_3
-      if (== $data.noble_lord_progress = 3) jump noble_lord_4
-      if (== $data.noble_lord_progress = 4) jump noble_lord_5
-      if (== $data.noble_lord_progress = 5) jump noble_lord_6
-      if (== $data.noble_lord_progress = 6) jump noble_lord_7
+  "Afternoon comes. Who will you speak with?"
+  jump get_stage
+
 afternoon_5:
-  add data.time 1
-  choice:
-    "Afternoon comes. Who will you speak with?"
-    "civilian_eagre":
-      if (== $data.civilian_eagre_progress = 0) jump civilian_eagre_1
-      if (== $data.civilian_eagre_progress = 1) jump civilian_eagre_2
-      if (== $data.civilian_eagre_progress = 2) jump civilian_eagre_3
-      if (== $data.civilian_eagre_progress = 3) jump civilian_eagre_4
-      if (== $data.civilian_eagre_progress = 4) jump civilian_eagre_5
-      if (== $data.civilian_eagre_progress = 5) jump civilian_eagre_6
-      if (== $data.civilian_eagre_progress = 6) jump civilian_eagre_7
-    "civilian_icon":
-      if (== $data.civilian_icon_progress = 0) jump civilian_icon_1
-      if (== $data.civilian_icon_progress = 1) jump civilian_icon_2
-      if (== $data.civilian_icon_progress = 2) jump civilian_icon_3
-      if (== $data.civilian_icon_progress = 3) jump civilian_icon_4
-      if (== $data.civilian_icon_progress = 4) jump civilian_icon_5
-      if (== $data.civilian_icon_progress = 5) jump civilian_icon_6
-      if (== $data.civilian_icon_progress = 6) jump civilian_icon_7
-    "merchant_bartender":
-      if (== $data.merchant_bartender_progress = 0) jump merchant_bartender_1
-      if (== $data.merchant_bartender_progress = 1) jump merchant_bartender_2
-      if (== $data.merchant_bartender_progress = 2) jump merchant_bartender_3
-      if (== $data.merchant_bartender_progress = 3) jump merchant_bartender_4
-      if (== $data.merchant_bartender_progress = 4) jump merchant_bartender_5
-      if (== $data.merchant_bartender_progress = 5) jump merchant_bartender_6
-      if (== $data.merchant_bartender_progress = 6) jump merchant_bartender_7
-    "merchant_business":
-      if (== $data.merchant_business_progress = 0) jump merchant_business_1
-      if (== $data.merchant_business_progress = 1) jump merchant_business_2
-      if (== $data.merchant_business_progress = 2) jump merchant_business_3
-      if (== $data.merchant_business_progress = 3) jump merchant_business_4
-      if (== $data.merchant_business_progress = 4) jump merchant_business_5
-      if (== $data.merchant_business_progress = 5) jump merchant_business_6
-      if (== $data.merchant_business_progress = 6) jump merchant_business_7
-    "military_hero":
-      if (== $data.military_hero_progress = 0) jump military_hero_1
-      if (== $data.military_hero_progress = 1) jump military_hero_2
-      if (== $data.military_hero_progress = 2) jump military_hero_3
-      if (== $data.military_hero_progress = 3) jump military_hero_4
-      if (== $data.military_hero_progress = 4) jump military_hero_5
-      if (== $data.military_hero_progress = 5) jump military_hero_6
-      if (== $data.military_hero_progress = 6) jump military_hero_7
-    "military_officer":
-      if (== $data.military_officer_progress = 0) jump military_officer_1
-      if (== $data.military_officer_progress = 1) jump military_officer_2
-      if (== $data.military_officer_progress = 2) jump military_officer_3
-      if (== $data.military_officer_progress = 3) jump military_officer_4
-      if (== $data.military_officer_progress = 4) jump military_officer_5
-      if (== $data.military_officer_progress = 5) jump military_officer_6
-      if (== $data.military_officer_progress = 6) jump military_officer_7
-    "noble_lady":
-      if (== $data.noble_lady_progress = 0) jump noble_lady_1
-      if (== $data.noble_lady_progress = 1) jump noble_lady_2
-      if (== $data.noble_lady_progress = 2) jump noble_lady_3
-      if (== $data.noble_lady_progress = 3) jump noble_lady_4
-      if (== $data.noble_lady_progress = 4) jump noble_lady_5
-      if (== $data.noble_lady_progress = 5) jump noble_lady_6
-      if (== $data.noble_lady_progress = 6) jump noble_lady_7
-    "noble_lord":
-      if (== $data.noble_lord_progress = 0) jump noble_lord_1
-      if (== $data.noble_lord_progress = 1) jump noble_lord_2
-      if (== $data.noble_lord_progress = 2) jump noble_lord_3
-      if (== $data.noble_lord_progress = 3) jump noble_lord_4
-      if (== $data.noble_lord_progress = 4) jump noble_lord_5
-      if (== $data.noble_lord_progress = 5) jump noble_lord_6
-      if (== $data.noble_lord_progress = 6) jump noble_lord_7
+  "Afternoon comes. Who will you speak with?"
+  jump get_stage
+
 afternoon_6:
-  add data.time 1
-  choice:
-    "Afternoon comes. Who will you speak with?"
-    "civilian_eagre":
-      if (== $data.civilian_eagre_progress = 0) jump civilian_eagre_1
-      if (== $data.civilian_eagre_progress = 1) jump civilian_eagre_2
-      if (== $data.civilian_eagre_progress = 2) jump civilian_eagre_3
-      if (== $data.civilian_eagre_progress = 3) jump civilian_eagre_4
-      if (== $data.civilian_eagre_progress = 4) jump civilian_eagre_5
-      if (== $data.civilian_eagre_progress = 5) jump civilian_eagre_6
-      if (== $data.civilian_eagre_progress = 6) jump civilian_eagre_7
-    "civilian_icon":
-      if (== $data.civilian_icon_progress = 0) jump civilian_icon_1
-      if (== $data.civilian_icon_progress = 1) jump civilian_icon_2
-      if (== $data.civilian_icon_progress = 2) jump civilian_icon_3
-      if (== $data.civilian_icon_progress = 3) jump civilian_icon_4
-      if (== $data.civilian_icon_progress = 4) jump civilian_icon_5
-      if (== $data.civilian_icon_progress = 5) jump civilian_icon_6
-      if (== $data.civilian_icon_progress = 6) jump civilian_icon_7
-    "merchant_bartender":
-      if (== $data.merchant_bartender_progress = 0) jump merchant_bartender_1
-      if (== $data.merchant_bartender_progress = 1) jump merchant_bartender_2
-      if (== $data.merchant_bartender_progress = 2) jump merchant_bartender_3
-      if (== $data.merchant_bartender_progress = 3) jump merchant_bartender_4
-      if (== $data.merchant_bartender_progress = 4) jump merchant_bartender_5
-      if (== $data.merchant_bartender_progress = 5) jump merchant_bartender_6
-      if (== $data.merchant_bartender_progress = 6) jump merchant_bartender_7
-    "merchant_business":
-      if (== $data.merchant_business_progress = 0) jump merchant_business_1
-      if (== $data.merchant_business_progress = 1) jump merchant_business_2
-      if (== $data.merchant_business_progress = 2) jump merchant_business_3
-      if (== $data.merchant_business_progress = 3) jump merchant_business_4
-      if (== $data.merchant_business_progress = 4) jump merchant_business_5
-      if (== $data.merchant_business_progress = 5) jump merchant_business_6
-      if (== $data.merchant_business_progress = 6) jump merchant_business_7
-    "military_hero":
-      if (== $data.military_hero_progress = 0) jump military_hero_1
-      if (== $data.military_hero_progress = 1) jump military_hero_2
-      if (== $data.military_hero_progress = 2) jump military_hero_3
-      if (== $data.military_hero_progress = 3) jump military_hero_4
-      if (== $data.military_hero_progress = 4) jump military_hero_5
-      if (== $data.military_hero_progress = 5) jump military_hero_6
-      if (== $data.military_hero_progress = 6) jump military_hero_7
-    "military_officer":
-      if (== $data.military_officer_progress = 0) jump military_officer_1
-      if (== $data.military_officer_progress = 1) jump military_officer_2
-      if (== $data.military_officer_progress = 2) jump military_officer_3
-      if (== $data.military_officer_progress = 3) jump military_officer_4
-      if (== $data.military_officer_progress = 4) jump military_officer_5
-      if (== $data.military_officer_progress = 5) jump military_officer_6
-      if (== $data.military_officer_progress = 6) jump military_officer_7
-    "noble_lady":
-      if (== $data.noble_lady_progress = 0) jump noble_lady_1
-      if (== $data.noble_lady_progress = 1) jump noble_lady_2
-      if (== $data.noble_lady_progress = 2) jump noble_lady_3
-      if (== $data.noble_lady_progress = 3) jump noble_lady_4
-      if (== $data.noble_lady_progress = 4) jump noble_lady_5
-      if (== $data.noble_lady_progress = 5) jump noble_lady_6
-      if (== $data.noble_lady_progress = 6) jump noble_lady_7
-    "noble_lord":
-      if (== $data.noble_lord_progress = 0) jump noble_lord_1
-      if (== $data.noble_lord_progress = 1) jump noble_lord_2
-      if (== $data.noble_lord_progress = 2) jump noble_lord_3
-      if (== $data.noble_lord_progress = 3) jump noble_lord_4
-      if (== $data.noble_lord_progress = 4) jump noble_lord_5
-      if (== $data.noble_lord_progress = 5) jump noble_lord_6
-      if (== $data.noble_lord_progress = 6) jump noble_lord_7
+  "Afternoon comes. Who will you speak with?"
+  jump get_stage
+
 afternoon_7:
-  add data.time 1
-  choice:
-    "Afternoon comes. Who will you speak with?"
-    "civilian_eagre":
-      if (== $data.civilian_eagre_progress = 0) jump civilian_eagre_1
-      if (== $data.civilian_eagre_progress = 1) jump civilian_eagre_2
-      if (== $data.civilian_eagre_progress = 2) jump civilian_eagre_3
-      if (== $data.civilian_eagre_progress = 3) jump civilian_eagre_4
-      if (== $data.civilian_eagre_progress = 4) jump civilian_eagre_5
-      if (== $data.civilian_eagre_progress = 5) jump civilian_eagre_6
-      if (== $data.civilian_eagre_progress = 6) jump civilian_eagre_7
-    "civilian_icon":
-      if (== $data.civilian_icon_progress = 0) jump civilian_icon_1
-      if (== $data.civilian_icon_progress = 1) jump civilian_icon_2
-      if (== $data.civilian_icon_progress = 2) jump civilian_icon_3
-      if (== $data.civilian_icon_progress = 3) jump civilian_icon_4
-      if (== $data.civilian_icon_progress = 4) jump civilian_icon_5
-      if (== $data.civilian_icon_progress = 5) jump civilian_icon_6
-      if (== $data.civilian_icon_progress = 6) jump civilian_icon_7
-    "merchant_bartender":
-      if (== $data.merchant_bartender_progress = 0) jump merchant_bartender_1
-      if (== $data.merchant_bartender_progress = 1) jump merchant_bartender_2
-      if (== $data.merchant_bartender_progress = 2) jump merchant_bartender_3
-      if (== $data.merchant_bartender_progress = 3) jump merchant_bartender_4
-      if (== $data.merchant_bartender_progress = 4) jump merchant_bartender_5
-      if (== $data.merchant_bartender_progress = 5) jump merchant_bartender_6
-      if (== $data.merchant_bartender_progress = 6) jump merchant_bartender_7
-    "merchant_business":
-      if (== $data.merchant_business_progress = 0) jump merchant_business_1
-      if (== $data.merchant_business_progress = 1) jump merchant_business_2
-      if (== $data.merchant_business_progress = 2) jump merchant_business_3
-      if (== $data.merchant_business_progress = 3) jump merchant_business_4
-      if (== $data.merchant_business_progress = 4) jump merchant_business_5
-      if (== $data.merchant_business_progress = 5) jump merchant_business_6
-      if (== $data.merchant_business_progress = 6) jump merchant_business_7
-    "military_hero":
-      if (== $data.military_hero_progress = 0) jump military_hero_1
-      if (== $data.military_hero_progress = 1) jump military_hero_2
-      if (== $data.military_hero_progress = 2) jump military_hero_3
-      if (== $data.military_hero_progress = 3) jump military_hero_4
-      if (== $data.military_hero_progress = 4) jump military_hero_5
-      if (== $data.military_hero_progress = 5) jump military_hero_6
-      if (== $data.military_hero_progress = 6) jump military_hero_7
-    "military_officer":
-      if (== $data.military_officer_progress = 0) jump military_officer_1
-      if (== $data.military_officer_progress = 1) jump military_officer_2
-      if (== $data.military_officer_progress = 2) jump military_officer_3
-      if (== $data.military_officer_progress = 3) jump military_officer_4
-      if (== $data.military_officer_progress = 4) jump military_officer_5
-      if (== $data.military_officer_progress = 5) jump military_officer_6
-      if (== $data.military_officer_progress = 6) jump military_officer_7
-    "noble_lady":
-      if (== $data.noble_lady_progress = 0) jump noble_lady_1
-      if (== $data.noble_lady_progress = 1) jump noble_lady_2
-      if (== $data.noble_lady_progress = 2) jump noble_lady_3
-      if (== $data.noble_lady_progress = 3) jump noble_lady_4
-      if (== $data.noble_lady_progress = 4) jump noble_lady_5
-      if (== $data.noble_lady_progress = 5) jump noble_lady_6
-      if (== $data.noble_lady_progress = 6) jump noble_lady_7
-    "noble_lord":
-      if (== $data.noble_lord_progress = 0) jump noble_lord_1
-      if (== $data.noble_lord_progress = 1) jump noble_lord_2
-      if (== $data.noble_lord_progress = 2) jump noble_lord_3
-      if (== $data.noble_lord_progress = 3) jump noble_lord_4
-      if (== $data.noble_lord_progress = 4) jump noble_lord_5
-      if (== $data.noble_lord_progress = 5) jump noble_lord_6
-      if (== $data.noble_lord_progress = 6) jump noble_lord_7
+  "Afternoon comes. Who will you speak with?"
+  jump get_stage
+
 crisis_1:
+  "<CRISIS_1_PLACEHOLDER>"
   add data.time 1
   jump timekeeper
+
 crisis_2:
+  "<CRISIS_2_PLACEHOLDER>"
   add data.time 1
   jump timekeeper
+
 crisis_3:
+  "<CRISIS_3_PLACEHOLDER>"
   add data.time 1
   jump timekeeper
+
 crisis_4:
+  "<CRISIS_4_PLACEHOLDER>"
   add data.time 1
   jump timekeeper
+
 crisis_5:
+  "<CRISIS_5_PLACEHOLDER>"
   add data.time 1
   jump timekeeper
+
 crisis_6:
+  "<CRISIS_6_PLACEHOLDER>"
   add data.time 1
   jump timekeeper
+
 endgame:
-      if (== $data.total_suspicion >= 5) jump ending_discovered
-      if (== $data.civilian_eagre_influence >= 10) jump civilian_eagre_end
-      if (== $data.civilian_icon_influence >= 10) jump civilian_icon_end
-      if (== $data.merchant_bartender_influence >= 10) jump merchant_bartender_end
-      if (== $data.merchant_business_influence >= 10) jump merchant_business_end
-      if (== $data.military_hero_influence >= 10) jump military_hero_end
-      if (== $data.military_officer_influence >= 10) jump military_officer_end
-      if (== $data.noble_lady_influence >= 10) jump noble_lady_end
-      if (== $data.noble_lord_influence >= 10) jump noble_lord_end
-      jump ending_flop
+  if (>= $data.total_suspicion 5): 
+    jump ending_discovered
+  if (>= $data.civilian_eagre_influence 10): 
+    jump civilian_eagre_end
+  if (>= $data.civilian_icon_influence 10): 
+    jump civilian_icon_end
+  if (>= $data.merchant_bartender_influence 10): 
+    jump merchant_bartender_end
+  if (>= $data.merchant_business_influence 10): 
+    jump merchant_business_end
+  if (>= $data.military_hero_influence 10): 
+    jump military_hero_end
+  if (>= $data.military_officer_influence 10): 
+    jump military_officer_end
+  if (>= $data.noble_lady_influence 10): 
+    jump noble_lady_end
+  if (>= $data.noble_lord_influence 10): 
+    jump noble_lord_end
+  jump ending_flop
 
 ending_civilian_eagre:
-  add_stat time = time+1
+  "<ENDING_CIVILIAN_EAGRE_PLACEHOLDER"
+  add data.time 1
   jump timekeeper
 ending_civilian_icon:
-  add_stat time = time+1
+  "<ENDING_CIVILIAN_ICON_PLACEHOLDER>"
+  add data.time 1
   jump timekeeper
 ending_merchant_bartender:
-  add_stat time = time+1
+  "<ENDING_MERCHANT_BARTENDER_PLACEHOLDER>"
+  add data.time 1
   jump timekeeper
 ending_merchant_business:
-  add_stat time = time+1
+  "<ENDING_MERCHANT_BUSINESS_PLACEHOLDER>"
+  add data.time 1
   jump timekeeper
 ending_military_hero:
-  add_stat time = time+1
+  "<ENDING_MILITARY_HERO_PLACEHOLDER>"
+  add data.time 1
   jump timekeeper
 ending_military_officer:
-  add_stat time = time+1
+  "<ENDING_MILITARY_OFFICER_PLACEHOLDER>"
+  add data.time 1
   jump timekeeper
 ending_noble_lady:
-  add_stat time = time+1
+  "<ENDING_NOBLE_LADY_PLACEHOLDER>"
+  add data.time 1
   jump timekeeper
 ending_noble_lord:
-  add_stat time = time+1
+  "<ENDING_NOBLE_LORD_PLACEHOLDER>"
+  add data.time 1
   jump timekeeper
 ending_discovered:
-  add_stat time = time+1
+  "<ENDING_DISCOVERED_PLACEHOLDER>"
+  add data.time 1
   jump timekeeper
 ending_flop:
-  add_stat time = time+1
+  "<ENDING_FLOP_PLACEHOLDER>"
+  add data.time 1
   jump timekeeper
 civilian_eagre_1:
-  add_stat civilian_eagre_progress +1
+  "<CIVILIAN_EAGRE_1_PLACEHOLDER>"
+  add data.civilian_eagre_progress 1
   jump timekeeper
 civilian_eagre_2:
-  add_stat civilian_eagre_progress +1
+  "<CIVILIAN_EAGRE_2_PLACEHOLDER>"
+  add data.civilian_eagre_progress 1
   jump timekeeper
 civilian_eagre_3:
-  add_stat civilian_eagre_progress +1
+  "<CIVILIAN_EAGRE_3_PLACEHOLDER>"
+  add data.civilian_eagre_progress 1
   jump timekeeper
 civilian_eagre_4:
-  add_stat civilian_eagre_progress +1
+  "<CIVILIAN_EAGRE_4_PLACEHOLDER>"
+  add data.civilian_eagre_progress 1
   jump timekeeper
 civilian_eagre_5:
-  add_stat civilian_eagre_progress +1
+  "<CIVILIAN_EAGRE_5_PLACEHOLDER>"
+  add data.civilian_eagre_progress 1
   jump timekeeper
 civilian_eagre_6:
-  add_stat civilian_eagre_progress +1
+  "<CIVILIAN_EAGRE_6_PLACEHOLDER>"
+  add data.civilian_eagre_progress 1
   jump timekeeper
 civilian_eagre_7:
-  add_stat civilian_eagre_progress +1
+  "<CIVILIAN_EAGRE_7_PLACEHOLDER>"
+  add data.civilian_eagre_progress 1
   jump timekeeper
 civilian_eagre_end:
+  "<CIVILIAN_EAGRE_END_PLACEHOLDER>"
   jump timekeeper
 civilian_icon_1:
-  add_stat civilian_icon_progress +1
+  "<CIVILIAN_ICON_1_PLACEHOLDER>"
+  add data.civilian_icon_progress 1
   jump timekeeper
 civilian_icon_2:
-  add_stat civilian_icon_progress +1
+  "<CIVILIAN_ICON_2_PLACEHOLDER>"
+  add data.civilian_icon_progress 1
   jump timekeeper
 civilian_icon_3:
-  add_stat civilian_icon_progress +1
+  "<CIVILIAN_ICON_3_PLACEHOLDER>"
+  add data.civilian_icon_progress 1
   jump timekeeper
 civilian_icon_4:
-  add_stat civilian_icon_progress +1
+  "<CIVILIAN_ICON_4_PLACEHOLDER>"
+  add data.civilian_icon_progress 1
   jump timekeeper
 civilian_icon_5:
-  add_stat civilian_icon_progress +1
+  "<CIVILIAN_ICON_5_PLACEHOLDER>"
+  add data.civilian_icon_progress 1
   jump timekeeper
 civilian_icon_6:
-  add_stat civilian_icon_progress +1
+  "<CIVILIAN_ICON_6_PLACEHOLDER>"
+  add data.civilian_icon_progress 1
   jump timekeeper
 civilian_icon_7:
-  add_stat civilian_icon_progress +1
+  "<CIVILIAN_ICON_7_PLACEHOLDER>"
+  add data.civilian_icon_progress 1
   jump timekeeper
 civilian_icon_end:
+  "<CIVILIAN_ICON_END_PLACEHOLDER>"
   jump timekeeper
 merchant_bartender_1:
-  add_stat merchant_bartender_progress +1
+  "<MERCHANT_BARTENDER_1_PLACEHOLDER>"
+  add data.merchant_bartender_progress 1
   jump timekeeper
 merchant_bartender_2:
-  add_stat merchant_bartender_progress +1
+  "<MERCHANT_BARTENDER_2_PLACEHOLDER>"
+  add data.merchant_bartender_progress 1
   jump timekeeper
 merchant_bartender_3:
-  add_stat merchant_bartender_progress +1
+  "<MERCHANT_BARTENDER_3_PLACEHOLDER>"
+  add data.merchant_bartender_progress 1
   jump timekeeper
 merchant_bartender_4:
-  add_stat merchant_bartender_progress +1
+  "<MERCHANT_BARTENDER_4_PLACEHOLDER>"
+  add data.merchant_bartender_progress 1
   jump timekeeper
 merchant_bartender_5:
-  add_stat merchant_bartender_progress +1
+  "<MERCHANT_BARTENDER_5_PLACEHOLDER>"
+  add data.merchant_bartender_progress 1
   jump timekeeper
 merchant_bartender_6:
-  add_stat merchant_bartender_progress +1
+  "<MERCHANT_BARTENDER_6_PLACEHOLDER>"
+  add data.merchant_bartender_progress 1
   jump timekeeper
 merchant_bartender_7:
-  add_stat merchant_bartender_progress +1
+  "<MERCHANT_BARTENDER_7_PLACEHOLDER>"
+  add data.merchant_bartender_progress 1
   jump timekeeper
 merchant_bartender_end:
+  "<MERCHANT_BARTENDER_END_PLACEHOLDER>"
   jump timekeeper
 merchant_business_1:
-  add_stat merchant_business_progress +1
+  "<MERCHANT_BUSINESS_1_PLACEHOLDER>"
+  add data.merchant_business_progress 1
   jump timekeeper
 merchant_business_2:
-  add_stat merchant_business_progress +1
+  "<MERCHANT_BUSINESS_2_PLACEHOLDER>"
+  add data.merchant_business_progress 1
   jump timekeeper
 merchant_business_3:
-  add_stat merchant_business_progress +1
+  "<MERCHANT_BUSINESS_3_PLACEHOLDER>"
+  add data.merchant_business_progress 1
   jump timekeeper
 merchant_business_4:
-  add_stat merchant_business_progress +1
+  "<MERCHANT_BUSINESS_4_PLACEHOLDER>"
+  add data.merchant_business_progress 1
   jump timekeeper
 merchant_business_5:
-  add_stat merchant_business_progress +1
+  "<MERCHANT_BUSINESS_5_PLACEHOLDER>"
+  add data.merchant_business_progress 1
   jump timekeeper
 merchant_business_6:
-  add_stat merchant_business_progress +1
+  "<MERCHANT_BUSINESS_6_PLACEHOLDER>"
+  add data.merchant_business_progress 1
   jump timekeeper
 merchant_business_7:
-  add_stat merchant_business_progress +1
+  "<MERCHANT_BUSINESS_7_PLACEHOLDER>"
+  add data.merchant_business_progress 1
   jump timekeeper
 merchant_business_end:
+  "<MERCHANT_BUSINESS_END_PLACEHOLDER>"
   jump timekeeper
 military_hero_1:
-  add_stat military_hero_progress +1
+  "<MILITARY_HERO_1_PLACEHOLDER>"
+  add data.military_hero_progress 1
   jump timekeeper
 military_hero_2:
-  add_stat military_hero_progress +1
+  "<MILITARY_HERO_2_PLACEHOLDER>"
+  add data.military_hero_progress 1
   jump timekeeper
 military_hero_3:
-  add_stat military_hero_progress +1
+  "<MILITARY_HERO_3_PLACEHOLDER>"
+  add data.military_hero_progress 1
   jump timekeeper
 military_hero_4:
-  add_stat military_hero_progress +1
+  "<MILITARY_HERO_4_PLACEHOLDER>"
+  add data.military_hero_progress 1
   jump timekeeper
 military_hero_5:
-  add_stat military_hero_progress +1
+  "<MILITARY_HERO_5_PLACEHOLDER>"
+  add data.military_hero_progress 1
   jump timekeeper
 military_hero_6:
-  add_stat military_hero_progress +1
+  "<MILITARY_HERO_6_PLACEHOLDER>"
+  add data.military_hero_progress 1
   jump timekeeper
-military_hero_7:  add_stat military_hero_progress +1
+military_hero_7:
+  "<MILITARY_HERO_7_PLACEHOLDER>"
+  add data.military_hero_progress 1
   jump timekeeper
 military_hero_end:
+  "<MILITARY_HERO_END_PLACEHOLDER>"
   jump timekeeper
 military_officer_1:
-  add_stat military_officer_progress +1
+  "<MILITARY_OFFICER_1_PLACEHOLDER>"
+  add data.military_officer_progress 1
   jump timekeeper
 military_officer_2:
-  add_stat military_officer_progress +1
+  "<MILITARY_OFFICER_2_PLACEHOLDER>"
+  add data.military_officer_progress 1
   jump timekeeper
 military_officer_3:
-  add_stat military_officer_progress +1
+  "<MILITARY_OFFICER_3_PLACEHOLDER>"
+  add data.military_officer_progress 1
   jump timekeeper
 military_officer_4:
-  add_stat military_officer_progress +1
+  "<MILITARY_OFFICER_4_PLACEHOLDER>"
+  add data.military_officer_progress 1
   jump timekeeper
 military_officer_5:
-  add_stat military_officer_progress +1
+  "<MILITARY_OFFICER_5_PLACEHOLDER>"
+  add data.military_officer_progress 1
   jump timekeeper
 military_officer_6:
-  add_stat military_officer_progress +1
+  "<MILITARY_OFFICER_6_PLACEHOLDER>"
+  add data.military_officer_progress 1
   jump timekeeper
 military_officer_7:
-  add_stat military_officer_progress +1
+  "<MILITARY_OFFICER_7_PLACEHOLDER>"
+  add data.military_officer_progress 1
   jump timekeeper
 military_officer_end:
+  "<MILITARY_OFFICER_END_PLACEHOLDER>"
   jump timekeeper
 noble_lady_1:
-  add_stat noble_lady_progress +1
+  "<NOBLE_LADY_1_PLACEHOLDER>"
+  add data.noble_lady_progress 1
   jump timekeeper
 noble_lady_2:
-  add_stat noble_lady_progress +1
+  "<NOBLE_LADY_2_PLACEHOLDER>"
+  add data.noble_lady_progress 1
   jump timekeeper
 noble_lady_3:
-  add_stat noble_lady_progress +1
+  "<NOBLE_LADY_3_PLACEHOLDER>"
+  add data.noble_lady_progress 1
   jump timekeeper
 noble_lady_4:
-  add_stat noble_lady_progress +1
+  "<NOBLE_LADY_4_PLACEHOLDER>"
+  add data.noble_lady_progress 1
   jump timekeeper
 noble_lady_5:
-  add_stat noble_lady_progress +1
+  "<NOBLE_LADY_5_PLACEHOLDER>"
+  add data.noble_lady_progress 1
   jump timekeeper
 noble_lady_6:
-  add_stat noble_lady_progress +1
+  "<NOBLE_LADY_6_PLACEHOLDER>"
+  add data.noble_lady_progress 1
   jump timekeeper
 noble_lady_7:
-  add_stat noble_lady_progress +1
+  "<NOBLE_LADY_7_PLACEHOLDER>"
+  add data.noble_lady_progress 1
   jump timekeeper
 noble_lady_end:
+  "<NOBLE_LADY_END_PLACEHOLDER>"
   jump timekeeper
 noble_lord_1:
-  add_stat noble_lord_progress +1
+  "<NOBLE_LORD_1_PLACEHOLDER>"
+  add data.noble_lord_progress 1
   jump timekeeper
 noble_lord_2:
-  add_stat noble_lord_progress +1
+  "<NOBLE_LORD_2_PLACEHOLDER>"
+  add data.noble_lord_progress 1
   jump timekeeper
 noble_lord_3:
-  add_stat noble_lord_progress +1
+  "<NOBLE_LORD_3_PLACEHOLDER>"
+  add data.noble_lord_progress 1
   jump timekeeper
 noble_lord_4:
-  add_stat noble_lord_progress +1
+  "<NOBLE_LORD_4_PLACEHOLDER>"
+  add data.noble_lord_progress 1
   jump timekeeper
 noble_lord_5:
-  add_stat noble_lord_progress +1
+  "<NOBLE_LORD_5_PLACEHOLDER>"
+  add data.noble_lord_progress 1
   jump timekeeper
 noble_lord_6:
-  add_stat noble_lord_progress +1
+  "<NOBLE_LORD_6_PLACEHOLDER>"
+  add data.noble_lord_progress 1
   jump timekeeper
 noble_lord_7:
-  add_stat noble_lord_progress +1
+  "<NOBLE_LORD_7_PLACEHOLDER>"
+  add data.noble_lord_progress 1
   jump timekeeper
 noble_lord_end:
+  "<NOBLE_LORD_END_PLACEHOLDER>"
   jump timekeeper
-
-
-
-
-
-
-
-
-
-
-
 credits:
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  // set the players name based on the result of a function
-  //set data.player.name (run ask_player_name)
-  //set_screen game 0 slide-top 1000
-  //"(The players name is %{data.player.name})"
-
-  // variable names are arbitrary. you can add as much
-  // bullshit to the `data` object as you like. think
-  // data.faction1.rep
-  // data.faction1.influence
-  // data.faction2.rep
-  // data.faction2.influence
-  // data.faction3.rep
-  // data.faction3.influence
-
-  // you can see this in action here, where the variable
-  // being used is deeply nested
-  //set data.fdsafdsafdsafd.fdsafdsaf.fdsafdsaf.fdsfdf.fdsfd (run ask_player_name)
-  //set_screen game 0 slide-top 1000
-  //"(The players name is %{data.fdsafdsafdsafd.fdsafdsaf.fdsafdsaf.fdsfdf.fdsfd})"
-
-//ask_player_name:
-  //var playerName (text_field "What's your name?") 
-  //return $playerName 
+  "<PLACEHOLDER FOR CREDITS>"
