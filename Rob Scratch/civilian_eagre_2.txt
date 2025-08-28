@@ -1,1 +1,12 @@
-When there is no quorum
+You find Gloria sitting cross-legged on the floor in a corner of the chamber, typing up a storm on her pocket terminal.
+talk eagre_organiser "Ah, hey, hi-it's you. Forgive me, I'm a little preoccupied after last night's events. Lots of...spirited discussions going back and forth after that."
+talk Facilitator "I can imagine-their approach doesn't really match up with yours, huh?"
+talk eagre_organiser "No, I just wish people like that could see the bigger picture. If we strike out alone like that we can get...snuffed out..."
+talk Facilitator "You sound like you are speaking from experience?"
+talk eagre_organiser "Yeah-my brother got jailed last year and...I don't even know where my sister went."
+talk Facilitator "That's awful-I'm sure they made a difference though."
+talk eagre_organiser "Sure, but at what cost? If we'd moved together-if we had reached a consensus-we could have done so much more..."
+She looks forlorn for just a moment, fiddling with a paperclip, before finding her resolve.
+talk eagre_organiser "Anyway, back to work-huh? I have my duties and you have yours."
+You catch a glimpse at her notifications feed-just a continuous stream of messages and pings.
+You leave her to it.

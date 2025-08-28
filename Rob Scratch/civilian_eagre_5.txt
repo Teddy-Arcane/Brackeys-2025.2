@@ -1,1 +1,14 @@
-Harmony rings
+talk eagre_organiser "Lets go for a run!"
+The requrest catches you off-guard.
+talk Facilitator "A run, where?"
+talk eagre_organiser "Just in a loop around the Ward, you need to get out of these chambers and see the city more! That and I have 20 minutes spare."
+And like that you're being dragged by the hand out of the chambers and onto the street, her bag of documents flopping awkwardly along behind her.
+You whip past old haunts like the Cinema-now Cafe Diamente, where you saw your first scary movie.
+The Museum Of The Storm-full of dust pilot paraphenalia and old dust-ships from the early days of the settlement.
+The market, where vendors try to flog carts of fruit that used to pass for fresh before you saw a real fruit tree on Calypso IV.
+The Engineer's Guildhall-windows barred and strange lights emenating from within.
+You didn't think you'd get to see any of this again, certainly not so soon.
+Something was clearly wrong with you being assigned here but you let yourself enjoy the nostalgia for a while.
+Gloria comes to a halt outside a tenement building and pushes her hair out of her face.
+talk eagre_organiser "Right, that's my stop. Wasn't that good? The air's not so bad out here, eh?"
+You take the long way back. It's good to be home.

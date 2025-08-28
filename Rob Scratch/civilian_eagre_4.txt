@@ -1,1 +1,21 @@
-Needlepoint politics
+Gloria's comandeered a table in the corner of a nearby cafe, documents everywhere-but as you approach she shuffles most of them back into her bag to make room for you.
+talk Facilitator "Whole lot of paper."
+talk eagre_organiser "Apparently the only way to be sure down here is wet ink. Honestly, it's a complete pain in the neck but that's how the board voted and I didn't have the fight that day to stop them."
+talk Facilitator "It does seem a little...backwards."
+talk eagre_organiser "It is, it is, but that's just how it is."
+She pulls another sheaf of paper out from underneath her mug before taking a sip.
+talk eagre_organiser "Anyway, what brings you to my office today?"
+talk Facilitator "I need to gather more information on your organisation, the Sclera Miner's Liberation Front. The Corroborance does allow for group rule but they insist on a figurehead for diplomatic reasons. Tell me more about the Front and their goals."
+talk eagre_organiser "Ah, of course. We were founded 8 years back and it's really exploded since then. Most of the populace here in Credence City are either miners or dust pilots, and we represent both groups as well as non-guild engineers, and just last week we absorbed the dockworkers union. All in all we directly represent about 67.4% of all workers based on Sclera.
+talk Facilitator "Impressive."
+talk eagre_organiser "Yeah, and exhausting. Actually, I hate to ask, but you could do me a massive favour. Would you mind looking in the official records for a Eustace Gyr-Varve? He holds a seat on the board, but well-"
+ choice:
+  talk eagre_organiser "We think he's...dead, but he's still alive on the public record."
+   "Of course, yes. That shouldn't be a problem.":
+    add data.eagre_organiser_influence 1
+    add data.suspicion 1
+    "Awesome, thank you so much. With him off the board we'll be able to break a tie and finally start moving on enrolling a dockworker representative."
+   "I don't think that would be appropriate.":
+    "Oh. That's a real shame. I was hoping you could help..."
+Gloria's terminal rings and she mouths "Got to take this, sorry" before picking up the call.
+   

@@ -1,1 +1,5 @@
-Vice-Chair, Eternal
+Gloria doesn't have any of her usual paraphanelia with her today. You catch up to her in a street outside the chamber.
+talk Facilitator "Travelling light today?"
+talk eagre_organiser "Haha, yeah. I can let things build up a bit for today. This is important, you know? Got to be focussed. Whatever happens next, we need to be ready to move as one."
+She stops walking and looks up, to the stars above the sinkhole city.
+talk eagre_organiser "I know my sister's up there somewhere. Gotta make sure things are good and organised when she gets back home. You know?"

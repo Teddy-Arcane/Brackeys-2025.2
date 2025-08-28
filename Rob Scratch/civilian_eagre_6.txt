@@ -1,1 +1,17 @@
-Old business
+talk eagre_organiser "There you are, Facilitator!"
+Gloria ambushes you from out of nowhere as you walk between meetings, bleary-eyed and clearly upset.
+talk eagre_organiser "Can we talk somewhere, in private?"
+talk Facilitator "Sure, I suppose-"
+She drags you by the collar into a side-room.
+talk eagre_organiser "You remember I told you my sister was missing, right? Well someone just told me she got enlisted in the Corroborance! She's a facilitator like you, frozen in a ship somewhere out in the middle of space somewhere!"
+talk Facilitator "There are worse fated I assur-"
+talk eagre_organiser "You don't understand, I thought she was dead and now I find out she's alive, I've got to...to try!"
+talk Facilitator "Try what, your sister is safe and once her duty is done she'll be free."
+talk eagre_organiser "I know but...look, this is stupid and I'm asking too much, but you try and get this message to her? Her name's Joyce. Just let her know we're still here for her."
+ choice: talk eagre_organiser "Could you do that for me?"
+   "I can try."
+    "Thank you, thank you so much!"
+	add data.eagre_organiser_influence 1
+   "I can't do that, we aren't supposed to have any contact with home..."
+    "Coward, then what are you doing here?!"
+	add data.suspicion 1
