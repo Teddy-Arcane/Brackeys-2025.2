@@ -1,1 +1,11 @@
-Lessons learned
+Isaiah is laughing with a group of on-duty troopers. When he sees you he claps one of them on the back and leaves with a lax salute.
+talk military_hero "Facilitator! So good to see you. How can I help?"
+This part of the process is always awkward. Best to get it over with.
+talk facilitator "As part of my duties am to verify your medical history, that is, the health of all candidates..."
+talk military_hero "Is this about my eye? I can assure you I'm perfectly capable as I am, I told the review board that already."
+talk facilitator "You would reject a prosthetic?"
+talk military_hero "I would, this wound is important to me. My troops need to know I understand the cost of battle."
+talk facilitator "I understand. Please know we may need to revisit this if you are selected."
+Isaiah stares you down.
+talk facilitator "Thank you for your time."
+

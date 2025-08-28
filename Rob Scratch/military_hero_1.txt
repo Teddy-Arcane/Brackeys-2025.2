@@ -1,2 +1,18 @@
-[Description of the character's appearance and pose]
-Stories of the leader
+Propped up against a doorframe you spot an imposing individual, scar and eyepatch and humming photoblade close at hand-every bit the experienced soldier.
+They turn to give you a deferential little bow as you approach.
+talk military_hero "The Facilitator, I presume? Captain Isaiah Shackle at your service."
+You've heard incredible stories of Shackle, "The Violet Edge"-their heroic exploits often came up in your nostalgic skimming of the newsfeeds.
+They were something of a champion of the people of Sclera.
+	Choice:
+	say "Ah, you were at Bastillan Falls I believe? The dossier mentioned you."
+	say "I'm honoured, you're a local legend!"
+		+1 Suspicion
+	say "Charmed, I'm sure."
+They shift back into their more relaxed stance, pleasantries dealt with.
+talk military_hero "I'm not sure how familiar you are with our departed leader. They, Berwyn, that is, they were good people despite it all. I worry Sclera is less safe today than it was a week ago."
+talk facilitator "You believe Sclera is under some threat her armed forces cannot handle?"
+talk military_hero "There's something off, things are too quiet in the system. I've been up late at night looking over scans but I can't nail it down..."
+talk facilitator "I'd suspect traffic is light on account of Corroborance vessels such as my own in the area. We tend to leave quite a wake."
+talk military_hero "I hope that's all it is." They seem genuinely concerned.
+talk military_hero "A pleasure to meet you Facilitator, but I have synaptic therapy to attend."
+They snap to attention and flash you a cheeky grin with their salute before turning on heel and leaving the chamber.

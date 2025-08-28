@@ -15,15 +15,7 @@ main:
   add_stat military_officer_influence 0
   add_stat noble_lady_influence 0
   add_stat noble_lord_influence 0
-  add_stat civilian_eagre_suspicion 0
-  add_stat civilian_icon_suspicion 0
-  add_stat merchant_bartender_suspicion 0
-  add_stat merchant_business_suspicion 0
-  add_stat military_hero_suspicion 0
-  add_stat military_officer_suspicion 0
-  add_stat noble_lady_suspicion 0
-  add_stat noble_lord_suspicion 0
-//  add_stat total_suspicion (civilian_eagre_suspicion + civilian_icon_suspicion + merchant_bartender_suspicion + merchant_business_suspicion + military_hero_suspicion + military_officer_suspicion + noble_lady_suspicion + noble_lord_suspicion)
+  add_stat suspicion 0
   add_stat time 0
 
   jump timekeeper

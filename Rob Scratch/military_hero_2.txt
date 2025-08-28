@@ -1,1 +1,19 @@
-Reputation gained
+You find Isaiah commandeering one of the chamber desks, poring over an array of monitors, coffee in hand.
+talk military_hero "Ah, Facilitator, take a seat."
+You pull one of the chairs out from another desk. It makes a terrible echoing screech on the stone floor. Mortifying, but Isaiah seems unphased.
+talk military_hero "I hope last night's demonstrations weren't too disruptive to your sleep."
+talk facilitator "I am required to sleep within the pod unfortunately.
+talk military_hero "Ah, a mixed blessing. Those things always gave me a sore neck when I was on deployment. Regardless, you wanted to speak with me?"
+talk facilitator "You are one of the identified candidates, I am bidden to learn as much as I can. I was hoping we could discuss your service history?"
+They visibly wince.
+talk military_hero "The curse of notoriety, I suppose. Anything in particular? The official record is mostly right, if a little overblown"
+	Choice:
+	You were enlisted from an orbital outpost?:
+	"Yeah, my folks were drifters with some bad debts chasing them, my service paid to get them free of that and settled down on Credence."
+	Choice:
+	You fought in the Bastillan campaign?:
+	"Wretched place, wretched fight, wretched memories. I did my duty that day and no more. I'd trade all this fame for a single one of my friends to have made it home."
+talk facilitator "You routed 3 regiments of Calladian Mercenaries with only your sword that day. I'd say that's above and beyond."
+They shrug off the compliment and return to their monitors.
+talk military_hero "If that will be all Facilitator, I'd rather not wax nostalgic today."
+You excuse yourself. The chair makes a terrible squeal again.

@@ -1,1 +1,23 @@
-Pained memories
+Commander Isaiah Shackle, The Violet Blade, Hero Of Sclera, is sitting on the chamber steps eating out of a takeout box. The smell is instantly nostalgic.
+Choice:
+		"Oh, I love Pickled Squash Noodles!":
+		They raise an eyebrow.
+		talk military_hero "I thought this was just a local thing?" +1 Suspicion
+		"Smells...interesting...":
+		talk military_hero "Mmmfh, yeah it took me a while but I've really come around to these squash noodles. I think they pickle them?"
+He sets the box aside and gestures with his chopsticks.
+talk military_hero "I assume you want to ask me about something?"
+talk facilitator "I was hoping to learn more about the Scleran military forces. You must all be based out of Credence City?"
+talk military_hero "Yeah, we're a pretty tight little crew, only a couple hundred of us. In theory the storms and defense cannons mean we're not needed that often."
+talk military_hero "Good people but I worry they're mostly just in it for their pay packet and to stay out of the mines."
+talk facilitator "You think they're sufficient to protect the populace? I know Officer Peril is petitioning for an increased garrison"
+They avert their gaze when Peril is mentioned.  Interesting.
+talk military_hero "They certainly have their...ideas. Their ambitions trouble me."
+Choice:
+	talk military_hero "...could you deliver this letter to the Executor for me?"
+		"Of course, Commander.":
+		+ suspicion + influence
+			talk military_hero "Thank you, I know it's improper..."
+		"I don't think that would be appropriate.":
+			talk military_hero "Ah, naturally. I'm sorry to trouble you with this."
+talk military_hero "Anywya, I should get back to my work. Thank you for you time, Facilitator."
