@@ -13,11 +13,11 @@ talk military_hero "Anyway, I called you here to ask you something"
 They place a box on the table.
 Choice:
 	talk military_hero "Could you accept this gift? I really feel I can trust you. Don't open it until you're offworld."
-		"I couldn't..possibly accept this.":
-		+1 Suspicion
+		talk facilitator "I couldn't..possibly accept this.":
+		add data.suspicion 1
 		talk military_hero "That's a real shame, but rules are rules I suppose."
-		+1 influence
-		"...of course, thank you."
+		add data.military_hero_influence 1
+		talk facilitator "...of course, thank you."
 They stand up from the table.
 talk military_hero "We've got a rehearsal for the Leadership ceremony in 20 minutes, I'll see you there."
 	

@@ -12,7 +12,7 @@ It seems he also spotted you as soon as you came in.
 	Choice:
 		talk merchant_bartender "You'll have a drink, of course?"
 		"Do you have Babylon Soda?":
-		+ suspicion
+		add data.suspicion 1
 		talk merchant_bartender "Ah, a local drink! Of course, let me fix that for you."
 		"I'm not permitted to partake in alchohol.":
 		talk merchant_bartender "No problem at all, you should try a Babylon Soda! A real local treat if I say so myself."

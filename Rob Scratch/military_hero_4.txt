@@ -1,6 +1,6 @@
 Isaiah is back to looking at his monitors covered in star charts, head in his hands.
 talk facilitator "Does the lack of traffic still concern you?"
-talk military_hero "It does-those raisers and your presence aren't enough to explain this. Something's out there still, got the Independents spooked."
+talk military_hero "It does-those raiders and your presence aren't enough to explain this. Something's out there still, got the Independents spooked."
 talk facilitator "Nothing from your scouts?"
 talk military_hero "Nothing is right, they're not reporting anything out of the ordinary. Just couple of unlicensed vessels but they were all mundane smiggling runs."
 He leans back in his chair and yawns.
