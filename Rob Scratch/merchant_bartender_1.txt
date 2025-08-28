@@ -1,2 +1,23 @@
-[Description of the character's appearance and pose]
-Funerals are good business
+Karl Sera-Gabbro is listed in your file as a "proprietor". Looking further into the dossier you quickly realise this is only a fragment of the truth.
+Mr Sera-Gabbro clearly has an outsized influence on all things vice on Sclera-be that drink, drugs, exotic meats, weaponry...
+You're surprised to see him on your list, but by all records and accounts he's...affable, well liked, and connected.
+Apparently he was presiding over his newest bar, well, it was a cinema when you were last here.
+You head out of the chamber and down some smokey tunnel-alleys to the other side of the Ward.
+You allow yourself the little thrill of already knowing the way, surely nobody could notice that.
+The outside of the building looks much the same as you remembered, save for the pulsating projected sign declaring that this was now "Cafe Diamante".
+You let yourself in and are instantly struck by how light-touch the remodelling must have been. Still dingy, slightly smokey, oddly soft carpet. A pang of nostalgia.
+Walking over to the bar, you can immediately spot Karl behind the bar.
+talk merchant_bartender "Ahaha, you must be the Facilitator, take a seat, please, sit!"
+It seems he also spotted you as soon as you came in.
+	Choice:
+		talk merchant_bartender "You'll have a drink, of course?"
+		"Do you have Babylon Soda?":
+		add data.suspicion 1
+		talk merchant_bartender "Ah, a local drink! Of course, let me fix that for you."
+		"I'm not permitted to partake in alchohol.":
+		talk merchant_bartender "No problem at all, you should try a Babylon Soda! A real local treat if I say so myself."
+The familiar tang of the canteloupe soda immediately transports you back to your youth, playing tag in the service tunnels not far from here.
+talk merchant_bartender "Nothing like it, eh? Huhuheh!"
+talk merchant_bartender "I hope you'll come see me over here, I can't really make it over to the chambers too often."
+
+	

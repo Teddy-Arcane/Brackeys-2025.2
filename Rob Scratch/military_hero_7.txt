@@ -1,1 +1,13 @@
-Looking forward
+You find Isaiah sitting on their bunk in the barracks, running their fingers over a twisted lump of shrapnel.
+talk military_hero "I had a partner that day, at Bastillan Falls, you know? Clara Jer-Dacite."
+talk military_hero "Excellent soldier, put her all into it-great shot, good sword arm, savvy-"
+talk military_hero "Maybe too savvy for her own good, I don't know. We were fighting back to back for days, I trusted her with my life."
+He stares into the middle distance for a moment.
+talk military_hero "...I guess she didn't trust me as far with hers in the end. There was an explosion, kicked up a bunch of dust. She tried to make a run for it in the chaos."
+talk military_hero "Stray bolt caught her in the side and she went down just like that."
+talk military_hero "For a long time, I hated her for that. Real searing gut hate, you know? For faltering in her duty in that moment. For losing her trust in me."
+talk military_hero "These past few years I think I've begun to understand it better."
+talk military_hero "It should have never been on us to hold that position for so long. If that's what it takes to make someone like me a hero, I don't know..."
+talk military_hero "I'm not sure it was worth it."
+They put down the shrapnel and pull a cigarette out from behind their ear.
+talk military_hero "You can pass that along to the Executor, I guess. Thanks for listening to an old dog's lament."
