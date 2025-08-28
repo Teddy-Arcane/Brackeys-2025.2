@@ -34,9 +34,12 @@ files:
   # `sound play <soundname>`.
   # make sure the right faction drone is playing or this may sound
   # dissonant as fuck!
-  motif_intrigue:
+  motif_intrigue_c:
     loop: false
-    src: "audio/motifs/Intrigue.ogg"
+    src: "audio/misc/Intrigue_C.ogg"
+  motif_intrigue_e:
+    loop: false
+    src: "audio/misc/Intrigue_E.ogg"
   motif_executor:
     loop: false
     src: "audio/motifs/Executor.ogg"
