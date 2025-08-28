@@ -1,2 +1,6 @@
-[Description of the character's appearance and pose]
-False friends, getting on your side
+An imposing figure sweeps across the room to meet you, a well-practiced smile on her face.
+talk scheming_lady "Ah, a pleasure to make your acquintance! Cerys D'Linear, Scion of the House D'Linear and daughter of the deceased Berwyn D'Linear."
+talk facilitator "I'm sorry for your loss, Lady Cerys."
+She flinches, but recovers.
+talk scheming_lady "Yes, well-no point in dwelling in the past now, is there? We need to look forward to the future and do whatever is best for the people of Planet Sclera."
+
