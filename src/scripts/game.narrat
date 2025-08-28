@@ -1,9 +1,14 @@
 main:
+
+  play music civilian
+
   "Hello world"
   // set the players name based on the result of a function
   set data.player.name (run ask_player_name)
   set_screen game 0 slide-top 1000
   "(The players name is %{data.player.name})"
+
+  play sound motif_reluctant_icon
 
   // variable names are arbitrary. you can add as much
   // bullshit to the `data` object as you like. think

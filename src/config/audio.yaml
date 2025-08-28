@@ -64,10 +64,18 @@ files:
   motif_eager_organizer:
     loop: false
     src: "audio/motifs/EagerOrganizer.ogg"
+  # misc shit
+  ui-click:
+    loop: false
+    src: audio/misc/click.wav
+    volume: 0.5
 options:
   defaultMusic: menu_music
   volume: 0.5
   musicFadeInTime: 0.5
   musicFadeInDelay: 0.5
   musicFadeOutTime: 0.5
-audioTriggers: {}
+audioTriggers:
+  onButtonClicked: ui-click
+  onPressStart: ui-click
+  onPlayerAnswered: ui-click
