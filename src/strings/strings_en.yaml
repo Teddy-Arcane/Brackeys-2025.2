@@ -126,7 +126,7 @@ translation:
     game:
       title: Narrat Default Game
     engine:
-      splash_text: Made with Narrat
+      splash_text: Made with <3 by Arcane Rituals
     errors:
       no_autosave_found: No autosave found
       no_free_slot_found: No free slot found
