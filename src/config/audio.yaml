@@ -25,7 +25,7 @@ files:
     src: "audio/drones/Civilians.ogg"
   end_pos:
     loop: true
-    src: "audio/drones/EndPos.ogg"
+    src: "audio/Navidson.ogg"
   end_neg:
     loop: true
     src: "audio/drones/EndNeg.ogg"
