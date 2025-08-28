@@ -1071,7 +1071,6 @@ crisis_6:
 endgame:
       If (total_suspicion >= 5) jump ending_discovered
       If (civilian_eagre_influence >= 10) jump civilian_eagre_end
-      If (civilian_eagre_influence >= 10) jump civilian_eagre_end
       If (civilian_icon_influence >= 10) jump civilian_icon_end
       If (merchant_bartender_influence >= 10) jump merchant_bartender_end
       If (merchant_business_influence >= 10) jump merchant_business_end
