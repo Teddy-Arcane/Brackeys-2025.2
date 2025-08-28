@@ -1,1 +1,14 @@
-I have a favour to ask
+talk merchant_bartender "I have...another favour to ask."
+Karl is visibly sweating when he ushers you into a different back-room at Cafe Diamante.
+talk merchant_bartender "Here, take a bottle of this-great stuff.
+He pushes a dark green bottle of...something into your arms.
+talk merchant_bartender "I need you to make sure there's an empty seat at the succession ceremony dinner, as close to Cerys D'Linear as possible. 
+Choice:
+	talk merchant_bartender "I know you can do that for me, you have the authority."
+	"I'll see what I can do.":
+	talk merchant_bartender "Thank you, thank you so very much. You won't regret it."
+	add data.merchant_bartender_influence 1
+	"I can't do that for you...":
+	talk merchant_bartender "You should be careful, you know...it's much better to be cooperative. It's just good business."
+	add data.suspicion 1
+talk merchant_bartender "Now get out of here! You got important work to do as a totally unbiased Facilitator, don't you?"

@@ -1,1 +1,17 @@
-I can get you what you need
+You spot Karl amidst a group of other local merchants and business owners at the chamber.  Seeing you, he excuses himself.
+talk merchant_bartender "Walk with me, Facilitator. I think we have some matters to discuss."
+He leads you deep into the administrative corridors of the chamber, where rows of offices lay empty.
+talk merchant_bartender "So I've been thinking, and that's a dangerous thing. You have a whole lot of influence from your position, right?"
+You manage a feeble little nod.
+talk merchant_bartender "Of course you do, so here's the thing. You're gonna pass see to it that on the ceremony day there's no mining-right? A full cease of production.
+choice:
+	talk merchant_bartender "It would be real convenient for me if those tunnels were empty that day."
+	"Of course, yes-I can...I can make that happen.":
+	add data.merchant_bartender_influence 1
+	talk merchant_bartender "Good. That's good."
+	"I can't do that-I'm sorry.":
+	add data.suspicion 1
+	talk merchant_bartender "That's a terrible shame, if I'm being honest with you, Facilitator."
+Their demeanour shifts as they roll their shoulders. 
+talk merchant_bartender "Anyways, I'll be seeing you around. Swing on by Cafe Diamante some time."
+	

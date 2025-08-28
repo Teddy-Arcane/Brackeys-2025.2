@@ -1,1 +1,8 @@
-The merits of trade
+talk merchant_bartender "You know, I was gonna be an actor, you yeah? Big star, tour the galaxy sort of thing."
+talk merchant_bartender "Really thought I had a chance, folks gave me every opportunity a kid from Credence could have."
+talk merchant_bartender "Blockade comes in, they can't get inventory, and I gotta start putting on a different face, blag my way past checkpoints and the like."
+talk merchant_bartender "Sometimes I wonder what that other Karl would have been like. I imagine he'da been a real prick..."
+He pulls a bottle from below the bar.
+talk merchant_bartender "I ain't going nowhere, but if I can give these people a taste of something better-"
+He pops the cork and pours out two glasses of a glittering purple syrup.
+talk merchant_bartender "-damn right I'm gonna do it."
