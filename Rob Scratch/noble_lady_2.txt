@@ -1,1 +1,15 @@
-Of course the lord is the one for the job
+The D'Linear compound sits a few streets over from the chamber, ivy coating the serious outer walls.
+As you approach the gatehouse, you make eye-contact with one of their mechanised gargoyles perched on the ramparts.
+You remembering these terrifying you as a child, but now they just seem a bit tacky. It grinds it's granite neck to stare you down, dim orange eyes flickering to life.
+An attendant leads you to the house through the surrounding gardens-you'd heard they had a hedge maze but never believed it...
+Cerys is sitting under a parasol, drinking some green smoothie concoction and reading something on her terminal.
+talk scheming_lady "Ah, Facilitator, so glad you could join me."
+talk facilitator "I couldn't turn down such an offer, Lady Cerys. It's nice to see some real plants."
+talk scheming_lady "Yes, this garden isn't quite to my tastes but I cannot deny it's a pleasant reprieve. Anyway, to business."
+She shotguns the remainder of her green drink with a discomforting "Glorp".
+talk facilitator "Yes, of course. Now, as a member of House D'Linear you are of course included as a potential candidate for leadership in a scenario like this, along with-"
+talk scheming_lady "my dear brother Alun, yes, naturally. I fear he's not really leadership material, you know?"
+talk facilitator "Oh, and why is that?"
+talk scheming_lady "He lacks vision, I really do think he would just settle for maintaining the status quo Father established."
+talk facilitator "And you have greater plans?"
+talk scheming_lady "Oh yes, very much so. Certainly no more of that brawling business from last night."
