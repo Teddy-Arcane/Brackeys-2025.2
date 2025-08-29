@@ -1,1 +1,9 @@
-Travelling circus arrives
+This evening one of the functionaries informs you that some entertainment has been arranged by the Merchants Guild.
+You travel with a group of other visiting dignitaries and diplomats in a shuttle to Sclera's stadium, slightly shabby.
+You take your seat in the box, and the show begins.
+The master of ceremonies walks out onto the field, their image holographically mirrored into the sky above.
+A classical circus complete with tightrope walking, fire eating, and general clowning unfolds.
+You spend so long in stasis, it's difficult to keep track of trends, supposedly this is in vogue at the moment.  
+[The Merchant Faction Gains Influence]
+add_stat merchant_bartender_influence 1
+add_stat merchant_business_influence 1

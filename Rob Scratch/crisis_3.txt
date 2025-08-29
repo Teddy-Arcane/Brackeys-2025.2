@@ -1,1 +1,8 @@
-Raiders!
+An explosion crackles and echoes through the sky above the chamber.
+People shriek and duck for cover under their desks.
+Over the PA, the voice of Isaiah Shackle booms-
+talk military_hero "Raiders have attempted to breach city airspace. Do not be alarmed and seek shelter immediately. Retaliatory fire is imminent."
+You return to your pod just in time, as the ground shakes and the Credence City batteries unload on the raider fleet.
+[The Military Faction Gains Influence]
+add_stat military_hero_influence 1
+add_stat military_officer_influence 1

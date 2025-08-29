@@ -1,18 +1,18 @@
 Cerys places her hands on your shoulders while you are discussing the leadership ceremony with some attendants.
-talk scheming_lady "We need to talk, Facilitator, dear."
+talk noble_lady "We need to talk, Facilitator, dear."
 The attendants shuffle away, a muttering mix of embarassed and intimidated.
-talk scheming_lady "You know, for how uptight they are there certainly are some gossips in the ranks of the Corroborance."
+talk noble_lady "You know, for how uptight they are there certainly are some gossips in the ranks of the Corroborance."
 That's not your experience of the faith, usually lips are sealed...
-talk scheming_lady "I got chatting with a charming initiate, I forget their name. They told me some very interesting things."
-talk scheming_lady "Now, of course I'd love to share but I'm afraid I'm feeling a little transactional.
+talk noble_lady "I got chatting with a charming initiate, I forget their name. They told me some very interesting things."
+talk noble_lady "Now, of course I'd love to share but I'm afraid I'm feeling a little transactional.
  choice:
  "In plain terms, endorse me as leader and I can tell you who gave you this potential death sentence."
   "...ok, tell me what you know":
-   add data.scheming_lady_influence 1
-   talk scheming_lady "Splendid, so glad we could see eye-to-eye."
-   talk scheming_lady "My little bird told me, it was "The Will Of The Executor" that you be sent here specifically."
-   talk scheming_lady "Not much you can do with that I suppose, but at least it's a little peace of mind." 
+   add data.noble_lady_influence 1
+   talk noble_lady "Splendid, so glad we could see eye-to-eye."
+   talk noble_lady "My little bird told me, it was "The Will Of The Executor" that you be sent here specifically."
+   talk noble_lady "Not much you can do with that I suppose, but at least it's a little peace of mind." 
   "I'm not going to break my vow of impartiality for you":
    add data.suspicion 2
-   talk scheming_lady "That's foolish, unfortunate, and altogether ill-considered."
-   talk scheming_lady "I wish you the best of luck, Facilitator. Stay safe."
+   talk noble_lady "That's foolish, unfortunate, and altogether ill-considered."
+   talk noble_lady "I wish you the best of luck, Facilitator. Stay safe."
