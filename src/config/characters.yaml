@@ -5,71 +5,80 @@ characters:
   game:
     name: ""
     color: "white"
+
   player:
     style:
       color: "orange"
     name: "The Facilitator"
+
   military_hero:
     name: "Isaiah Shackle"
     sprites:
-      idle: ""
-      positive: ""
-      negative: ""
+      idle: "military_hero_idle.png"
+      positive: "military_hero_positive.png"
+      negative: "military_hero_negative.png"
     style:
       color: "green"
+
   military_officer:
     name: "Jac Peril"
     style:
       color: "green"
     sprites:
-      idle: ""
-      positive: ""
-      negative: ""
-  merchant_barkeeper:
+      idle: "military_officer_idle.png"
+      positive: "military_officer_positive.png"
+      negative: "military_officer_negative.png"
+
+  merchant_bartender:
     name: "Karl Sera-Gabbro"
     sprites:
-      idle: ""
-      positive: ""
-      negative: ""
+      idle: "merchant_bartender_idle.png"
+      positive: "merchant_bartender_positive.png"
+      negative: "merchant_bartender_negative.png"
     style:
       color: "yellow"
+
   merchant_business:
     name: "Delilah Smythe"
     sprites:
-      idle: ""
-      positive: ""
-      negative: ""
+      idle: "merchant_business_idle.png"
+      positive: "merchant_business_positive.png"
+      negative: "merchant_business_negative.png"
     style:
       color: "yellow"
+
   civilian_eagre:
     name: "Gloria Hewcore-Schist"
     sprites:
-      idle: ""
-      positive: ""
-      negative: ""
+      idle: "civilian_eagre_idle.png"
+      positive: "civilian_eagre_positive.png"
+      negative: "civilian_eagre_negative.png"
     style:
       color: "red"
+
   civilian_icon:
     name: "Dod Millet-Arkose"
     sprites:
-      idle: ""
-      positive: ""
-      negative: ""
+      idle: "civilian_icon_idle.png"
+      positive: "civilian_icon_positive.png"
+      negative: "civilian_icon_negative.png"
     style:
       color: "red"
+
   noble_lord:
     name: "Alun D'Linear"
     sprites:
-      idle: ""
-      positive: ""
-      negative: ""
+      idle: "noble_lord_idle.png"
+      positive: "noble_lord_positive.png"
+      negative: "noble_lord_negative.png"
     style:
       color: "purple"
+
   noble_lady:
     name: "Cerys D'Linear"
     sprites:
-      idle: ""
-      positive: ""
-      negative: ""
+      idle: "noble_lady_idle.png"
+      positive: "noble_lady_positive.png"
+      negative: "noble_lady_negative.png"
     style:
       color: "purple"

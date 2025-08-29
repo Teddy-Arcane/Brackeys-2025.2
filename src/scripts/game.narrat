@@ -71,6 +71,7 @@ timekeeper:
 
 get_stage:
   choice:
+    "Who will you speak with?"
     "civilian_eagre":
       if (== $data.civilian_eagre_progress 0): 
         jump civilian_eagre_1
@@ -471,52 +472,52 @@ ending_flop:
 civilian_eagre_1:
   add data.civilian_eagre_progress 1
   "Gloria Hewcore-Schist makes herself known before you even have a chance to say hello."
-  talk eagre_organiser idle "Hi, hello, uh-welcome to Sclera and well, Credence City specifically I suppose! I'm Gloria Hewcore-Schist but I'm not precious about it, just call me Gloria. I'm the head of the commitee for the Sclera Miner's Liberation Front and I also sit on the boards for-oh, you don't need to know about those though, they just keep me busy."
+  talk civilian_eagre idle "Hi, hello, uh-welcome to Sclera and well, Credence City specifically I suppose! I'm Gloria Hewcore-Schist but I'm not precious about it, just call me Gloria. I'm the head of the commitee for the Sclera Miner's Liberation Front and I also sit on the boards for-oh, you don't need to know about those though, they just keep me busy."
   "She stops to take a breath."
-  talk eagre_organiser idle "How was the travel, I hope you're not too sore? I heard those pods are terrible for you but I'd get sooo bored sitting around for days on those long haul ships, not that I've ever been to space."
-  talk eagre_organiser idle "Anyway, what was I saying-uh-"
+  talk civilian_eagre idle "How was the travel, I hope you're not too sore? I heard those pods are terrible for you but I'd get sooo bored sitting around for days on those long haul ships, not that I've ever been to space."
+  talk civilian_eagre idle "Anyway, what was I saying-uh-"
   "She pulls a PDA from her bag-"
-  talk eagre_organiser idle "Right, yes-as the representative for Sclera Miner's Liberation Front and as a candidate for the upcoming leadership ceremony I've been asked to assure you that if that great honour falls to me I will lead according to our written bylaws. Now I just need you to-"
+  talk civilian_eagre idle "Right, yes-as the representative for Sclera Miner's Liberation Front and as a candidate for the upcoming leadership ceremony I've been asked to assure you that if that great honour falls to me I will lead according to our written bylaws. Now I just need you to-"
   "A slightly crumpled sheet of paper-"
-  talk eagre_organiser idle "-get you to sign this to confirm that."
+  talk civilian_eagre idle "-get you to sign this to confirm that."
   talk player idle "You want me to sign a document confirming that...you told me something?"
-  talk eagre_organiser idle "Ah, yes-I know it's a bit unusual but we have a whole section in the bylaws on how to handle this, you know? Divine appointment by the Corroborance kind of doesn't align with the Sclera Miner's Liberation Front's whole...deal-but it's not like we can challenge it directly so we've come up with a process to do harm mitigation as best we can."
+  talk civilian_eagre idle "Ah, yes-I know it's a bit unusual but we have a whole section in the bylaws on how to handle this, you know? Divine appointment by the Corroborance kind of doesn't align with the Sclera Miner's Liberation Front's whole...deal-but it's not like we can challenge it directly so we've come up with a process to do harm mitigation as best we can."
   talk player idle "That's very...considered."
-  talk eagre_organiser idle "Isn't it just? Got to make do with what you have, like I always say. Anyway, delightful to meet you but I have to get going, I'm already running late for my next meeting."
+  talk civilian_eagre idle "Isn't it just? Got to make do with what you have, like I always say. Anyway, delightful to meet you but I have to get going, I'm already running late for my next meeting."
   "...and just like that she took off running."
   jump timekeeper
 
 civilian_eagre_2:
   add data.civilian_eagre_progress 1
   "You find Gloria sitting cross-legged on the floor in a corner of the chamber, typing up a storm on her pocket terminal."
-  talk eagre_organiser idle "Ah, hey, hi-it's you. Forgive me, I'm a little preoccupied after last night's events. Lots of...spirited discussions going back and forth after that."
+  talk civilian_eagre idle "Ah, hey, hi-it's you. Forgive me, I'm a little preoccupied after last night's events. Lots of...spirited discussions going back and forth after that."
   talk player idle "I can imagine-their approach doesn't really match up with yours, huh?"
-  talk eagre_organiser idle "No, I just wish people like that could see the bigger picture. If we strike out alone like that we can get...snuffed out..."
+  talk civilian_eagre idle "No, I just wish people like that could see the bigger picture. If we strike out alone like that we can get...snuffed out..."
   talk player idle "You sound like you are speaking from experience?"
-  talk eagre_organiser idle "Yeah-my brother got jailed last year and...I don't even know where my sister went."
+  talk civilian_eagre idle "Yeah-my brother got jailed last year and...I don't even know where my sister went."
   talk player idle "That's awful-I'm sure they made a difference though."
-  talk eagre_organiser idle "Sure, but at what cost? If we'd moved together-if we had reached a consensus-we could have done so much more..."
+  talk civilian_eagre idle "Sure, but at what cost? If we'd moved together-if we had reached a consensus-we could have done so much more..."
   "She looks forlorn for just a moment, fiddling with a paperclip, before finding her resolve."
-  talk eagre_organiser idle "Anyway, back to work-huh? I have my duties and you have yours."
+  talk civilian_eagre idle "Anyway, back to work-huh? I have my duties and you have yours."
   "You catch a glimpse at her notifications feed-just a continuous stream of messages and pings."
   "You leave her to it."
   jump timekeeper
 
 civilian_eagre_3:
   add data.civilian_eagre_progress 1
-  talk eagre_organiser idle "You know, we really need to get to the bottom of this and work together, gang! I'm serious!"
+  talk civilian_eagre idle "You know, we really need to get to the bottom of this and work together, gang! I'm serious!"
   "Gloria's conference call is drawing glares from around the chamber."
   "She looks up from her screen, mortified, and closes the terminal."
-  talk eagre_organiser idle "I am sooo sorry, it's just...sometimes I wonder if I wear too many hats-right?"
-  talk eagre_organiser idle "It's like I can't be their boss, their friend, their comrade and their mother..."
+  talk civilian_eagre idle "I am sooo sorry, it's just...sometimes I wonder if I wear too many hats-right?"
+  talk civilian_eagre idle "It's like I can't be their boss, their friend, their comrade and their mother..."
   talk player idle "I've never thought of it this way but I suppose being as indpendent as I am in this job does have it's advantages."
-  talk eagre_organiser idle "Oh, no disrespect but I could *never* do what you do. It seems awful, just being dropped into a random civilisation at their moment of crisis. How do you build relationships, forge trust and the like?"
+  talk civilian_eagre idle "Oh, no disrespect but I could *never* do what you do. It seems awful, just being dropped into a random civilisation at their moment of crisis. How do you build relationships, forge trust and the like?"
   talk player idle "I've come to hold less stock in such things, I suppose that's true. I only have 12 more rotations left though, I think I can make it."
-  talk eagre_organiser idle "12 more! That could be, what, another decade? How long have they kept you on ice?"
+  talk civilian_eagre idle "12 more! That could be, what, another decade? How long have they kept you on ice?"
   "The thought of it is like have a bruise punched."
   talk player idle "As long as my duty demands..."
   "She cracks a smile."
-  talk eagre_organiser idle "For my first order as Supreme Overchancellor or whatever I'm definitely outlawing that nonsense."
+  talk civilian_eagre idle "For my first order as Supreme Overchancellor or whatever I'm definitely outlawing that nonsense."
   talk player idle "As nice as that might be...I think that's probably heresy."
   jump timekeeper
 
@@ -524,32 +525,32 @@ civilian_eagre_4:
   add data.civilian_eagre_progress 1
   "Gloria's comandeered a table in the corner of a nearby cafe, documents everywhere-but as you approach she shuffles most of them back into her bag to make room for you."
   talk player idle idle "Whole lot of paper."
-  talk eagre_organiser idle "Apparently the only way to be sure down here is wet ink. Honestly, it's a complete pain in the neck but that's how the board voted and I didn't have the fight that day to stop them."
+  talk civilian_eagre idle "Apparently the only way to be sure down here is wet ink. Honestly, it's a complete pain in the neck but that's how the board voted and I didn't have the fight that day to stop them."
   talk player idle "It does seem a little...backwards."
-  talk eagre_organiser idle "It is, it is, but that's just how it is."
+  talk civilian_eagre idle "It is, it is, but that's just how it is."
   "She pulls another sheaf of paper out from underneath her mug before taking a sip."
-  talk eagre_organiser idle "Anyway, what brings you to my office today?"
+  talk civilian_eagre idle "Anyway, what brings you to my office today?"
   talk player idle "I need to gather more information on your organisation, the Sclera Miner's Liberation Front. The Corroborance does allow for group rule but they insist on a figurehead for diplomatic reasons. Tell me more about the Front and their goals."
-  talk eagre_organiser idle "Ah, of course. We were founded 8 years back and it's really exploded since then. Most of the populace here in Credence City are either miners or dust pilots, and we represent both groups as well as non-guild engineers, and just last week we absorbed the dockworkers union. All in all we directly represent about 67.4% of all workers based on Sclera."
+  talk civilian_eagre idle "Ah, of course. We were founded 8 years back and it's really exploded since then. Most of the populace here in Credence City are either miners or dust pilots, and we represent both groups as well as non-guild engineers, and just last week we absorbed the dockworkers union. All in all we directly represent about 67.4% of all workers based on Sclera."
   talk player idle "Impressive."
-  talk eagre_organiser idle "Yeah, and exhausting. Actually, I hate to ask, but you could do me a massive favour. Would you mind looking in the official records for a Eustace Gyr-Varve? He holds a seat on the board, but well-"
+  talk civilian_eagre idle "Yeah, and exhausting. Actually, I hate to ask, but you could do me a massive favour. Would you mind looking in the official records for a Eustace Gyr-Varve? He holds a seat on the board, but well-"
   choice:
-    talk eagre_organiser idle "We think he's...dead, but he's still alive on the public record."
+    talk civilian_eagre idle "We think he's...dead, but he's still alive on the public record."
     "Of course, yes. That shouldn't be a problem.":
-      add data.eagre_organiser_influence 1
+      add data.civilian_eagre_influence 1
       add data.suspicion 1
-      "Awesome, thank you so much. With him off the board we'll be able to break a tie and finally start moving on enrolling a dockworker representative."
+      talk civilian_eagre idle "Awesome, thank you so much. With him off the board we'll be able to break a tie and finally start moving on enrolling a dockworker representative."
     "I don't think that would be appropriate.":
-      "Oh. That's a real shame. I was hoping you could help..."
+      talk civilian_eagre idle "Oh. That's a real shame. I was hoping you could help..."
   "Gloria's terminal rings and she mouths \"Got to take this, sorry\" before picking up the call."
   jump timekeeper
 
 civilian_eagre_5:
   add data.civilian_eagre_progress 1
-  talk eagre_organiser idle "Lets go for a run!"
+  talk civilian_eagre idle "Lets go for a run!"
   "The requrest catches you off-guard."
   talk player idle "A run, where?"
-  talk eagre_organiser idle "Just in a loop around the Ward, you need to get out of these chambers and see the city more! That and I have 20 minutes spare."
+  talk civilian_eagre idle "Just in a loop around the Ward, you need to get out of these chambers and see the city more! That and I have 20 minutes spare."
   "And like that you're being dragged by the hand out of the chambers and onto the street, her bag of documents flopping awkwardly along behind her."
   "You whip past old haunts like the Cinema-now Cafe Diamente, where you saw your first scary movie."
   "The Museum Of The Storm-full of dust pilot paraphenalia and old dust-ships from the early days of the settlement."
@@ -557,26 +558,26 @@ civilian_eagre_5:
   "You didn't think you'd get to see any of this again, certainly not so soon."
   "Something was clearly wrong with you being assigned here but you let yourself enjoy the nostalgia for a while."
   "Gloria comes to a halt outside a tenement building and pushes her hair out of her face."
-  talk eagre_organiser idle "Right, that's my stop. Wasn't that good? The air's not so bad out here, eh?"
+  talk civilian_eagre idle "Right, that's my stop. Wasn't that good? The air's not so bad out here, eh?"
   "You take the long way back. It's good to be home."
   jump timekeeper
 
 civilian_eagre_6:
   add data.civilian_eagre_progress 1
-  talk eagre_organiser idle "There you are, Facilitator!"
+  talk civilian_eagre idle "There you are, Facilitator!"
   "Gloria ambushes you from out of nowhere as you walk between meetings, bleary-eyed and clearly upset."
-  talk eagre_organiser idle "Can we talk somewhere, in private?"
+  talk civilian_eagre idle "Can we talk somewhere, in private?"
   talk player idle "Sure, I suppose-"
   "She drags you by the collar into a side-room."
-  talk eagre_organiser idle "You remember I told you my sister was missing, right? Well someone just told me she got enlisted in the Corroborance! She's a facilitator like you, frozen in a ship somewhere out in the middle of space somewhere!"
+  talk civilian_eagre idle "You remember I told you my sister was missing, right? Well someone just told me she got enlisted in the Corroborance! She's a facilitator like you, frozen in a ship somewhere out in the middle of space somewhere!"
   talk player idle "There are worse fated I assur-"
-  talk eagre_organiser idle "You don't understand, I thought she was dead and now I find out she's alive, I've got to...to try!"
+  talk civilian_eagre idle "You don't understand, I thought she was dead and now I find out she's alive, I've got to...to try!"
   talk player idle "Try what, your sister is safe and once her duty is done she'll be free."
-  talk eagre_organiser idle "I know but...look, this is stupid and I'm asking too much, but you try and get this message to her? Her name's Joyce. Just let her know we're still here for her."
-  choice: talk eagre_organiser idle "Could you do that for me?"
+  talk civilian_eagre idle "I know but...look, this is stupid and I'm asking too much, but you try and get this message to her? Her name's Joyce. Just let her know we're still here for her."
+  choice: talk civilian_eagre idle "Could you do that for me?"
     "I can try.":
       "Thank you, thank you so much!"
-  	  add data.eagre_organiser_influence 1
+  	  add data.civilian_eagre_influence 1
     "I can't do that, we aren't supposed to have any contact with home...":
       "Coward, then what are you doing here?!"
  	    add data.suspicion 1
@@ -586,9 +587,9 @@ civilian_eagre_7:
   add data.civilian_eagre_progress 1
   "Gloria doesn't have any of her usual paraphanelia with her today. You catch up to her in a street outside the chamber."
   talk player idle "Travelling light today?"
-  talk eagre_organiser idle "Haha, yeah. I can let things build up a bit for today. This is important, you know? Got to be focussed. Whatever happens next, we need to be ready to move as one."
+  talk civilian_eagre idle "Haha, yeah. I can let things build up a bit for today. This is important, you know? Got to be focussed. Whatever happens next, we need to be ready to move as one."
   "She stops walking and looks up, to the stars above the sinkhole city."
-  talk eagre_organiser idle "I know my sister's up there somewhere. Gotta make sure things are good and organised when she gets back home. You know?"
+  talk civilian_eagre idle "I know my sister's up there somewhere. Gotta make sure things are good and organised when she gets back home. You know?"
   jump timekeeper
 
 civilian_icon_1:
@@ -826,11 +827,12 @@ military_hero_2:
 
 military_hero_3:
   add data.military_hero_progress 1
-  "Commander Isaiah Shackle, The Violet Blade, Hero Of Sclera, is sitting on the chamber steps eating out of a takeout box. The smell is instantly nostalgic."
+  
   choice:
+    "Commander Isaiah Shackle, The Violet Blade, Hero Of Sclera, is sitting on the chamber steps eating out of a takeout box. The smell is instantly nostalgic."
  		"Oh, I love Pickled Squash Noodles!":
  		  "They raise an eyebrow."
- 		  talk military_hero idle "I thought this was just a local thing?"
+      talk military_hero idle "I thought this was just a local thing?"
       add data.suspicion 1
  		"Smells...interesting...":
  		  talk military_hero idle "Mmmfh, yeah it took me a while but I've really come around to these squash noodles. I think they pickle them?"
