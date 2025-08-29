@@ -1,75 +1,75 @@
 ---
 config:
-  imagesPath: img/characters/
+  imagesPath: "img/characters/"
 characters:
   game:
     name: ""
-    color: white
+    color: "white"
   player:
     style:
-      color: orange
+      color: "orange"
     name: "The Facilitator"
   military_hero:
     name: "Isaiah Shackle"
     sprites:
-      idle:
-      positive:
-      negative:
+      idle: ""
+      positive: ""
+      negative: ""
     style:
-      color: green
+      color: "green"
   military_officer:
     name: "Jac Peril"
     style:
+      color: "green"
     sprites:
-      idle:
-      positive:
-      negative:
-    color: green
+      idle: ""
+      positive: ""
+      negative: ""
   merchant_barkeeper:
     name: "Karl Sera-Gabbro"
     sprites:
-      idle:
-      positive:
-      negative:
+      idle: ""
+      positive: ""
+      negative: ""
     style:
-      color: yellow
+      color: "yellow"
   merchant_business:
     name: "Delilah Smythe"
     sprites:
-      idle:
-      positive:
-      negative:
+      idle: ""
+      positive: ""
+      negative: ""
     style:
-      color: yellow
+      color: "yellow"
   civilian_eagre:
     name: "Gloria Hewcore-Schist"
     sprites:
-      idle:
-      positive:
-      negative:
+      idle: ""
+      positive: ""
+      negative: ""
     style:
-      color: red
+      color: "red"
   civilian_icon:
     name: "Dod Millet-Arkose"
     sprites:
-      idle:
-      positive:
-      negative:
+      idle: ""
+      positive: ""
+      negative: ""
     style:
-      color: red
+      color: "red"
   noble_lord:
     name: "Alun D'Linear"
     sprites:
-      idle:
-      positive:
-      negative:
+      idle: ""
+      positive: ""
+      negative: ""
     style:
-      color: purple
+      color: "purple"
   noble_lady:
     name: "Cerys D'Linear"
     sprites:
-      idle:
-      positive:
-      negative:
+      idle: ""
+      positive: ""
+      negative: ""
     style:
-      color: purple
+      color: "purple"

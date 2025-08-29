@@ -1,50 +1,196 @@
 main:
-	set data.civilian_eagre_progress 0
-	set data.civilian_icon_progress 0
-	set data.merchant_bartender_progress 0
-	set data.merchant_business_progress 0
-	set data.military_hero_progress 0
-	set data.military_officer_progress 0
-	set data.noble_lady_progress 0
-	set data.noble_lord_progress 0
-	set data.civilian_eagre_influence 0
-	set data.civilian_icon_influence 0
-	set data.merchant_bartender_influence 0
-	set data.merchant_business_influence 0
-	set data.military_hero_influence 0
-	set data.military_officer_influence 0
-	set data.noble_lady_influence 0
-	set data.noble_lord_influence 0
-	set data.suspicion 0
-	set data.time 0
-
+  set data.civilian_eagre_progress 0
+  set data.civilian_icon_progress 0
+  set data.merchant_bartender_progress 0
+  set data.merchant_business_progress 0
+  set data.military_hero_progress 0
+  set data.military_officer_progress 0
+  set data.noble_lady_progress 0
+  set data.noble_lord_progress 0
+  set data.civilian_eagre_influence 0
+  set data.civilian_icon_influence 0
+  set data.merchant_bartender_influence 0
+  set data.merchant_business_influence 0
+  set data.military_hero_influence 0
+  set data.military_officer_influence 0
+  set data.noble_lady_influence 0
+  set data.noble_lord_influence 0
+  set data.suspicion 0
+  set data.time 0
   jump timekeeper
-timekeeper:
-  if (== $data.time 0) jump intro
-  if (== $data.time 0) jump morning_1
-  if (== $data.time 2) jump afternoon_2
-  if (== $data.time 3) jump crisis_1
-  if (== $data.time 4) jump morning_2
-  if (== $data.time 5) jump afternoon_2
-  if (== $data.time 6) jump crisis_2
-  if (== $data.time 7) jump morning_3
-  if (== $data.time 8) jump afternoon_3
-  if (== $data.time 9) jump crisis_3
-  if (== $data.time 10) jump morning_4
-  if (== $data.time 11) jump afternoon_4
-  if (== $data.time 12) jump crisis_4
-  if (== $data.time 13) jump morning_5
-  if (== $data.time 14) jump afternoon_5
-  if (== $data.time 15) jump crisis_5
-  if (== $data.time 16) jump morning_6
-  if (== $data.time 17) jump afternoon_6
-  if (== $data.time 18) jump crisis_6
-  if (== $data.time 19) jump morning_7
-  if (== $data.time 20) jump afternoon_7
-  if (== $data.time 21) jump crisis_7
-  if (== $data.time 22) jump endgame
-  if (== $data.time 23) jump credits
 
+timekeeper:
+  if (== $data.time 0):
+    jump intro
+  if (== $data.time 1):
+    jump morning_1
+  if (== $data.time 2):
+    jump afternoon_1
+  if (== $data.time 3):
+    jump crisis_1
+  if (== $data.time 4):
+    jump morning_2
+  if (== $data.time 5):
+    jump afternoon_2
+  if (== $data.time 6):
+    jump crisis_2
+  if (== $data.time 7):
+    jump morning_3
+  if (== $data.time 8):
+    jump afternoon_3
+  if (== $data.time 9):
+    jump crisis_3
+  if (== $data.time 10):
+    jump morning_4
+  if (== $data.time 11):
+    jump afternoon_4
+  if (== $data.time 12):
+    jump crisis_4
+  if (== $data.time 13):
+    jump morning_5
+  if (== $data.time 14):
+    jump afternoon_5
+  if (== $data.time 15):
+    jump crisis_5
+  if (== $data.time 16):
+    jump morning_6
+  if (== $data.time 17):
+    jump afternoon_6
+  if (== $data.time 18):
+    jump crisis_6
+  if (== $data.time 19):
+    jump morning_7
+  if (== $data.time 20):
+    jump afternoon_7
+  if (== $data.time 21):
+    jump crisis_7
+  if (== $data.time 22):
+    jump endgame
+  if (== $data.time 23):
+    jump credits
+
+get_stage:
+  choice:
+    "civilian_eagre":
+      if (== $data.civilian_eagre_progress 0): 
+        jump civilian_eagre_1
+      if (== $data.civilian_eagre_progress 1): 
+        jump civilian_eagre_2
+      if (== $data.civilian_eagre_progress 2): 
+        jump civilian_eagre_3
+      if (== $data.civilian_eagre_progress 3): 
+        jump civilian_eagre_4
+      if (== $data.civilian_eagre_progress 4): 
+        jump civilian_eagre_5
+      if (== $data.civilian_eagre_progress 5): 
+        jump civilian_eagre_6
+      if (== $data.civilian_eagre_progress 6): 
+        jump civilian_eagre_7
+    "civilian_icon":
+      if (== $data.civilian_icon_progress 0): 
+        jump civilian_icon_1
+      if (== $data.civilian_icon_progress 1): 
+        jump civilian_icon_2
+      if (== $data.civilian_icon_progress 2): 
+        jump civilian_icon_3
+      if (== $data.civilian_icon_progress 3): 
+        jump civilian_icon_4
+      if (== $data.civilian_icon_progress 4): 
+        jump civilian_icon_5
+      if (== $data.civilian_icon_progress 5): 
+        jump civilian_icon_6
+      if (== $data.civilian_icon_progress 6): 
+        jump civilian_icon_7
+    "merchant_bartender":
+      if (== $data.merchant_bartender_progress 0): 
+        jump merchant_bartender_1
+      if (== $data.merchant_bartender_progress 1): 
+        jump merchant_bartender_2
+      if (== $data.merchant_bartender_progress 2): 
+        jump merchant_bartender_3
+      if (== $data.merchant_bartender_progress 3): 
+        jump merchant_bartender_4
+      if (== $data.merchant_bartender_progress 4): 
+        jump merchant_bartender_5
+      if (== $data.merchant_bartender_progress 5): 
+        jump merchant_bartender_6
+      if (== $data.merchant_bartender_progress 6): 
+        jump merchant_bartender_7
+    "merchant_business":
+      if (== $data.merchant_business_progress 0): 
+        jump merchant_business_1
+      if (== $data.merchant_business_progress 1): 
+        jump merchant_business_2
+      if (== $data.merchant_business_progress 2): 
+        jump merchant_business_3
+      if (== $data.merchant_business_progress 3): 
+        jump merchant_business_4
+      if (== $data.merchant_business_progress 4): 
+        jump merchant_business_5
+      if (== $data.merchant_business_progress 5): 
+        jump merchant_business_6
+      if (== $data.merchant_business_progress 6): 
+        jump merchant_business_7
+    "military_hero":
+      if (== $data.military_hero_progress 0): 
+        jump military_hero_1
+      if (== $data.military_hero_progress 1): 
+        jump military_hero_2
+      if (== $data.military_hero_progress 2): 
+        jump military_hero_3
+      if (== $data.military_hero_progress 3): 
+        jump military_hero_4
+      if (== $data.military_hero_progress 4): 
+        jump military_hero_5
+      if (== $data.military_hero_progress 5): 
+        jump military_hero_6
+      if (== $data.military_hero_progress 6): 
+        jump military_hero_7
+    "military_officer":
+      if (== $data.military_officer_progress 0): 
+        jump military_officer_1
+      if (== $data.military_officer_progress 1): 
+        jump military_officer_2
+      if (== $data.military_officer_progress 2): 
+        jump military_officer_3
+      if (== $data.military_officer_progress 3): 
+        jump military_officer_4
+      if (== $data.military_officer_progress 4): 
+        jump military_officer_5
+      if (== $data.military_officer_progress 5): 
+        jump military_officer_6
+      if (== $data.military_officer_progress 6): 
+        jump military_officer_7
+    "noble_lady":
+      if (== $data.noble_lady_progress 0): 
+        jump noble_lady_1
+      if (== $data.noble_lady_progress 1): 
+        jump noble_lady_2
+      if (== $data.noble_lady_progress 2): 
+        jump noble_lady_3
+      if (== $data.noble_lady_progress 3): 
+        jump noble_lady_4
+      if (== $data.noble_lady_progress 4): 
+        jump noble_lady_5
+      if (== $data.noble_lady_progress 5): 
+        jump noble_lady_6
+      if (== $data.noble_lady_progress 6): 
+        jump noble_lady_7
+    "noble_lord":
+      if (== $data.noble_lord_progress 0): 
+        jump noble_lord_1
+      if (== $data.noble_lord_progress 1): 
+        jump noble_lord_2
+      if (== $data.noble_lord_progress 2): 
+        jump noble_lord_3
+      if (== $data.noble_lord_progress 3): 
+        jump noble_lord_4
+      if (== $data.noble_lord_progress 4): 
+        jump noble_lord_5
+      if (== $data.noble_lord_progress 5): 
+        jump noble_lord_6
+      if (== $data.noble_lord_progress 6): 
+        jump noble_lord_7
 
 intro:
   "You awake once more within The Garden, the faux birds chirp, blipping in and out of this semblance of peace."
@@ -74,15 +220,14 @@ intro:
   "How could you possibly be balanced in deciding who should rule your home!"
   "The Corroborance was so meticulous, always triple-checks and fastidious forms-"
   "Or rather, they never made a mistake anyone heard about."
-  
   choice:
-      "Had you been sent here to die? Whose toes had you stepped on?"
-      "Could it be the Envoy from Barlow Station?":
-        "You always suspected she had it in for you."
-      "Maybe the Grand Clement at Murtagh Point?":
-        "Surely that gown wasn't so expensive as to justify this?"
-      "The attendant from the banquet at Incisor 7?":
-        "How could you have known that was the wrong fork!"
+    "Had you been sent here to die? Whose toes had you stepped on?"
+    "Could it be the Envoy from Barlow Station?":
+      "You always suspected she had it in for you."
+    "Maybe the Grand Clement at Murtagh Point?":
+      "Surely that gown wasn't so expensive as to justify this?"
+    "The attendant from the banquet at Incisor 7?":
+      "How could you have known that was the wrong fork!"
   "Regardless, you find yourself in mortal danger. You will have to keep your origin under wraps both here and in your report."
   
   add data.time 1
@@ -90,1753 +235,871 @@ intro:
 
 morning_1:
   add data.time 1
-  choice:
-    "Morning comes. Who will you speak with?"
-    "civilian_eagre":
-      if (== $data.civilian_eagre_progress = 0) jump civilian_eagre_1
-      if (== $data.civilian_eagre_progress = 1) jump civilian_eagre_2
-      if (== $data.civilian_eagre_progress = 2) jump civilian_eagre_3
-      if (== $data.civilian_eagre_progress = 3) jump civilian_eagre_4
-      if (== $data.civilian_eagre_progress = 4) jump civilian_eagre_5
-      if (== $data.civilian_eagre_progress = 5) jump civilian_eagre_6
-      if (== $data.civilian_eagre_progress = 6) jump civilian_eagre_7
-    "civilian_icon":
-      if (== $data.civilian_icon_progress = 0) jump civilian_icon_1
-      if (== $data.civilian_icon_progress = 1) jump civilian_icon_2
-      if (== $data.civilian_icon_progress = 2) jump civilian_icon_3
-      if (== $data.civilian_icon_progress = 3) jump civilian_icon_4
-      if (== $data.civilian_icon_progress = 4) jump civilian_icon_5
-      if (== $data.civilian_icon_progress = 5) jump civilian_icon_6
-      if (== $data.civilian_icon_progress = 6) jump civilian_icon_7
-    "merchant_bartender":
-      if (== $data.merchant_bartender_progress = 0) jump merchant_bartender_1
-      if (== $data.merchant_bartender_progress = 1) jump merchant_bartender_2
-      if (== $data.merchant_bartender_progress = 2) jump merchant_bartender_3
-      if (== $data.merchant_bartender_progress = 3) jump merchant_bartender_4
-      if (== $data.merchant_bartender_progress = 4) jump merchant_bartender_5
-      if (== $data.merchant_bartender_progress = 5) jump merchant_bartender_6
-      if (== $data.merchant_bartender_progress = 6) jump merchant_bartender_7
-    "merchant_business":
-      if (== $data.merchant_business_progress = 0) jump merchant_business_1
-      if (== $data.merchant_business_progress = 1) jump merchant_business_2
-      if (== $data.merchant_business_progress = 2) jump merchant_business_3
-      if (== $data.merchant_business_progress = 3) jump merchant_business_4
-      if (== $data.merchant_business_progress = 4) jump merchant_business_5
-      if (== $data.merchant_business_progress = 5) jump merchant_business_6
-      if (== $data.merchant_business_progress = 6) jump merchant_business_7
-    "military_hero":
-      if (== $data.military_hero_progress = 0) jump military_hero_1
-      if (== $data.military_hero_progress = 1) jump military_hero_2
-      if (== $data.military_hero_progress = 2) jump military_hero_3
-      if (== $data.military_hero_progress = 3) jump military_hero_4
-      if (== $data.military_hero_progress = 4) jump military_hero_5
-      if (== $data.military_hero_progress = 5) jump military_hero_6
-      if (== $data.military_hero_progress = 6) jump military_hero_7
-    "military_officer":
-      if (== $data.military_officer_progress = 0) jump military_officer_1
-      if (== $data.military_officer_progress = 1) jump military_officer_2
-      if (== $data.military_officer_progress = 2) jump military_officer_3
-      if (== $data.military_officer_progress = 3) jump military_officer_4
-      if (== $data.military_officer_progress = 4) jump military_officer_5
-      if (== $data.military_officer_progress = 5) jump military_officer_6
-      if (== $data.military_officer_progress = 6) jump military_officer_7
-    "noble_lady":
-      if (== $data.noble_lady_progress = 0) jump noble_lady_1
-      if (== $data.noble_lady_progress = 1) jump noble_lady_2
-      if (== $data.noble_lady_progress = 2) jump noble_lady_3
-      if (== $data.noble_lady_progress = 3) jump noble_lady_4
-      if (== $data.noble_lady_progress = 4) jump noble_lady_5
-      if (== $data.noble_lady_progress = 5) jump noble_lady_6
-      if (== $data.noble_lady_progress = 6) jump noble_lady_7
-    "noble_lord":
-      if (== $data.noble_lord_progress = 0) jump noble_lord_1
-      if (== $data.noble_lord_progress = 1) jump noble_lord_2
-      if (== $data.noble_lord_progress = 2) jump noble_lord_3
-      if (== $data.noble_lord_progress = 3) jump noble_lord_4
-      if (== $data.noble_lord_progress = 4) jump noble_lord_5
-      if (== $data.noble_lord_progress = 5) jump noble_lord_6
-      if (== $data.noble_lord_progress = 6) jump noble_lord_7
+  "Morning comes. Who will you speak with?"
+  jump get_stage
+
 morning_2:
   add data.time 1
-  choice:
-    "Morning comes. Who will you speak with?"
-    "civilian_eagre":
-      if (== $data.civilian_eagre_progress = 0) jump civilian_eagre_1
-      if (== $data.civilian_eagre_progress = 1) jump civilian_eagre_2
-      if (== $data.civilian_eagre_progress = 2) jump civilian_eagre_3
-      if (== $data.civilian_eagre_progress = 3) jump civilian_eagre_4
-      if (== $data.civilian_eagre_progress = 4) jump civilian_eagre_5
-      if (== $data.civilian_eagre_progress = 5) jump civilian_eagre_6
-      if (== $data.civilian_eagre_progress = 6) jump civilian_eagre_7
-    "civilian_icon":
-      if (== $data.civilian_icon_progress = 0) jump civilian_icon_1
-      if (== $data.civilian_icon_progress = 1) jump civilian_icon_2
-      if (== $data.civilian_icon_progress = 2) jump civilian_icon_3
-      if (== $data.civilian_icon_progress = 3) jump civilian_icon_4
-      if (== $data.civilian_icon_progress = 4) jump civilian_icon_5
-      if (== $data.civilian_icon_progress = 5) jump civilian_icon_6
-      if (== $data.civilian_icon_progress = 6) jump civilian_icon_7
-    "merchant_bartender":
-      if (== $data.merchant_bartender_progress = 0) jump merchant_bartender_1
-      if (== $data.merchant_bartender_progress = 1) jump merchant_bartender_2
-      if (== $data.merchant_bartender_progress = 2) jump merchant_bartender_3
-      if (== $data.merchant_bartender_progress = 3) jump merchant_bartender_4
-      if (== $data.merchant_bartender_progress = 4) jump merchant_bartender_5
-      if (== $data.merchant_bartender_progress = 5) jump merchant_bartender_6
-      if (== $data.merchant_bartender_progress = 6) jump merchant_bartender_7
-    "merchant_business":
-      if (== $data.merchant_business_progress = 0) jump merchant_business_1
-      if (== $data.merchant_business_progress = 1) jump merchant_business_2
-      if (== $data.merchant_business_progress = 2) jump merchant_business_3
-      if (== $data.merchant_business_progress = 3) jump merchant_business_4
-      if (== $data.merchant_business_progress = 4) jump merchant_business_5
-      if (== $data.merchant_business_progress = 5) jump merchant_business_6
-      if (== $data.merchant_business_progress = 6) jump merchant_business_7
-    "military_hero":
-      if (== $data.military_hero_progress = 0) jump military_hero_1
-      if (== $data.military_hero_progress = 1) jump military_hero_2
-      if (== $data.military_hero_progress = 2) jump military_hero_3
-      if (== $data.military_hero_progress = 3) jump military_hero_4
-      if (== $data.military_hero_progress = 4) jump military_hero_5
-      if (== $data.military_hero_progress = 5) jump military_hero_6
-      if (== $data.military_hero_progress = 6) jump military_hero_7
-    "military_officer":
-      if (== $data.military_officer_progress = 0) jump military_officer_1
-      if (== $data.military_officer_progress = 1) jump military_officer_2
-      if (== $data.military_officer_progress = 2) jump military_officer_3
-      if (== $data.military_officer_progress = 3) jump military_officer_4
-      if (== $data.military_officer_progress = 4) jump military_officer_5
-      if (== $data.military_officer_progress = 5) jump military_officer_6
-      if (== $data.military_officer_progress = 6) jump military_officer_7
-    "noble_lady":
-      if (== $data.noble_lady_progress = 0) jump noble_lady_1
-      if (== $data.noble_lady_progress = 1) jump noble_lady_2
-      if (== $data.noble_lady_progress = 2) jump noble_lady_3
-      if (== $data.noble_lady_progress = 3) jump noble_lady_4
-      if (== $data.noble_lady_progress = 4) jump noble_lady_5
-      if (== $data.noble_lady_progress = 5) jump noble_lady_6
-      if (== $data.noble_lady_progress = 6) jump noble_lady_7
-    "noble_lord":
-      if (== $data.noble_lord_progress = 0) jump noble_lord_1
-      if (== $data.noble_lord_progress = 1) jump noble_lord_2
-      if (== $data.noble_lord_progress = 2) jump noble_lord_3
-      if (== $data.noble_lord_progress = 3) jump noble_lord_4
-      if (== $data.noble_lord_progress = 4) jump noble_lord_5
-      if (== $data.noble_lord_progress = 5) jump noble_lord_6
-      if (== $data.noble_lord_progress = 6) jump noble_lord_7
+  "Morning comes. Who will you speak with?"
+  jump get_stage
+
 morning_3:
   add data.time 1
-  choice:
-    "Morning comes. Who will you speak with?"
-    "civilian_eagre":
-      if (== $data.civilian_eagre_progress = 0) jump civilian_eagre_1
-      if (== $data.civilian_eagre_progress = 1) jump civilian_eagre_2
-      if (== $data.civilian_eagre_progress = 2) jump civilian_eagre_3
-      if (== $data.civilian_eagre_progress = 3) jump civilian_eagre_4
-      if (== $data.civilian_eagre_progress = 4) jump civilian_eagre_5
-      if (== $data.civilian_eagre_progress = 5) jump civilian_eagre_6
-      if (== $data.civilian_eagre_progress = 6) jump civilian_eagre_7
-    "civilian_icon":
-      if (== $data.civilian_icon_progress = 0) jump civilian_icon_1
-      if (== $data.civilian_icon_progress = 1) jump civilian_icon_2
-      if (== $data.civilian_icon_progress = 2) jump civilian_icon_3
-      if (== $data.civilian_icon_progress = 3) jump civilian_icon_4
-      if (== $data.civilian_icon_progress = 4) jump civilian_icon_5
-      if (== $data.civilian_icon_progress = 5) jump civilian_icon_6
-      if (== $data.civilian_icon_progress = 6) jump civilian_icon_7
-    "merchant_bartender":
-      if (== $data.merchant_bartender_progress = 0) jump merchant_bartender_1
-      if (== $data.merchant_bartender_progress = 1) jump merchant_bartender_2
-      if (== $data.merchant_bartender_progress = 2) jump merchant_bartender_3
-      if (== $data.merchant_bartender_progress = 3) jump merchant_bartender_4
-      if (== $data.merchant_bartender_progress = 4) jump merchant_bartender_5
-      if (== $data.merchant_bartender_progress = 5) jump merchant_bartender_6
-      if (== $data.merchant_bartender_progress = 6) jump merchant_bartender_7
-    "merchant_business":
-      if (== $data.merchant_business_progress = 0) jump merchant_business_1
-      if (== $data.merchant_business_progress = 1) jump merchant_business_2
-      if (== $data.merchant_business_progress = 2) jump merchant_business_3
-      if (== $data.merchant_business_progress = 3) jump merchant_business_4
-      if (== $data.merchant_business_progress = 4) jump merchant_business_5
-      if (== $data.merchant_business_progress = 5) jump merchant_business_6
-      if (== $data.merchant_business_progress = 6) jump merchant_business_7
-    "military_hero":
-      if (== $data.military_hero_progress = 0) jump military_hero_1
-      if (== $data.military_hero_progress = 1) jump military_hero_2
-      if (== $data.military_hero_progress = 2) jump military_hero_3
-      if (== $data.military_hero_progress = 3) jump military_hero_4
-      if (== $data.military_hero_progress = 4) jump military_hero_5
-      if (== $data.military_hero_progress = 5) jump military_hero_6
-      if (== $data.military_hero_progress = 6) jump military_hero_7
-    "military_officer":
-      if (== $data.military_officer_progress = 0) jump military_officer_1
-      if (== $data.military_officer_progress = 1) jump military_officer_2
-      if (== $data.military_officer_progress = 2) jump military_officer_3
-      if (== $data.military_officer_progress = 3) jump military_officer_4
-      if (== $data.military_officer_progress = 4) jump military_officer_5
-      if (== $data.military_officer_progress = 5) jump military_officer_6
-      if (== $data.military_officer_progress = 6) jump military_officer_7
-    "noble_lady":
-      if (== $data.noble_lady_progress = 0) jump noble_lady_1
-      if (== $data.noble_lady_progress = 1) jump noble_lady_2
-      if (== $data.noble_lady_progress = 2) jump noble_lady_3
-      if (== $data.noble_lady_progress = 3) jump noble_lady_4
-      if (== $data.noble_lady_progress = 4) jump noble_lady_5
-      if (== $data.noble_lady_progress = 5) jump noble_lady_6
-      if (== $data.noble_lady_progress = 6) jump noble_lady_7
-    "noble_lord":
-      if (== $data.noble_lord_progress = 0) jump noble_lord_1
-      if (== $data.noble_lord_progress = 1) jump noble_lord_2
-      if (== $data.noble_lord_progress = 2) jump noble_lord_3
-      if (== $data.noble_lord_progress = 3) jump noble_lord_4
-      if (== $data.noble_lord_progress = 4) jump noble_lord_5
-      if (== $data.noble_lord_progress = 5) jump noble_lord_6
-      if (== $data.noble_lord_progress = 6) jump noble_lord_7
+  "Morning comes. Who will you speak with?"
+  jump get_stage
+
 morning_4:
   add data.time 1
-  choice:
-    "Morning comes. Who will you speak with?"
-    "civilian_eagre":
-      if (== $data.civilian_eagre_progress = 0) jump civilian_eagre_1
-      if (== $data.civilian_eagre_progress = 1) jump civilian_eagre_2
-      if (== $data.civilian_eagre_progress = 2) jump civilian_eagre_3
-      if (== $data.civilian_eagre_progress = 3) jump civilian_eagre_4
-      if (== $data.civilian_eagre_progress = 4) jump civilian_eagre_5
-      if (== $data.civilian_eagre_progress = 5) jump civilian_eagre_6
-      if (== $data.civilian_eagre_progress = 6) jump civilian_eagre_7
-    "civilian_icon":
-      if (== $data.civilian_icon_progress = 0) jump civilian_icon_1
-      if (== $data.civilian_icon_progress = 1) jump civilian_icon_2
-      if (== $data.civilian_icon_progress = 2) jump civilian_icon_3
-      if (== $data.civilian_icon_progress = 3) jump civilian_icon_4
-      if (== $data.civilian_icon_progress = 4) jump civilian_icon_5
-      if (== $data.civilian_icon_progress = 5) jump civilian_icon_6
-      if (== $data.civilian_icon_progress = 6) jump civilian_icon_7
-    "merchant_bartender":
-      if (== $data.merchant_bartender_progress = 0) jump merchant_bartender_1
-      if (== $data.merchant_bartender_progress = 1) jump merchant_bartender_2
-      if (== $data.merchant_bartender_progress = 2) jump merchant_bartender_3
-      if (== $data.merchant_bartender_progress = 3) jump merchant_bartender_4
-      if (== $data.merchant_bartender_progress = 4) jump merchant_bartender_5
-      if (== $data.merchant_bartender_progress = 5) jump merchant_bartender_6
-      if (== $data.merchant_bartender_progress = 6) jump merchant_bartender_7
-    "merchant_business":
-      if (== $data.merchant_business_progress = 0) jump merchant_business_1
-      if (== $data.merchant_business_progress = 1) jump merchant_business_2
-      if (== $data.merchant_business_progress = 2) jump merchant_business_3
-      if (== $data.merchant_business_progress = 3) jump merchant_business_4
-      if (== $data.merchant_business_progress = 4) jump merchant_business_5
-      if (== $data.merchant_business_progress = 5) jump merchant_business_6
-      if (== $data.merchant_business_progress = 6) jump merchant_business_7
-    "military_hero":
-      if (== $data.military_hero_progress = 0) jump military_hero_1
-      if (== $data.military_hero_progress = 1) jump military_hero_2
-      if (== $data.military_hero_progress = 2) jump military_hero_3
-      if (== $data.military_hero_progress = 3) jump military_hero_4
-      if (== $data.military_hero_progress = 4) jump military_hero_5
-      if (== $data.military_hero_progress = 5) jump military_hero_6
-      if (== $data.military_hero_progress = 6) jump military_hero_7
-    "military_officer":
-      if (== $data.military_officer_progress = 0) jump military_officer_1
-      if (== $data.military_officer_progress = 1) jump military_officer_2
-      if (== $data.military_officer_progress = 2) jump military_officer_3
-      if (== $data.military_officer_progress = 3) jump military_officer_4
-      if (== $data.military_officer_progress = 4) jump military_officer_5
-      if (== $data.military_officer_progress = 5) jump military_officer_6
-      if (== $data.military_officer_progress = 6) jump military_officer_7
-    "noble_lady":
-      if (== $data.noble_lady_progress = 0) jump noble_lady_1
-      if (== $data.noble_lady_progress = 1) jump noble_lady_2
-      if (== $data.noble_lady_progress = 2) jump noble_lady_3
-      if (== $data.noble_lady_progress = 3) jump noble_lady_4
-      if (== $data.noble_lady_progress = 4) jump noble_lady_5
-      if (== $data.noble_lady_progress = 5) jump noble_lady_6
-      if (== $data.noble_lady_progress = 6) jump noble_lady_7
-    "noble_lord":
-      if (== $data.noble_lord_progress = 0) jump noble_lord_1
-      if (== $data.noble_lord_progress = 1) jump noble_lord_2
-      if (== $data.noble_lord_progress = 2) jump noble_lord_3
-      if (== $data.noble_lord_progress = 3) jump noble_lord_4
-      if (== $data.noble_lord_progress = 4) jump noble_lord_5
-      if (== $data.noble_lord_progress = 5) jump noble_lord_6
-      if (== $data.noble_lord_progress = 6) jump noble_lord_7
+  "Morning comes. Who will you speak with?"
+  jump get_stage
+
 morning_5:
   add data.time 1
-  choice:
-    "Morning comes. Who will you speak with?"
-    "civilian_eagre":
-      if (== $data.civilian_eagre_progress = 0) jump civilian_eagre_1
-      if (== $data.civilian_eagre_progress = 1) jump civilian_eagre_2
-      if (== $data.civilian_eagre_progress = 2) jump civilian_eagre_3
-      if (== $data.civilian_eagre_progress = 3) jump civilian_eagre_4
-      if (== $data.civilian_eagre_progress = 4) jump civilian_eagre_5
-      if (== $data.civilian_eagre_progress = 5) jump civilian_eagre_6
-      if (== $data.civilian_eagre_progress = 6) jump civilian_eagre_7
-    "civilian_icon":
-      if (== $data.civilian_icon_progress = 0) jump civilian_icon_1
-      if (== $data.civilian_icon_progress = 1) jump civilian_icon_2
-      if (== $data.civilian_icon_progress = 2) jump civilian_icon_3
-      if (== $data.civilian_icon_progress = 3) jump civilian_icon_4
-      if (== $data.civilian_icon_progress = 4) jump civilian_icon_5
-      if (== $data.civilian_icon_progress = 5) jump civilian_icon_6
-      if (== $data.civilian_icon_progress = 6) jump civilian_icon_7
-    "merchant_bartender":
-      if (== $data.merchant_bartender_progress = 0) jump merchant_bartender_1
-      if (== $data.merchant_bartender_progress = 1) jump merchant_bartender_2
-      if (== $data.merchant_bartender_progress = 2) jump merchant_bartender_3
-      if (== $data.merchant_bartender_progress = 3) jump merchant_bartender_4
-      if (== $data.merchant_bartender_progress = 4) jump merchant_bartender_5
-      if (== $data.merchant_bartender_progress = 5) jump merchant_bartender_6
-      if (== $data.merchant_bartender_progress = 6) jump merchant_bartender_7
-    "merchant_business":
-      if (== $data.merchant_business_progress = 0) jump merchant_business_1
-      if (== $data.merchant_business_progress = 1) jump merchant_business_2
-      if (== $data.merchant_business_progress = 2) jump merchant_business_3
-      if (== $data.merchant_business_progress = 3) jump merchant_business_4
-      if (== $data.merchant_business_progress = 4) jump merchant_business_5
-      if (== $data.merchant_business_progress = 5) jump merchant_business_6
-      if (== $data.merchant_business_progress = 6) jump merchant_business_7
-    "military_hero":
-      if (== $data.military_hero_progress = 0) jump military_hero_1
-      if (== $data.military_hero_progress = 1) jump military_hero_2
-      if (== $data.military_hero_progress = 2) jump military_hero_3
-      if (== $data.military_hero_progress = 3) jump military_hero_4
-      if (== $data.military_hero_progress = 4) jump military_hero_5
-      if (== $data.military_hero_progress = 5) jump military_hero_6
-      if (== $data.military_hero_progress = 6) jump military_hero_7
-    "military_officer":
-      if (== $data.military_officer_progress = 0) jump military_officer_1
-      if (== $data.military_officer_progress = 1) jump military_officer_2
-      if (== $data.military_officer_progress = 2) jump military_officer_3
-      if (== $data.military_officer_progress = 3) jump military_officer_4
-      if (== $data.military_officer_progress = 4) jump military_officer_5
-      if (== $data.military_officer_progress = 5) jump military_officer_6
-      if (== $data.military_officer_progress = 6) jump military_officer_7
-    "noble_lady":
-      if (== $data.noble_lady_progress = 0) jump noble_lady_1
-      if (== $data.noble_lady_progress = 1) jump noble_lady_2
-      if (== $data.noble_lady_progress = 2) jump noble_lady_3
-      if (== $data.noble_lady_progress = 3) jump noble_lady_4
-      if (== $data.noble_lady_progress = 4) jump noble_lady_5
-      if (== $data.noble_lady_progress = 5) jump noble_lady_6
-      if (== $data.noble_lady_progress = 6) jump noble_lady_7
-    "noble_lord":
-      if (== $data.noble_lord_progress = 0) jump noble_lord_1
-      if (== $data.noble_lord_progress = 1) jump noble_lord_2
-      if (== $data.noble_lord_progress = 2) jump noble_lord_3
-      if (== $data.noble_lord_progress = 3) jump noble_lord_4
-      if (== $data.noble_lord_progress = 4) jump noble_lord_5
-      if (== $data.noble_lord_progress = 5) jump noble_lord_6
-      if (== $data.noble_lord_progress = 6) jump noble_lord_7
+  "Morning comes. Who will you speak with?"
+  jump get_stage
+
 morning_6:
   add data.time 1
-  choice:
-    "Morning comes. Who will you speak with?"
-    "civilian_eagre":
-      if (== $data.civilian_eagre_progress = 0) jump civilian_eagre_1
-      if (== $data.civilian_eagre_progress = 1) jump civilian_eagre_2
-      if (== $data.civilian_eagre_progress = 2) jump civilian_eagre_3
-      if (== $data.civilian_eagre_progress = 3) jump civilian_eagre_4
-      if (== $data.civilian_eagre_progress = 4) jump civilian_eagre_5
-      if (== $data.civilian_eagre_progress = 5) jump civilian_eagre_6
-      if (== $data.civilian_eagre_progress = 6) jump civilian_eagre_7
-    "civilian_icon":
-      if (== $data.civilian_icon_progress = 0) jump civilian_icon_1
-      if (== $data.civilian_icon_progress = 1) jump civilian_icon_2
-      if (== $data.civilian_icon_progress = 2) jump civilian_icon_3
-      if (== $data.civilian_icon_progress = 3) jump civilian_icon_4
-      if (== $data.civilian_icon_progress = 4) jump civilian_icon_5
-      if (== $data.civilian_icon_progress = 5) jump civilian_icon_6
-      if (== $data.civilian_icon_progress = 6) jump civilian_icon_7
-    "merchant_bartender":
-      if (== $data.merchant_bartender_progress = 0) jump merchant_bartender_1
-      if (== $data.merchant_bartender_progress = 1) jump merchant_bartender_2
-      if (== $data.merchant_bartender_progress = 2) jump merchant_bartender_3
-      if (== $data.merchant_bartender_progress = 3) jump merchant_bartender_4
-      if (== $data.merchant_bartender_progress = 4) jump merchant_bartender_5
-      if (== $data.merchant_bartender_progress = 5) jump merchant_bartender_6
-      if (== $data.merchant_bartender_progress = 6) jump merchant_bartender_7
-    "merchant_business":
-      if (== $data.merchant_business_progress = 0) jump merchant_business_1
-      if (== $data.merchant_business_progress = 1) jump merchant_business_2
-      if (== $data.merchant_business_progress = 2) jump merchant_business_3
-      if (== $data.merchant_business_progress = 3) jump merchant_business_4
-      if (== $data.merchant_business_progress = 4) jump merchant_business_5
-      if (== $data.merchant_business_progress = 5) jump merchant_business_6
-      if (== $data.merchant_business_progress = 6) jump merchant_business_7
-    "military_hero":
-      if (== $data.military_hero_progress = 0) jump military_hero_1
-      if (== $data.military_hero_progress = 1) jump military_hero_2
-      if (== $data.military_hero_progress = 2) jump military_hero_3
-      if (== $data.military_hero_progress = 3) jump military_hero_4
-      if (== $data.military_hero_progress = 4) jump military_hero_5
-      if (== $data.military_hero_progress = 5) jump military_hero_6
-      if (== $data.military_hero_progress = 6) jump military_hero_7
-    "military_officer":
-      if (== $data.military_officer_progress = 0) jump military_officer_1
-      if (== $data.military_officer_progress = 1) jump military_officer_2
-      if (== $data.military_officer_progress = 2) jump military_officer_3
-      if (== $data.military_officer_progress = 3) jump military_officer_4
-      if (== $data.military_officer_progress = 4) jump military_officer_5
-      if (== $data.military_officer_progress = 5) jump military_officer_6
-      if (== $data.military_officer_progress = 6) jump military_officer_7
-    "noble_lady":
-      if (== $data.noble_lady_progress = 0) jump noble_lady_1
-      if (== $data.noble_lady_progress = 1) jump noble_lady_2
-      if (== $data.noble_lady_progress = 2) jump noble_lady_3
-      if (== $data.noble_lady_progress = 3) jump noble_lady_4
-      if (== $data.noble_lady_progress = 4) jump noble_lady_5
-      if (== $data.noble_lady_progress = 5) jump noble_lady_6
-      if (== $data.noble_lady_progress = 6) jump noble_lady_7
-    "noble_lord":
-      if (== $data.noble_lord_progress = 0) jump noble_lord_1
-      if (== $data.noble_lord_progress = 1) jump noble_lord_2
-      if (== $data.noble_lord_progress = 2) jump noble_lord_3
-      if (== $data.noble_lord_progress = 3) jump noble_lord_4
-      if (== $data.noble_lord_progress = 4) jump noble_lord_5
-      if (== $data.noble_lord_progress = 5) jump noble_lord_6
-      if (== $data.noble_lord_progress = 6) jump noble_lord_7
+  "Morning comes. Who will you speak with?"
+  jump get_stage
+
 morning_7:
   add data.time 1
-  choice:
-    "Morning comes. Who will you speak with?"
-    "civilian_eagre":
-      if (== $data.civilian_eagre_progress = 0) jump civilian_eagre_1
-      if (== $data.civilian_eagre_progress = 1) jump civilian_eagre_2
-      if (== $data.civilian_eagre_progress = 2) jump civilian_eagre_3
-      if (== $data.civilian_eagre_progress = 3) jump civilian_eagre_4
-      if (== $data.civilian_eagre_progress = 4) jump civilian_eagre_5
-      if (== $data.civilian_eagre_progress = 5) jump civilian_eagre_6
-      if (== $data.civilian_eagre_progress = 6) jump civilian_eagre_7
-    "civilian_icon":
-      if (== $data.civilian_icon_progress = 0) jump civilian_icon_1
-      if (== $data.civilian_icon_progress = 1) jump civilian_icon_2
-      if (== $data.civilian_icon_progress = 2) jump civilian_icon_3
-      if (== $data.civilian_icon_progress = 3) jump civilian_icon_4
-      if (== $data.civilian_icon_progress = 4) jump civilian_icon_5
-      if (== $data.civilian_icon_progress = 5) jump civilian_icon_6
-      if (== $data.civilian_icon_progress = 6) jump civilian_icon_7
-    "merchant_bartender":
-      if (== $data.merchant_bartender_progress = 0) jump merchant_bartender_1
-      if (== $data.merchant_bartender_progress = 1) jump merchant_bartender_2
-      if (== $data.merchant_bartender_progress = 2) jump merchant_bartender_3
-      if (== $data.merchant_bartender_progress = 3) jump merchant_bartender_4
-      if (== $data.merchant_bartender_progress = 4) jump merchant_bartender_5
-      if (== $data.merchant_bartender_progress = 5) jump merchant_bartender_6
-      if (== $data.merchant_bartender_progress = 6) jump merchant_bartender_7
-    "merchant_business":
-      if (== $data.merchant_business_progress = 0) jump merchant_business_1
-      if (== $data.merchant_business_progress = 1) jump merchant_business_2
-      if (== $data.merchant_business_progress = 2) jump merchant_business_3
-      if (== $data.merchant_business_progress = 3) jump merchant_business_4
-      if (== $data.merchant_business_progress = 4) jump merchant_business_5
-      if (== $data.merchant_business_progress = 5) jump merchant_business_6
-      if (== $data.merchant_business_progress = 6) jump merchant_business_7
-    "military_hero":
-      if (== $data.military_hero_progress = 0) jump military_hero_1
-      if (== $data.military_hero_progress = 1) jump military_hero_2
-      if (== $data.military_hero_progress = 2) jump military_hero_3
-      if (== $data.military_hero_progress = 3) jump military_hero_4
-      if (== $data.military_hero_progress = 4) jump military_hero_5
-      if (== $data.military_hero_progress = 5) jump military_hero_6
-      if (== $data.military_hero_progress = 6) jump military_hero_7
-    "military_officer":
-      if (== $data.military_officer_progress = 0) jump military_officer_1
-      if (== $data.military_officer_progress = 1) jump military_officer_2
-      if (== $data.military_officer_progress = 2) jump military_officer_3
-      if (== $data.military_officer_progress = 3) jump military_officer_4
-      if (== $data.military_officer_progress = 4) jump military_officer_5
-      if (== $data.military_officer_progress = 5) jump military_officer_6
-      if (== $data.military_officer_progress = 6) jump military_officer_7
-    "noble_lady":
-      if (== $data.noble_lady_progress = 0) jump noble_lady_1
-      if (== $data.noble_lady_progress = 1) jump noble_lady_2
-      if (== $data.noble_lady_progress = 2) jump noble_lady_3
-      if (== $data.noble_lady_progress = 3) jump noble_lady_4
-      if (== $data.noble_lady_progress = 4) jump noble_lady_5
-      if (== $data.noble_lady_progress = 5) jump noble_lady_6
-      if (== $data.noble_lady_progress = 6) jump noble_lady_7
-    "noble_lord":
-      if (== $data.noble_lord_progress = 0) jump noble_lord_1
-      if (== $data.noble_lord_progress = 1) jump noble_lord_2
-      if (== $data.noble_lord_progress = 2) jump noble_lord_3
-      if (== $data.noble_lord_progress = 3) jump noble_lord_4
-      if (== $data.noble_lord_progress = 4) jump noble_lord_5
-      if (== $data.noble_lord_progress = 5) jump noble_lord_6
-      if (== $data.noble_lord_progress = 6) jump noble_lord_7
+  "Morning comes. Who will you speak with?"
+  jump get_stage
+
 afternoon_1:
   add data.time 1
-  choice:
-    "Afternoon comes. Who will you speak with?"
-    "civilian_eagre":
-      if (== $data.civilian_eagre_progress = 0) jump civilian_eagre_1
-      if (== $data.civilian_eagre_progress = 1) jump civilian_eagre_2
-      if (== $data.civilian_eagre_progress = 2) jump civilian_eagre_3
-      if (== $data.civilian_eagre_progress = 3) jump civilian_eagre_4
-      if (== $data.civilian_eagre_progress = 4) jump civilian_eagre_5
-      if (== $data.civilian_eagre_progress = 5) jump civilian_eagre_6
-      if (== $data.civilian_eagre_progress = 6) jump civilian_eagre_7
-    "civilian_icon":
-      if (== $data.civilian_icon_progress = 0) jump civilian_icon_1
-      if (== $data.civilian_icon_progress = 1) jump civilian_icon_2
-      if (== $data.civilian_icon_progress = 2) jump civilian_icon_3
-      if (== $data.civilian_icon_progress = 3) jump civilian_icon_4
-      if (== $data.civilian_icon_progress = 4) jump civilian_icon_5
-      if (== $data.civilian_icon_progress = 5) jump civilian_icon_6
-      if (== $data.civilian_icon_progress = 6) jump civilian_icon_7
-    "merchant_bartender":
-      if (== $data.merchant_bartender_progress = 0) jump merchant_bartender_1
-      if (== $data.merchant_bartender_progress = 1) jump merchant_bartender_2
-      if (== $data.merchant_bartender_progress = 2) jump merchant_bartender_3
-      if (== $data.merchant_bartender_progress = 3) jump merchant_bartender_4
-      if (== $data.merchant_bartender_progress = 4) jump merchant_bartender_5
-      if (== $data.merchant_bartender_progress = 5) jump merchant_bartender_6
-      if (== $data.merchant_bartender_progress = 6) jump merchant_bartender_7
-    "merchant_business":
-      if (== $data.merchant_business_progress = 0) jump merchant_business_1
-      if (== $data.merchant_business_progress = 1) jump merchant_business_2
-      if (== $data.merchant_business_progress = 2) jump merchant_business_3
-      if (== $data.merchant_business_progress = 3) jump merchant_business_4
-      if (== $data.merchant_business_progress = 4) jump merchant_business_5
-      if (== $data.merchant_business_progress = 5) jump merchant_business_6
-      if (== $data.merchant_business_progress = 6) jump merchant_business_7
-    "military_hero":
-      if (== $data.military_hero_progress = 0) jump military_hero_1
-      if (== $data.military_hero_progress = 1) jump military_hero_2
-      if (== $data.military_hero_progress = 2) jump military_hero_3
-      if (== $data.military_hero_progress = 3) jump military_hero_4
-      if (== $data.military_hero_progress = 4) jump military_hero_5
-      if (== $data.military_hero_progress = 5) jump military_hero_6
-      if (== $data.military_hero_progress = 6) jump military_hero_7
-    "military_officer":
-      if (== $data.military_officer_progress = 0) jump military_officer_1
-      if (== $data.military_officer_progress = 1) jump military_officer_2
-      if (== $data.military_officer_progress = 2) jump military_officer_3
-      if (== $data.military_officer_progress = 3) jump military_officer_4
-      if (== $data.military_officer_progress = 4) jump military_officer_5
-      if (== $data.military_officer_progress = 5) jump military_officer_6
-      if (== $data.military_officer_progress = 6) jump military_officer_7
-    "noble_lady":
-      if (== $data.noble_lady_progress = 0) jump noble_lady_1
-      if (== $data.noble_lady_progress = 1) jump noble_lady_2
-      if (== $data.noble_lady_progress = 2) jump noble_lady_3
-      if (== $data.noble_lady_progress = 3) jump noble_lady_4
-      if (== $data.noble_lady_progress = 4) jump noble_lady_5
-      if (== $data.noble_lady_progress = 5) jump noble_lady_6
-      if (== $data.noble_lady_progress = 6) jump noble_lady_7
-    "noble_lord":
-      if (== $data.noble_lord_progress = 0) jump noble_lord_1
-      if (== $data.noble_lord_progress = 1) jump noble_lord_2
-      if (== $data.noble_lord_progress = 2) jump noble_lord_3
-      if (== $data.noble_lord_progress = 3) jump noble_lord_4
-      if (== $data.noble_lord_progress = 4) jump noble_lord_5
-      if (== $data.noble_lord_progress = 5) jump noble_lord_6
-      if (== $data.noble_lord_progress = 6) jump noble_lord_7
+  "Afternoon comes. Who will you speak with?"
+  jump get_stage
+
 afternoon_2:
   add data.time 1
-  choice:
-    "Afternoon comes. Who will you speak with?"
-    "civilian_eagre":
-      if (== $data.civilian_eagre_progress = 0) jump civilian_eagre_1
-      if (== $data.civilian_eagre_progress = 1) jump civilian_eagre_2
-      if (== $data.civilian_eagre_progress = 2) jump civilian_eagre_3
-      if (== $data.civilian_eagre_progress = 3) jump civilian_eagre_4
-      if (== $data.civilian_eagre_progress = 4) jump civilian_eagre_5
-      if (== $data.civilian_eagre_progress = 5) jump civilian_eagre_6
-      if (== $data.civilian_eagre_progress = 6) jump civilian_eagre_7
-    "civilian_icon":
-      if (== $data.civilian_icon_progress = 0) jump civilian_icon_1
-      if (== $data.civilian_icon_progress = 1) jump civilian_icon_2
-      if (== $data.civilian_icon_progress = 2) jump civilian_icon_3
-      if (== $data.civilian_icon_progress = 3) jump civilian_icon_4
-      if (== $data.civilian_icon_progress = 4) jump civilian_icon_5
-      if (== $data.civilian_icon_progress = 5) jump civilian_icon_6
-      if (== $data.civilian_icon_progress = 6) jump civilian_icon_7
-    "merchant_bartender":
-      if (== $data.merchant_bartender_progress = 0) jump merchant_bartender_1
-      if (== $data.merchant_bartender_progress = 1) jump merchant_bartender_2
-      if (== $data.merchant_bartender_progress = 2) jump merchant_bartender_3
-      if (== $data.merchant_bartender_progress = 3) jump merchant_bartender_4
-      if (== $data.merchant_bartender_progress = 4) jump merchant_bartender_5
-      if (== $data.merchant_bartender_progress = 5) jump merchant_bartender_6
-      if (== $data.merchant_bartender_progress = 6) jump merchant_bartender_7
-    "merchant_business":
-      if (== $data.merchant_business_progress = 0) jump merchant_business_1
-      if (== $data.merchant_business_progress = 1) jump merchant_business_2
-      if (== $data.merchant_business_progress = 2) jump merchant_business_3
-      if (== $data.merchant_business_progress = 3) jump merchant_business_4
-      if (== $data.merchant_business_progress = 4) jump merchant_business_5
-      if (== $data.merchant_business_progress = 5) jump merchant_business_6
-      if (== $data.merchant_business_progress = 6) jump merchant_business_7
-    "military_hero":
-      if (== $data.military_hero_progress = 0) jump military_hero_1
-      if (== $data.military_hero_progress = 1) jump military_hero_2
-      if (== $data.military_hero_progress = 2) jump military_hero_3
-      if (== $data.military_hero_progress = 3) jump military_hero_4
-      if (== $data.military_hero_progress = 4) jump military_hero_5
-      if (== $data.military_hero_progress = 5) jump military_hero_6
-      if (== $data.military_hero_progress = 6) jump military_hero_7
-    "military_officer":
-      if (== $data.military_officer_progress = 0) jump military_officer_1
-      if (== $data.military_officer_progress = 1) jump military_officer_2
-      if (== $data.military_officer_progress = 2) jump military_officer_3
-      if (== $data.military_officer_progress = 3) jump military_officer_4
-      if (== $data.military_officer_progress = 4) jump military_officer_5
-      if (== $data.military_officer_progress = 5) jump military_officer_6
-      if (== $data.military_officer_progress = 6) jump military_officer_7
-    "noble_lady":
-      if (== $data.noble_lady_progress = 0) jump noble_lady_1
-      if (== $data.noble_lady_progress = 1) jump noble_lady_2
-      if (== $data.noble_lady_progress = 2) jump noble_lady_3
-      if (== $data.noble_lady_progress = 3) jump noble_lady_4
-      if (== $data.noble_lady_progress = 4) jump noble_lady_5
-      if (== $data.noble_lady_progress = 5) jump noble_lady_6
-      if (== $data.noble_lady_progress = 6) jump noble_lady_7
-    "noble_lord":
-      if (== $data.noble_lord_progress = 0) jump noble_lord_1
-      if (== $data.noble_lord_progress = 1) jump noble_lord_2
-      if (== $data.noble_lord_progress = 2) jump noble_lord_3
-      if (== $data.noble_lord_progress = 3) jump noble_lord_4
-      if (== $data.noble_lord_progress = 4) jump noble_lord_5
-      if (== $data.noble_lord_progress = 5) jump noble_lord_6
-      if (== $data.noble_lord_progress = 6) jump noble_lord_7
+  "Afternoon comes. Who will you speak with?"
+  jump get_stage
+
 afternoon_3:
   add data.time 1
-  choice:
-    "Afternoon comes. Who will you speak with?"
-    "civilian_eagre":
-      if (== $data.civilian_eagre_progress = 0) jump civilian_eagre_1
-      if (== $data.civilian_eagre_progress = 1) jump civilian_eagre_2
-      if (== $data.civilian_eagre_progress = 2) jump civilian_eagre_3
-      if (== $data.civilian_eagre_progress = 3) jump civilian_eagre_4
-      if (== $data.civilian_eagre_progress = 4) jump civilian_eagre_5
-      if (== $data.civilian_eagre_progress = 5) jump civilian_eagre_6
-      if (== $data.civilian_eagre_progress = 6) jump civilian_eagre_7
-    "civilian_icon":
-      if (== $data.civilian_icon_progress = 0) jump civilian_icon_1
-      if (== $data.civilian_icon_progress = 1) jump civilian_icon_2
-      if (== $data.civilian_icon_progress = 2) jump civilian_icon_3
-      if (== $data.civilian_icon_progress = 3) jump civilian_icon_4
-      if (== $data.civilian_icon_progress = 4) jump civilian_icon_5
-      if (== $data.civilian_icon_progress = 5) jump civilian_icon_6
-      if (== $data.civilian_icon_progress = 6) jump civilian_icon_7
-    "merchant_bartender":
-      if (== $data.merchant_bartender_progress = 0) jump merchant_bartender_1
-      if (== $data.merchant_bartender_progress = 1) jump merchant_bartender_2
-      if (== $data.merchant_bartender_progress = 2) jump merchant_bartender_3
-      if (== $data.merchant_bartender_progress = 3) jump merchant_bartender_4
-      if (== $data.merchant_bartender_progress = 4) jump merchant_bartender_5
-      if (== $data.merchant_bartender_progress = 5) jump merchant_bartender_6
-      if (== $data.merchant_bartender_progress = 6) jump merchant_bartender_7
-    "merchant_business":
-      if (== $data.merchant_business_progress = 0) jump merchant_business_1
-      if (== $data.merchant_business_progress = 1) jump merchant_business_2
-      if (== $data.merchant_business_progress = 2) jump merchant_business_3
-      if (== $data.merchant_business_progress = 3) jump merchant_business_4
-      if (== $data.merchant_business_progress = 4) jump merchant_business_5
-      if (== $data.merchant_business_progress = 5) jump merchant_business_6
-      if (== $data.merchant_business_progress = 6) jump merchant_business_7
-    "military_hero":
-      if (== $data.military_hero_progress = 0) jump military_hero_1
-      if (== $data.military_hero_progress = 1) jump military_hero_2
-      if (== $data.military_hero_progress = 2) jump military_hero_3
-      if (== $data.military_hero_progress = 3) jump military_hero_4
-      if (== $data.military_hero_progress = 4) jump military_hero_5
-      if (== $data.military_hero_progress = 5) jump military_hero_6
-      if (== $data.military_hero_progress = 6) jump military_hero_7
-    "military_officer":
-      if (== $data.military_officer_progress = 0) jump military_officer_1
-      if (== $data.military_officer_progress = 1) jump military_officer_2
-      if (== $data.military_officer_progress = 2) jump military_officer_3
-      if (== $data.military_officer_progress = 3) jump military_officer_4
-      if (== $data.military_officer_progress = 4) jump military_officer_5
-      if (== $data.military_officer_progress = 5) jump military_officer_6
-      if (== $data.military_officer_progress = 6) jump military_officer_7
-    "noble_lady":
-      if (== $data.noble_lady_progress = 0) jump noble_lady_1
-      if (== $data.noble_lady_progress = 1) jump noble_lady_2
-      if (== $data.noble_lady_progress = 2) jump noble_lady_3
-      if (== $data.noble_lady_progress = 3) jump noble_lady_4
-      if (== $data.noble_lady_progress = 4) jump noble_lady_5
-      if (== $data.noble_lady_progress = 5) jump noble_lady_6
-      if (== $data.noble_lady_progress = 6) jump noble_lady_7
-    "noble_lord":
-      if (== $data.noble_lord_progress = 0) jump noble_lord_1
-      if (== $data.noble_lord_progress = 1) jump noble_lord_2
-      if (== $data.noble_lord_progress = 2) jump noble_lord_3
-      if (== $data.noble_lord_progress = 3) jump noble_lord_4
-      if (== $data.noble_lord_progress = 4) jump noble_lord_5
-      if (== $data.noble_lord_progress = 5) jump noble_lord_6
-      if (== $data.noble_lord_progress = 6) jump noble_lord_7
+  "Afternoon comes. Who will you speak with?"
+  jump get_stage
+
 afternoon_4:
   add data.time 1
-  choice:
-    "Afternoon comes. Who will you speak with?"
-    "civilian_eagre":
-      if (== $data.civilian_eagre_progress = 0) jump civilian_eagre_1
-      if (== $data.civilian_eagre_progress = 1) jump civilian_eagre_2
-      if (== $data.civilian_eagre_progress = 2) jump civilian_eagre_3
-      if (== $data.civilian_eagre_progress = 3) jump civilian_eagre_4
-      if (== $data.civilian_eagre_progress = 4) jump civilian_eagre_5
-      if (== $data.civilian_eagre_progress = 5) jump civilian_eagre_6
-      if (== $data.civilian_eagre_progress = 6) jump civilian_eagre_7
-    "civilian_icon":
-      if (== $data.civilian_icon_progress = 0) jump civilian_icon_1
-      if (== $data.civilian_icon_progress = 1) jump civilian_icon_2
-      if (== $data.civilian_icon_progress = 2) jump civilian_icon_3
-      if (== $data.civilian_icon_progress = 3) jump civilian_icon_4
-      if (== $data.civilian_icon_progress = 4) jump civilian_icon_5
-      if (== $data.civilian_icon_progress = 5) jump civilian_icon_6
-      if (== $data.civilian_icon_progress = 6) jump civilian_icon_7
-    "merchant_bartender":
-      if (== $data.merchant_bartender_progress = 0) jump merchant_bartender_1
-      if (== $data.merchant_bartender_progress = 1) jump merchant_bartender_2
-      if (== $data.merchant_bartender_progress = 2) jump merchant_bartender_3
-      if (== $data.merchant_bartender_progress = 3) jump merchant_bartender_4
-      if (== $data.merchant_bartender_progress = 4) jump merchant_bartender_5
-      if (== $data.merchant_bartender_progress = 5) jump merchant_bartender_6
-      if (== $data.merchant_bartender_progress = 6) jump merchant_bartender_7
-    "merchant_business":
-      if (== $data.merchant_business_progress = 0) jump merchant_business_1
-      if (== $data.merchant_business_progress = 1) jump merchant_business_2
-      if (== $data.merchant_business_progress = 2) jump merchant_business_3
-      if (== $data.merchant_business_progress = 3) jump merchant_business_4
-      if (== $data.merchant_business_progress = 4) jump merchant_business_5
-      if (== $data.merchant_business_progress = 5) jump merchant_business_6
-      if (== $data.merchant_business_progress = 6) jump merchant_business_7
-    "military_hero":
-      if (== $data.military_hero_progress = 0) jump military_hero_1
-      if (== $data.military_hero_progress = 1) jump military_hero_2
-      if (== $data.military_hero_progress = 2) jump military_hero_3
-      if (== $data.military_hero_progress = 3) jump military_hero_4
-      if (== $data.military_hero_progress = 4) jump military_hero_5
-      if (== $data.military_hero_progress = 5) jump military_hero_6
-      if (== $data.military_hero_progress = 6) jump military_hero_7
-    "military_officer":
-      if (== $data.military_officer_progress = 0) jump military_officer_1
-      if (== $data.military_officer_progress = 1) jump military_officer_2
-      if (== $data.military_officer_progress = 2) jump military_officer_3
-      if (== $data.military_officer_progress = 3) jump military_officer_4
-      if (== $data.military_officer_progress = 4) jump military_officer_5
-      if (== $data.military_officer_progress = 5) jump military_officer_6
-      if (== $data.military_officer_progress = 6) jump military_officer_7
-    "noble_lady":
-      if (== $data.noble_lady_progress = 0) jump noble_lady_1
-      if (== $data.noble_lady_progress = 1) jump noble_lady_2
-      if (== $data.noble_lady_progress = 2) jump noble_lady_3
-      if (== $data.noble_lady_progress = 3) jump noble_lady_4
-      if (== $data.noble_lady_progress = 4) jump noble_lady_5
-      if (== $data.noble_lady_progress = 5) jump noble_lady_6
-      if (== $data.noble_lady_progress = 6) jump noble_lady_7
-    "noble_lord":
-      if (== $data.noble_lord_progress = 0) jump noble_lord_1
-      if (== $data.noble_lord_progress = 1) jump noble_lord_2
-      if (== $data.noble_lord_progress = 2) jump noble_lord_3
-      if (== $data.noble_lord_progress = 3) jump noble_lord_4
-      if (== $data.noble_lord_progress = 4) jump noble_lord_5
-      if (== $data.noble_lord_progress = 5) jump noble_lord_6
-      if (== $data.noble_lord_progress = 6) jump noble_lord_7
+  "Afternoon comes. Who will you speak with?"
+  jump get_stage
+
 afternoon_5:
   add data.time 1
-  choice:
-    "Afternoon comes. Who will you speak with?"
-    "civilian_eagre":
-      if (== $data.civilian_eagre_progress = 0) jump civilian_eagre_1
-      if (== $data.civilian_eagre_progress = 1) jump civilian_eagre_2
-      if (== $data.civilian_eagre_progress = 2) jump civilian_eagre_3
-      if (== $data.civilian_eagre_progress = 3) jump civilian_eagre_4
-      if (== $data.civilian_eagre_progress = 4) jump civilian_eagre_5
-      if (== $data.civilian_eagre_progress = 5) jump civilian_eagre_6
-      if (== $data.civilian_eagre_progress = 6) jump civilian_eagre_7
-    "civilian_icon":
-      if (== $data.civilian_icon_progress = 0) jump civilian_icon_1
-      if (== $data.civilian_icon_progress = 1) jump civilian_icon_2
-      if (== $data.civilian_icon_progress = 2) jump civilian_icon_3
-      if (== $data.civilian_icon_progress = 3) jump civilian_icon_4
-      if (== $data.civilian_icon_progress = 4) jump civilian_icon_5
-      if (== $data.civilian_icon_progress = 5) jump civilian_icon_6
-      if (== $data.civilian_icon_progress = 6) jump civilian_icon_7
-    "merchant_bartender":
-      if (== $data.merchant_bartender_progress = 0) jump merchant_bartender_1
-      if (== $data.merchant_bartender_progress = 1) jump merchant_bartender_2
-      if (== $data.merchant_bartender_progress = 2) jump merchant_bartender_3
-      if (== $data.merchant_bartender_progress = 3) jump merchant_bartender_4
-      if (== $data.merchant_bartender_progress = 4) jump merchant_bartender_5
-      if (== $data.merchant_bartender_progress = 5) jump merchant_bartender_6
-      if (== $data.merchant_bartender_progress = 6) jump merchant_bartender_7
-    "merchant_business":
-      if (== $data.merchant_business_progress = 0) jump merchant_business_1
-      if (== $data.merchant_business_progress = 1) jump merchant_business_2
-      if (== $data.merchant_business_progress = 2) jump merchant_business_3
-      if (== $data.merchant_business_progress = 3) jump merchant_business_4
-      if (== $data.merchant_business_progress = 4) jump merchant_business_5
-      if (== $data.merchant_business_progress = 5) jump merchant_business_6
-      if (== $data.merchant_business_progress = 6) jump merchant_business_7
-    "military_hero":
-      if (== $data.military_hero_progress = 0) jump military_hero_1
-      if (== $data.military_hero_progress = 1) jump military_hero_2
-      if (== $data.military_hero_progress = 2) jump military_hero_3
-      if (== $data.military_hero_progress = 3) jump military_hero_4
-      if (== $data.military_hero_progress = 4) jump military_hero_5
-      if (== $data.military_hero_progress = 5) jump military_hero_6
-      if (== $data.military_hero_progress = 6) jump military_hero_7
-    "military_officer":
-      if (== $data.military_officer_progress = 0) jump military_officer_1
-      if (== $data.military_officer_progress = 1) jump military_officer_2
-      if (== $data.military_officer_progress = 2) jump military_officer_3
-      if (== $data.military_officer_progress = 3) jump military_officer_4
-      if (== $data.military_officer_progress = 4) jump military_officer_5
-      if (== $data.military_officer_progress = 5) jump military_officer_6
-      if (== $data.military_officer_progress = 6) jump military_officer_7
-    "noble_lady":
-      if (== $data.noble_lady_progress = 0) jump noble_lady_1
-      if (== $data.noble_lady_progress = 1) jump noble_lady_2
-      if (== $data.noble_lady_progress = 2) jump noble_lady_3
-      if (== $data.noble_lady_progress = 3) jump noble_lady_4
-      if (== $data.noble_lady_progress = 4) jump noble_lady_5
-      if (== $data.noble_lady_progress = 5) jump noble_lady_6
-      if (== $data.noble_lady_progress = 6) jump noble_lady_7
-    "noble_lord":
-      if (== $data.noble_lord_progress = 0) jump noble_lord_1
-      if (== $data.noble_lord_progress = 1) jump noble_lord_2
-      if (== $data.noble_lord_progress = 2) jump noble_lord_3
-      if (== $data.noble_lord_progress = 3) jump noble_lord_4
-      if (== $data.noble_lord_progress = 4) jump noble_lord_5
-      if (== $data.noble_lord_progress = 5) jump noble_lord_6
-      if (== $data.noble_lord_progress = 6) jump noble_lord_7
+  "Afternoon comes. Who will you speak with?"
+  jump get_stage
+
 afternoon_6:
   add data.time 1
-  choice:
-    "Afternoon comes. Who will you speak with?"
-    "civilian_eagre":
-      if (== $data.civilian_eagre_progress = 0) jump civilian_eagre_1
-      if (== $data.civilian_eagre_progress = 1) jump civilian_eagre_2
-      if (== $data.civilian_eagre_progress = 2) jump civilian_eagre_3
-      if (== $data.civilian_eagre_progress = 3) jump civilian_eagre_4
-      if (== $data.civilian_eagre_progress = 4) jump civilian_eagre_5
-      if (== $data.civilian_eagre_progress = 5) jump civilian_eagre_6
-      if (== $data.civilian_eagre_progress = 6) jump civilian_eagre_7
-    "civilian_icon":
-      if (== $data.civilian_icon_progress = 0) jump civilian_icon_1
-      if (== $data.civilian_icon_progress = 1) jump civilian_icon_2
-      if (== $data.civilian_icon_progress = 2) jump civilian_icon_3
-      if (== $data.civilian_icon_progress = 3) jump civilian_icon_4
-      if (== $data.civilian_icon_progress = 4) jump civilian_icon_5
-      if (== $data.civilian_icon_progress = 5) jump civilian_icon_6
-      if (== $data.civilian_icon_progress = 6) jump civilian_icon_7
-    "merchant_bartender":
-      if (== $data.merchant_bartender_progress = 0) jump merchant_bartender_1
-      if (== $data.merchant_bartender_progress = 1) jump merchant_bartender_2
-      if (== $data.merchant_bartender_progress = 2) jump merchant_bartender_3
-      if (== $data.merchant_bartender_progress = 3) jump merchant_bartender_4
-      if (== $data.merchant_bartender_progress = 4) jump merchant_bartender_5
-      if (== $data.merchant_bartender_progress = 5) jump merchant_bartender_6
-      if (== $data.merchant_bartender_progress = 6) jump merchant_bartender_7
-    "merchant_business":
-      if (== $data.merchant_business_progress = 0) jump merchant_business_1
-      if (== $data.merchant_business_progress = 1) jump merchant_business_2
-      if (== $data.merchant_business_progress = 2) jump merchant_business_3
-      if (== $data.merchant_business_progress = 3) jump merchant_business_4
-      if (== $data.merchant_business_progress = 4) jump merchant_business_5
-      if (== $data.merchant_business_progress = 5) jump merchant_business_6
-      if (== $data.merchant_business_progress = 6) jump merchant_business_7
-    "military_hero":
-      if (== $data.military_hero_progress = 0) jump military_hero_1
-      if (== $data.military_hero_progress = 1) jump military_hero_2
-      if (== $data.military_hero_progress = 2) jump military_hero_3
-      if (== $data.military_hero_progress = 3) jump military_hero_4
-      if (== $data.military_hero_progress = 4) jump military_hero_5
-      if (== $data.military_hero_progress = 5) jump military_hero_6
-      if (== $data.military_hero_progress = 6) jump military_hero_7
-    "military_officer":
-      if (== $data.military_officer_progress = 0) jump military_officer_1
-      if (== $data.military_officer_progress = 1) jump military_officer_2
-      if (== $data.military_officer_progress = 2) jump military_officer_3
-      if (== $data.military_officer_progress = 3) jump military_officer_4
-      if (== $data.military_officer_progress = 4) jump military_officer_5
-      if (== $data.military_officer_progress = 5) jump military_officer_6
-      if (== $data.military_officer_progress = 6) jump military_officer_7
-    "noble_lady":
-      if (== $data.noble_lady_progress = 0) jump noble_lady_1
-      if (== $data.noble_lady_progress = 1) jump noble_lady_2
-      if (== $data.noble_lady_progress = 2) jump noble_lady_3
-      if (== $data.noble_lady_progress = 3) jump noble_lady_4
-      if (== $data.noble_lady_progress = 4) jump noble_lady_5
-      if (== $data.noble_lady_progress = 5) jump noble_lady_6
-      if (== $data.noble_lady_progress = 6) jump noble_lady_7
-    "noble_lord":
-      if (== $data.noble_lord_progress = 0) jump noble_lord_1
-      if (== $data.noble_lord_progress = 1) jump noble_lord_2
-      if (== $data.noble_lord_progress = 2) jump noble_lord_3
-      if (== $data.noble_lord_progress = 3) jump noble_lord_4
-      if (== $data.noble_lord_progress = 4) jump noble_lord_5
-      if (== $data.noble_lord_progress = 5) jump noble_lord_6
-      if (== $data.noble_lord_progress = 6) jump noble_lord_7
+  "Afternoon comes. Who will you speak with?"
+  jump get_stage
+
 afternoon_7:
   add data.time 1
-  choice:
-    "Afternoon comes. Who will you speak with?"
-    "civilian_eagre":
-      if (== $data.civilian_eagre_progress = 0) jump civilian_eagre_1
-      if (== $data.civilian_eagre_progress = 1) jump civilian_eagre_2
-      if (== $data.civilian_eagre_progress = 2) jump civilian_eagre_3
-      if (== $data.civilian_eagre_progress = 3) jump civilian_eagre_4
-      if (== $data.civilian_eagre_progress = 4) jump civilian_eagre_5
-      if (== $data.civilian_eagre_progress = 5) jump civilian_eagre_6
-      if (== $data.civilian_eagre_progress = 6) jump civilian_eagre_7
-    "civilian_icon":
-      if (== $data.civilian_icon_progress = 0) jump civilian_icon_1
-      if (== $data.civilian_icon_progress = 1) jump civilian_icon_2
-      if (== $data.civilian_icon_progress = 2) jump civilian_icon_3
-      if (== $data.civilian_icon_progress = 3) jump civilian_icon_4
-      if (== $data.civilian_icon_progress = 4) jump civilian_icon_5
-      if (== $data.civilian_icon_progress = 5) jump civilian_icon_6
-      if (== $data.civilian_icon_progress = 6) jump civilian_icon_7
-    "merchant_bartender":
-      if (== $data.merchant_bartender_progress = 0) jump merchant_bartender_1
-      if (== $data.merchant_bartender_progress = 1) jump merchant_bartender_2
-      if (== $data.merchant_bartender_progress = 2) jump merchant_bartender_3
-      if (== $data.merchant_bartender_progress = 3) jump merchant_bartender_4
-      if (== $data.merchant_bartender_progress = 4) jump merchant_bartender_5
-      if (== $data.merchant_bartender_progress = 5) jump merchant_bartender_6
-      if (== $data.merchant_bartender_progress = 6) jump merchant_bartender_7
-    "merchant_business":
-      if (== $data.merchant_business_progress = 0) jump merchant_business_1
-      if (== $data.merchant_business_progress = 1) jump merchant_business_2
-      if (== $data.merchant_business_progress = 2) jump merchant_business_3
-      if (== $data.merchant_business_progress = 3) jump merchant_business_4
-      if (== $data.merchant_business_progress = 4) jump merchant_business_5
-      if (== $data.merchant_business_progress = 5) jump merchant_business_6
-      if (== $data.merchant_business_progress = 6) jump merchant_business_7
-    "military_hero":
-      if (== $data.military_hero_progress = 0) jump military_hero_1
-      if (== $data.military_hero_progress = 1) jump military_hero_2
-      if (== $data.military_hero_progress = 2) jump military_hero_3
-      if (== $data.military_hero_progress = 3) jump military_hero_4
-      if (== $data.military_hero_progress = 4) jump military_hero_5
-      if (== $data.military_hero_progress = 5) jump military_hero_6
-      if (== $data.military_hero_progress = 6) jump military_hero_7
-    "military_officer":
-      if (== $data.military_officer_progress = 0) jump military_officer_1
-      if (== $data.military_officer_progress = 1) jump military_officer_2
-      if (== $data.military_officer_progress = 2) jump military_officer_3
-      if (== $data.military_officer_progress = 3) jump military_officer_4
-      if (== $data.military_officer_progress = 4) jump military_officer_5
-      if (== $data.military_officer_progress = 5) jump military_officer_6
-      if (== $data.military_officer_progress = 6) jump military_officer_7
-    "noble_lady":
-      if (== $data.noble_lady_progress = 0) jump noble_lady_1
-      if (== $data.noble_lady_progress = 1) jump noble_lady_2
-      if (== $data.noble_lady_progress = 2) jump noble_lady_3
-      if (== $data.noble_lady_progress = 3) jump noble_lady_4
-      if (== $data.noble_lady_progress = 4) jump noble_lady_5
-      if (== $data.noble_lady_progress = 5) jump noble_lady_6
-      if (== $data.noble_lady_progress = 6) jump noble_lady_7
-    "noble_lord":
-      if (== $data.noble_lord_progress = 0) jump noble_lord_1
-      if (== $data.noble_lord_progress = 1) jump noble_lord_2
-      if (== $data.noble_lord_progress = 2) jump noble_lord_3
-      if (== $data.noble_lord_progress = 3) jump noble_lord_4
-      if (== $data.noble_lord_progress = 4) jump noble_lord_5
-      if (== $data.noble_lord_progress = 5) jump noble_lord_6
-      if (== $data.noble_lord_progress = 6) jump noble_lord_7
+  "Afternoon comes. Who will you speak with?"
+  jump get_stage
+
 crisis_1:
- add data.time 1
- "In the evening, the chamber becomes quiet-only a few functionaries and other staff are milling around."
- "Before returning to your pod for the night you open up your local news feeds and skim around."
- "You open a feed tagged with <BREAKING NEWS>"
- "There appears to be some sort of labour dispute in one of Sclera's deep mining caverns. A rabble of miners stand with protest signs decrying their unfair treatment, pay, safety."
- "They appear to be surrounded by local security forces, riot shields and stun lances deployed."
- " One of the protestors trips and falls forward towards them."
- "The camera operator jostles and clumsily zooms in."
- "Two of the guards break from their line and move to strike."
- "...and then they're both writhing on the ground, and standing in centre frame is a miner, fists raised aloft. A champion of the people in coveralls."
- "You receive a notification that your candidates list has been automatically updated."
- "[The Civilian Faction Gains Influence]"
- add_stat civilian_eagre_influence 1
- add_stat civilian_icon_influence 1
- jump timekeeper
+  add data.time 1
+  "In the evening, the chamber becomes quiet-only a few functionaries and other staff are milling around."
+  "Before returning to your pod for the night you open up your local news feeds and skim around."
+  "You open a feed tagged with <BREAKING NEWS>"
+  "There appears to be some sort of labour dispute in one of Sclera's deep mining caverns. A rabble of miners stand with protest signs decrying their unfair treatment, pay, safety."
+  "They appear to be surrounded by local security forces, riot shields and stun lances deployed."
+  " One of the protestors trips and falls forward towards them."
+  "The camera operator jostles and clumsily zooms in."
+  "Two of the guards break from their line and move to strike."
+  "...and then they're both writhing on the ground, and standing in centre frame is a miner, fists raised aloft. A champion of the people in coveralls."
+  "You receive a notification that your candidates list has been automatically updated."
+  "[The Civilian Faction Gains Influence]"
+  add data.civilian_eagre_influence 1
+  add data.civilian_icon_influence 1
+  jump timekeeper
+
 crisis_2:
   add data.time 1
- "This evening one of the functionaries informs you that some entertainment has been arranged by the Merchants Guild."
- "You travel with a group of other visiting dignitaries and diplomats in a shuttle to Sclera's stadium, slightly shabby."
- "You take your seat in the box, and the show begins."
- "The master of ceremonies walks out onto the field, their image holographically mirrored into the sky above."
- "A classical circus complete with tightrope walking, fire eating, and general clowning unfolds."
- "You spend so long in stasis, it's difficult to keep track of trends, supposedly this is in vogue at the moment."
- "[The Merchant Faction Gains Influence]"
- add_stat merchant_bartender_influence 1
- add_stat merchant_business_influence 1
- jump timekeeper
+  "This evening one of the functionaries informs you that some entertainment has been arranged by the Merchants Guild."
+  "You travel with a group of other visiting dignitaries and diplomats in a shuttle to Sclera's stadium, slightly shabby."
+  "You take your seat in the box, and the show begins."
+  "The master of ceremonies walks out onto the field, their image holographically mirrored into the sky above."
+  "A classical circus complete with tightrope walking, fire eating, and general clowning unfolds."
+  "You spend so long in stasis, it's difficult to keep track of trends, supposedly this is in vogue at the moment."
+  "[The Merchant Faction Gains Influence]"
+  add data.merchant_bartender_influence 1
+  add data.merchant_business_influence 1
+  jump timekeeper
+
 crisis_3:
   add data.time 1
- "An explosion crackles and echoes through the sky above the chamber."
- "People shriek and duck for cover under their desks."
- "Over the PA, the voice of Isaiah Shackle booms-"
- talk military_hero "Raiders have attempted to breach city airspace. Do not be alarmed and seek shelter immediately. Retaliatory fire is imminent."
- "You return to your pod just in time, as the ground shakes and the Credence City batteries unload on the raider fleet."
- "[The Military Faction Gains Influence]"
- add_stat military_hero_influence 1
- add_stat military_officer_influence 1
- jump timekeeper
-crisis_4:
- add data.time 1
- "Every Planet under the Corroborance, willing or not, has an anniversary festival. You've been to many in your time."
- "The Priesthood in their flowing gowns take to the streets with censers filled with local herbs and spices."
- "It's customary for those of Noble Houses and certain Guild positions to visit each ward and bestow a gift upon the people."
- "This year's gifts are particularly generous-a trade school, a community centre, a war memorial, and a grand feast in the streets which devolves into an all-night party."
- "You recall sneaking out as a child to see to experience it all, just before you took your vows."
- "[The Noble Faction Gains Influence]"
- add_stat noble_lord_influence 1
- add_stat noble_lady_influence 1
- jump timekeeper
-crisis_5:
- add data.time 1
- "The day draws to a close, and you take a walk through the chamber's warren of a basement."
- "You pass a squad of guards, smoking and playing cards. They invite you to play, but you decline."
- "You walk through an empty atrium, your shoes clacking in the tall stillness of the place."
- "In another wing you see Ser Anastasia, Housecarl Of House D'Linear, sharpening her photoblade. She regards you with a smile."
- "You return to the atrium, your curiosity satisfied, and press the call button for the elevator with a muffled ding."
- "A robed figure drops from above, landing in a heap with a crack."
- "And then the figure is rising, contorting and twisty and inhuman, and they're at rushing you, hissing."
- choice:
-  "Where do you run to?"
-   "The Housecarl":
-    add_stat noble_lord_influence 1
-    add_stat scheming_lady_influence 1
-    "In an instant, the assailant is disected and disected and disected again by the photoblade, a steaming pile."
-    "Ser Anastasia nods, flicks the gore from the blade, smiles, and returns to her business."
-    "You walk alone back to the elevator."
-    "[The Noble Faction Has Gained Influence]"
-   "The Soldiers": 
-    "The soldiers grab their rifles and gun down your would-be assasin as though they were a beast."
-    "They say you're in shock and you're not going to deny that."
-    "One of them puts their coat around you and they escort you back to your pod."
-    add_stat military_hero_influence 1
-    add_stat military_officer_influence 1
-    "[The Military Faction Has Gained Influence]"
+  "An explosion crackles and echoes through the sky above the chamber."
+  "People shriek and duck for cover under their desks."
+  "Over the PA, the voice of Isaiah Shackle booms-"
+  talk military_hero idle idle "Raiders have attempted to breach city airspace. Do not be alarmed and seek shelter immediately. Retaliatory fire is imminent."
+  "You return to your pod just in time, as the ground shakes and the Credence City batteries unload on the raider fleet."
+  "[The Military Faction Gains Influence]"
+  add data.military_hero_influence 1
+  add data.military_officer_influence 1
   jump timekeeper
+
+crisis_4:
+  add data.time 1
+  "Every Planet under the Corroborance, willing or not, has an anniversary festival. You've been to many in your time."
+  "The Priesthood in their flowing gowns take to the streets with censers filled with local herbs and spices."
+  "It's customary for those of Noble Houses and certain Guild positions to visit each ward and bestow a gift upon the people."
+  "This year's gifts are particularly generous-a trade school, a community centre, a war memorial, and a grand feast in the streets which devolves into an all-night party."
+  "You recall sneaking out as a child to see to experience it all, just before you took your vows."
+  "[The Noble Faction Gains Influence]"
+  add data.noble_lord_influence 1
+  add data.noble_lady_influence 1
+  jump timekeeper
+  
+crisis_5:
+  add data.time 1
+  "The day draws to a close, and you take a walk through the chamber's warren of a basement."
+  "You pass a squad of guards, smoking and playing cards. They invite you to play, but you decline."
+  "You walk through an empty atrium, your shoes clacking in the tall stillness of the place."
+  "In another wing you see Ser Anastasia, Housecarl Of House D'Linear, sharpening her photoblade. She regards you with a smile."
+  "You return to the atrium, your curiosity satisfied, and press the call button for the elevator with a muffled ding."
+  "A robed figure drops from above, landing in a heap with a crack."
+  "And then the figure is rising, contorting and twisty and inhuman, and they're at rushing you, hissing."
+  choice:
+    "Where do you run to?"
+    "The Housecarl":
+      add data.noble_lord_influence 1
+      add data.scheming_lady_influence 1
+      "In an instant, the assailant is disected and disected and disected again by the photoblade, a steaming pile."
+      "Ser Anastasia nods, flicks the gore from the blade, smiles, and returns to her business."
+      "You walk alone back to the elevator."
+      "[The Noble Faction Has Gained Influence]"
+    "The Soldiers": 
+      "The soldiers grab their rifles and gun down your would-be assasin as though they were a beast."
+      "They say you're in shock and you're not going to deny that."
+      "One of them puts their coat around you and they escort you back to your pod."
+      add data.military_hero_influence 1
+      add data.military_officer_influence 1
+      "[The Military Faction Has Gained Influence]"
+  jump timekeeper
+
 crisis_6:
   add data.time 1
- "On your penultimate night before the succesion ceremony, you take a trip to one of the rooftop gardens atop the habitation towers."
- "Up here, the air is thin and clean. You lay down on a grassy hillock and gaze up at the night-sky, framed by the perfect circle of the sinkhole."
- "The silica storm whorls and snaps in the velveteen darkness far above you. It's rare to see the stars on Sclera, it's part of why you signed up for this job in the first place."
- "You find yourself waxing nostalgic about this place, about the people and sights and the smells and the weird air that sticks to your tongue and..."
- "12 more cycles, and you can come home for real."
- "But not yet."
- "Glistening in the dark, a meteor shower begins-little white streaks cutting hot through the cold void."
- choice:
-  "choice"
-   "Option A":
-    "Outcome"
-    add_stat merchant_bartender_influence 1
-    add_stat merchant_business_influence 1
-    "[The Merchant Faction Has Gained Influence]"
-   "Option B":
-    "Outcome"
-    add_stat civilian_icon_influence 1
-    add_stat civilian_eagre_influence 1
-    "[The Civilian Faction Has Gained Influence]"
+  "On your penultimate night before the succesion ceremony, you take a trip to one of the rooftop gardens atop the habitation towers."
+  "Up here, the air is thin and clean. You lay down on a grassy hillock and gaze up at the night-sky, framed by the perfect circle of the sinkhole."
+  "The silica storm whorls and snaps in the velveteen darkness far above you. It's rare to see the stars on Sclera, it's part of why you signed up for this job in the first place."
+  "You find yourself waxing nostalgic about this place, about the people and sights and the smells and the weird air that sticks to your tongue and..."
+  "12 more cycles, and you can come home for real."
+  "But not yet."
+  "Glistening in the dark, a meteor shower begins-little white streaks cutting hot through the cold void."
+  choice:
+    "choice"
+    "Option A":
+      "Outcome"
+      add data.merchant_bartender_influence 1
+      add data.merchant_business_influence 1
+      "[The Merchant Faction Has Gained Influence]"
+    "Option B":
+      "Outcome"
+      add data.civilian_icon_influence 1
+      add data.civilian_eagre_influence 1
+      "[The Civilian Faction Has Gained Influence]"
   jump timekeeper
+
 endgame:
-      if (== $data.suspicion > 2) jump dicovered_end
-      if (== $data.civilian_eagre_influence > 2) jump civilian_eagre_end
-      if (== $data.civilian_icon_influence > 2) jump civilian_icon_end
-      if (== $data.merchant_bartender_influence > 2) jump merchant_bartender_end
-      if (== $data.merchant_business_influence > 2) jump merchant_business_end
-      if (== $data.military_hero_influence > 2) jump military_hero_end
-      if (== $data.military_officer_influence > 2) jump military_officer_end
-      if (== $data.noble_lady_influence > 2) jump noble_lady_end
-      if (== $data.noble_lord_influence > 2) jump noble_lord_end
-      jump ending_flop
+  if (== $data.suspicion > 2): 
+    jump discovered_end
+  if (== $data.civilian_eagre_influence > 2): 
+    jump civilian_eagre_end
+  if (== $data.civilian_icon_influence > 2): 
+    jump civilian_icon_end
+  if (== $data.merchant_bartender_influence > 2): 
+    jump merchant_bartender_end
+  if (== $data.merchant_business_influence > 2): 
+    jump merchant_business_end
+  if (== $data.military_hero_influence > 2): 
+    jump military_hero_end
+  if (== $data.military_officer_influence > 2): 
+    jump military_officer_end
+  if (== $data.noble_lady_influence > 2): 
+    jump noble_lady_end
+  if (== $data.noble_lord_influence > 2): 
+    jump noble_lord_end
+  jump ending_flop
 
 civilian_eagre_end:
-  add data.time = time 1
+  add data.time 1
   jump timekeeper
+
 civilian_icon_end:
-  add data.time = time 1
+  add data.time 1
   jump timekeeper
+
 merchant_bartender_end:
-  add data.time = time 1
+  add data.time 1
   jump timekeeper
+
 merchant_business_end:
-  add data.time = time 1
+  add data.time 1
   jump timekeeper
+
 military_hero_end:
-  add data.time = time 1
+  add data.time 1
   jump timekeeper
+
 military_officer_end:
-  add data.time = time 1
+  add data.time 1
   jump timekeeper
+
 noble_lady_end:
-  add data.time = time 1
+  add data.time 1
   jump timekeeper
+
 noble_lord_end:
-  add data.time = time 1
+  add data.time 1
   jump timekeeper
+
 discovered_end:
-  add data.time = time 1
-
+  add data.time 1
   jump timekeeper
+
 ending_flop:
-  add data.time = time 1
+  add data.time 1
+  jump timekeeper
 
-  jump timekeeper
 civilian_eagre_1:
- add data.civilian_eagre_progress 1
- "Gloria Hewcore-Schist makes herself known before you even have a chance to say hello."
- talk eagre_organiser "Hi, hello, uh-welcome to Sclera and well, Credence City specifically I suppose! I'm Gloria Hewcore-Schist but I'm not precious about it, just call me Gloria. I'm the head of the commitee for the Sclera Miner's Liberation Front and I also sit on the boards for-oh, you don't need to know about those though, they just keep me busy."
- "She stops to take a breath."
- talk eagre_organiser "How was the travel, I hope you're not too sore? I heard those pods are terrible for you but I'd get sooo bored sitting around for days on those long haul ships, not that I've ever been to space."
- talk eagre_organiser  "Anyway, what was I saying-uh-"
- "She pulls a PDA from her bag-"
- talk eagre_organiser  "Right, yes-as the representative for Sclera Miner's Liberation Front and as a candidate for the upcoming leadership ceremony I've been asked to assure you that if that great honour falls to me I will lead according to our written bylaws. Now I just need you to-"
- "A slightly crumpled sheet of paper-"
- talk eagre_organiser  "-get you to sign this to confirm that."
- talk facilitator  "You want me to sign a document confirming that...you told me something?"
- talk eagre_organiser  "Ah, yes-I know it's a bit unusual but we have a whole section in the bylaws on how to handle this, you know? Divine appointment by the Corroborance kind of doesn't align with the Sclera Miner's Liberation Front's whole...deal-but it's not like we can challenge it directly so we've come up with a process to do harm mitigation as best we can."
- talk facilitator  "That's very...considered."
- talk eagre_organiser  "Isn't it just? Got to make do with what you have, like I always say. Anyway, delightful to meet you but I have to get going, I'm already running late for my next meeting."
- "...and just like that she took off running."
+  add data.civilian_eagre_progress 1
+  "Gloria Hewcore-Schist makes herself known before you even have a chance to say hello."
+  talk eagre_organiser idle "Hi, hello, uh-welcome to Sclera and well, Credence City specifically I suppose! I'm Gloria Hewcore-Schist but I'm not precious about it, just call me Gloria. I'm the head of the commitee for the Sclera Miner's Liberation Front and I also sit on the boards for-oh, you don't need to know about those though, they just keep me busy."
+  "She stops to take a breath."
+  talk eagre_organiser idle "How was the travel, I hope you're not too sore? I heard those pods are terrible for you but I'd get sooo bored sitting around for days on those long haul ships, not that I've ever been to space."
+  talk eagre_organiser idle "Anyway, what was I saying-uh-"
+  "She pulls a PDA from her bag-"
+  talk eagre_organiser idle "Right, yes-as the representative for Sclera Miner's Liberation Front and as a candidate for the upcoming leadership ceremony I've been asked to assure you that if that great honour falls to me I will lead according to our written bylaws. Now I just need you to-"
+  "A slightly crumpled sheet of paper-"
+  talk eagre_organiser idle "-get you to sign this to confirm that."
+  talk player idle "You want me to sign a document confirming that...you told me something?"
+  talk eagre_organiser idle "Ah, yes-I know it's a bit unusual but we have a whole section in the bylaws on how to handle this, you know? Divine appointment by the Corroborance kind of doesn't align with the Sclera Miner's Liberation Front's whole...deal-but it's not like we can challenge it directly so we've come up with a process to do harm mitigation as best we can."
+  talk player idle "That's very...considered."
+  talk eagre_organiser idle "Isn't it just? Got to make do with what you have, like I always say. Anyway, delightful to meet you but I have to get going, I'm already running late for my next meeting."
+  "...and just like that she took off running."
   jump timekeeper
+
 civilian_eagre_2:
- add data.civilian_eagre_progress 1
- "You find Gloria sitting cross-legged on the floor in a corner of the chamber, typing up a storm on her pocket terminal."
- talk eagre_organiser "Ah, hey, hi-it's you. Forgive me, I'm a little preoccupied after last night's events. Lots of...spirited discussions going back and forth after that."
- talk Facilitator "I can imagine-their approach doesn't really match up with yours, huh?"
- talk eagre_organiser "No, I just wish people like that could see the bigger picture. If we strike out alone like that we can get...snuffed out..."
- talk Facilitator "You sound like you are speaking from experience?"
- talk eagre_organiser "Yeah-my brother got jailed last year and...I don't even know where my sister went."
- talk Facilitator "That's awful-I'm sure they made a difference though."
- talk eagre_organiser "Sure, but at what cost? If we'd moved together-if we had reached a consensus-we could have done so much more..."
- "She looks forlorn for just a moment, fiddling with a paperclip, before finding her resolve."
- talk eagre_organiser "Anyway, back to work-huh? I have my duties and you have yours."
- "You catch a glimpse at her notifications feed-just a continuous stream of messages and pings."
- "You leave her to it."
- jump timekeeper
+  add data.civilian_eagre_progress 1
+  "You find Gloria sitting cross-legged on the floor in a corner of the chamber, typing up a storm on her pocket terminal."
+  talk eagre_organiser idle "Ah, hey, hi-it's you. Forgive me, I'm a little preoccupied after last night's events. Lots of...spirited discussions going back and forth after that."
+  talk player idle "I can imagine-their approach doesn't really match up with yours, huh?"
+  talk eagre_organiser idle "No, I just wish people like that could see the bigger picture. If we strike out alone like that we can get...snuffed out..."
+  talk player idle "You sound like you are speaking from experience?"
+  talk eagre_organiser idle "Yeah-my brother got jailed last year and...I don't even know where my sister went."
+  talk player idle "That's awful-I'm sure they made a difference though."
+  talk eagre_organiser idle "Sure, but at what cost? If we'd moved together-if we had reached a consensus-we could have done so much more..."
+  "She looks forlorn for just a moment, fiddling with a paperclip, before finding her resolve."
+  talk eagre_organiser idle "Anyway, back to work-huh? I have my duties and you have yours."
+  "You catch a glimpse at her notifications feed-just a continuous stream of messages and pings."
+  "You leave her to it."
+  jump timekeeper
+
 civilian_eagre_3:
- add data.civilian_eagre_progress 1
- talk eagre_organiser "You know, we really need to get to the bottom of this and work together, gang! I'm serious!"
- "Gloria's conference call is drawing glares from around the chamber."
- "She looks up from her screen, mortified, and closes the terminal."
- talk eagre_organiser "I am sooo sorry, it's just...sometimes I wonder if I wear too many hats-right?"
- talk eagre_organiser "It's like I can't be their boss, their friend, their comrade and their mother..."
- talk Facilitator "I've never thought of it this way but I suppose being as indpendent as I am in this job does have it's advantages."
- talk eagre_organiser "Oh, no disrespect but I could *never* do what you do. It seems awful, just being dropped into a random civilisation at their moment of crisis. How do you build relationships, forge trust and the like?"
- talk Facilitator "I've come to hold less stock in such things, I suppose that's true. I only have 12 more rotations left though, I think I can make it."
- talk eagre_organiser "12 more! That could be, what, another decade? How long have they kept you on ice?"
- "The thought of it is like have a bruise punched."
- talk Facilitator "As long as my duty demands..."
- "She cracks a smile."
- talk eagre_organiser "For my first order as Supreme Overchancellor or whatever I'm definitely outlawing that nonsense."
- talk Facilitator "As nice as that might be...I think that's probably heresy."
- jump timekeeper
+  add data.civilian_eagre_progress 1
+  talk eagre_organiser idle "You know, we really need to get to the bottom of this and work together, gang! I'm serious!"
+  "Gloria's conference call is drawing glares from around the chamber."
+  "She looks up from her screen, mortified, and closes the terminal."
+  talk eagre_organiser idle "I am sooo sorry, it's just...sometimes I wonder if I wear too many hats-right?"
+  talk eagre_organiser idle "It's like I can't be their boss, their friend, their comrade and their mother..."
+  talk player idle "I've never thought of it this way but I suppose being as indpendent as I am in this job does have it's advantages."
+  talk eagre_organiser idle "Oh, no disrespect but I could *never* do what you do. It seems awful, just being dropped into a random civilisation at their moment of crisis. How do you build relationships, forge trust and the like?"
+  talk player idle "I've come to hold less stock in such things, I suppose that's true. I only have 12 more rotations left though, I think I can make it."
+  talk eagre_organiser idle "12 more! That could be, what, another decade? How long have they kept you on ice?"
+  "The thought of it is like have a bruise punched."
+  talk player idle "As long as my duty demands..."
+  "She cracks a smile."
+  talk eagre_organiser idle "For my first order as Supreme Overchancellor or whatever I'm definitely outlawing that nonsense."
+  talk player idle "As nice as that might be...I think that's probably heresy."
+  jump timekeeper
+
 civilian_eagre_4:
- add data.civilian_eagre_progress 1
- "Gloria's comandeered a table in the corner of a nearby cafe, documents everywhere-but as you approach she shuffles most of them back into her bag to make room for you."
- talk Facilitator "Whole lot of paper."
- talk eagre_organiser "Apparently the only way to be sure down here is wet ink. Honestly, it's a complete pain in the neck but that's how the board voted and I didn't have the fight that day to stop them."
- talk Facilitator "It does seem a little...backwards."
- talk eagre_organiser "It is, it is, but that's just how it is."
- "She pulls another sheaf of paper out from underneath her mug before taking a sip."
- talk eagre_organiser "Anyway, what brings you to my office today?"
- talk Facilitator "I need to gather more information on your organisation, the Sclera Miner's Liberation Front. The Corroborance does allow for group rule but they insist on a figurehead for diplomatic reasons. Tell me more about the Front and their goals."
- talk eagre_organiser "Ah, of course. We were founded 8 years back and it's really exploded since then. Most of the populace here in Credence City are either miners or dust pilots, and we represent both groups as well as non-guild engineers, and just last week we absorbed the dockworkers union. All in all we directly represent about 67.4% of all workers based on Sclera."
- talk Facilitator "Impressive."
- talk eagre_organiser "Yeah, and exhausting. Actually, I hate to ask, but you could do me a massive favour. Would you mind looking in the official records for a Eustace Gyr-Varve? He holds a seat on the board, but well-"
+  add data.civilian_eagre_progress 1
+  "Gloria's comandeered a table in the corner of a nearby cafe, documents everywhere-but as you approach she shuffles most of them back into her bag to make room for you."
+  talk player idle idle "Whole lot of paper."
+  talk eagre_organiser idle "Apparently the only way to be sure down here is wet ink. Honestly, it's a complete pain in the neck but that's how the board voted and I didn't have the fight that day to stop them."
+  talk player idle "It does seem a little...backwards."
+  talk eagre_organiser idle "It is, it is, but that's just how it is."
+  "She pulls another sheaf of paper out from underneath her mug before taking a sip."
+  talk eagre_organiser idle "Anyway, what brings you to my office today?"
+  talk player idle "I need to gather more information on your organisation, the Sclera Miner's Liberation Front. The Corroborance does allow for group rule but they insist on a figurehead for diplomatic reasons. Tell me more about the Front and their goals."
+  talk eagre_organiser idle "Ah, of course. We were founded 8 years back and it's really exploded since then. Most of the populace here in Credence City are either miners or dust pilots, and we represent both groups as well as non-guild engineers, and just last week we absorbed the dockworkers union. All in all we directly represent about 67.4% of all workers based on Sclera."
+  talk player idle "Impressive."
+  talk eagre_organiser idle "Yeah, and exhausting. Actually, I hate to ask, but you could do me a massive favour. Would you mind looking in the official records for a Eustace Gyr-Varve? He holds a seat on the board, but well-"
   choice:
-   talk eagre_organiser "We think he's...dead, but he's still alive on the public record."
+    talk eagre_organiser idle "We think he's...dead, but he's still alive on the public record."
     "Of course, yes. That shouldn't be a problem.":
-     add data.eagre_organiser_influence 1
-     add data.suspicion 1
-     "Awesome, thank you so much. With him off the board we'll be able to break a tie and finally start moving on enrolling a dockworker representative."
+      add data.eagre_organiser_influence 1
+      add data.suspicion 1
+      "Awesome, thank you so much. With him off the board we'll be able to break a tie and finally start moving on enrolling a dockworker representative."
     "I don't think that would be appropriate.":
-     "Oh. That's a real shame. I was hoping you could help..."
- "Gloria's terminal rings and she mouths \"Got to take this, sorry\" before picking up the call."
-   jump timekeeper
+      "Oh. That's a real shame. I was hoping you could help..."
+  "Gloria's terminal rings and she mouths \"Got to take this, sorry\" before picking up the call."
+  jump timekeeper
+
 civilian_eagre_5:
- add data.civilian_eagre_progress 1
- talk eagre_organiser "Lets go for a run!"
- "The requrest catches you off-guard."
- talk Facilitator "A run, where?"
- talk eagre_organiser "Just in a loop around the Ward, you need to get out of these chambers and see the city more! That and I have 20 minutes spare."
- "And like that you're being dragged by the hand out of the chambers and onto the street, her bag of documents flopping awkwardly along behind her."
- "You whip past old haunts like the Cinema-now Cafe Diamente, where you saw your first scary movie."
- "The Museum Of The Storm-full of dust pilot paraphenalia and old dust-ships from the early days of the settlement."
- "The market, where vendors try to flog carts of fruit that used to pass for fresh before you saw a real fruit tree on Calypso IV."
- "You didn't think you'd get to see any of this again, certainly not so soon."
- "Something was clearly wrong with you being assigned here but you let yourself enjoy the nostalgia for a while."
- "Gloria comes to a halt outside a tenement building and pushes her hair out of her face."
- talk eagre_organiser "Right, that's my stop. Wasn't that good? The air's not so bad out here, eh?"
- "You take the long way back. It's good to be home."
- jump timekeeper
+  add data.civilian_eagre_progress 1
+  talk eagre_organiser idle "Lets go for a run!"
+  "The requrest catches you off-guard."
+  talk player idle "A run, where?"
+  talk eagre_organiser idle "Just in a loop around the Ward, you need to get out of these chambers and see the city more! That and I have 20 minutes spare."
+  "And like that you're being dragged by the hand out of the chambers and onto the street, her bag of documents flopping awkwardly along behind her."
+  "You whip past old haunts like the Cinema-now Cafe Diamente, where you saw your first scary movie."
+  "The Museum Of The Storm-full of dust pilot paraphenalia and old dust-ships from the early days of the settlement."
+  "The market, where vendors try to flog carts of fruit that used to pass for fresh before you saw a real fruit tree on Calypso IV."
+  "You didn't think you'd get to see any of this again, certainly not so soon."
+  "Something was clearly wrong with you being assigned here but you let yourself enjoy the nostalgia for a while."
+  "Gloria comes to a halt outside a tenement building and pushes her hair out of her face."
+  talk eagre_organiser idle "Right, that's my stop. Wasn't that good? The air's not so bad out here, eh?"
+  "You take the long way back. It's good to be home."
+  jump timekeeper
+
 civilian_eagre_6:
- add data.civilian_eagre_progress 1
- talk eagre_organiser "There you are, Facilitator!"
- "Gloria ambushes you from out of nowhere as you walk between meetings, bleary-eyed and clearly upset."
- talk eagre_organiser "Can we talk somewhere, in private?"
- talk Facilitator "Sure, I suppose-"
- "She drags you by the collar into a side-room."
- talk eagre_organiser "You remember I told you my sister was missing, right? Well someone just told me she got enlisted in the Corroborance! She's a facilitator like you, frozen in a ship somewhere out in the middle of space somewhere!"
- talk Facilitator "There are worse fated I assur-"
- talk eagre_organiser "You don't understand, I thought she was dead and now I find out she's alive, I've got to...to try!"
- talk Facilitator "Try what, your sister is safe and once her duty is done she'll be free."
- talk eagre_organiser "I know but...look, this is stupid and I'm asking too much, but you try and get this message to her? Her name's Joyce. Just let her know we're still here for her."
-  choice: talk eagre_organiser "Could you do that for me?"
-   "I can try.":
-    "Thank you, thank you so much!"
- 	  add data.eagre_organiser_influence 1
-   "I can't do that, we aren't supposed to have any contact with home...":
-    "Coward, then what are you doing here?!"
-	  add data.suspicion 1
- jump timekeeper
+  add data.civilian_eagre_progress 1
+  talk eagre_organiser idle "There you are, Facilitator!"
+  "Gloria ambushes you from out of nowhere as you walk between meetings, bleary-eyed and clearly upset."
+  talk eagre_organiser idle "Can we talk somewhere, in private?"
+  talk player idle "Sure, I suppose-"
+  "She drags you by the collar into a side-room."
+  talk eagre_organiser idle "You remember I told you my sister was missing, right? Well someone just told me she got enlisted in the Corroborance! She's a facilitator like you, frozen in a ship somewhere out in the middle of space somewhere!"
+  talk player idle "There are worse fated I assur-"
+  talk eagre_organiser idle "You don't understand, I thought she was dead and now I find out she's alive, I've got to...to try!"
+  talk player idle "Try what, your sister is safe and once her duty is done she'll be free."
+  talk eagre_organiser idle "I know but...look, this is stupid and I'm asking too much, but you try and get this message to her? Her name's Joyce. Just let her know we're still here for her."
+  choice: talk eagre_organiser idle "Could you do that for me?"
+    "I can try.":
+      "Thank you, thank you so much!"
+  	  add data.eagre_organiser_influence 1
+    "I can't do that, we aren't supposed to have any contact with home...":
+      "Coward, then what are you doing here?!"
+ 	    add data.suspicion 1
+  jump timekeeper
+
 civilian_eagre_7:
- add data.civilian_eagre_progress 1
- "Gloria doesn't have any of her usual paraphanelia with her today. You catch up to her in a street outside the chamber."
- talk Facilitator "Travelling light today?"
- talk eagre_organiser "Haha, yeah. I can let things build up a bit for today. This is important, you know? Got to be focussed. Whatever happens next, we need to be ready to move as one."
- "She stops walking and looks up, to the stars above the sinkhole city."
- talk eagre_organiser "I know my sister's up there somewhere. Gotta make sure things are good and organised when she gets back home. You know?"
- jump timekeeper
+  add data.civilian_eagre_progress 1
+  "Gloria doesn't have any of her usual paraphanelia with her today. You catch up to her in a street outside the chamber."
+  talk player idle "Travelling light today?"
+  talk eagre_organiser idle "Haha, yeah. I can let things build up a bit for today. This is important, you know? Got to be focussed. Whatever happens next, we need to be ready to move as one."
+  "She stops walking and looks up, to the stars above the sinkhole city."
+  talk eagre_organiser idle "I know my sister's up there somewhere. Gotta make sure things are good and organised when she gets back home. You know?"
+  jump timekeeper
+
 civilian_icon_1:
   add data.civilian_icon_progress 1
-
   jump timekeeper
+
 civilian_icon_2:
   add data.civilian_icon_progress 1
-
   jump timekeeper
+
 civilian_icon_3:
   add data.civilian_icon_progress 1
-
   jump timekeeper
+
 civilian_icon_4:
   add data.civilian_icon_progress 1
-
   jump timekeeper
+
 civilian_icon_5:
   add data.civilian_icon_progress 1
-
   jump timekeeper
+
 civilian_icon_6:
   add data.civilian_icon_progress 1
-
   jump timekeeper
+
 civilian_icon_7:
   add data.civilian_icon_progress 1
+  jump timekeeper
 
-  jump timekeeper
 merchant_bartender_1:
- add data.merchant_bartender_progress 1
- "Karl Sera-Gabbro is listed in your file as a \"proprietor\". Looking further into the dossier you quickly realise this is only a fragment of the truth."
- "Mr Sera-Gabbro clearly has an outsized influence on all things vice on Sclera-be that drink, drugs, exotic meats, weaponry..."
- "You're surprised to see him on your list, but by all records and accounts he's...affable, well liked, and connected."
- "Apparently he was presiding over his newest bar, well, it was a cinema when you were last here."
- "You head out of the chamber and down some smokey tunnel-alleys to the other side of the Ward."
- "You allow yourself the little thrill of already knowing the way, surely nobody could notice that."
- "The outside of the building looks much the same as you remembered, save for the pulsating projected sign declaring that this was now \"Cafe Diamante\"."
- "You let yourself in and are instantly struck by how light-touch the remodelling must have been. Still dingy, slightly smokey, oddly soft carpet. A pang of nostalgia."
- "Taking the place in, you can immediately spot Karl behind the bar."
- talk merchant_bartender "Ahaha, you must be the Facilitator, take a seat, please, sit!"
- "It seems he also spotted you as soon as you came in."
- 	choice:
- 		talk merchant_bartender "You'll have a drink, of course?"
- 		"Do you have Babylon Soda?":
- 		add data.suspicion 1
- 		talk merchant_bartender "Ah, a local drink! Of course, let me fix that for you."
- 		"I'm not permitted to partake in alchohol.":
- 		talk merchant_bartender "No problem at all, you should try a Babylon Soda! A real local treat if I say so myself."
- "The familiar tang of the canteloupe soda immediately transports you back to your youth, playing tag in the service tunnels not far from here."
- talk merchant_bartender "Nothing like it, eh? Huhuheh!"
- talk merchant_bartender "I hope you'll come see me over here, I can't really make it over to the chambers too often."
- jump timekeeper
-merchant_bartender_2:
- add data.merchant_bartender_progress 1
- "You head back over to Cafe Diamante, glad for any excuse to get out of the chamber."
- talk merchant_bartender "Ahaha, I knew you would be back! I presume you have questions for me, Facilitator?"
- talk facilitator "You have a broad portfolio, Mr Sera-Gabbro, and quite the reputation. I am sure we will have much to discuss."
- talk merchant_bartender "Well I'm not going to be modest, if that's in your report! I've put in work to make this little city sparkle."
- talk facilitator "So I can see. How's is business? Any challenges?"
- talk merchant_bartender "I make do with what I have, not my place to complain. With that said-"
- "He picks up a glass, breathes into it, and starts cleaning it with a rag."
- talk merchant_bartender "-the recent trade inspections have made things more interesting. It's harder to keep the wheels greased, you understand?"
- talk facilitator "Whoever is chosen as leader would have significant sway over that."
- talk merchant_bartender "Oho, is that so?"
- talk merchant_bartender "I suppose it's not like old Berwyn D'linear kept his nose clean, even by noble standards."
- "You're taken aback. They would speak so coarsely of the newly-dead?"
- They lean in close over the bar.
- talk merchant_bartender "I should know, I have his receipts."
- jump timekeeper
-merchant_bartender_3:
- add data.merchant_bartender_progress 1
- "Cafe Diamante seems quieter than usual this time, only a couple of patrons mill around in the booths at the back of the bar."
- talk merchant_bartender "Ahaha, a Babylon Soda on ice for my favourite Facilitator! Come, lets chat."
- "...
- ~Hours pass~"
- talk merchant_bartender "And so I say, that's not like any Andruuvan Melt-Ice *I've* ever tasted before!"
- "You're hoarse from talking, where did the time go? It's been so long since you've just...talked with someone."
- "It strikes you in that moment that they've left you with your guard down."
- talk merchant_bartender "I need a smoke and you look like you could use some air-I ain't gonna say it's fresh down here but it'll perk you up a bit!"
- "They lead you through a series of back rooms, crates of drink and other no-doubt illegal things piled high up against the walls."
- "Out a door and into a little courtyard enclosed on all sides by a dozen other buildings, potted plants and string-lights making a brave stand against the industrial dankness."
- talk merchant_bartender "Here's my little sanctuary, take a seat-I'll be right back."
- "He disappears back inside and reappears a moment later with a a lighter and an envelope, which he tosses on the table."
- talk merchant_bartender "Take a look at that."
- "Their eyes are hard now, shrewd."
- "You peel open the envelope and pull from within it a photograph...it can't be!"
- talk merchant_bartender "You were a real bright-eyed kid, you know. Why'dja sign up with the Corroborance anyway?"
- "He lights his cigarette, holding all the cards."
- talk facilitator "You can't let anyone know, I don't even understand why they sent me here!"
- A deep drag.
- talk merchant_bartender "Of course, because we're good friends. Us Sclerans have gotta look out for eachother, right? Now get out of here. Your drinks are on me."
- jump timekeeper
-merchant_bartender_4:
- add data.merchant_bartender_progress 1
- "You spot Karl amidst a group of other local merchants and business owners at the chamber.  Seeing you, he excuses himself."
- talk merchant_bartender "Walk with me, Facilitator. I think we have some matters to discuss."
- "He leads you deep into the administrative corridors of the chamber, where rows of offices lay empty."
- talk merchant_bartender "So I've been thinking, and that's a dangerous thing. You have a whole lot of influence from your position, right?"
- "You manage a feeble little nod."
- talk merchant_bartender "Of course you do, so here's the thing. You're gonna see to it that on the ceremony day there's no mining-right? A full cease of production. Say it's for noise reasons or something."
- choice:
- 	talk merchant_bartender "It would be real convenient for me if those tunnels were empty that day."
-	"Of course, yes-I can...I can make that happen.":
-	 add data.merchant_bartender_influence 1
-	 talk merchant_bartender "Good. That's good."
-	"I can't do that-I'm sorry.":
-	 add data.suspicion 1
-	 talk merchant_bartender "That's a terrible shame, if I'm being honest with you, Facilitator."
- Their demeanour shifts as they roll their shoulders. 
- talk merchant_bartender "Anyways, I'll be seeing you around. Swing on by Cafe Diamante some time."
+  add data.merchant_bartender_progress 1
+  "Karl Sera-Gabbro is listed in your file as a \"proprietor\". Looking further into the dossier you quickly realise this is only a fragment of the truth."
+  "Mr Sera-Gabbro clearly has an outsized influence on all things vice on Sclera-be that drink, drugs, exotic meats, weaponry..."
+  "You're surprised to see him on your list, but by all records and accounts he's...affable, well liked, and connected."
+  "Apparently he was presiding over his newest bar, well, it was a cinema when you were last here."
+  "You head out of the chamber and down some smokey tunnel-alleys to the other side of the Ward."
+  "You allow yourself the little thrill of already knowing the way, surely nobody could notice that."
+  "The outside of the building looks much the same as you remembered, save for the pulsating projected sign declaring that this was now \"Cafe Diamante\"."
+  "You let yourself in and are instantly struck by how light-touch the remodelling must have been. Still dingy, slightly smokey, oddly soft carpet. A pang of nostalgia."
+  "Taking the place in, you can immediately spot Karl behind the bar."
+  talk merchant_bartender idle "Ahaha, you must be the Facilitator, take a seat, please, sit!"
+  "It seems he also spotted you as soon as you came in."
+  	choice:
+  		talk merchant_bartender idle "You'll have a drink, of course?"
+  		"Do you have Babylon Soda?":
+  		  add data.suspicion 1
+  		  talk merchant_bartender idle "Ah, a local drink! Of course, let me fix that for you."
+  		"I'm not permitted to partake in alchohol.":
+  		  talk merchant_bartender idle "No problem at all, you should try a Babylon Soda! A real local treat if I say so myself."
+  "The familiar tang of the canteloupe soda immediately transports you back to your youth, playing tag in the service tunnels not far from here."
+  talk merchant_bartender idle "Nothing like it, eh? Huhuheh!"
+  talk merchant_bartender idle "I hope you'll come see me over here, I can't really make it over to the chambers too often."
   jump timekeeper
+
+merchant_bartender_2:
+  add data.merchant_bartender_progress 1
+  "You head back over to Cafe Diamante, glad for any excuse to get out of the chamber."
+  talk merchant_bartender idle "Ahaha, I knew you would be back! I presume you have questions for me, Facilitator?"
+  talk player idle "You have a broad portfolio, Mr Sera-Gabbro, and quite the reputation. I am sure we will have much to discuss."
+  talk merchant_bartender idle "Well I'm not going to be modest, if that's in your report! I've put in work to make this little city sparkle."
+  talk player idle "So I can see. How's is business? Any challenges?"
+  talk merchant_bartender idle "I make do with what I have, not my place to complain. With that said-"
+  "He picks up a glass, breathes into it, and starts cleaning it with a rag."
+  talk merchant_bartender idle "-the recent trade inspections have made things more interesting. It's harder to keep the wheels greased, you understand?"
+  talk player idle "Whoever is chosen as leader would have significant sway over that."
+  talk merchant_bartender idle "Oho, is that so?"
+  talk merchant_bartender idle "I suppose it's not like old Berwyn D'linear kept his nose clean, even by noble standards."
+  "You're taken aback. They would speak so coarsely of the newly-dead?"
+  They lean in close over the bar.
+  talk merchant_bartender idle "I should know, I have his receipts."
+  jump timekeeper
+
+merchant_bartender_3:
+  add data.merchant_bartender_progress 1
+  "Cafe Diamante seems quieter than usual this time, only a couple of patrons mill around in the booths at the back of the bar."
+  talk merchant_bartender idle "Ahaha, a Babylon Soda on ice for my favourite Facilitator! Come, lets chat."
+  "...
+  ~Hours pass~"
+  talk merchant_bartender idle "And so I say, that's not like any Andruuvan Melt-Ice *I've* ever tasted before!"
+  "You're hoarse from talking, where did the time go? It's been so long since you've just...talked with someone."
+  "It strikes you in that moment that they've left you with your guard down."
+  talk merchant_bartender idle "I need a smoke and you look like you could use some air-I ain't gonna say it's fresh down here but it'll perk you up a bit!"
+  "They lead you through a series of back rooms, crates of drink and other no-doubt illegal things piled high up against the walls."
+  "Out a door and into a little courtyard enclosed on all sides by a dozen other buildings, potted plants and string-lights making a brave stand against the industrial dankness."
+  talk merchant_bartender idle "Here's my little sanctuary, take a seat-I'll be right back."
+  "He disappears back inside and reappears a moment later with a a lighter and an envelope, which he tosses on the table."
+  talk merchant_bartender idle "Take a look at that."
+  "Their eyes are hard now, shrewd."
+  "You peel open the envelope and pull from within it a photograph...it can't be!"
+  talk merchant_bartender idle "You were a real bright-eyed kid, you know. Why'dja sign up with the Corroborance anyway?"
+  "He lights his cigarette, holding all the cards."
+  talk player idle "You can't let anyone know, I don't even understand why they sent me here!"
+  A deep drag.
+  talk merchant_bartender idle "Of course, because we're good friends. Us Sclerans have gotta look out for eachother, right? Now get out of here. Your drinks are on me."
+  jump timekeeper
+
+merchant_bartender_4:
+  add data.merchant_bartender_progress 1
+  "You spot Karl amidst a group of other local merchants and business owners at the chamber.  Seeing you, he excuses himself."
+  talk merchant_bartender idle "Walk with me, Facilitator. I think we have some matters to discuss."
+  "He leads you deep into the administrative corridors of the chamber, where rows of offices lay empty."
+  talk merchant_bartender idle "So I've been thinking, and that's a dangerous thing. You have a whole lot of influence from your position, right?"
+  "You manage a feeble little nod."
+  talk merchant_bartender idle "Of course you do, so here's the thing. You're gonna see to it that on the ceremony day there's no mining-right? A full cease of production. Say it's for noise reasons or something."
+  choice:
+  	talk merchant_bartender idle "It would be real convenient for me if those tunnels were empty that day."
+ 	  "Of course, yes-I can...I can make that happen.":
+ 	    add data.merchant_bartender_influence 1
+ 	    talk merchant_bartender idle "Good. That's good."
+ 	  "I can't do that-I'm sorry.":
+ 	    add data.suspicion 1
+ 	    talk merchant_bartender idle "That's a terrible shame, if I'm being honest with you, Facilitator."
+  "Their demeanour shifts as they roll their shoulders."
+  talk merchant_bartender idle "Anyways, I'll be seeing you around. Swing on by Cafe Diamante some time."
+  jump timekeeper
+
 merchant_bartender_5:
   add data.merchant_bartender_progress 1
- "You head over to Cafe Diamante during a lull in preperations for the leadership ceremony. It's busier in here than you've seen it-some people are even dancing."
- "Karl is enthusiastically telling a story to a gaggle of older patrons at the bar."
- talk merchant_bartender "So I say, you know what-no, I don't see the Corroborance specifically outlawing the sale of Billrat meat any time soon."
- "\"-Tell them what they said next!\" bellows a patron, clearly deep in his cups."
- talk merchant_bartender "I'm getting to that part-she says \"I hope not, I've got a full hold of the stuff stinking up my hold!\""
- "The group explodes with laughter-apparently that was the best punchline they'd ever heard."
- "You are about to take a seat at one of the side tables when one of the bartenders with a full tray of glasses in her other hand taps you on the shoulder."
- "Mr Sera-Gabbro would like to see you tomorrow, he has business to discuss."
- "Mr Sera-Gabbro would also recommend you make yourself scarce tonight, things are about to get loud."
- "You take their advice. You're half-way up the street when you hear gunshots and screams."
+  "You head over to Cafe Diamante during a lull in preperations for the leadership ceremony. It's busier in here than you've seen it-some people are even dancing."
+  "Karl is enthusiastically telling a story to a gaggle of older patrons at the bar."
+  talk merchant_bartender idle "So I say, you know what-no, I don't see the Corroborance specifically outlawing the sale of Billrat meat any time soon."
+  "\"-Tell them what they said next!\" bellows a patron, clearly deep in his cups."
+  talk merchant_bartender idle "I'm getting to that part-she says \"I hope not, I've got a full hold of the stuff stinking up my hold!\""
+  "The group explodes with laughter-apparently that was the best punchline they'd ever heard."
+  "You are about to take a seat at one of the side tables when one of the bartenders with a full tray of glasses in her other hand taps you on the shoulder."
+  "Mr Sera-Gabbro would like to see you tomorrow, he has business to discuss."
+  "Mr Sera-Gabbro would also recommend you make yourself scarce tonight, things are about to get loud."
+  "You take their advice. You're half-way up the street when you hear gunshots and screams."
   jump timekeeper
+
 merchant_bartender_6:
- add data.merchant_bartender_progress 1
- talk merchant_bartender "I have...another favour to ask."
- "Karl is visibly sweating when he ushers you into a different back-room at Cafe Diamante."
- talk merchant_bartender "Here, take a bottle of this-great stuff."
- "He pushes a dark green bottle of...something into your arms."
- talk merchant_bartender "I need you to make sure there's an empty seat at the succession ceremony dinner, as close to Cerys D'Linear as possible." 
+  add data.merchant_bartender_progress 1
+  talk merchant_bartender idle "I have...another favour to ask."
+  "Karl is visibly sweating when he ushers you into a different back-room at Cafe Diamante."
+  talk merchant_bartender idle "Here, take a bottle of this-great stuff."
+  "He pushes a dark green bottle of...something into your arms."
+  talk merchant_bartender idle "I need you to make sure there's an empty seat at the succession ceremony dinner, as close to Cerys D'Linear as possible." 
   choice:
- 	 talk merchant_bartender "I know you can do that for me, you have the authority."
- 	 "I'll see what I can do.":
- 	  talk merchant_bartender "Thank you, thank you so very much. You won't regret it."
- 	  add data.merchant_bartender_influence 1
- 	 "I can't do that for you...":
- 	  talk merchant_bartender "You should be careful, you know...it's much better to be cooperative. It's just good business."
- 	  add data.suspicion 1
- talk merchant_bartender "Now get out of here! You got important work to do as a totally unbiased Facilitator, don't you?"
-   jump timekeeper
+    talk merchant_bartender idle "I know you can do that for me, you have the authority."
+    "I'll see what I can do.":
+  	  talk merchant_bartender idle "Thank you, thank you so very much. You won't regret it."
+  	  add data.merchant_bartender_influence 1
+    "I can't do that for you...":
+  	  talk merchant_bartender idle "You should be careful, you know...it's much better to be cooperative. It's just good business."
+  	  add data.suspicion 1
+  talk merchant_bartender idle "Now get out of here! You got important work to do as a totally unbiased Facilitator, don't you?"
+  jump timekeeper
+
 merchant_bartender_7:
- add data.merchant_bartender_progress 1
- talk merchant_bartender "You know, I was gonna be an actor, you yeah? Big star, tour the galaxy sort of thing."
- talk merchant_bartender "Really thought I had a chance, folks gave me every opportunity a kid from Credence could have."
- talk merchant_bartender "Blockade comes in, they can't get inventory, and I gotta start putting on a different face, blag my way past checkpoints and the like."
- talk merchant_bartender "Sometimes I wonder what that other Karl would have been like. I imagine he'da been a real prick..."
- "He pulls a bottle from below the bar."
- talk merchant_bartender "I ain't going nowhere, but if I can give these people a taste of something better-"
- "He pops the cork and pours out two glasses of a glittering purple syrup."
- talk merchant_bartender "-damn right I'm gonna do it."
- jump timekeeper
+  add data.merchant_bartender_progress 1
+  talk merchant_bartender idle "You know, I was gonna be an actor, you yeah? Big star, tour the galaxy sort of thing."
+  talk merchant_bartender idle "Really thought I had a chance, folks gave me every opportunity a kid from Credence could have."
+  talk merchant_bartender idle "Blockade comes in, they can't get inventory, and I gotta start putting on a different face, blag my way past checkpoints and the like."
+  talk merchant_bartender idle "Sometimes I wonder what that other Karl would have been like. I imagine he'da been a real prick..."
+  "He pulls a bottle from below the bar."
+  talk merchant_bartender idle "I ain't going nowhere, but if I can give these people a taste of something better-"
+  "He pops the cork and pours out two glasses of a glittering purple syrup."
+  talk merchant_bartender idle "-damn right I'm gonna do it."
+  jump timekeeper
+
 merchant_business_1:
   add data.merchant_business_progress 1
-
   jump timekeeper
+
 merchant_business_2:
   add data.merchant_business_progress 1
-
   jump timekeeper
+
 merchant_business_3:
   add data.merchant_business_progress 1
-
   jump timekeeper
+
 merchant_business_4:
   add data.merchant_business_progress 1
-
   jump timekeeper
+
 merchant_business_5:
   add data.merchant_business_progress 1
-
   jump timekeeper
+
 merchant_business_6:
   add data.merchant_business_progress 1
-
   jump timekeeper
+
 merchant_business_7:
   add data.merchant_business_progress 1
-
   jump timekeeper
+
 military_hero_1:
- add data.military_hero_progress 1
- "Propped up against a doorframe you spot an imposing individual, scar and eyepatch and humming photoblade close at hand-every bit the experienced soldier."
- "They turn to give you a deferential little bow as you approach."
- talk military_hero "The Facilitator, I presume? Captain Isaiah Shackle at your service."
- "You've heard incredible stories of Shackle, \"The Violet Edge\"-their heroic exploits often came up in your nostalgic skimming of the newsfeeds."
- "They were something of a champion of the people of Sclera."
-	 choice:
-	  talk facilitator "Ah, you were at Bastillan Falls I believe? The dossier mentioned you."
-	   "I'm honoured, you're a local legend!":
-		 add data.suspicion 1
-	  talk facilitator "Charmed, I'm sure.":
- "They shift back into their more relaxed stance, pleasantries dealt with."
- talk military_hero "I'm not sure how familiar you are with our departed leader. They, Berwyn, that is, they were good people despite it all. I worry Sclera is less safe today than it was a week ago."
- talk facilitator "You believe Sclera is under some threat her armed forces cannot handle?"
- talk military_hero "There's something off, things are too quiet in the system. I've been up late at night looking over scans but I can't nail it down..."
- talk facilitator "I'd suspect traffic is light on account of Corroborance vessels such as my own in the area. We tend to leave quite a wake."
- talk military_hero "I hope that's all it is."
- "They seem genuinely concerned."
- talk military_hero "A pleasure to meet you Facilitator, but I have synaptic therapy to attend."
- "They snap to attention and flash you a cheeky grin with their salute before turning on heel and leaving the chamber."
- jump timekeeper
+  add data.military_hero_progress 1
+  "Propped up against a doorframe you spot an imposing individual, scar and eyepatch and humming photoblade close at hand-every bit the experienced soldier."
+  "They turn to give you a deferential little bow as you approach."
+  talk military_hero idle "The Facilitator, I presume? Captain Isaiah Shackle at your service."
+  "You've heard incredible stories of Shackle, \"The Violet Edge\"-their heroic exploits often came up in your nostalgic skimming of the newsfeeds."
+  "They were something of a champion of the people of Sclera."
+  choice:
+    talk player idle "Ah, you were at Bastillan Falls I believe? The dossier mentioned you."
+    "I'm honoured, you're a local legend!":
+      add data.military_hero_influence 1
+ 	  "Charmed, I'm sure.":
+      add data.suspicion 1
+  "They shift back into their more relaxed stance, pleasantries dealt with."
+  talk military_hero idle "I'm not sure how familiar you are with our departed leader. They, Berwyn, that is, they were good people despite it all. I worry Sclera is less safe today than it was a week ago."
+  talk player idle "You believe Sclera is under some threat her armed forces cannot handle?"
+  talk military_hero idle "There's something off, things are too quiet in the system. I've been up late at night looking over scans but I can't nail it down..."
+  talk player idle "I'd suspect traffic is light on account of Corroborance vessels such as my own in the area. We tend to leave quite a wake."
+  talk military_hero idle "I hope that's all it is."
+  "They seem genuinely concerned."
+  talk military_hero idle "A pleasure to meet you Facilitator, but I have synaptic therapy to attend."
+  "They snap to attention and flash you a cheeky grin with their salute before turning on heel and leaving the chamber."
+  jump timekeeper
+
 military_hero_2:
   add data.military_hero_progress 1
- "You find Isaiah commandeering one of the chamber desks, poring over an array of monitors, coffee in hand."
- talk military_hero "Ah, Facilitator, take a seat."
- "You pull one of the chairs out from another desk. It makes a terrible echoing screech on the stone floor. Mortifying, but Isaiah seems unphased."
- talk military_hero "I hope last night's demonstrations weren't too disruptive to your sleep."
- talk facilitator "I am required to sleep within the pod unfortunately."
- talk military_hero "Ah, a mixed blessing. Those things always gave me a sore neck when I was on deployment. Regardless, you wanted to speak with me?"
- talk facilitator "You are one of the identified candidates, I am bidden to learn as much as I can. I was hoping we could discuss your service history?"
- "They visibly wince."
- talk military_hero "The curse of notoriety, I suppose. Anything in particular? The official record is mostly right, if a little overblown"
-	choice:
-	 "You were enlisted from an orbital outpost?":
-	 "Yeah, my folks were drifters with some bad debts chasing them, my service paid to get them free of that and settled down on Credence."
-	choice:
-	 "You fought in the Bastillan campaign?":
-	 "Wretched place, wretched fight, wretched memories. I did my duty that day and no more. I'd trade all this fame for a single one of my friends to have made it home."
- talk facilitator "You routed 3 regiments of Calladian Mercenaries with only your sword that day. I'd say that's above and beyond."
- "They shrug off the compliment and return to their monitors."
- talk military_hero "If that will be all Facilitator, I'd rather not wax nostalgic today."
- "You excuse yourself. The chair makes a terrible squeal again."
+  "You find Isaiah commandeering one of the chamber desks, poring over an array of monitors, coffee in hand."
+  talk military_hero idle "Ah, Facilitator, take a seat."
+  "You pull one of the chairs out from another desk. It makes a terrible echoing screech on the stone floor. Mortifying, but Isaiah seems unphased."
+  talk military_hero idle "I hope last night's demonstrations weren't too disruptive to your sleep."
+  talk player idle "I am required to sleep within the pod unfortunately."
+  talk military_hero idle "Ah, a mixed blessing. Those things always gave me a sore neck when I was on deployment. Regardless, you wanted to speak with me?"
+  talk player idle "You are one of the identified candidates, I am bidden to learn as much as I can. I was hoping we could discuss your service history?"
+  "They visibly wince."
+ 	choice:
+    talk military_hero idle "The curse of notoriety, I suppose. Anything in particular? The official record is mostly right, if a little overblown"
+ 	  "You were enlisted from an orbital outpost?":
+ 	    talk military_hero idle "Yeah, my folks were drifters with some bad debts chasing them, my service paid to get them free of that and settled down on Credence."
+    "You fought in the Bastillan campaign?":
+ 	    talk military_hero idle "Wretched place, wretched fight, wretched memories. I did my duty that day and no more. I'd trade all this fame for a single one of my friends to have made it home."
+      talk player idle "You routed 3 regiments of Calladian Mercenaries with only your sword that day. I'd say that's above and beyond."
+      "They shrug off the compliment and return to their monitors."
+  talk military_hero idle "If that will be all Facilitator, I'd rather not wax nostalgic today."
+  "You excuse yourself. The chair makes a terrible squeal again."
   jump timekeeper
+
 military_hero_3:
   add data.military_hero_progress 1
- "Commander Isaiah Shackle, The Violet Blade, Hero Of Sclera, is sitting on the chamber steps eating out of a takeout box. The smell is instantly nostalgic."
- choice:
-		talk facilitator "Oh, I love Pickled Squash Noodles!":
-		 "They raise an eyebrow."
-		 talk military_hero "I thought this was just a local thing?"
-     add data.suspicion 1
-		talk facilitator "Smells...interesting...":
-		 talk military_hero "Mmmfh, yeah it took me a while but I've really come around to these squash noodles. I think they pickle them?"
- "He sets the box aside and gestures with his chopsticks."
- talk military_hero "I assume you want to ask me about something?"
- talk facilitator "I was hoping to learn more about the Scleran military forces. You must all be based out of Credence City?"
- talk military_hero "Yeah, we're a pretty tight little crew, only a couple hundred of us. In theory the storms and defense cannons mean we're not needed that often."
- talk military_hero "Good people but I worry they're mostly just in it for their pay packet and to stay out of the mines."
- talk facilitator "You think they're sufficient to protect the populace? I know Officer Peril is petitioning for an increased garrison"
- "They avert their gaze when Peril is mentioned.  Interesting."
- talk military_hero "They certainly have their...ideas. Their ambitions trouble me."
- choice:
-	talk military_hero "...could you deliver this letter to the Executor for me?"
-		talk facilitator "Of course, Commander.":
-		add data.suspicion 1
-		add data.military_hero_influence 1
-			talk military_hero "Thank you, I know it's improper..."
-		talk facilitator "I don't think that would be appropriate.":
-			talk military_hero "Ah, naturally. I'm sorry to trouble you with this."
- talk military_hero "Anyway, I should get back to my work. Thank you for you time, Facilitator."
- jump timekeeper
-military_hero_4:
- add data.military_hero_progress 1
- "Isaiah is back to looking at his monitors covered in star charts, head in his hands."
- talk facilitator "Does the lack of traffic still concern you?"
- talk military_hero "It does-those raiders and your presence aren't enough to explain this. Something's out there still, got the Independents spooked."
- talk facilitator "Nothing from your scouts?"
- talk military_hero "Nothing is right, they're not reporting anything out of the ordinary. Just couple of unlicensed vessels but they were all mundane smiggling runs."
- "He leans back in his chair and yawns."
- choice:
-  talk military_hero "I spent 4 hours last night doing inspections on our defense cannons, and I still couldn't sleep."
-  "You're very dedicated, that's admirable.":
-   talk military_hero "Spare me the flattery, I get enough of that."
-  "You're doing no good exhausted, you should rest.":
-   talk military_hero "...I just need to check this sector over one more time."
- "You leave them to their work."
+  "Commander Isaiah Shackle, The Violet Blade, Hero Of Sclera, is sitting on the chamber steps eating out of a takeout box. The smell is instantly nostalgic."
+  choice:
+ 		"Oh, I love Pickled Squash Noodles!":
+ 		  "They raise an eyebrow."
+ 		  talk military_hero idle "I thought this was just a local thing?"
+      add data.suspicion 1
+ 		"Smells...interesting...":
+ 		  talk military_hero idle "Mmmfh, yeah it took me a while but I've really come around to these squash noodles. I think they pickle them?"
+  "He sets the box aside and gestures with his chopsticks."
+  talk military_hero idle "I assume you want to ask me about something?"
+  talk player idle "I was hoping to learn more about the Scleran military forces. You must all be based out of Credence City?"
+  talk military_hero idle "Yeah, we're a pretty tight little crew, only a couple hundred of us. In theory the storms and defense cannons mean we're not needed that often."
+  talk military_hero idle "Good people but I worry they're mostly just in it for their pay packet and to stay out of the mines."
+  talk player idle "You think they're sufficient to protect the populace? I know Officer Peril is petitioning for an increased garrison"
+  "They avert their gaze when Peril is mentioned.  Interesting."
+  talk military_hero idle "They certainly have their...ideas. Their ambitions trouble me."
+  choice:
+ 	  talk military_hero idle "...could you deliver this letter to the Executor for me?"
+ 		"Of course, Commander.":
+ 			talk military_hero idle "Thank you, I know it's improper..."
+ 		  add data.military_hero_influence 1
+    "I don't think that would be appropriate.":
+ 		  add data.suspicion 1
+ 			talk military_hero idle "Ah, naturally. I'm sorry to trouble you with this."
+  talk military_hero idle "Anyway, I should get back to my work. Thank you for you time, Facilitator."
   jump timekeeper
+
+military_hero_4:
+  add data.military_hero_progress 1
+  "Isaiah is back to looking at his monitors covered in star charts, head in his hands."
+  talk player idle "Does the lack of traffic still concern you?"
+  talk military_hero idle "It does-those raiders and your presence aren't enough to explain this. Something's out there still, got the Independents spooked."
+  talk player idle "Nothing from your scouts?"
+  talk military_hero idle "Nothing is right, they're not reporting anything out of the ordinary. Just couple of unlicensed vessels but they were all mundane smiggling runs."
+  "He leans back in his chair and yawns."
+  choice:
+    talk military_hero idle "I spent 4 hours last night doing inspections on our defense cannons, and I still couldn't sleep."
+    "You're very dedicated, that's admirable.":
+      talk military_hero idle "Spare me the flattery, I get enough of that."
+    "You're doing no good exhausted, you should rest.":
+      talk military_hero idle "...I just need to check this sector over one more time."
+  "You leave them to their work."
+  jump timekeeper
+
 military_hero_5:
- add data.military_hero_progress 1
- "Isaiah is laughing with a group of on-duty troopers. When he sees you he claps one of them on the back and leaves with a lax salute."
- talk military_hero "Facilitator! So good to see you. How can I help?"
- "This part of the process is always awkward. Best to get it over with."
- talk facilitator "As part of my duties am to verify your medical history, that is, the health of all candidates..."
- talk military_hero "Is this about my eye? I can assure you I'm perfectly capable as I am, I told the review board that already."
- talk facilitator "You would reject a prosthetic?"
- talk military_hero "I would, this wound is important to me. My troops need to know I understand the cost of battle."
- talk facilitator "I understand. Please know we may need to revisit this if you are selected."
- "Isaiah stares you down."
- talk facilitator "Thank you for your time."
- jump timekeeper
+  add data.military_hero_progress 1
+  "Isaiah is laughing with a group of on-duty troopers. When he sees you he claps one of them on the back and leaves with a lax salute."
+  talk military_hero idle "Facilitator! So good to see you. How can I help?"
+  "This part of the process is always awkward. Best to get it over with."
+  talk player idle "As part of my duties am to verify your medical history, that is, the health of all candidates..."
+  talk military_hero idle "Is this about my eye? I can assure you I'm perfectly capable as I am, I told the review board that already."
+  talk player idle "You would reject a prosthetic?"
+  talk military_hero idle "I would, this wound is important to me. My troops need to know I understand the cost of battle."
+  talk player idle "I understand. Please know we may need to revisit this if you are selected."
+  "Isaiah stares you down."
+  talk player idle "Thank you for your time."
+  jump timekeeper
+
 military_hero_6:
- add data.military_hero_progress 1
- "You meet with Isaiah for coffee at a little street cafe outside the chamber."
- "The familiar bustle of accents and smells  sets you at ease."
- talk military_hero "I'm surprised, most folks take a while to acclimate to the air down here. Sticks to your tongue, doesn't it?"
- "You brush this off, but Isaiah looks you up and down with a keen eye." 
- talk military_hero "...ah, I understand."
- "He gives you a knowing look and in any other circumstance it would be reassuring."
- "He knows you're a Sclera local?! Just from how you breathe?"
- "Your heart is threatening to explode. Your palms are sticky. A bead of sweat on your forehead."
- "You take a sip of coffee."
- talk military_hero "You fit right in, don't you, ahaha. I suppose...you get used to new places in your line of work."
- "A knowing look that turns to...concern."
- talk military_hero "Anyway, I called you here to ask you something"
- "They place a box on the table."
- choice:
-  talk military_hero "Could you accept this gift? I really feel I can trust you. Don't open it until you're offworld."
-   add data.suspicion 1
-   talk facilitator "I couldn't..possibly accept this.":
-  talk military_hero "That's a real shame, but rules are rules I suppose."
-   add data.military_hero_influence 1
-   talk facilitator "...of course, thank you."
- "They stand up from the table."
- talk military_hero "We've got a rehearsal for the Leadership ceremony in 20 minutes, I'll see you there."
- jump timekeeper
+  add data.military_hero_progress 1
+  "You meet with Isaiah for coffee at a little street cafe outside the chamber."
+  "The familiar bustle of accents and smells  sets you at ease."
+  talk military_hero idle "I'm surprised, most folks take a while to acclimate to the air down here. Sticks to your tongue, doesn't it?"
+  "You brush this off, but Isaiah looks you up and down with a keen eye." 
+  talk military_hero idle "...ah, I understand."
+  "He gives you a knowing look and in any other circumstance it would be reassuring."
+  "He knows you're a Sclera local?! Just from how you breathe?"
+  "Your heart is threatening to explode. Your palms are sticky. A bead of sweat on your forehead."
+  "You take a sip of coffee."
+  talk military_hero idle "You fit right in, don't you, ahaha. I suppose...you get used to new places in your line of work."
+  "A knowing look that turns to...concern."
+  talk military_hero idle "Anyway, I called you here to ask you something"
+  "They place a box on the table."
+  choice:
+    talk military_hero idle "Could you accept this gift? I really feel I can trust you. Don't open it until you're offworld."
+    "I couldn't..possibly accept this.":
+      add data.suspicion 1
+      talk military_hero idle "That's a real shame, but rules are rules I suppose."
+    "...of course, thank you.":
+      add data.military_hero_influence 1
+      "<PLACEHOLDER>"
+  "They stand up from the table."
+  talk military_hero idle "We've got a rehearsal for the Leadership ceremony in 20 minutes, I'll see you there."
+  jump timekeeper
+
 military_hero_7:
- add data.military_hero_progress 1
- "You find Isaiah sitting on their bunk in the barracks, running their fingers over a twisted lump of shrapnel."
- talk military_hero "I had a partner that day, at Bastillan Falls, you know? Clara Jer-Dacite."
- talk military_hero "Excellent soldier, put her all into it-great shot, good sword arm, savvy-"
- talk military_hero "Maybe too savvy for her own good, I don't know. We were fighting back to back for days, I trusted her with my life."
- "He stares into the middle distance for a moment."
- talk military_hero "...I guess she didn't trust me as far with hers in the end. There was an explosion, kicked up a bunch of dust. She tried to make a run for it in the chaos."
- talk military_hero "Stray bolt caught her in the side and she went down just like that."
- talk military_hero "For a long time, I hated her for that. Real searing gut hate, you know? For faltering in her duty in that moment. For losing her trust in me."
- talk military_hero "These past few years I think I've begun to understand it better."
- talk military_hero "It should have never been on us to hold that position for so long. If that's what it takes to make someone like me a hero, I don't know..."
- talk military_hero "I'm not sure it was worth it."
- "They put down the shrapnel and pull a cigarette out from behind their ear."
- talk military_hero "You can pass that along to the Executor, I guess. Thanks for listening to an old dog's lament."
- jump timekeeper
+  add data.military_hero_progress 1 
+  "You find Isaiah sitting on their bunk in the barracks, running their fingers over a twisted lump of shrapnel."
+  talk military_hero idle "I had a partner that day, at Bastillan Falls, you know? Clara Jer-Dacite."
+  talk military_hero idle "Excellent soldier, put her all into it-great shot, good sword arm, savvy-"
+  talk military_hero idle "Maybe too savvy for her own good, I don't know. We were fighting back to back for days, I trusted her with my life."
+  "He stares into the middle distance for a moment."
+  talk military_hero idle "...I guess she didn't trust me as far with hers in the end. There was an explosion, kicked up a bunch of dust. She tried to make a run for it in the chaos."
+  talk military_hero idle "Stray bolt caught her in the side and she went down just like that."
+  talk military_hero idle "For a long time, I hated her for that. Real searing gut hate, you know? For faltering in her duty in that moment. For losing her trust in me."
+  talk military_hero idle "These past few years I think I've begun to understand it better."
+  talk military_hero idle "It should have never been on us to hold that position for so long. If that's what it takes to make someone like me a hero, I don't know..."
+  talk military_hero idle "I'm not sure it was worth it."
+  "They put down the shrapnel and pull a cigarette out from behind their ear."
+  talk military_hero idle "You can pass that along to the Executor, I guess. Thanks for listening to an old dog's lament."
+  jump timekeeper
+
 military_officer_1:
   add data.military_officer_progress 1
-
   jump timekeeper
+
 military_officer_2:
   add data.military_officer_progress 1
-
   jump timekeeper
+
 military_officer_3:
   add data.military_officer_progress 1
-
   jump timekeeper
+
 military_officer_4:
   add data.military_officer_progress 1
-
   jump timekeeper
+
 military_officer_5:
   add data.military_officer_progress 1
-
   jump timekeeper
+
 military_officer_6:
   add data.military_officer_progress 1
-
   jump timekeeper
+
 military_officer_7:
   add data.military_officer_progress 1
-
   jump timekeeper
+
 noble_lady_1:
   add data.noble_lady_progress 1
- "An imposing figure sweeps across the chamber floor to meet you, a well-practiced smile on her face."
- talk noble_lady "Ah, a pleasure to make your acquintance! Cerys D'Linear, Scion of the House D'Linear and daughter of the deceased Berwyn D'Linear."
- talk facilitator "I'm sorry for your loss, Lady Cerys."
- "She flinches, but recovers."
- talk noble_lady "Yes, well-no point in dwelling in the past now, is there? We need to look forward to the future and do whatever is best for the people of Planet Sclera."
- "So no love was lost between her and her father then..."
- talk noble_lady "You really should join me at the D'Linear compound, dear Facilitator. I'm inviting some much more...scintilating company than you'll encounter stuck in this chamber."
- talk facilitator "I'll keep that in mind but-"
- "And just like that, she's swept away to talk with someone else..."
- jump timekeeper
+  "An imposing figure sweeps across the chamber floor to meet you, a well-practiced smile on her face."
+  talk noble_lady idle "Ah, a pleasure to make your acquintance! Cerys D'Linear, Scion of the House D'Linear and daughter of the deceased Berwyn D'Linear."
+  talk player idle "I'm sorry for your loss, Lady Cerys."
+  "She flinches, but recovers."
+  talk noble_lady idle "Yes, well-no point in dwelling in the past now, is there? We need to look forward to the future and do whatever is best for the people of Planet Sclera."
+  "So no love was lost between her and her father then..."
+  talk noble_lady idle "You really should join me at the D'Linear compound, dear Facilitator. I'm inviting some much more...scintilating company than you'll encounter stuck in this chamber."
+  talk player idle "I'll keep that in mind but-"
+  "And just like that, she's swept away to talk with someone else..."
+  jump timekeeper
+
 noble_lady_2:
- add data.noble_lady_progress 1
- "The D'Linear compound sits a few streets over from the chamber, ivy coating the serious outer walls."
- "As you approach the gatehouse, you make eye-contact with one of their mechanised gargoyles perched on the ramparts."
- "You remembering these terrifying you as a child, but now they just seem a bit tacky. It grinds it's granite neck to stare you down, dim orange eyes flickering to life."
- "An attendant leads you to the house through the surrounding gardens-you'd heard they had a hedge maze but never believed it..."
- "Cerys is sitting under a parasol, drinking some green smoothie concoction and reading something on her terminal."
- talk noble_lady "Ah, Facilitator, so glad you could join me."
- talk facilitator "I couldn't turn down such an offer, Lady Cerys. It's nice to see some real plants."
- talk noble_lady "Yes, this garden isn't quite to my tastes but I cannot deny it's a pleasant reprieve. Anyway, to business."
- "She shotguns the remainder of her green drink with a discomforting \"Glorp\"."
- talk facilitator "Yes, of course. Now, as a member of House D'Linear you are of course included as a potential candidate for leadership in a scenario like this, along with-"
- talk noble_lady "my dear brother Alun, yes, naturally. I fear he's not really leadership material, you know?"
- talk facilitator "Oh, and why is that?"
- talk noble_lady "He lacks vision, I really do think he would just settle for maintaining the status quo Father established."
- talk facilitator "And you have greater plans?"
- talk noble_lady "Oh yes, very much so. Certainly no more of that brawling business from last night."
- jump timekeeper
+  add data.noble_lady_progress 1
+  "The D'Linear compound sits a few streets over from the chamber, ivy coating the serious outer walls."
+  "As you approach the gatehouse, you make eye-contact with one of their mechanised gargoyles perched on the ramparts."
+  "You remembering these terrifying you as a child, but now they just seem a bit tacky. It grinds it's granite neck to stare you down, dim orange eyes flickering to life."
+  "An attendant leads you to the house through the surrounding gardens-you'd heard they had a hedge maze but never believed it..."
+  "Cerys is sitting under a parasol, drinking some green smoothie concoction and reading something on her terminal."
+  talk noble_lady idle "Ah, Facilitator, so glad you could join me."
+  talk player idle "I couldn't turn down such an offer, Lady Cerys. It's nice to see some real plants."
+  talk noble_lady idle "Yes, this garden isn't quite to my tastes but I cannot deny it's a pleasant reprieve. Anyway, to business."
+  "She shotguns the remainder of her green drink with a discomforting \"Glorp\"."
+  talk player idle "Yes, of course. Now, as a member of House D'Linear you are of course included as a potential candidate for leadership in a scenario like this, along with-"
+  talk noble_lady idle "my dear brother Alun, yes, naturally. I fear he's not really leadership material, you know?"
+  talk player idle "Oh, and why is that?"
+  talk noble_lady idle "He lacks vision, I really do think he would just settle for maintaining the status quo Father established."
+  talk player idle "And you have greater plans?"
+  talk noble_lady idle "Oh yes, very much so. Certainly no more of that brawling business from last night."
+  jump timekeeper
+
 noble_lady_3:
- add data.noble_lady_progress 1
- talk noble_lady "Facilitator, you simply must join me for a spot of lunch."
- "Before you know it, you've been swept into a great glass conservatory, the table filled with finger sandwiches, salads and fresh fruits."
- "Pleasantries exchanged, Cerys steeples her fingers."
- talk noble_lady "Now, plans for my leadership. Item 1, construct a ring around the mouth of the sinkhole and restrict ship docking to there. That should cut down on those ghastly exhaust fumes.
- Item 2, demolish that unfinished bypass between Chrysalis and Tinmouth Ward. 
- Item 3, evict the Engineer's Guild from their Guildhouse and construct a new funicular shaft down-"
- "She procedes to list off dozens of improvements, both industrial and civic.  You've met the sort before."
- talk facilitator "If I may, Lady Cerys, do you perhaps spend significant time working with simulations?"
- "A blush, you got it in one."
- talk noble_lady "It only seemed right that I should gain some experience, and Father always favoured Alun for this sort of thing when he clearly didn't have the aptitude. Nobless oblige, you know? Even if I was going to be stuck as his second."
- talk facilitator "The simulations are excellent but in my experience, people are resistant to such sweeping change-even for the better."
- "She shoots you a glare-once again her mask falters for a moment."
- talk noble_lady "Thank you Facilitator, I will keep that in mind."
- "A tap on your shoulder and you are escorted out."
- jump timekeeper
+  add data.noble_lady_progress 1
+  talk noble_lady idle "Facilitator, you simply must join me for a spot of lunch."
+  "Before you know it, you've been swept into a great glass conservatory, the table filled with finger sandwiches, salads and fresh fruits."
+  "Pleasantries exchanged, Cerys steeples her fingers."
+  talk noble_lady idle "Now, plans for my leadership. Item 1, construct a ring around the mouth of the sinkhole and restrict ship docking to there. That should cut down on those ghastly exhaust fumes."
+  "Item 2, demolish that unfinished bypass between Chrysalis and Tinmouth Ward."
+  "Item 3, evict the Engineer's Guild from their Guildhouse and construct a new funicular shaft down-"
+  "She procedes to list off dozens of improvements, both industrial and civic.  You've met the sort before."
+  talk player idle "If I may, Lady Cerys, do you perhaps spend significant time working with simulations?"
+  "A blush, you got it in one."
+  talk noble_lady idle "It only seemed right that I should gain some experience, and Father always favoured Alun for this sort of thing when he clearly didn't have the aptitude. Nobless oblige, you know? Even if I was going to be stuck as his second."
+  talk player idle "The simulations are excellent but in my experience, people are resistant to such sweeping change-even for the better."
+  "She shoots you a glare-once again her mask falters for a moment."
+  talk noble_lady idle "Thank you Facilitator, I will keep that in mind."
+  "A tap on your shoulder and you are escorted out."
+  jump timekeeper
+
 noble_lady_4:
- add data.noble_lady_progress 1
- "Lady Cerys swishes past you in a chamber corridor."
- talk noble_lady "Walk with me, Facilitator"
- talk noble_lady "You know, in some ways I envy your position. You get to travel, dip your toes in the political pool, and then you're off to the next one."
- talk facilitator "It's certainly...exciting."
- talk noble_lady "I suppose it must be strange to have no connection to a place and yet have such influence."
- "You round a corner and she pins you against a wall with her arms, as if you were nothing."
- talk noble_lady "I'll cut the shit, I know you're a local *but* I can help you find out how this happened."
- "You're stunned silence clearly wasn't what she was after."
- choice:
-  talk noble_lady "Look, my lips are sealed as long as you co-operate. You can do that right."
-   "Of course, Lady Cerys":
-    talk noble_lady "Cerys will do, we're ever such good friends now."
-    add data.noble_lady_influence 1
-   "Uh-I can't do that.":
-    talk noble_lady "Of course you can, don't dance too close to the fire now."
-    add data.suspicion 2
- "She puts you down and turns to leave."
- talk noble_lady "I'll be in touch."
- jump timekeeper
-noble_lady_5:
- add data.noble_lady_progress 1
- talk noble_lady "I've been doing some -hyah- asking around. I have -huh- ears everywhere you know."
- "You've joined Lady Cerys to her fencing training session, as she spars with a mannequin simulacrum."
- talk noble_lady "I should hear back soon, and-"
- "The mannequin flashes red as she scores a point, then returns to it's ready stance."
- talk noble_lady "-you really should work with me rather than against me."
- "She makes a grand lunge forward and pierces the mannequin in the face."
- talk noble_lady "I just want what's best for everyone."
- jump timekeeper
-noble_lady_6:
- add data.noble_lady_progress 1
- "Cerys places her hands on your shoulders while you are discussing the leadership ceremony with some attendants."
- talk noble_lady "We need to talk, Facilitator, dear."
- "The attendants shuffle away, a muttering mix of embarassed and intimidated."
- talk noble_lady "You know, for how uptight they are there certainly are some gossips in the ranks of the Corroborance."
- "That's not your experience of the faith, usually lips are sealed..."
- talk noble_lady "I got chatting with a charming initiate, I forget their name. They told me some very interesting things."
- talk noble_lady "Now, of course I'd love to share but I'm afraid I'm feeling a little transactional."
+  add data.noble_lady_progress 1
+  "Lady Cerys swishes past you in a chamber corridor."
+  talk noble_lady idle "Walk with me, Facilitator"
+  talk noble_lady idle "You know, in some ways I envy your position. You get to travel, dip your toes in the political pool, and then you're off to the next one."
+  talk player idle "It's certainly...exciting."
+  talk noble_lady idle "I suppose it must be strange to have no connection to a place and yet have such influence."
+  "You round a corner and she pins you against a wall with her arms, as if you were nothing."
+  talk noble_lady idle "I'll cut the shit, I know you're a local *but* I can help you find out how this happened."
+  "You're stunned silence clearly wasn't what she was after."
   choice:
-  "In plain terms, endorse me as leader and I can tell you who gave you this potential death sentence."
-   "...ok, tell me what you know":
-   add data.noble_lady_influence 1
-   talk noble_lady "Splendid, so glad we could see eye-to-eye."
-   talk noble_lady "My little bird told me, it was "The Will Of The Executor" that you be sent here specifically."
-   talk noble_lady "Not much you can do with that I suppose, but at least it's a little peace of mind." 
-  "I'm not going to break my vow of impartiality for you!":
-   add data.suspicion 2
-   talk noble_lady "That's foolish, unfortunate, and altogether ill-considered."
-   talk noble_lady "I wish you the best of luck, Facilitator. Stay safe."
- jump timekeeper
+    talk noble_lady idle "Look, my lips are sealed as long as you co-operate. You can do that right."
+    "Of course, Lady Cerys":
+      talk noble_lady idle "Cerys will do, we're ever such good friends now."
+      add data.noble_lady_influence 1
+    "Uh-I can't do that.":
+      talk noble_lady idle "Of course you can, don't dance too close to the fire now."
+     add data.suspicion 2
+  "She puts you down and turns to leave."
+  talk noble_lady idle "I'll be in touch."
+  jump timekeeper
+
+noble_lady_5:
+  add data.noble_lady_progress 1
+  talk noble_lady idle "I've been doing some -hyah- asking around. I have -huh- ears everywhere you know."
+  "You've joined Lady Cerys to her fencing training session, as she spars with a mannequin simulacrum."
+  talk noble_lady idle "I should hear back soon, and-"
+  "The mannequin flashes red as she scores a point, then returns to it's ready stance."
+  talk noble_lady idle "-you really should work with me rather than against me."
+  "She makes a grand lunge forward and pierces the mannequin in the face."
+  talk noble_lady idle "I just want what's best for everyone."
+  jump timekeeper
+
+noble_lady_6:
+  add data.noble_lady_progress 1
+  "Cerys places her hands on your shoulders while you are discussing the leadership ceremony with some attendants."
+  talk noble_lady idle "We need to talk, Facilitator, dear."
+  "The attendants shuffle away, a muttering mix of embarassed and intimidated."
+  talk noble_lady idle "You know, for how uptight they are there certainly are some gossips in the ranks of the Corroborance."
+  "That's not your experience of the faith, usually lips are sealed..."
+  talk noble_lady idle "I got chatting with a charming initiate, I forget their name. They told me some very interesting things."
+  talk noble_lady idle "Now, of course I'd love to share but I'm afraid I'm feeling a little transactional."
+  choice:
+    "In plain terms, endorse me as leader and I can tell you who gave you this potential death sentence."
+    "...ok, tell me what you know":
+      add data.noble_lady_influence 1
+      talk noble_lady idle "Splendid, so glad we could see eye-to-eye."
+      talk noble_lady idle "My little bird told me, it was \"The Will Of The Executor\" that you be sent here specifically."
+      talk noble_lady idle "Not much you can do with that I suppose, but at least it's a little peace of mind." 
+    "I'm not going to break my vow of impartiality for you!":
+      add data.suspicion 2
+      talk noble_lady idle "That's foolish, unfortunate, and altogether ill-considered."
+      talk noble_lady idle "I wish you the best of luck, Facilitator. Stay safe."
+  jump timekeeper
+
 noble_lady_7:
- add data.noble_lady_progress 1
- talk noble_lady "-and so yes, I suppose we should consider an extension to Burgeon Ward given the demographics will naturally shift over-"
- "Lady Cerys D'Linear is holding court, surrounded by merchants, bureacrats, and civic planners. Undeniably in her element."
- "Her eyes meet yours across the chamber floor and you're struck by the impression that, regardless how this leadership contest resolves, she will make a significant difference to the people of Planet Sclera-for better or for worse."
- "She turns away and returns to her congregation." 
- jump timekeeper
+  add data.noble_lady_progress 1
+  talk noble_lady idle "-and so yes, I suppose we should consider an extension to Burgeon Ward given the demographics will naturally shift over-"
+  "Lady Cerys D'Linear is holding court, surrounded by merchants, bureacrats, and civic planners. Undeniably in her element."
+  "Her eyes meet yours across the chamber floor and you're struck by the impression that, regardless how this leadership contest resolves, she will make a significant difference to the people of Planet Sclera-for better or for worse."
+  "She turns away and returns to her congregation." 
+  jump timekeeper
+
 noble_lord_1:
   add data.noble_lord_progress 1
-
   jump timekeeper
+
 noble_lord_2:
   add data.noble_lord_progress 1
-
   jump timekeeper
+
 noble_lord_3:
   add data.noble_lord_progress 1
-
   jump timekeeper
+
 noble_lord_4:
   add data.noble_lord_progress 1
-
   jump timekeeper
+
 noble_lord_5:
   add data.noble_lord_progress 1
-
   jump timekeeper
+
 noble_lord_6:
   add data.noble_lord_progress 1
-
   jump timekeeper
+
 noble_lord_7:
   add data.noble_lord_progress 1
-
   jump timekeeper
 
-
-
-
-
-
-
-
-
-
-
 credits:
-
- An Arcane Rituals game
- Thank You For Playing
- Art: Lada
- Music: Teddy
- Writing: Hex
- 
- menu_return
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  // set the players name based on the result of a function
-  //set data.player.name (run ask_player_name)
-  //set_screen game 0 slide-top 1000
-  //"(The players name is %{data.player.name})"
-
-  // variable names are arbitrary. you can add as much
-  // bullshit to the `data` object as you like. think
-  // data.faction1.rep
-  // data.faction1.influence
-  // data.faction2.rep
-  // data.faction2.influence
-  // data.faction3.rep
-  // data.faction3.influence
-
-  // you can see this in action here, where the variable
-  // being used is deeply nested
-  //set data.fdsafdsafdsafd.fdsafdsaf.fdsafdsaf.fdsfdf.fdsfd (run ask_player_name)
-  //set_screen game 0 slide-top 1000
-  //"(The players name is %{data.fdsafdsafdsafd.fdsafdsaf.fdsafdsaf.fdsfdf.fdsfd})"
-
-//ask_player_name:
-  //var playerName (text_field "What's your name?") 
-  //return $playerName 
+  "An Arcane Rituals game"
+  "Thank You For Playing"
+  "Art: Lada"
+  "Music: Teddy"
+  "Writing: Hex"
