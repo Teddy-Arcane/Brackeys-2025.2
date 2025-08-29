@@ -1,1 +1,18 @@
-Request
+Lady Cerys sweeps past you in a chamber corridor.
+talk scheming_lady "Walk with me, Facilitator"
+talk scheming_lady "You know, in some ways I envy your position. You get to travel, dip your toes in the political pool, and then you're off to the next one."
+talk facilitator "It's certainly...exciting."
+talk scheming_lady "I suppose it must be strange to have no connection to a place and yet have such influence."
+You round a corner and she pins you against a wall with her arms, as if you were nothing.
+talk scheming_lady "I'll cut the shit, I know you're a local *but* I can help you find out how this happened."
+You're stunned silence clearly wasn't what she was after.
+ choice:
+  talk scheming_lady "Look, my lips are sealed as long as you co-operate. You can do that right."
+   "Of course, Lady Cerys":
+    talk scheming_lady "Cerys will do, we're working together now.
+    add data.scheming_lady_influence 1
+   "Uh-I can't do that.":
+    talk scheming_lady "Of course you can, don't dance too close to the fire now."
+    add data.suspicion 2
+She puts you down and turns to leave.
+talk scheming_lady "I'll be in touch."
