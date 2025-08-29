@@ -1,1 +1,14 @@
-The mask drops
+talk scheming_lady "Facilitator, you simply must join me for a spot of lunch."
+Before you know it, you've been swept into a great glass conservatory, the table filled with finger sandwiches, salads and fresh fruits.
+Pleasantries exchanged, Cerys steeples her fingers.
+talk scheming_lady "Now, plans for my leadership. Item 1, construct a ring around the mouth of the sinkhole and restrict ship docking to there. That should cut down on those ghastly exhaust fumes.
+Item 2, demolish that unfinished bypass between Chrysalis and Tinmouth Ward. 
+Item 3, evict the Engineer's Guild from their Guildhouse and construct a new funicular shaft down-"
+She procedes to list off dozens of improvements, both industrial and civic.  You've met the sort before.
+talk facilitator "If I may, Lady Cerys, do you perhaps spend significant time working with simulations?"
+A blush, you got it in one.
+talk scheming_lady "It only seemed right that I should gain some experience, and Father always favoured Alun for this sort of thing when he clearly didn't have the aptitude. Nobless oblige, you know? Even if I was going to be stuck as his second."
+talk facilitator "The simulations are excellent but in my experience, people are resistant to such sweeping change-even for the better."
+She shoots you a glare-once again her mask falters for a moment.
+talk scheming_lady "Thank you Facilitator, I will keep that in mind."
+A tap on your shoulder and you are escorted out.

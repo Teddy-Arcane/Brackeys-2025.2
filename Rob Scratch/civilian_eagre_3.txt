@@ -1,1 +1,15 @@
-Personality types
+talk eagre_organiser "You know, we really need to get to the bottom of this and work together, gang! I'm serious!"
+Gloria's conference call is drawing glares from around the chamber.
+She looks up from her screen, mortified, and closes the terminal.
+talk eagre_organiser "I am sooo sorry, it's just...sometimes I wonder if I wear too many hats-right?"
+talk eagre_organiser "It's like I can't be their boss, their friend, their comrade and their mother..."
+talk Facilitator "I've never thought of it this way but I suppose being as indpendent as I am in this job does have it's advantages."
+talk eagre_organiser "Oh, no disrespect but I could *never* do what you do. It seems awful, just being dropped into a random civilisation at their moment of crisis. How do you build relationships, forge trust and the like?"
+talk Facilitator "I've come to hold less stock in such things, I suppose that's true. I only have 12 more rotations left though, I think I can make it."
+talk eagre_organiser "12 more! That could be, what, another decade? How long have they kept you on ice?"
+The thought of it is like have a bruise punched.
+talk Facilitator "As long as my duty demands..."
+She cracks a smile.
+talk eagre_organiser "For my first order as Supreme Overchancellor or whatever I'm definitely outlawing that nonsense."
+talk Facilitator "As nice as that might be...I think that's probably heresy."
+

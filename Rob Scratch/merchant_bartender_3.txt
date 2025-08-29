@@ -2,4 +2,20 @@ Cafe Diamante seems quieter than usual this time, only a couple of patrons mill 
 talk merchant_bartender "Ahaha, a Babylon Soda on ice for my favourite Facilitator! Come, lets chat."
 ...
 ~Hours pass~
+talk merchant_bartender "And so I say, that's not like any Andruuvan Melt-Ice *I've* ever tasted before!"
+You're hoarse from talking, where did the time go? It's been so long since you've just...talked with someone.
+It strikes you in that moment that they've left you with your guard down.
+talk merchant_bartender "I need a smoke and you look like you could use some air-I ain't gonna say it's fresh down here but it'll perk you up a bit!"
+They lead you through a series of back rooms, crates of drink and other no-doubt illegal things piled high up against the walls.
+Out a door and into a little courtyard enclosed on all sides by a dozen other buildings, potted plants and string-lights making a brave stand against the industrial dankness.
+talk merchant_bartender "Here's my little sanctuary, take a seat-I'll be right back."
+He disappears back inside and reappears a moment later with a a lighter and an envelope, which he tosses on the table.
+talk merchant_bartender "Take a look at that."
+Their eyes are hard now, shrewd.
+You peel open the envelope and pull from within it a photograph...it can't be!
+talk merchant_bartender "You were a real bright-eyed kid, you know. Why'dja sign up with the Corroborance anyway?"
+He lights his cigarette, holding all the cards.
+talk facilitator "You can't let anyone know, I don't even understand why they sent me here!"
+A deep drag.
+talk merchant_bartender "Of course, because we're good friends. Us Sclerans have gotta look out for eachother, right? Now get out of here. Your drinks are on me."
 

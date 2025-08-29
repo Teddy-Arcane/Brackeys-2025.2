@@ -1,1 +1,10 @@
-I got you what you need
+You head over to Cafe Diamante during a lull in preperations for the leadership ceremony. It's busier in here than you've seen it-some people are even dancing.
+Karl is enthusiastically telling a story to a gaggle of older patrons at the bar.
+talk merchant_bartender "So I say, you know what-no, I don't see the Corroborance specifically outlawing the sale of Billrat meat any time soon."
+"-Tell them what they said next!" bellows a patron, clearly deep in his cups.
+talk merchant_bartender "I'm getting to that part-she says "I hope not, I've got a full hold of the stuff stinking up my hold!""
+The group explodes with laughter-apparently that was the best punchline they'd ever heard.
+You are about to take a seat at one of the side tables when one of the bartenders with a full tray of glasses in her other hand taps you on the shoulder.
+"Mr Sera-Gabbro would like to see you tomorrow, he has business to discuss."
+"Mr Sera-Gabbro would also recommend you make yourself scarce tonight, things are about to get loud."
+You take their advice. You're half-way up the street when you hear gunshots and screams.

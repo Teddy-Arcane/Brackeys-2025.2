@@ -1,2 +1,14 @@
-[Description of the character's appearance and pose]
-Liberation by commitee
+Gloria Hewcore-Schist makes herself known before you even have a chance to say hello.
+talk eagre_organiser "Hi, hello, uh-welcome to Sclera and well, Credence City specifically I suppose! I'm Gloria Hewcore-Schist but I'm not precious about it, just call me Gloria. I'm the head of the commitee for the Sclera Miner's Liberation Front and I also sit on the boards for-oh, you don't need to know about those though, they just keep me busy."
+She stops to take a breath.
+talk eagre_organiser "How was the travel, I hope you're not too sore? I heard those pods are terrible for you but I'd get sooo bored sitting around for days on those long haul ships, not that I've ever been to space."
+talk eagre_organiser  "Anyway, what was I saying-uh-"
+She pulls a PDA from her bag-
+talk eagre_organiser  "Right, yes-as the representative for Sclera Miner's Liberation Front and as a candidate for the upcoming leadership ceremony I've been asked to assure you that if that great honour falls to me I will lead according to our written bylaws. Now I just need you to-"
+A slightly crumpled sheet of paper-
+talk eagre_organiser  "-get you to sign this to confirm that."
+talk facilitator  "You want me to sign a document confirming that...you told me something?"
+talk eagre_organiser  "Ah, yes-I know it's a bit unusual but we have a whole section in the bylaws on how to handle this, you know? Divine appointment by the Corroborance kind of doesn't align with the Sclera Miner's Liberation Front's whole...deal-but it's not like we can challenge it directly so we've come up with a process to do harm mitigation as best we can."
+talk facilitator  "That's very...considered."
+talk eagre_organiser  "Isn't it just? Got to make do with what you have, like I always say. Anyway, delightful to meet you but I have to get going, I'm already running late for my next meeting."
+...and just like that she took off running.
