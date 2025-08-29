@@ -3,9 +3,73 @@ config:
   imagesPath: img/characters/
 characters:
   game:
-    name: ''
+    name: ""
     color: white
   player:
     style:
       color: orange
-    name: You
+    name: "The Facilitator"
+  military_hero:
+    name: "Isaiah Shackle"
+    sprites:
+      idle:
+      positive:
+      negative:
+    style:
+      color: green
+  military_officer:
+    name: "Jac Peril"
+    style:
+    sprites:
+      idle:
+      positive:
+      negative:
+    color: green
+  merchant_barkeeper:
+    name: "Karl Sera-Gabbro"
+    sprites:
+      idle:
+      positive:
+      negative:
+    style:
+      color: yellow
+  merchant_business:
+    name: "Delilah Smythe"
+    sprites:
+      idle:
+      positive:
+      negative:
+    style:
+      color: yellow
+  civilian_eagre:
+    name: "Gloria Hewcore-Schist"
+    sprites:
+      idle:
+      positive:
+      negative:
+    style:
+      color: red
+  civilian_icon:
+    name: "Dod Millet-Arkose"
+    sprites:
+      idle:
+      positive:
+      negative:
+    style:
+      color: red
+  noble_lord:
+    name: "Alun D'Linear"
+    sprites:
+      idle:
+      positive:
+      negative:
+    style:
+      color: purple
+  noble_lady:
+    name: "Cerys D'Linear"
+    sprites:
+      idle:
+      positive:
+      negative:
+    style:
+      color: purple
