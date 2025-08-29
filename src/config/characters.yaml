@@ -1,11 +1,84 @@
 ---
 config:
-  imagesPath: img/characters/
+  imagesPath: "img/characters/"
 characters:
   game:
-    name: ''
-    color: white
+    name: ""
+    color: "white"
+
   player:
     style:
-      color: orange
-    name: You
+      color: "orange"
+    name: "The Facilitator"
+
+  military_hero:
+    name: "Isaiah Shackle"
+    sprites:
+      idle: "isaiah_idle.png"
+      positive: "isaiah_positive.png"
+      negative: "isaiah_negative.png"
+    style:
+      color: "green"
+
+  military_officer:
+    name: "Jac Peril"
+    style:
+      color: "green"
+    sprites:
+      idle: "jac_idle.png"
+      positive: "jac_positive.png"
+      negative: "jac_negative.png"
+
+  merchant_bartender:
+    name: "Karl Sera-Gabbro"
+    sprites:
+      idle: "karl_idle.png"
+      positive: "karl_positive.png"
+      negative: "karl_negative.png"
+    style:
+      color: "yellow"
+
+  merchant_business:
+    name: "Delilah Smythe"
+    sprites:
+      idle: "delilah_idle.png"
+      positive: "delilah_positive.png"
+      negative: "delilah_negative.png"
+    style:
+      color: "yellow"
+
+  civilian_eagre:
+    name: "Gloria Hewcore-Schist"
+    sprites:
+      idle: "gloria_idle.png"
+      positive: "gloria_positive.png"
+      negative: "gloria_negative.png"
+    style:
+      color: "red"
+
+  civilian_icon:
+    name: "Dod Millet-Arkose"
+    sprites:
+      idle: "dod_idle.png"
+      positive: "dod_positive.png"
+      negative: "dod_negative.png"
+    style:
+      color: "red"
+
+  noble_lord:
+    name: "Alun D'Linear"
+    sprites:
+      idle: "alun_idle.png"
+      positive: "alun_positive.png"
+      negative: "alun_negative.png"
+    style:
+      color: "purple"
+
+  noble_lady:
+    name: "Cerys D'Linear"
+    sprites:
+      idle: "cerys_idle.png"
+      positive: "cerys_positive.png"
+      negative: "cerys_negative.png"
+    style:
+      color: "purple"

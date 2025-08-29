@@ -1,7 +1,7 @@
-talk scheming_lady "I've been doing some -hyah- asking around. I have -huh- ears everywhere you know."
+talk noble_lady "I've been doing some -hyah- asking around. I have -huh- ears everywhere you know."
 You've joined Lady Cerys to her fencing training session, as she spars with a mannequin simulacrum.
-talk scheming_lady "I should hear back soon, and-"
+talk noble_lady "I should hear back soon, and-"
 The mannequin flashes red as she scores a point, then returns to it's ready stance.
-talk scheming_lady "-you really should work with me rather than against me."
+talk noble_lady "-you really should work with me rather than against me."
 She makes a grand lunge forward and pierces the mannequin in the face.
-talk scheming_lady "I just want what's best for everyone."
+talk noble_lady "I just want what's best for everyone."

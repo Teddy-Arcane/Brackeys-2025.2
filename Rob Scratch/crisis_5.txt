@@ -1,1 +1,24 @@
-Assasination plot!
+The day draws to a close, and you take a walk through the chamber's warren of a basement.
+You pass a squad of guards, smoking and playing cards. They invite you to play, but you decline.
+You walk through an empty atrium, your shoes clacking in the tall stillness of the place.
+In another wing you see Ser Anastasia, Housecarl Of House D'Linear, sharpening her photoblade. She regards you with a smile.
+You return to the atrium, your curiosity satisfied, and press the call button for the elevator with a muffled ding.
+
+A robed figure drops from above, landing in a heap with a crack.
+And then the figure is rising, contorting and twisty and inhuman, and they're at rushing you, hissing.
+choice:
+ "Where do you run to?"
+  "The Housecarl":
+   add_stat noble_lord_influence 1
+   add_stat scheming_lady_influence 1
+   In an instant, the assailant is disected and disected and disected again by the photoblade, a steaming pile.
+   Ser Anastasia nods, flicks the gore from the blade, smiles, and returns to her business.
+   You walk alone back to the elevator.
+   [The Noble Faction Has Gained Influence]
+  "The Soldiers": 
+   The soldiers grab their rifles and gun down your would-be assasin as though they were a beast.
+   They say you're in shock and you're not going to deny that.
+   One of them puts their coat around you and they escort you back to your pod.
+   add_stat military_hero_influence 1
+   add_stat military_officer_influence 1
+   [The Military Faction Has Gained Influence]

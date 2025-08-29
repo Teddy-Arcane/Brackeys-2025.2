@@ -1,1 +1,13 @@
-Civil unrest, cop punched
+In the evening, the chamber becomes quiet-only a few functionaries and other staff are milling around.
+Before returning to your pod for the night you open up your local news feeds and skim around.
+You open a feed tagged with [BREAKING NEWS]
+There appears to be some sort of labour dispute in one of Sclera's deep mining caverns. A rabble of miners stand with protest signs decrying their unfair treatment, pay, safety.
+They appear to be surrounded by local security forces, riot shields and stun lances deployed.
+One of the protestors trips and falls forward towards them.
+The camera operator jostles and clumsily zooms in.
+Two of the guards break from their line and move to strike.
+...and then they're both writhing on the ground, and standing in centre frame is a miner, fists raised aloft. A champion of the people in coveralls.
+You receive a notification that your candidates list has been automatically updated.
+[The Civilian Faction Gains Influence]
+add_stat civilian_eagre_influence 1
+add_stat civilian_icon_influence 1

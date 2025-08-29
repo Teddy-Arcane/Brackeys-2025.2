@@ -1,1 +1,8 @@
-Local Festival
+Every Planet under the Corroborance, willing or not, has an anniversary festival. You've been to many in your time.
+The Priesthood in their flowing gowns take to the streets with censers filled with local herbs and spices.
+It's customary for those of Noble Houses and certain Guild positions to visit each ward and bestow a gift upon the people.
+This year's gifts are particularly generous-a trade school, a community centre, a war memorial, and a grand feast in the streets which devolves into an all-night party.
+You recall sneaking out as a child to see to experience it all, just before you took your vows. 
+[The Noble Faction Gains Influence]
+add_stat noble_lord_influence 1
+add_stat noble_lady_influence 1

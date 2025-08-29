@@ -1,1 +1,19 @@
-Meteor storm
+On your penultimate night before the succesion ceremony, you take a trip to one of the rooftop gardens atop the habitation towers.
+Up here, the air is thin and clean. You lay down on a grassy hillock and gaze up at the night-sky, framed by the perfect circle of the sinkhole.
+The silica storm whorls and snaps in the velveteen darkness far above you. It's rare to see the stars on Sclera, it's part of why you signed up for this job in the first place.
+You find yourself waxing nostalgic about this place, about the people and sights and the smells and the weird air that sticks to your tongue and...
+12 more cycles, and you can come home for real.
+But not yet.
+Glistening in the dark, a meteor shower begins-little white streaks cutting hot through the cold void.
+ choice:
+  "Choice"
+   "Option A":
+    Outcome
+    add_stat merchant_bartender_influence 1
+    add_stat merchant_business_influence 1
+    [The Merchant Faction Has Gained Influence]
+   "Option B":
+    Outcome
+    add_stat civilian_icon_influence 1
+    add_stat civilian_eagre_influence 1
+    [The Civilian Faction Has Gained Influence]

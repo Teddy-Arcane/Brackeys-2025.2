@@ -1,0 +1,9 @@
+if (== $data.suspicion = >2 ) jump discovered_end
+if (== $data.civilian_eagre_influence = >2 ) jump civilian_eagre_end
+if (== $data.civilian_icon_influence = >2 ) jump civilian_icon_end
+if (== $data.merchant_bartender_influence = >2 ) jump_merchant_bartender_end
+if (== $data.merchant_business_influence = >2 ) jump merchant_business_end
+if (== $data.military_hero_influence = >2 ) jump military_hero_end
+if (== $data.military_officer_influence = >2 ) jump military_officer_end
+if (== $data.noble_lord_influence = >2 ) jump noble_lord_end
+if (== $data.noble_lady_influence_influence = >2 ) jump noble_lady_end
