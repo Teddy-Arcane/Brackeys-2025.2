@@ -537,9 +537,9 @@ civilian_eagre_4:
   choice:
     talk civilian_eagre idle "We think he's...dead, but he's still alive on the public record."
     "Of course, yes. That shouldn't be a problem.":
+      talk civilian_eagre idle "Awesome, thank you so much. With him off the board we'll be able to break a tie and finally start moving on enrolling a dockworker representative."
       add data.civilian_eagre_influence 1
       add data.suspicion 1
-      talk civilian_eagre idle "Awesome, thank you so much. With him off the board we'll be able to break a tie and finally start moving on enrolling a dockworker representative."
     "I don't think that would be appropriate.":
       talk civilian_eagre idle "Oh. That's a real shame. I was hoping you could help..."
   "Gloria's terminal rings and she mouths \"Got to take this, sorry\" before picking up the call."
@@ -574,13 +574,14 @@ civilian_eagre_6:
   talk civilian_eagre idle "You don't understand, I thought she was dead and now I find out she's alive, I've got to...to try!"
   talk player idle "Try what, your sister is safe and once her duty is done she'll be free."
   talk civilian_eagre idle "I know but...look, this is stupid and I'm asking too much, but you try and get this message to her? Her name's Joyce. Just let her know we're still here for her."
-  choice: talk civilian_eagre idle "Could you do that for me?"
+  choice: 
+    talk civilian_eagre idle "Could you do that for me?"
     "I can try.":
-      "Thank you, thank you so much!"
-  	  add data.civilian_eagre_influence 1
+      talk civilian_eagre idle "Thank you, thank you so much!"
+      add data.civilian_eagre_influence 1
     "I can't do that, we aren't supposed to have any contact with home...":
-      "Coward, then what are you doing here?!"
- 	    add data.suspicion 1
+      talk civilian_eagre idle "Coward, then what are you doing here?!"
+      add data.suspicion 1
   jump timekeeper
 
 civilian_eagre_7:
@@ -633,13 +634,13 @@ merchant_bartender_1:
   "Taking the place in, you can immediately spot Karl behind the bar."
   talk merchant_bartender idle "Ahaha, you must be the Facilitator, take a seat, please, sit!"
   "It seems he also spotted you as soon as you came in."
-  	choice:
-  		talk merchant_bartender idle "You'll have a drink, of course?"
-  		"Do you have Babylon Soda?":
-  		  add data.suspicion 1
-  		  talk merchant_bartender idle "Ah, a local drink! Of course, let me fix that for you."
-  		"I'm not permitted to partake in alchohol.":
-  		  talk merchant_bartender idle "No problem at all, you should try a Babylon Soda! A real local treat if I say so myself."
+  choice:
+    talk merchant_bartender idle "You'll have a drink, of course?"
+    "Do you have Babylon Soda?":
+      add data.suspicion 1
+      talk merchant_bartender idle "Ah, a local drink! Of course, let me fix that for you."
+    "I'm not permitted to partake in alchohol.":
+      talk merchant_bartender idle "No problem at all, you should try a Babylon Soda! A real local treat if I say so myself."
   "The familiar tang of the canteloupe soda immediately transports you back to your youth, playing tag in the service tunnels not far from here."
   talk merchant_bartender idle "Nothing like it, eh? Huhuheh!"
   talk merchant_bartender idle "I hope you'll come see me over here, I can't really make it over to the chambers too often."
@@ -659,7 +660,7 @@ merchant_bartender_2:
   talk merchant_bartender idle "Oho, is that so?"
   talk merchant_bartender idle "I suppose it's not like old Berwyn D'linear kept his nose clean, even by noble standards."
   "You're taken aback. They would speak so coarsely of the newly-dead?"
-  They lean in close over the bar.
+  "They lean in close over the bar."
   talk merchant_bartender idle "I should know, I have his receipts."
   jump timekeeper
 
@@ -667,8 +668,8 @@ merchant_bartender_3:
   add data.merchant_bartender_progress 1
   "Cafe Diamante seems quieter than usual this time, only a couple of patrons mill around in the booths at the back of the bar."
   talk merchant_bartender idle "Ahaha, a Babylon Soda on ice for my favourite Facilitator! Come, lets chat."
-  "...
-  ~Hours pass~"
+  "..."
+  "~Hours pass~"
   talk merchant_bartender idle "And so I say, that's not like any Andruuvan Melt-Ice *I've* ever tasted before!"
   "You're hoarse from talking, where did the time go? It's been so long since you've just...talked with someone."
   "It strikes you in that moment that they've left you with your guard down."
@@ -683,7 +684,7 @@ merchant_bartender_3:
   talk merchant_bartender idle "You were a real bright-eyed kid, you know. Why'dja sign up with the Corroborance anyway?"
   "He lights his cigarette, holding all the cards."
   talk player idle "You can't let anyone know, I don't even understand why they sent me here!"
-  A deep drag.
+  "A deep drag."
   talk merchant_bartender idle "Of course, because we're good friends. Us Sclerans have gotta look out for eachother, right? Now get out of here. Your drinks are on me."
   jump timekeeper
 
@@ -696,13 +697,13 @@ merchant_bartender_4:
   "You manage a feeble little nod."
   talk merchant_bartender idle "Of course you do, so here's the thing. You're gonna see to it that on the ceremony day there's no mining-right? A full cease of production. Say it's for noise reasons or something."
   choice:
-  	talk merchant_bartender idle "It would be real convenient for me if those tunnels were empty that day."
- 	  "Of course, yes-I can...I can make that happen.":
- 	    add data.merchant_bartender_influence 1
- 	    talk merchant_bartender idle "Good. That's good."
- 	  "I can't do that-I'm sorry.":
- 	    add data.suspicion 1
- 	    talk merchant_bartender idle "That's a terrible shame, if I'm being honest with you, Facilitator."
+    talk merchant_bartender idle "It would be real convenient for me if those tunnels were empty that day."
+    "Of course, yes-I can...I can make that happen.":
+      add data.merchant_bartender_influence 1
+      talk merchant_bartender idle "Good. That's good."
+    "I can't do that-I'm sorry.":
+      add data.suspicion 1
+      talk merchant_bartender idle "That's a terrible shame, if I'm being honest with you, Facilitator."
   "Their demeanour shifts as they roll their shoulders."
   talk merchant_bartender idle "Anyways, I'll be seeing you around. Swing on by Cafe Diamante some time."
   jump timekeeper
@@ -731,11 +732,11 @@ merchant_bartender_6:
   choice:
     talk merchant_bartender idle "I know you can do that for me, you have the authority."
     "I'll see what I can do.":
-  	  talk merchant_bartender idle "Thank you, thank you so very much. You won't regret it."
-  	  add data.merchant_bartender_influence 1
+      talk merchant_bartender idle "Thank you, thank you so very much. You won't regret it."
+      add data.merchant_bartender_influence 1
     "I can't do that for you...":
-  	  talk merchant_bartender idle "You should be careful, you know...it's much better to be cooperative. It's just good business."
-  	  add data.suspicion 1
+      talk merchant_bartender idle "You should be careful, you know...it's much better to be cooperative. It's just good business."
+      add data.suspicion 1
   talk merchant_bartender idle "Now get out of here! You got important work to do as a totally unbiased Facilitator, don't you?"
   jump timekeeper
 
@@ -790,7 +791,7 @@ military_hero_1:
     talk player idle "Ah, you were at Bastillan Falls I believe? The dossier mentioned you."
     "I'm honoured, you're a local legend!":
       add data.military_hero_influence 1
- 	  "Charmed, I'm sure.":
+    "Charmed, I'm sure.":
       add data.suspicion 1
   "They shift back into their more relaxed stance, pleasantries dealt with."
   talk military_hero idle "I'm not sure how familiar you are with our departed leader. They, Berwyn, that is, they were good people despite it all. I worry Sclera is less safe today than it was a week ago."
@@ -813,12 +814,12 @@ military_hero_2:
   talk military_hero idle "Ah, a mixed blessing. Those things always gave me a sore neck when I was on deployment. Regardless, you wanted to speak with me?"
   talk player idle "You are one of the identified candidates, I am bidden to learn as much as I can. I was hoping we could discuss your service history?"
   "They visibly wince."
- 	choice:
+  choice:
     talk military_hero idle "The curse of notoriety, I suppose. Anything in particular? The official record is mostly right, if a little overblown"
- 	  "You were enlisted from an orbital outpost?":
- 	    talk military_hero idle "Yeah, my folks were drifters with some bad debts chasing them, my service paid to get them free of that and settled down on Credence."
+    "You were enlisted from an orbital outpost?":
+      talk military_hero idle "Yeah, my folks were drifters with some bad debts chasing them, my service paid to get them free of that and settled down on Credence."
     "You fought in the Bastillan campaign?":
- 	    talk military_hero idle "Wretched place, wretched fight, wretched memories. I did my duty that day and no more. I'd trade all this fame for a single one of my friends to have made it home."
+      talk military_hero idle "Wretched place, wretched fight, wretched memories. I did my duty that day and no more. I'd trade all this fame for a single one of my friends to have made it home."
       talk player idle "You routed 3 regiments of Calladian Mercenaries with only your sword that day. I'd say that's above and beyond."
       "They shrug off the compliment and return to their monitors."
   talk military_hero idle "If that will be all Facilitator, I'd rather not wax nostalgic today."
@@ -827,15 +828,14 @@ military_hero_2:
 
 military_hero_3:
   add data.military_hero_progress 1
-  
   choice:
     "Commander Isaiah Shackle, The Violet Blade, Hero Of Sclera, is sitting on the chamber steps eating out of a takeout box. The smell is instantly nostalgic."
- 		"Oh, I love Pickled Squash Noodles!":
- 		  "They raise an eyebrow."
+    "Oh, I love Pickled Squash Noodles!":
+      "They raise an eyebrow."
       talk military_hero idle "I thought this was just a local thing?"
       add data.suspicion 1
- 		"Smells...interesting...":
- 		  talk military_hero idle "Mmmfh, yeah it took me a while but I've really come around to these squash noodles. I think they pickle them?"
+    "Smells...interesting...":
+      talk military_hero idle "Mmmfh, yeah it took me a while but I've really come around to these squash noodles. I think they pickle them?"
   "He sets the box aside and gestures with his chopsticks."
   talk military_hero idle "I assume you want to ask me about something?"
   talk player idle "I was hoping to learn more about the Scleran military forces. You must all be based out of Credence City?"
@@ -845,13 +845,13 @@ military_hero_3:
   "They avert their gaze when Peril is mentioned.  Interesting."
   talk military_hero idle "They certainly have their...ideas. Their ambitions trouble me."
   choice:
- 	  talk military_hero idle "...could you deliver this letter to the Executor for me?"
- 		"Of course, Commander.":
- 			talk military_hero idle "Thank you, I know it's improper..."
- 		  add data.military_hero_influence 1
+    talk military_hero idle "...could you deliver this letter to the Executor for me?"
+    "Of course, Commander.":
+      talk military_hero idle "Thank you, I know it's improper..."
+      add data.military_hero_influence 1
     "I don't think that would be appropriate.":
- 		  add data.suspicion 1
- 			talk military_hero idle "Ah, naturally. I'm sorry to trouble you with this."
+      add data.suspicion 1
+      talk military_hero idle "Ah, naturally. I'm sorry to trouble you with this."
   talk military_hero idle "Anyway, I should get back to my work. Thank you for you time, Facilitator."
   jump timekeeper
 
@@ -1025,7 +1025,7 @@ noble_lady_4:
       add data.noble_lady_influence 1
     "Uh-I can't do that.":
       talk noble_lady idle "Of course you can, don't dance too close to the fire now."
-     add data.suspicion 2
+      add data.suspicion 2
   "She puts you down and turns to leave."
   talk noble_lady idle "I'll be in touch."
   jump timekeeper
