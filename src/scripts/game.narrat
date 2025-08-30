@@ -61,18 +61,16 @@ timekeeper:
   if (== $data.time 19):
     jump morning_7
   if (== $data.time 20):
-    jump afternoon_7
-  if (== $data.time 21):
     jump crisis_7
-  if (== $data.time 22):
+  if (== $data.time 21):
     jump endgame
-  if (== $data.time 23):
+  if (== $data.time 22):
     jump credits
 
-get_stage:
+get_stage_morning_1:
   choice:
     "Who will you speak with?"
-    "civilian_eagre":
+    "Gloria Hewcore-Schist, Union Representative":
       if (== $data.civilian_eagre_progress 0): 
         jump civilian_eagre_1
       if (== $data.civilian_eagre_progress 1): 
@@ -87,37 +85,7 @@ get_stage:
         jump civilian_eagre_6
       if (== $data.civilian_eagre_progress 6): 
         jump civilian_eagre_7
-    "civilian_icon":
-      if (== $data.civilian_icon_progress 0): 
-        jump civilian_icon_1
-      if (== $data.civilian_icon_progress 1): 
-        jump civilian_icon_2
-      if (== $data.civilian_icon_progress 2): 
-        jump civilian_icon_3
-      if (== $data.civilian_icon_progress 3): 
-        jump civilian_icon_4
-      if (== $data.civilian_icon_progress 4): 
-        jump civilian_icon_5
-      if (== $data.civilian_icon_progress 5): 
-        jump civilian_icon_6
-      if (== $data.civilian_icon_progress 6): 
-        jump civilian_icon_7
-    "merchant_bartender":
-      if (== $data.merchant_bartender_progress 0): 
-        jump merchant_bartender_1
-      if (== $data.merchant_bartender_progress 1): 
-        jump merchant_bartender_2
-      if (== $data.merchant_bartender_progress 2): 
-        jump merchant_bartender_3
-      if (== $data.merchant_bartender_progress 3): 
-        jump merchant_bartender_4
-      if (== $data.merchant_bartender_progress 4): 
-        jump merchant_bartender_5
-      if (== $data.merchant_bartender_progress 5): 
-        jump merchant_bartender_6
-      if (== $data.merchant_bartender_progress 6): 
-        jump merchant_bartender_7
-    "merchant_business":
+    "Delilah Smythe, Interplanetary Financier":
       if (== $data.merchant_business_progress 0): 
         jump merchant_business_1
       if (== $data.merchant_business_progress 1): 
@@ -132,7 +100,7 @@ get_stage:
         jump merchant_business_6
       if (== $data.merchant_business_progress 6): 
         jump merchant_business_7
-    "military_hero":
+    "Isaiah Shackle, The Violet Edge":
       if (== $data.military_hero_progress 0): 
         jump military_hero_1
       if (== $data.military_hero_progress 1): 
@@ -147,7 +115,7 @@ get_stage:
         jump military_hero_6
       if (== $data.military_hero_progress 6): 
         jump military_hero_7
-    "military_officer":
+    "Officer Jac Peril":
       if (== $data.military_officer_progress 0): 
         jump military_officer_1
       if (== $data.military_officer_progress 1): 
@@ -162,22 +130,7 @@ get_stage:
         jump military_officer_6
       if (== $data.military_officer_progress 6): 
         jump military_officer_7
-    "noble_lady":
-      if (== $data.noble_lady_progress 0): 
-        jump noble_lady_1
-      if (== $data.noble_lady_progress 1): 
-        jump noble_lady_2
-      if (== $data.noble_lady_progress 2): 
-        jump noble_lady_3
-      if (== $data.noble_lady_progress 3): 
-        jump noble_lady_4
-      if (== $data.noble_lady_progress 4): 
-        jump noble_lady_5
-      if (== $data.noble_lady_progress 5): 
-        jump noble_lady_6
-      if (== $data.noble_lady_progress 6): 
-        jump noble_lady_7
-    "noble_lord":
+    "Lord Alun D'Linear":
       if (== $data.noble_lord_progress 0): 
         jump noble_lord_1
       if (== $data.noble_lord_progress 1): 
@@ -192,22 +145,802 @@ get_stage:
         jump noble_lord_6
       if (== $data.noble_lord_progress 6): 
         jump noble_lord_7
-
+get_stage_morning_2:
+  choice:
+    "Who will you speak with?"
+    "Gloria Hewcore-Schist, Union Representative":
+      if (== $data.civilian_eagre_progress 0): 
+        jump civilian_eagre_1
+      if (== $data.civilian_eagre_progress 1): 
+        jump civilian_eagre_2
+      if (== $data.civilian_eagre_progress 2): 
+        jump civilian_eagre_3
+      if (== $data.civilian_eagre_progress 3): 
+        jump civilian_eagre_4
+      if (== $data.civilian_eagre_progress 4): 
+        jump civilian_eagre_5
+      if (== $data.civilian_eagre_progress 5): 
+        jump civilian_eagre_6
+      if (== $data.civilian_eagre_progress 6): 
+        jump civilian_eagre_7
+    "Dod Millet-Arkose, People's Champion":
+      if (== $data.civilian_icon_progress 0): 
+        jump civilian_icon_1
+      if (== $data.civilian_icon_progress 1): 
+        jump civilian_icon_2
+      if (== $data.civilian_icon_progress 2): 
+        jump civilian_icon_3
+      if (== $data.civilian_icon_progress 3): 
+        jump civilian_icon_4
+      if (== $data.civilian_icon_progress 4): 
+        jump civilian_icon_5
+      if (== $data.civilian_icon_progress 5): 
+        jump civilian_icon_6
+      if (== $data.civilian_icon_progress 6): 
+        jump civilian_icon_7
+    "Delilah Smythe, Interplanetary Financier":
+      if (== $data.merchant_business_progress 0): 
+        jump merchant_business_1
+      if (== $data.merchant_business_progress 1): 
+        jump merchant_business_2
+      if (== $data.merchant_business_progress 2): 
+        jump merchant_business_3
+      if (== $data.merchant_business_progress 3): 
+        jump merchant_business_4
+      if (== $data.merchant_business_progress 4): 
+        jump merchant_business_5
+      if (== $data.merchant_business_progress 5): 
+        jump merchant_business_6
+      if (== $data.merchant_business_progress 6): 
+        jump merchant_business_7
+    "Lady Cerys D'Linear":
+      if (== $data.noble_lady_progress 0): 
+        jump noble_lady_1
+      if (== $data.noble_lady_progress 1): 
+        jump noble_lady_2
+      if (== $data.noble_lady_progress 2): 
+        jump noble_lady_3
+      if (== $data.noble_lady_progress 3): 
+        jump noble_lady_4
+      if (== $data.noble_lady_progress 4): 
+        jump noble_lady_5
+      if (== $data.noble_lady_progress 5): 
+        jump noble_lady_6
+      if (== $data.noble_lady_progress 6): 
+        jump noble_lady_7
+get_stage_morning_3:
+  choice:
+    "Who will you speak with?"
+    "Gloria Hewcore-Schist, Union Representative":
+      if (== $data.civilian_eagre_progress 0): 
+        jump civilian_eagre_1
+      if (== $data.civilian_eagre_progress 1): 
+        jump civilian_eagre_2
+      if (== $data.civilian_eagre_progress 2): 
+        jump civilian_eagre_3
+      if (== $data.civilian_eagre_progress 3): 
+        jump civilian_eagre_4
+      if (== $data.civilian_eagre_progress 4): 
+        jump civilian_eagre_5
+      if (== $data.civilian_eagre_progress 5): 
+        jump civilian_eagre_6
+      if (== $data.civilian_eagre_progress 6): 
+        jump civilian_eagre_7
+    "Delilah Smythe, Interplanetary Financier":
+      if (== $data.merchant_business_progress 0): 
+        jump merchant_business_1
+      if (== $data.merchant_business_progress 1): 
+        jump merchant_business_2
+      if (== $data.merchant_business_progress 2): 
+        jump merchant_business_3
+      if (== $data.merchant_business_progress 3): 
+        jump merchant_business_4
+      if (== $data.merchant_business_progress 4): 
+        jump merchant_business_5
+      if (== $data.merchant_business_progress 5): 
+        jump merchant_business_6
+      if (== $data.merchant_business_progress 6): 
+        jump merchant_business_7
+    "Isaiah Shackle, The Violet Edge":
+      if (== $data.military_hero_progress 0): 
+        jump military_hero_1
+      if (== $data.military_hero_progress 1): 
+        jump military_hero_2
+      if (== $data.military_hero_progress 2): 
+        jump military_hero_3
+      if (== $data.military_hero_progress 3): 
+        jump military_hero_4
+      if (== $data.military_hero_progress 4): 
+        jump military_hero_5
+      if (== $data.military_hero_progress 5): 
+        jump military_hero_6
+      if (== $data.military_hero_progress 6): 
+        jump military_hero_7
+    "Officer Jac Peril":
+      if (== $data.military_officer_progress 0): 
+        jump military_officer_1
+      if (== $data.military_officer_progress 1): 
+        jump military_officer_2
+      if (== $data.military_officer_progress 2): 
+        jump military_officer_3
+      if (== $data.military_officer_progress 3): 
+        jump military_officer_4
+      if (== $data.military_officer_progress 4): 
+        jump military_officer_5
+      if (== $data.military_officer_progress 5): 
+        jump military_officer_6
+      if (== $data.military_officer_progress 6): 
+        jump military_officer_7
+    "Lady Cerys D'Linear":
+      if (== $data.noble_lady_progress 0): 
+        jump noble_lady_1
+      if (== $data.noble_lady_progress 1): 
+        jump noble_lady_2
+      if (== $data.noble_lady_progress 2): 
+        jump noble_lady_3
+      if (== $data.noble_lady_progress 3): 
+        jump noble_lady_4
+      if (== $data.noble_lady_progress 4): 
+        jump noble_lady_5
+      if (== $data.noble_lady_progress 5): 
+        jump noble_lady_6
+      if (== $data.noble_lady_progress 6): 
+        jump noble_lady_7
+get_stage_morning_4:
+  choice:
+    "Who will you speak with?"
+    "Gloria Hewcore-Schist, Union Representative":
+      if (== $data.civilian_eagre_progress 0): 
+        jump civilian_eagre_1
+      if (== $data.civilian_eagre_progress 1): 
+        jump civilian_eagre_2
+      if (== $data.civilian_eagre_progress 2): 
+        jump civilian_eagre_3
+      if (== $data.civilian_eagre_progress 3): 
+        jump civilian_eagre_4
+      if (== $data.civilian_eagre_progress 4): 
+        jump civilian_eagre_5
+      if (== $data.civilian_eagre_progress 5): 
+        jump civilian_eagre_6
+      if (== $data.civilian_eagre_progress 6): 
+        jump civilian_eagre_7
+    "Isaiah Shackle, The Violet Edge":
+      if (== $data.military_hero_progress 0): 
+        jump military_hero_1
+      if (== $data.military_hero_progress 1): 
+        jump military_hero_2
+      if (== $data.military_hero_progress 2): 
+        jump military_hero_3
+      if (== $data.military_hero_progress 3): 
+        jump military_hero_4
+      if (== $data.military_hero_progress 4): 
+        jump military_hero_5
+      if (== $data.military_hero_progress 5): 
+        jump military_hero_6
+      if (== $data.military_hero_progress 6): 
+        jump military_hero_7
+    "Officer Jac Peril":
+      if (== $data.military_officer_progress 0): 
+        jump military_officer_1
+      if (== $data.military_officer_progress 1): 
+        jump military_officer_2
+      if (== $data.military_officer_progress 2): 
+        jump military_officer_3
+      if (== $data.military_officer_progress 3): 
+        jump military_officer_4
+      if (== $data.military_officer_progress 4): 
+        jump military_officer_5
+      if (== $data.military_officer_progress 5): 
+        jump military_officer_6
+      if (== $data.military_officer_progress 6): 
+        jump military_officer_7
+    "Lady Cerys D'Linear":
+      if (== $data.noble_lady_progress 0): 
+        jump noble_lady_1
+      if (== $data.noble_lady_progress 1): 
+        jump noble_lady_2
+      if (== $data.noble_lady_progress 2): 
+        jump noble_lady_3
+      if (== $data.noble_lady_progress 3): 
+        jump noble_lady_4
+      if (== $data.noble_lady_progress 4): 
+        jump noble_lady_5
+      if (== $data.noble_lady_progress 5): 
+        jump noble_lady_6
+      if (== $data.noble_lady_progress 6): 
+        jump noble_lady_7
+get_stage_morning_5:
+  choice:
+    "Who will you speak with?"
+    "Gloria Hewcore-Schist, Union Representative":
+      if (== $data.civilian_eagre_progress 0): 
+        jump civilian_eagre_1
+      if (== $data.civilian_eagre_progress 1): 
+        jump civilian_eagre_2
+      if (== $data.civilian_eagre_progress 2): 
+        jump civilian_eagre_3
+      if (== $data.civilian_eagre_progress 3): 
+        jump civilian_eagre_4
+      if (== $data.civilian_eagre_progress 4): 
+        jump civilian_eagre_5
+      if (== $data.civilian_eagre_progress 5): 
+        jump civilian_eagre_6
+      if (== $data.civilian_eagre_progress 6): 
+        jump civilian_eagre_7
+    "Delilah Smythe, Interplanetary Financier":
+      if (== $data.merchant_business_progress 0): 
+        jump merchant_business_1
+      if (== $data.merchant_business_progress 1): 
+        jump merchant_business_2
+      if (== $data.merchant_business_progress 2): 
+        jump merchant_business_3
+      if (== $data.merchant_business_progress 3): 
+        jump merchant_business_4
+      if (== $data.merchant_business_progress 4): 
+        jump merchant_business_5
+      if (== $data.merchant_business_progress 5): 
+        jump merchant_business_6
+      if (== $data.merchant_business_progress 6): 
+        jump merchant_business_7
+    "Officer Jac Peril":
+      if (== $data.military_officer_progress 0): 
+        jump military_officer_1
+      if (== $data.military_officer_progress 1): 
+        jump military_officer_2
+      if (== $data.military_officer_progress 2): 
+        jump military_officer_3
+      if (== $data.military_officer_progress 3): 
+        jump military_officer_4
+      if (== $data.military_officer_progress 4): 
+        jump military_officer_5
+      if (== $data.military_officer_progress 5): 
+        jump military_officer_6
+      if (== $data.military_officer_progress 6): 
+        jump military_officer_7
+    "Lady Cerys D'Linear":
+      if (== $data.noble_lady_progress 0): 
+        jump noble_lady_1
+      if (== $data.noble_lady_progress 1): 
+        jump noble_lady_2
+      if (== $data.noble_lady_progress 2): 
+        jump noble_lady_3
+      if (== $data.noble_lady_progress 3): 
+        jump noble_lady_4
+      if (== $data.noble_lady_progress 4): 
+        jump noble_lady_5
+      if (== $data.noble_lady_progress 5): 
+        jump noble_lady_6
+      if (== $data.noble_lady_progress 6): 
+        jump noble_lady_7
+get_stage_morning_6:
+  choice:
+    "Who will you speak with?"
+    "Gloria Hewcore-Schist, Union Representative":
+      if (== $data.civilian_eagre_progress 0): 
+        jump civilian_eagre_1
+      if (== $data.civilian_eagre_progress 1): 
+        jump civilian_eagre_2
+      if (== $data.civilian_eagre_progress 2): 
+        jump civilian_eagre_3
+      if (== $data.civilian_eagre_progress 3): 
+        jump civilian_eagre_4
+      if (== $data.civilian_eagre_progress 4): 
+        jump civilian_eagre_5
+      if (== $data.civilian_eagre_progress 5): 
+        jump civilian_eagre_6
+      if (== $data.civilian_eagre_progress 6): 
+        jump civilian_eagre_7
+    "Dod Millet-Arkose, People's Champion":
+      if (== $data.civilian_icon_progress 0): 
+        jump civilian_icon_1
+      if (== $data.civilian_icon_progress 1): 
+        jump civilian_icon_2
+      if (== $data.civilian_icon_progress 2): 
+        jump civilian_icon_3
+      if (== $data.civilian_icon_progress 3): 
+        jump civilian_icon_4
+      if (== $data.civilian_icon_progress 4): 
+        jump civilian_icon_5
+      if (== $data.civilian_icon_progress 5): 
+        jump civilian_icon_6
+      if (== $data.civilian_icon_progress 6): 
+        jump civilian_icon_7
+    "Karl Sera_Gabbro, Local Businessman":
+      if (== $data.merchant_bartender_progress 0): 
+        jump merchant_bartender_1
+      if (== $data.merchant_bartender_progress 1): 
+        jump merchant_bartender_2
+      if (== $data.merchant_bartender_progress 2): 
+        jump merchant_bartender_3
+      if (== $data.merchant_bartender_progress 3): 
+        jump merchant_bartender_4
+      if (== $data.merchant_bartender_progress 4): 
+        jump merchant_bartender_5
+      if (== $data.merchant_bartender_progress 5): 
+        jump merchant_bartender_6
+      if (== $data.merchant_bartender_progress 6): 
+        jump merchant_bartender_7
+    "Delilah Smythe, Interplanetary Financier":
+      if (== $data.merchant_business_progress 0): 
+        jump merchant_business_1
+      if (== $data.merchant_business_progress 1): 
+        jump merchant_business_2
+      if (== $data.merchant_business_progress 2): 
+        jump merchant_business_3
+      if (== $data.merchant_business_progress 3): 
+        jump merchant_business_4
+      if (== $data.merchant_business_progress 4): 
+        jump merchant_business_5
+      if (== $data.merchant_business_progress 5): 
+        jump merchant_business_6
+      if (== $data.merchant_business_progress 6): 
+        jump merchant_business_7
+    "Officer Jac Peril":
+      if (== $data.military_officer_progress 0): 
+        jump military_officer_1
+      if (== $data.military_officer_progress 1): 
+        jump military_officer_2
+      if (== $data.military_officer_progress 2): 
+        jump military_officer_3
+      if (== $data.military_officer_progress 3): 
+        jump military_officer_4
+      if (== $data.military_officer_progress 4): 
+        jump military_officer_5
+      if (== $data.military_officer_progress 5): 
+        jump military_officer_6
+      if (== $data.military_officer_progress 6): 
+        jump military_officer_7
+    "Lady Cerys D'Linear":
+      if (== $data.noble_lady_progress 0): 
+        jump noble_lady_1
+      if (== $data.noble_lady_progress 1): 
+        jump noble_lady_2
+      if (== $data.noble_lady_progress 2): 
+        jump noble_lady_3
+      if (== $data.noble_lady_progress 3): 
+        jump noble_lady_4
+      if (== $data.noble_lady_progress 4): 
+        jump noble_lady_5
+      if (== $data.noble_lady_progress 5): 
+        jump noble_lady_6
+      if (== $data.noble_lady_progress 6): 
+        jump noble_lady_7
+get_stage_afternoon_1:
+  choice:
+    "Who will you speak with?"
+    "Karl Sera_Gabbro, Local Businessman":
+      if (== $data.merchant_bartender_progress 0): 
+        jump merchant_bartender_1
+      if (== $data.merchant_bartender_progress 1): 
+        jump merchant_bartender_2
+      if (== $data.merchant_bartender_progress 2): 
+        jump merchant_bartender_3
+      if (== $data.merchant_bartender_progress 3): 
+        jump merchant_bartender_4
+      if (== $data.merchant_bartender_progress 4): 
+        jump merchant_bartender_5
+      if (== $data.merchant_bartender_progress 5): 
+        jump merchant_bartender_6
+      if (== $data.merchant_bartender_progress 6): 
+        jump merchant_bartender_7
+    "Isaiah Shackle, The Violet Edge":
+      if (== $data.military_hero_progress 0): 
+        jump military_hero_1
+      if (== $data.military_hero_progress 1): 
+        jump military_hero_2
+      if (== $data.military_hero_progress 2): 
+        jump military_hero_3
+      if (== $data.military_hero_progress 3): 
+        jump military_hero_4
+      if (== $data.military_hero_progress 4): 
+        jump military_hero_5
+      if (== $data.military_hero_progress 5): 
+        jump military_hero_6
+      if (== $data.military_hero_progress 6): 
+        jump military_hero_7
+    "Lady Cerys D'Linear":
+      if (== $data.noble_lady_progress 0): 
+        jump noble_lady_1
+      if (== $data.noble_lady_progress 1): 
+        jump noble_lady_2
+      if (== $data.noble_lady_progress 2): 
+        jump noble_lady_3
+      if (== $data.noble_lady_progress 3): 
+        jump noble_lady_4
+      if (== $data.noble_lady_progress 4): 
+        jump noble_lady_5
+      if (== $data.noble_lady_progress 5): 
+        jump noble_lady_6
+      if (== $data.noble_lady_progress 6): 
+        jump noble_lady_7
+    "Lord Alun D'Linear":
+      if (== $data.noble_lord_progress 0): 
+        jump noble_lord_1
+      if (== $data.noble_lord_progress 1): 
+        jump noble_lord_2
+      if (== $data.noble_lord_progress 2): 
+        jump noble_lord_3
+      if (== $data.noble_lord_progress 3): 
+        jump noble_lord_4
+      if (== $data.noble_lord_progress 4): 
+        jump noble_lord_5
+      if (== $data.noble_lord_progress 5): 
+        jump noble_lord_6
+      if (== $data.noble_lord_progress 6): 
+        jump noble_lord_7
+get_stage_afternoon_2:
+  choice:
+    "Who will you speak with?"
+    "Dod Millet-Arkose, People's Champion":
+      if (== $data.civilian_icon_progress 0): 
+        jump civilian_icon_1
+      if (== $data.civilian_icon_progress 1): 
+        jump civilian_icon_2
+      if (== $data.civilian_icon_progress 2): 
+        jump civilian_icon_3
+      if (== $data.civilian_icon_progress 3): 
+        jump civilian_icon_4
+      if (== $data.civilian_icon_progress 4): 
+        jump civilian_icon_5
+      if (== $data.civilian_icon_progress 5): 
+        jump civilian_icon_6
+      if (== $data.civilian_icon_progress 6): 
+        jump civilian_icon_7
+    "Karl Sera_Gabbro, Local Businessman":
+      if (== $data.merchant_bartender_progress 0): 
+        jump merchant_bartender_1
+      if (== $data.merchant_bartender_progress 1): 
+        jump merchant_bartender_2
+      if (== $data.merchant_bartender_progress 2): 
+        jump merchant_bartender_3
+      if (== $data.merchant_bartender_progress 3): 
+        jump merchant_bartender_4
+      if (== $data.merchant_bartender_progress 4): 
+        jump merchant_bartender_5
+      if (== $data.merchant_bartender_progress 5): 
+        jump merchant_bartender_6
+      if (== $data.merchant_bartender_progress 6): 
+        jump merchant_bartender_7
+    "Officer Jac Peril":
+      if (== $data.military_officer_progress 0): 
+        jump military_officer_1
+      if (== $data.military_officer_progress 1): 
+        jump military_officer_2
+      if (== $data.military_officer_progress 2): 
+        jump military_officer_3
+      if (== $data.military_officer_progress 3): 
+        jump military_officer_4
+      if (== $data.military_officer_progress 4): 
+        jump military_officer_5
+      if (== $data.military_officer_progress 5): 
+        jump military_officer_6
+      if (== $data.military_officer_progress 6): 
+        jump military_officer_7
+    "Lord Alun D'Linear":
+      if (== $data.noble_lord_progress 0): 
+        jump noble_lord_1
+      if (== $data.noble_lord_progress 1): 
+        jump noble_lord_2
+      if (== $data.noble_lord_progress 2): 
+        jump noble_lord_3
+      if (== $data.noble_lord_progress 3): 
+        jump noble_lord_4
+      if (== $data.noble_lord_progress 4): 
+        jump noble_lord_5
+      if (== $data.noble_lord_progress 5): 
+        jump noble_lord_6
+      if (== $data.noble_lord_progress 6): 
+        jump noble_lord_7
+get_stage_afternoon_3:
+  choice:
+    "Who will you speak with?"
+    "Dod Millet-Arkose, People's Champion":
+      if (== $data.civilian_icon_progress 0): 
+        jump civilian_icon_1
+      if (== $data.civilian_icon_progress 1): 
+        jump civilian_icon_2
+      if (== $data.civilian_icon_progress 2): 
+        jump civilian_icon_3
+      if (== $data.civilian_icon_progress 3): 
+        jump civilian_icon_4
+      if (== $data.civilian_icon_progress 4): 
+        jump civilian_icon_5
+      if (== $data.civilian_icon_progress 5): 
+        jump civilian_icon_6
+      if (== $data.civilian_icon_progress 6): 
+        jump civilian_icon_7
+    "Karl Sera_Gabbro, Local Businessman":
+      if (== $data.merchant_bartender_progress 0): 
+        jump merchant_bartender_1
+      if (== $data.merchant_bartender_progress 1): 
+        jump merchant_bartender_2
+      if (== $data.merchant_bartender_progress 2): 
+        jump merchant_bartender_3
+      if (== $data.merchant_bartender_progress 3): 
+        jump merchant_bartender_4
+      if (== $data.merchant_bartender_progress 4): 
+        jump merchant_bartender_5
+      if (== $data.merchant_bartender_progress 5): 
+        jump merchant_bartender_6
+      if (== $data.merchant_bartender_progress 6): 
+        jump merchant_bartender_7
+    "Delilah Smythe, Interplanetary Financier":
+      if (== $data.merchant_business_progress 0): 
+        jump merchant_business_1
+      if (== $data.merchant_business_progress 1): 
+        jump merchant_business_2
+      if (== $data.merchant_business_progress 2): 
+        jump merchant_business_3
+      if (== $data.merchant_business_progress 3): 
+        jump merchant_business_4
+      if (== $data.merchant_business_progress 4): 
+        jump merchant_business_5
+      if (== $data.merchant_business_progress 5): 
+        jump merchant_business_6
+      if (== $data.merchant_business_progress 6): 
+        jump merchant_business_7
+    "Isaiah Shackle, The Violet Edge":
+      if (== $data.military_hero_progress 0): 
+        jump military_hero_1
+      if (== $data.military_hero_progress 1): 
+        jump military_hero_2
+      if (== $data.military_hero_progress 2): 
+        jump military_hero_3
+      if (== $data.military_hero_progress 3): 
+        jump military_hero_4
+      if (== $data.military_hero_progress 4): 
+        jump military_hero_5
+      if (== $data.military_hero_progress 5): 
+        jump military_hero_6
+      if (== $data.military_hero_progress 6): 
+        jump military_hero_7
+    "Lord Alun D'Linear":
+      if (== $data.noble_lord_progress 0): 
+        jump noble_lord_1
+      if (== $data.noble_lord_progress 1): 
+        jump noble_lord_2
+      if (== $data.noble_lord_progress 2): 
+        jump noble_lord_3
+      if (== $data.noble_lord_progress 3): 
+        jump noble_lord_4
+      if (== $data.noble_lord_progress 4): 
+        jump noble_lord_5
+      if (== $data.noble_lord_progress 5): 
+        jump noble_lord_6
+      if (== $data.noble_lord_progress 6): 
+        jump noble_lord_7
+get_stage_afternoon_4:
+  choice:
+    "Who will you speak with?"
+    "Dod Millet-Arkose, People's Champion":
+      if (== $data.civilian_icon_progress 0): 
+        jump civilian_icon_1
+      if (== $data.civilian_icon_progress 1): 
+        jump civilian_icon_2
+      if (== $data.civilian_icon_progress 2): 
+        jump civilian_icon_3
+      if (== $data.civilian_icon_progress 3): 
+        jump civilian_icon_4
+      if (== $data.civilian_icon_progress 4): 
+        jump civilian_icon_5
+      if (== $data.civilian_icon_progress 5): 
+        jump civilian_icon_6
+      if (== $data.civilian_icon_progress 6): 
+        jump civilian_icon_7
+    "Karl Sera_Gabbro, Local Businessman":
+      if (== $data.merchant_bartender_progress 0): 
+        jump merchant_bartender_1
+      if (== $data.merchant_bartender_progress 1): 
+        jump merchant_bartender_2
+      if (== $data.merchant_bartender_progress 2): 
+        jump merchant_bartender_3
+      if (== $data.merchant_bartender_progress 3): 
+        jump merchant_bartender_4
+      if (== $data.merchant_bartender_progress 4): 
+        jump merchant_bartender_5
+      if (== $data.merchant_bartender_progress 5): 
+        jump merchant_bartender_6
+      if (== $data.merchant_bartender_progress 6): 
+        jump merchant_bartender_7
+    "Delilah Smythe, Interplanetary Financier":
+      if (== $data.merchant_business_progress 0): 
+        jump merchant_business_1
+      if (== $data.merchant_business_progress 1): 
+        jump merchant_business_2
+      if (== $data.merchant_business_progress 2): 
+        jump merchant_business_3
+      if (== $data.merchant_business_progress 3): 
+        jump merchant_business_4
+      if (== $data.merchant_business_progress 4): 
+        jump merchant_business_5
+      if (== $data.merchant_business_progress 5): 
+        jump merchant_business_6
+      if (== $data.merchant_business_progress 6): 
+        jump merchant_business_7
+    "Officer Jac Peril":
+      if (== $data.military_officer_progress 0): 
+        jump military_officer_1
+      if (== $data.military_officer_progress 1): 
+        jump military_officer_2
+      if (== $data.military_officer_progress 2): 
+        jump military_officer_3
+      if (== $data.military_officer_progress 3): 
+        jump military_officer_4
+      if (== $data.military_officer_progress 4): 
+        jump military_officer_5
+      if (== $data.military_officer_progress 5): 
+        jump military_officer_6
+      if (== $data.military_officer_progress 6): 
+        jump military_officer_7
+    "Lady Cerys D'Linear":
+      if (== $data.noble_lady_progress 0): 
+        jump noble_lady_1
+      if (== $data.noble_lady_progress 1): 
+        jump noble_lady_2
+      if (== $data.noble_lady_progress 2): 
+        jump noble_lady_3
+      if (== $data.noble_lady_progress 3): 
+        jump noble_lady_4
+      if (== $data.noble_lady_progress 4): 
+        jump noble_lady_5
+      if (== $data.noble_lady_progress 5): 
+        jump noble_lady_6
+      if (== $data.noble_lady_progress 6): 
+        jump noble_lady_7
+    "Lord Alun D'Linear":
+      if (== $data.noble_lord_progress 0): 
+        jump noble_lord_1
+      if (== $data.noble_lord_progress 1): 
+        jump noble_lord_2
+      if (== $data.noble_lord_progress 2): 
+        jump noble_lord_3
+      if (== $data.noble_lord_progress 3): 
+        jump noble_lord_4
+      if (== $data.noble_lord_progress 4): 
+        jump noble_lord_5
+      if (== $data.noble_lord_progress 5): 
+        jump noble_lord_6
+      if (== $data.noble_lord_progress 6): 
+        jump noble_lord_7
+get_stage_afternoon_5:
+  choice:
+    "Who will you speak with?"
+    "Dod Millet-Arkose, People's Champion":
+      if (== $data.civilian_icon_progress 0): 
+        jump civilian_icon_1
+      if (== $data.civilian_icon_progress 1): 
+        jump civilian_icon_2
+      if (== $data.civilian_icon_progress 2): 
+        jump civilian_icon_3
+      if (== $data.civilian_icon_progress 3): 
+        jump civilian_icon_4
+      if (== $data.civilian_icon_progress 4): 
+        jump civilian_icon_5
+      if (== $data.civilian_icon_progress 5): 
+        jump civilian_icon_6
+      if (== $data.civilian_icon_progress 6): 
+        jump civilian_icon_7
+    "Karl Sera_Gabbro, Local Businessman":
+      if (== $data.merchant_bartender_progress 0): 
+        jump merchant_bartender_1
+      if (== $data.merchant_bartender_progress 1): 
+        jump merchant_bartender_2
+      if (== $data.merchant_bartender_progress 2): 
+        jump merchant_bartender_3
+      if (== $data.merchant_bartender_progress 3): 
+        jump merchant_bartender_4
+      if (== $data.merchant_bartender_progress 4): 
+        jump merchant_bartender_5
+      if (== $data.merchant_bartender_progress 5): 
+        jump merchant_bartender_6
+      if (== $data.merchant_bartender_progress 6): 
+        jump merchant_bartender_7
+    "Isaiah Shackle, The Violet Edge":
+      if (== $data.military_hero_progress 0): 
+        jump military_hero_1
+      if (== $data.military_hero_progress 1): 
+        jump military_hero_2
+      if (== $data.military_hero_progress 2): 
+        jump military_hero_3
+      if (== $data.military_hero_progress 3): 
+        jump military_hero_4
+      if (== $data.military_hero_progress 4): 
+        jump military_hero_5
+      if (== $data.military_hero_progress 5): 
+        jump military_hero_6
+      if (== $data.military_hero_progress 6): 
+        jump military_hero_7
+get_stage_afternoon_6:
+  choice:
+    "Who will you speak with?"
+    "Gloria Hewcore-Schist, Union Representative":
+      if (== $data.civilian_eagre_progress 0): 
+        jump civilian_eagre_1
+      if (== $data.civilian_eagre_progress 1): 
+        jump civilian_eagre_2
+      if (== $data.civilian_eagre_progress 2): 
+        jump civilian_eagre_3
+      if (== $data.civilian_eagre_progress 3): 
+        jump civilian_eagre_4
+      if (== $data.civilian_eagre_progress 4): 
+        jump civilian_eagre_5
+      if (== $data.civilian_eagre_progress 5): 
+        jump civilian_eagre_6
+      if (== $data.civilian_eagre_progress 6): 
+        jump civilian_eagre_7
+    "Dod Millet-Arkose, People's Champion":
+      if (== $data.civilian_icon_progress 0): 
+        jump civilian_icon_1
+      if (== $data.civilian_icon_progress 1): 
+        jump civilian_icon_2
+      if (== $data.civilian_icon_progress 2): 
+        jump civilian_icon_3
+      if (== $data.civilian_icon_progress 3): 
+        jump civilian_icon_4
+      if (== $data.civilian_icon_progress 4): 
+        jump civilian_icon_5
+      if (== $data.civilian_icon_progress 5): 
+        jump civilian_icon_6
+      if (== $data.civilian_icon_progress 6): 
+        jump civilian_icon_7
+    "Karl Sera_Gabbro, Local Businessman":
+      if (== $data.merchant_bartender_progress 0): 
+        jump merchant_bartender_1
+      if (== $data.merchant_bartender_progress 1): 
+        jump merchant_bartender_2
+      if (== $data.merchant_bartender_progress 2): 
+        jump merchant_bartender_3
+      if (== $data.merchant_bartender_progress 3): 
+        jump merchant_bartender_4
+      if (== $data.merchant_bartender_progress 4): 
+        jump merchant_bartender_5
+      if (== $data.merchant_bartender_progress 5): 
+        jump merchant_bartender_6
+      if (== $data.merchant_bartender_progress 6): 
+        jump merchant_bartender_7
+    "Isaiah Shackle, The Violet Edge":
+      if (== $data.military_hero_progress 0): 
+        jump military_hero_1
+      if (== $data.military_hero_progress 1): 
+        jump military_hero_2
+      if (== $data.military_hero_progress 2): 
+        jump military_hero_3
+      if (== $data.military_hero_progress 3): 
+        jump military_hero_4
+      if (== $data.military_hero_progress 4): 
+        jump military_hero_5
+      if (== $data.military_hero_progress 5): 
+        jump military_hero_6
+      if (== $data.military_hero_progress 6): 
+        jump military_hero_7
+    "Lord Alun D'Linear":
+      if (== $data.noble_lord_progress 0): 
+        jump noble_lord_1
+      if (== $data.noble_lord_progress 1): 
+        jump noble_lord_2
+      if (== $data.noble_lord_progress 2): 
+        jump noble_lord_3
+      if (== $data.noble_lord_progress 3): 
+        jump noble_lord_4
+      if (== $data.noble_lord_progress 4): 
+        jump noble_lord_5
+      if (== $data.noble_lord_progress 5): 
+        jump noble_lord_6
+      if (== $data.noble_lord_progress 6): 
+        jump noble_lord_7
 intro:
   "You awake once more within The Garden, the faux birds chirp, blipping in and out of this semblance of peace."
   "The marble bench you lay upon has that slick plastic warmth, tacky even within this deluded place."
   "You reach out your hand and your dossier had always been there."
   "You might as well flip through it as the too-fast setting of the artificial sun heralds the end of your stasis."
   "Cracking open the plexiglass envelope you skim the details of your coming task-"
-  "boilerplate detailing your role as a Prior Facilitator to the Executor-"
-  "a planetary governance realignment...an assasination, exciting, disparate populace, unruly-"
+  "Boilerplate detailing your role as a Prior Facilitator to the Executor-"
+  "A planetary governance realignment...an assasination, exciting, disparate populace, unruly-"
   "A sidebar on one sheet contains a tiny grainy video of a swirling white planet."
   "But it couldn't be-"
-  "The Planet Sclera, rapt in her terrible caustic silica storms-"
-  "-the singular city, Credence, cowering in its sinkhole - 100 clicks across."
+  "The Planet Sclera, rapt in her terrible caustic silica storms...the singular city, Credence, cowering in its sinkhole, 100 clicks across."
   "Resembling a great eye, turned away from its sun in shame."
-  "This couldn't be happening."
-  "Somehow, despite the odds, they had brought you home."
+  "This couldn't be happening. Somehow, despite the odds, they had brought you home."
   "It had to be a mistake. Nobody could know. How would they have-"
   "If they found out, they'd have you killed for their mistake."
   "Your hands start shaking, and a cold sweat breaks even in this place where your body isn't..."
@@ -236,73 +969,73 @@ intro:
 
 morning_1:
   add data.time 1
-  "Morning comes. Who will you speak with?"
-  jump get_stage
+  "Morning comes."
+  jump get_stage_morning_1
 
 morning_2:
   add data.time 1
-  "Morning comes. Who will you speak with?"
-  jump get_stage
+  "Morning comes."
+  jump get_stage_morning_2
 
 morning_3:
   add data.time 1
-  "Morning comes. Who will you speak with?"
-  jump get_stage
+  "Morning comes."
+  jump get_stage_morning_3
 
 morning_4:
   add data.time 1
-  "Morning comes. Who will you speak with?"
-  jump get_stage
+  "Morning comes."
+  jump get_stage_morning_4
 
 morning_5:
   add data.time 1
-  "Morning comes. Who will you speak with?"
-  jump get_stage
+  "Morning comes."
+  jump get_stage_morning_5
 
 morning_6:
   add data.time 1
-  "Morning comes. Who will you speak with?"
-  jump get_stage
+  "Morning comes."
+  jump get_stage_morning_6
 
 morning_7:
   add data.time 1
-  "Morning comes. Who will you speak with?"
-  jump get_stage
+  "Morning comes. Succession day."
+  jump endgame
 
 afternoon_1:
   add data.time 1
-  "Afternoon comes. Who will you speak with?"
-  jump get_stage
+  "Afternoon comes."
+  jump get_stage_afternoon_1
 
 afternoon_2:
   add data.time 1
-  "Afternoon comes. Who will you speak with?"
-  jump get_stage
+  "Afternoon comes."
+  jump get_stage_afternoon_2
 
 afternoon_3:
   add data.time 1
-  "Afternoon comes. Who will you speak with?"
-  jump get_stage
+  "Afternoon comes."
+  jump get_stage_afternoon_3
 
 afternoon_4:
   add data.time 1
-  "Afternoon comes. Who will you speak with?"
-  jump get_stage
+  "Afternoon comes."
+  jump get_stage_afternoon_4
 
 afternoon_5:
   add data.time 1
-  "Afternoon comes. Who will you speak with?"
-  jump get_stage
+  "Afternoon comes."
+  jump get_stage_afternoon_5
 
 afternoon_6:
   add data.time 1
-  "Afternoon comes. Who will you speak with?"
-  jump get_stage
+  "Afternoon comes."
+  jump get_stage_afternoon_6
 
 afternoon_7:
   add data.time 1
-  "Afternoon comes. Who will you speak with?"
-  jump get_stage
+  "Afternoon comes."
+  jump get_stage_afternoon_7
 
 crisis_1:
   add data.time 1
@@ -316,7 +1049,7 @@ crisis_1:
   "Two of the guards break from their line and move to strike."
   "...and then they're both writhing on the ground, and standing in centre frame is a miner, fists raised aloft. A champion of the people in coveralls."
   "You receive a notification that your candidates list has been automatically updated."
-  "[The Civilian Faction Gains Influence]"
+  "[Gloria & Dod Gain Influence]"
   add data.civilian_eagre_influence 1
   add data.civilian_icon_influence 1
   jump timekeeper
@@ -329,7 +1062,7 @@ crisis_2:
   "The master of ceremonies walks out onto the field, their image holographically mirrored into the sky above."
   "A classical circus complete with tightrope walking, fire eating, and general clowning unfolds."
   "You spend so long in stasis, it's difficult to keep track of trends, supposedly this is in vogue at the moment."
-  "[The Merchant Faction Gains Influence]"
+  "[Karl & Delilah Gain Influence]"
   add data.merchant_bartender_influence 1
   add data.merchant_business_influence 1
   jump timekeeper
@@ -341,7 +1074,7 @@ crisis_3:
   "Over the PA, the voice of Isaiah Shackle booms-"
   talk military_hero idle idle "Raiders have attempted to breach city airspace. Do not be alarmed and seek shelter immediately. Retaliatory fire is imminent."
   "You return to your pod just in time, as the ground shakes and the Credence City batteries unload on the raider fleet."
-  "[The Military Faction Gains Influence]"
+  "[Isaiah & Jac Gain Influence]"
   add data.military_hero_influence 1
   add data.military_officer_influence 1
   jump timekeeper
@@ -353,7 +1086,7 @@ crisis_4:
   "It's customary for those of Noble Houses and certain Guild positions to visit each ward and bestow a gift upon the people."
   "This year's gifts are particularly generous-a trade school, a community centre, a war memorial, and a grand feast in the streets which devolves into an all-night party."
   "You recall sneaking out as a child to see to experience it all, just before you took your vows."
-  "[The Noble Faction Gains Influence]"
+  "[Alun & Cerys Gain Influence]"
   add data.noble_lord_influence 1
   add data.noble_lady_influence 1
   jump timekeeper
@@ -371,41 +1104,47 @@ crisis_5:
     "Where do you run to?"
     "The Housecarl":
       add data.noble_lord_influence 1
-      add data.scheming_lady_influence 1
+      add data.noble_lady_influence 1
       "In an instant, the assailant is disected and disected and disected again by the photoblade, a steaming pile."
       "Ser Anastasia nods, flicks the gore from the blade, smiles, and returns to her business."
       "You walk alone back to the elevator."
-      "[The Noble Faction Has Gained Influence]"
+      "[Alun & Cerys Gain Influence]"
     "The Soldiers": 
       "The soldiers grab their rifles and gun down your would-be assasin as though they were a beast."
       "They say you're in shock and you're not going to deny that."
       "One of them puts their coat around you and they escort you back to your pod."
       add data.military_hero_influence 1
       add data.military_officer_influence 1
-      "[The Military Faction Has Gained Influence]"
+      "[Isaiah & Jac Gain Influence]"
   jump timekeeper
 
 crisis_6:
   add data.time 1
   "On your penultimate night before the succesion ceremony, you take a trip to one of the rooftop gardens atop the habitation towers."
-  "Up here, the air is thin and clean. You lay down on a grassy hillock and gaze up at the night-sky, framed by the perfect circle of the sinkhole."
+  "Up here, the air is thin and clean. You lay down on a grassy hillock by a small pond and gaze up at the night-sky, framed by the perfect circle of the sinkhole."
   "The silica storm whorls and snaps in the velveteen darkness far above you. It's rare to see the stars on Sclera, it's part of why you signed up for this job in the first place."
   "You find yourself waxing nostalgic about this place, about the people and sights and the smells and the weird air that sticks to your tongue and..."
   "12 more cycles, and you can come home for real."
   "But not yet."
-  "Glistening in the dark, a meteor shower begins-little white streaks cutting hot through the cold void."
+  "Glistening in the dark, a meteor shower begins-little white cuts, hot through the cold void."
+  "...glistening much closer now!"
+  "A meteor streaks down and down, shrieking screaming from around the garden"
+  "You close your eyes"
+  "Whooooooosh~plop."
+  "You wade out into the pond and find the meteorite, a perfect glassy teardrop still warm to the touch"
+  "A crowd has gathered around now, oohing and aaahing at the member of the clergy holding up a shiny rock in their drenched robes..."
   choice:
-    "choice"
-    "Option A":
-      "Outcome"
+    "This is a chance to swing opinion. Who do you gift the meteorite to?"
+    "The gemcutter, resplendent in finery":
+      "A camera flashes, as he holds the stone aloft. <i> Sclera's Tear A Mark Of Prosperity </i>, the feeds declare the next morning."    
       add data.merchant_bartender_influence 1
       add data.merchant_business_influence 1
-      "[The Merchant Faction Has Gained Influence]"
-    "Option B":
-      "Outcome"
+      "[Karl & Delilah Gain Influence]"
+    "The bright-eyed child from a lower-class family":
+      "A camera flashes, as she holds the stone aloft. <i> Sclera's Tear In The Hands Of Our Future </i>, the feeds declare the next morning."
       add data.civilian_icon_influence 1
       add data.civilian_eagre_influence 1
-      "[The Civilian Faction Has Gained Influence]"
+      "[Gloria & Dod Gain Influence]"
   jump timekeeper
 
 endgame:
