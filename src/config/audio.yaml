@@ -43,28 +43,28 @@ files:
   motif_executor:
     loop: false
     src: "audio/motifs/Executor.ogg"
-  motif_feeble_lord:
+  motif_alun:
     loop: false
     src: "audio/motifs/FeebleLord.ogg"
-  motif_scheming_lady:
+  motif_cerys:
     loop: false
     src: "audio/motifs/SchemingLady.ogg"
-  motif_bartender:
+  motif_karl:
     loop: false
     src: "audio/motifs/Bartender.ogg"
-  motif_business_suit:
+  motif_delilah:
     loop: false
     src: "audio/motifs/BusinessSuit.ogg"
-  motif_folk_hero:
+  motif_isaiah:
     loop: false
     src: "audio/motifs/FolkHero.ogg"
-  motif_officer:
+  motif_jac:
     loop: false
     src: "audio/motifs/Officer.ogg"
-  motif_reluctant_icon:
+  motif_dod:
     loop: false
     src: "audio/motifs/ReluctantIcon.ogg"
-  motif_eager_organizer:
+  motif_gloria:
     loop: false
     src: "audio/motifs/EagerOrganizer.ogg"
   # misc shit
@@ -75,9 +75,9 @@ files:
 options:
   defaultMusic: menu_music
   volume: 0.5
-  musicFadeInTime: 0.5
-  musicFadeInDelay: 0.5
-  musicFadeOutTime: 0.5
+  musicFadeInTime: 0.2
+  musicFadeInDelay: 0.0
+  musicFadeOutTime: 0.2
 audioTriggers:
   onButtonClicked: ui-click
   onPressStart: ui-click

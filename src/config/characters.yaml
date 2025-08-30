@@ -47,7 +47,7 @@ characters:
     style:
       color: "yellow"
 
-  civilian_eagre:
+  civilian_eager:
     name: "Gloria Hewcore-Schist"
     sprites:
       idle: "gloria_idle.png"
