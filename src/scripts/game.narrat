@@ -20,7 +20,7 @@ main:
   jump timekeeper
 
 timekeeper:
-  music play garden
+  play music garden
   if (== $data.time 0):
     jump intro
   if (== $data.time 1):
@@ -79,7 +79,7 @@ get_stage_morning_1:
   choice:
     "Who will you speak with?"
     "Gloria Hewcore-Schist, Union Representative":
-      music play civilian
+      play music civilian
       if (== $data.civilian_eagre_progress 0): 
         jump civilian_eagre_1
       if (== $data.civilian_eagre_progress 1): 
@@ -95,7 +95,7 @@ get_stage_morning_1:
       if (== $data.civilian_eagre_progress 6): 
         jump civilian_eagre_7
     "Delilah Smythe, Interplanetary Financier":
-      music play merchants
+      play music merchants
       if (== $data.merchant_business_progress 0): 
         jump merchant_business_1
       if (== $data.merchant_business_progress 1): 
@@ -111,7 +111,7 @@ get_stage_morning_1:
       if (== $data.merchant_business_progress 6): 
         jump merchant_business_7
     "Isaiah Shackle, The Violet Edge":
-      music play military
+      play music military
       if (== $data.military_hero_progress 0): 
         jump military_hero_1
       if (== $data.military_hero_progress 1): 
@@ -127,7 +127,7 @@ get_stage_morning_1:
       if (== $data.military_hero_progress 6): 
         jump military_hero_7
     "Officer Jac Peril":
-      music play military
+      play music military
       if (== $data.military_officer_progress 0): 
         jump military_officer_1
       if (== $data.military_officer_progress 1): 
@@ -143,7 +143,7 @@ get_stage_morning_1:
       if (== $data.military_officer_progress 6): 
         jump military_officer_7
     "Lord Alun D'Linear":
-      music play nobility
+      play music nobility
       if (== $data.noble_lord_progress 0): 
         jump noble_lord_1
       if (== $data.noble_lord_progress 1): 
@@ -162,7 +162,7 @@ get_stage_morning_2:
   choice:
     "Who will you speak with?"
     "Gloria Hewcore-Schist, Union Representative":
-      music play civilian
+      play music civilian
       if (== $data.civilian_eagre_progress 0): 
         jump civilian_eagre_1
       if (== $data.civilian_eagre_progress 1): 
@@ -178,7 +178,7 @@ get_stage_morning_2:
       if (== $data.civilian_eagre_progress 6): 
         jump civilian_eagre_7
     "Dod Millet-Arkose, People's Champion":
-      music play civilian
+      play music civilian
       if (== $data.civilian_icon_progress 0): 
         jump civilian_icon_1
       if (== $data.civilian_icon_progress 1): 
@@ -194,7 +194,7 @@ get_stage_morning_2:
       if (== $data.civilian_icon_progress 6): 
         jump civilian_icon_7
     "Delilah Smythe, Interplanetary Financier":
-      music play merchants
+      play music merchants
       if (== $data.merchant_business_progress 0): 
         jump merchant_business_1
       if (== $data.merchant_business_progress 1): 
@@ -210,7 +210,7 @@ get_stage_morning_2:
       if (== $data.merchant_business_progress 6): 
         jump merchant_business_7
     "Lady Cerys D'Linear":
-      music play nobility
+      play music nobility
       if (== $data.noble_lady_progress 0): 
         jump noble_lady_1
       if (== $data.noble_lady_progress 1): 
@@ -229,7 +229,7 @@ get_stage_morning_3:
   choice:
     "Who will you speak with?"
     "Gloria Hewcore-Schist, Union Representative":
-      music play civilian
+      play music civilian
       if (== $data.civilian_eagre_progress 0): 
         jump civilian_eagre_1
       if (== $data.civilian_eagre_progress 1): 
@@ -245,7 +245,7 @@ get_stage_morning_3:
       if (== $data.civilian_eagre_progress 6): 
         jump civilian_eagre_7
     "Delilah Smythe, Interplanetary Financier":
-      music play merchants
+      play music merchants
       if (== $data.merchant_business_progress 0): 
         jump merchant_business_1
       if (== $data.merchant_business_progress 1): 
@@ -261,7 +261,7 @@ get_stage_morning_3:
       if (== $data.merchant_business_progress 6): 
         jump merchant_business_7
     "Isaiah Shackle, The Violet Edge":
-      music play military
+      play music military
       if (== $data.military_hero_progress 0): 
         jump military_hero_1
       if (== $data.military_hero_progress 1): 
@@ -277,7 +277,7 @@ get_stage_morning_3:
       if (== $data.military_hero_progress 6): 
         jump military_hero_7
     "Officer Jac Peril":
-      music play military
+      play music military
       if (== $data.military_officer_progress 0): 
         jump military_officer_1
       if (== $data.military_officer_progress 1): 
@@ -293,7 +293,7 @@ get_stage_morning_3:
       if (== $data.military_officer_progress 6): 
         jump military_officer_7
     "Lady Cerys D'Linear":
-      music play nobility
+      play music nobility
       if (== $data.noble_lady_progress 0): 
         jump noble_lady_1
       if (== $data.noble_lady_progress 1): 
@@ -312,7 +312,7 @@ get_stage_morning_4:
   choice:
     "Who will you speak with?"
     "Gloria Hewcore-Schist, Union Representative":
-      music play civilian
+      play music civilian
       if (== $data.civilian_eagre_progress 0): 
         jump civilian_eagre_1
       if (== $data.civilian_eagre_progress 1): 
@@ -328,7 +328,7 @@ get_stage_morning_4:
       if (== $data.civilian_eagre_progress 6): 
         jump civilian_eagre_7
     "Isaiah Shackle, The Violet Edge":
-      music play military
+      play music military
       if (== $data.military_hero_progress 0): 
         jump military_hero_1
       if (== $data.military_hero_progress 1): 
@@ -344,7 +344,7 @@ get_stage_morning_4:
       if (== $data.military_hero_progress 6): 
         jump military_hero_7
     "Officer Jac Peril":
-      music play military
+      play music military
       if (== $data.military_officer_progress 0): 
         jump military_officer_1
       if (== $data.military_officer_progress 1): 
@@ -360,7 +360,7 @@ get_stage_morning_4:
       if (== $data.military_officer_progress 6): 
         jump military_officer_7
     "Lady Cerys D'Linear":
-      music play nobility
+      play music nobility
       if (== $data.noble_lady_progress 0): 
         jump noble_lady_1
       if (== $data.noble_lady_progress 1): 
@@ -379,7 +379,7 @@ get_stage_morning_5:
   choice:
     "Who will you speak with?"
     "Gloria Hewcore-Schist, Union Representative":
-      music play civilian
+      play music civilian
       if (== $data.civilian_eagre_progress 0): 
         jump civilian_eagre_1
       if (== $data.civilian_eagre_progress 1): 
@@ -395,7 +395,7 @@ get_stage_morning_5:
       if (== $data.civilian_eagre_progress 6): 
         jump civilian_eagre_7
     "Delilah Smythe, Interplanetary Financier":
-      music play merchants
+      play music merchants
       if (== $data.merchant_business_progress 0): 
         jump merchant_business_1
       if (== $data.merchant_business_progress 1): 
@@ -411,7 +411,7 @@ get_stage_morning_5:
       if (== $data.merchant_business_progress 6): 
         jump merchant_business_7
     "Officer Jac Peril":
-      music play military
+      play music military
       if (== $data.military_officer_progress 0): 
         jump military_officer_1
       if (== $data.military_officer_progress 1): 
@@ -427,7 +427,7 @@ get_stage_morning_5:
       if (== $data.military_officer_progress 6): 
         jump military_officer_7
     "Lady Cerys D'Linear":
-      music play nobility
+      play music nobility
       if (== $data.noble_lady_progress 0): 
         jump noble_lady_1
       if (== $data.noble_lady_progress 1): 
@@ -443,7 +443,7 @@ get_stage_morning_5:
       if (== $data.noble_lady_progress 6): 
         jump noble_lady_7
     "Lord Alun D'Linear":
-      music play nobility
+      play music nobility
       if (== $data.noble_lord_progress 0): 
         jump noble_lord_1
       if (== $data.noble_lord_progress 1): 
@@ -462,7 +462,7 @@ get_stage_morning_6:
   choice:
     "Who will you speak with?"
     "Gloria Hewcore-Schist, Union Representative":
-      music play civilian
+      play music civilian
       if (== $data.civilian_eagre_progress 0): 
         jump civilian_eagre_1
       if (== $data.civilian_eagre_progress 1): 
@@ -478,7 +478,7 @@ get_stage_morning_6:
       if (== $data.civilian_eagre_progress 6): 
         jump civilian_eagre_7
     "Dod Millet-Arkose, People's Champion":
-      music play civilian
+      play music civilian
       if (== $data.civilian_icon_progress 0): 
         jump civilian_icon_1
       if (== $data.civilian_icon_progress 1): 
@@ -494,7 +494,7 @@ get_stage_morning_6:
       if (== $data.civilian_icon_progress 6): 
         jump civilian_icon_7
     "Karl Sera_Gabbro, Local Businessman":
-      music play merchants
+      play music merchants
       if (== $data.merchant_bartender_progress 0): 
         jump merchant_bartender_1
       if (== $data.merchant_bartender_progress 1): 
@@ -510,7 +510,7 @@ get_stage_morning_6:
       if (== $data.merchant_bartender_progress 6): 
         jump merchant_bartender_7
     "Delilah Smythe, Interplanetary Financier":
-      music play merchant
+      play music merchant
       if (== $data.merchant_business_progress 0): 
         jump merchant_business_1
       if (== $data.merchant_business_progress 1): 
@@ -526,7 +526,7 @@ get_stage_morning_6:
       if (== $data.merchant_business_progress 6): 
         jump merchant_business_7
     "Officer Jac Peril":
-      music play military
+      play music military
       if (== $data.military_officer_progress 0): 
         jump military_officer_1
       if (== $data.military_officer_progress 1): 
@@ -542,7 +542,7 @@ get_stage_morning_6:
       if (== $data.military_officer_progress 6): 
         jump military_officer_7
     "Lady Cerys D'Linear":
-      music play nobility
+      play music nobility
       if (== $data.noble_lady_progress 0): 
         jump noble_lady_1
       if (== $data.noble_lady_progress 1): 
@@ -561,7 +561,7 @@ get_stage_afternoon_1:
   choice:
     "Who will you speak with?"
     "Karl Sera_Gabbro, Local Businessman":
-      music play merchants
+      play music merchants
       if (== $data.merchant_bartender_progress 0): 
         jump merchant_bartender_1
       if (== $data.merchant_bartender_progress 1): 
@@ -577,7 +577,7 @@ get_stage_afternoon_1:
       if (== $data.merchant_bartender_progress 6): 
         jump merchant_bartender_7
     "Isaiah Shackle, The Violet Edge":
-      music play military
+      play music military
       if (== $data.military_hero_progress 0): 
         jump military_hero_1
       if (== $data.military_hero_progress 1): 
@@ -593,7 +593,7 @@ get_stage_afternoon_1:
       if (== $data.military_hero_progress 6): 
         jump military_hero_7
     "Lady Cerys D'Linear":
-      music play nobility
+      play music nobility
       if (== $data.noble_lady_progress 0): 
         jump noble_lady_1
       if (== $data.noble_lady_progress 1): 
@@ -609,7 +609,7 @@ get_stage_afternoon_1:
       if (== $data.noble_lady_progress 6): 
         jump noble_lady_7
     "Lord Alun D'Linear":
-      music play nobility
+      play music nobility
       if (== $data.noble_lord_progress 0): 
         jump noble_lord_1
       if (== $data.noble_lord_progress 1): 
@@ -628,7 +628,7 @@ get_stage_afternoon_2:
   choice:
     "Who will you speak with?"
     "Dod Millet-Arkose, People's Champion":
-      music play civilian
+      play music civilian
       if (== $data.civilian_icon_progress 0): 
         jump civilian_icon_1
       if (== $data.civilian_icon_progress 1): 
@@ -644,7 +644,7 @@ get_stage_afternoon_2:
       if (== $data.civilian_icon_progress 6): 
         jump civilian_icon_7
     "Karl Sera_Gabbro, Local Businessman":
-      music play merchants
+      play music merchants
       if (== $data.merchant_bartender_progress 0): 
         jump merchant_bartender_1
       if (== $data.merchant_bartender_progress 1): 
@@ -660,7 +660,7 @@ get_stage_afternoon_2:
       if (== $data.merchant_bartender_progress 6): 
         jump merchant_bartender_7
     "Officer Jac Peril":
-      music play military
+      play music military
       if (== $data.military_officer_progress 0): 
         jump military_officer_1
       if (== $data.military_officer_progress 1): 
@@ -676,7 +676,7 @@ get_stage_afternoon_2:
       if (== $data.military_officer_progress 6): 
         jump military_officer_7
     "Lord Alun D'Linear":
-      music play nobility
+      play music nobility
       if (== $data.noble_lord_progress 0): 
         jump noble_lord_1
       if (== $data.noble_lord_progress 1): 
@@ -695,7 +695,7 @@ get_stage_afternoon_3:
   choice:
     "Who will you speak with?"
     "Dod Millet-Arkose, People's Champion":
-      music play civilian
+      play music civilian
       if (== $data.civilian_icon_progress 0): 
         jump civilian_icon_1
       if (== $data.civilian_icon_progress 1): 
@@ -711,7 +711,7 @@ get_stage_afternoon_3:
       if (== $data.civilian_icon_progress 6): 
         jump civilian_icon_7
     "Karl Sera_Gabbro, Local Businessman":
-      music play merchants
+      play music merchants
       if (== $data.merchant_bartender_progress 0): 
         jump merchant_bartender_1
       if (== $data.merchant_bartender_progress 1): 
@@ -727,7 +727,7 @@ get_stage_afternoon_3:
       if (== $data.merchant_bartender_progress 6): 
         jump merchant_bartender_7
     "Delilah Smythe, Interplanetary Financier":
-      music play merchants
+      play music merchants
       if (== $data.merchant_business_progress 0): 
         jump merchant_business_1
       if (== $data.merchant_business_progress 1): 
@@ -743,7 +743,7 @@ get_stage_afternoon_3:
       if (== $data.merchant_business_progress 6): 
         jump merchant_business_7
     "Isaiah Shackle, The Violet Edge":
-      music play military
+      play music military
       if (== $data.military_hero_progress 0): 
         jump military_hero_1
       if (== $data.military_hero_progress 1): 
@@ -759,7 +759,7 @@ get_stage_afternoon_3:
       if (== $data.military_hero_progress 6): 
         jump military_hero_7
     "Lord Alun D'Linear":
-      music play nobility
+      play music nobility
       if (== $data.noble_lord_progress 0): 
         jump noble_lord_1
       if (== $data.noble_lord_progress 1): 
@@ -778,7 +778,7 @@ get_stage_afternoon_4:
   choice:
     "Who will you speak with?"
     "Dod Millet-Arkose, People's Champion":
-      music play civilian
+      play music civilian
       if (== $data.civilian_icon_progress 0): 
         jump civilian_icon_1
       if (== $data.civilian_icon_progress 1): 
@@ -794,7 +794,7 @@ get_stage_afternoon_4:
       if (== $data.civilian_icon_progress 6): 
         jump civilian_icon_7
     "Karl Sera_Gabbro, Local Businessman":
-      music play merchants
+      play music merchants
       if (== $data.merchant_bartender_progress 0): 
         jump merchant_bartender_1
       if (== $data.merchant_bartender_progress 1): 
@@ -810,7 +810,7 @@ get_stage_afternoon_4:
       if (== $data.merchant_bartender_progress 6): 
         jump merchant_bartender_7
     "Delilah Smythe, Interplanetary Financier":
-      music play merchants
+      play music merchants
       if (== $data.merchant_business_progress 0): 
         jump merchant_business_1
       if (== $data.merchant_business_progress 1): 
@@ -826,7 +826,7 @@ get_stage_afternoon_4:
       if (== $data.merchant_business_progress 6): 
         jump merchant_business_7
     "Officer Jac Peril":
-      music play military
+      play music military
       if (== $data.military_officer_progress 0): 
         jump military_officer_1
       if (== $data.military_officer_progress 1): 
@@ -842,7 +842,7 @@ get_stage_afternoon_4:
       if (== $data.military_officer_progress 6): 
         jump military_officer_7
     "Lady Cerys D'Linear":
-      music play nobility
+      play music nobility
       if (== $data.noble_lady_progress 0): 
         jump noble_lady_1
       if (== $data.noble_lady_progress 1): 
@@ -858,7 +858,7 @@ get_stage_afternoon_4:
       if (== $data.noble_lady_progress 6): 
         jump noble_lady_7
     "Lord Alun D'Linear":
-      music play nobility
+      play music nobility
       if (== $data.noble_lord_progress 0): 
         jump noble_lord_1
       if (== $data.noble_lord_progress 1): 
@@ -877,7 +877,7 @@ get_stage_afternoon_5:
   choice:
     "Who will you speak with?"
     "Dod Millet-Arkose, People's Champion":
-      music play civilian
+      play music civilian
       if (== $data.civilian_icon_progress 0): 
         jump civilian_icon_1
       if (== $data.civilian_icon_progress 1): 
@@ -893,7 +893,7 @@ get_stage_afternoon_5:
       if (== $data.civilian_icon_progress 6): 
         jump civilian_icon_7
     "Karl Sera_Gabbro, Local Businessman":
-      music play merchant
+      play music merchant
       if (== $data.merchant_bartender_progress 0): 
         jump merchant_bartender_1
       if (== $data.merchant_bartender_progress 1): 
@@ -909,7 +909,7 @@ get_stage_afternoon_5:
       if (== $data.merchant_bartender_progress 6): 
         jump merchant_bartender_7
     "Isaiah Shackle, The Violet Edge":
-      music play military
+      play music military
       if (== $data.military_hero_progress 0): 
         jump military_hero_1
       if (== $data.military_hero_progress 1): 
@@ -928,7 +928,7 @@ get_stage_afternoon_6:
   choice:
     "Who will you speak with?"
     "Gloria Hewcore-Schist, Union Representative":
-      music play civilian
+      play music civilian
       if (== $data.civilian_eagre_progress 0): 
         jump civilian_eagre_1
       if (== $data.civilian_eagre_progress 1): 
@@ -944,7 +944,7 @@ get_stage_afternoon_6:
       if (== $data.civilian_eagre_progress 6): 
         jump civilian_eagre_7
     "Dod Millet-Arkose, People's Champion":
-      music play civilian
+      play music civilian
       if (== $data.civilian_icon_progress 0): 
         jump civilian_icon_1
       if (== $data.civilian_icon_progress 1): 
@@ -960,7 +960,7 @@ get_stage_afternoon_6:
       if (== $data.civilian_icon_progress 6): 
         jump civilian_icon_7
     "Karl Sera_Gabbro, Local Businessman":
-      music play merchants
+      play music merchants
       if (== $data.merchant_bartender_progress 0): 
         jump merchant_bartender_1
       if (== $data.merchant_bartender_progress 1): 
@@ -976,7 +976,7 @@ get_stage_afternoon_6:
       if (== $data.merchant_bartender_progress 6): 
         jump merchant_bartender_7
     "Isaiah Shackle, The Violet Edge":
-      music play military
+      play music military
       if (== $data.military_hero_progress 0): 
         jump military_hero_1
       if (== $data.military_hero_progress 1): 
@@ -992,7 +992,7 @@ get_stage_afternoon_6:
       if (== $data.military_hero_progress 6): 
         jump military_hero_7
     "Lord Alun D'Linear":
-      music play nobility
+      play music nobility
       if (== $data.noble_lord_progress 0): 
         jump noble_lord_1
       if (== $data.noble_lord_progress 1): 
@@ -1118,7 +1118,7 @@ afternoon_7:
 
 crisis_1:
   add data.time 1
-  music play crisis
+  play music crisis
   "In the evening, the chamber becomes quiet-only a few functionaries and other staff are milling around."
   "Before returning to your pod for the night you open up your local news feeds and skim around."
   "You open a feed tagged with BREAKING NEWS"
@@ -1136,7 +1136,7 @@ crisis_1:
 
 crisis_2:
   add data.time 1
-  music play crisis
+  play music crisis
   "This evening one of the functionaries informs you that some entertainment has been arranged by the Merchants Guild."
   "You travel with a group of other visiting dignitaries and diplomats in a shuttle to Sclera's stadium, slightly shabby."
   "You take your seat in the box, and the show begins."
@@ -1150,7 +1150,7 @@ crisis_2:
 
 crisis_3:
   add data.time 1
-  music play crisis
+  play music crisis
   "An explosion crackles and echoes through the sky above the chamber."
   "People shriek and duck for cover under their desks."
   "Over the PA, the voice of Isaiah Shackle booms-"
@@ -1163,7 +1163,7 @@ crisis_3:
 
 crisis_4:
   add data.time 1
-  music play crisis
+  play music crisis
   "Every Planet under the Corroborance, willing or not, has an anniversary festival. You've been to many in your time."
   "The Priesthood in their flowing gowns take to the streets with censers filled with local herbs and spices."
   "It's customary for those of Noble Houses and certain Guild positions to visit each ward and bestow a gift upon the people."
@@ -1176,7 +1176,7 @@ crisis_4:
   
 crisis_5:
   add data.time 1
-  music play crisis
+  play music crisis
   "The day draws to a close, and you take a walk through the chamber's warren of a basement."
   "You pass a squad of guards, smoking and playing cards. They invite you to play, but you decline."
   "You walk through an empty atrium, your shoes clacking in the tall stillness of the place."
@@ -1204,7 +1204,7 @@ crisis_5:
 
 crisis_6:
   add data.time 1
-  music play crisis
+  play music crisis
   "On your penultimate night before the succesion ceremony, you take a trip to one of the rooftop gardens atop the habitation towers."
   "Up here, the air is thin and clean. You lay down on a grassy hillock by a small pond and gaze up at the night-sky, framed by the perfect circle of the sinkhole."
   "The silica storm whorls and snaps in the velveteen darkness far above you. It's rare to see the stars on Sclera, it's part of why you signed up for this job in the first place."
