@@ -560,7 +560,7 @@ get_stage_morning_6:
 get_stage_afternoon_1:
   choice:
     "Who will you speak with?"
-    "Karl Sera_Gabbro, Local Businessman":
+    "Karl Sera-Gabbro, Local Businessman":
       play music merchants
       if (== $data.merchant_bartender_progress 0): 
         jump merchant_bartender_1
@@ -643,7 +643,7 @@ get_stage_afternoon_2:
         jump civilian_icon_6
       if (== $data.civilian_icon_progress 6): 
         jump civilian_icon_7
-    "Karl Sera_Gabbro, Local Businessman":
+    "Karl Sera-Gabbro, Local Businessman":
       play music merchants
       if (== $data.merchant_bartender_progress 0): 
         jump merchant_bartender_1
@@ -710,7 +710,7 @@ get_stage_afternoon_3:
         jump civilian_icon_6
       if (== $data.civilian_icon_progress 6): 
         jump civilian_icon_7
-    "Karl Sera_Gabbro, Local Businessman":
+    "Karl Sera-Gabbro, Local Businessman":
       play music merchants
       if (== $data.merchant_bartender_progress 0): 
         jump merchant_bartender_1
@@ -793,7 +793,7 @@ get_stage_afternoon_4:
         jump civilian_icon_6
       if (== $data.civilian_icon_progress 6): 
         jump civilian_icon_7
-    "Karl Sera_Gabbro, Local Businessman":
+    "Karl Sera-Gabbro, Local Businessman":
       play music merchants
       if (== $data.merchant_bartender_progress 0): 
         jump merchant_bartender_1
@@ -892,7 +892,7 @@ get_stage_afternoon_5:
         jump civilian_icon_6
       if (== $data.civilian_icon_progress 6): 
         jump civilian_icon_7
-    "Karl Sera_Gabbro, Local Businessman":
+    "Karl Sera-Gabbro, Local Businessman":
       play music merchant
       if (== $data.merchant_bartender_progress 0): 
         jump merchant_bartender_1
@@ -959,7 +959,7 @@ get_stage_afternoon_6:
         jump civilian_icon_6
       if (== $data.civilian_icon_progress 6): 
         jump civilian_icon_7
-    "Karl Sera_Gabbro, Local Businessman":
+    "Karl Sera-Gabbro, Local Businessman":
       play music merchants
       if (== $data.merchant_bartender_progress 0): 
         jump merchant_bartender_1
@@ -1024,9 +1024,11 @@ intro:
   "And then you emerge from the pod in the manner rehearsed, stepping forward into a deep bow."
   "The Chamber Of Governance is much as you remembered it from when you took your vows. White composite stone carved into sweeping curves forming a vaulted ceiling. <br>The room is filled with dignitaries, nobles and such-all of them watching as you step out of your stasis pod."
   "As you do, a projection crackles into being alongside you."
-  talk executor idle "People of Sclera, here this now and be silent that you may hear the word of the Grand Truth-that of The Corroborance!"
-  talk executor idle "7 days past, your appointed leader, Berwyn of House D'linear, passed away. <br>In that moment, the rites of succession began and "
-  "The taste of the air here is a familiar stale in your mouth as you nod your way through perfunctory introductions."
+  talk executor idle "People of Sclera, hear this now and be silent that you may hear the word of the One Grand Truth-that of The Corroborance!"
+  talk executor idle "7 days hence, your appointed leader, Berwyn of House D'linear, passed away. <br>In that moment, the rites of succession began and I dispatched my Facilitator, who now stands before you."
+  talk executor idle "They are here to prepare for my arrival, and to impartially inspect those among your populace who have the most influence, that they might best serve as our representative. <br>Remember well that though the Corroborance endorses the Noble Houses, all are eligible for this position."
+  talk executor idle "7 days from now, I will arrive to pass judgement. Be ready."
+  "The projection fades. <br>The taste of the air here is a familiar stale in your mouth as you nod your way through perfunctory introductions."
   "You were really home on Sclera, where you took the Vow of Impartial Service so many years ago."
   "How could you possibly be balanced in deciding who should rule your home! <br> The Corroborance was so meticulous, always triple-checks and fastidious forms-"
   "Or rather, they never made a mistake anyone heard about."
@@ -1038,8 +1040,8 @@ intro:
       "Surely that gown wasn't so expensive as to justify this?"
     "The attendant from the banquet at Incisor 7?":
       "How could you have known that was the wrong fork!"
-  "Regardless, you find yourself in mortal danger. You will have to keep your origin under wraps both here and in your report."
-  
+  "Regardless, you find yourself in mortal danger. You will have to keep your origin under wraps both here and in your report. <br>The Corroborance don't state it explicitly, but an expected part of your role is also to assure that there is a clear candidate, so you are expected to push in one direction or another."
+  "A curse or a gift, you have the potential to shape your home goiong forward."  
   add data.time 1
   jump timekeeper
 
@@ -1230,6 +1232,7 @@ crisis_6:
   jump timekeeper
 
 endgame:
+  "The Day Of Succession has come, the chamber is decked out with banners bearing the mark of The Corroborance. Soldiers in formation, nobles in their finery."
   if (== $data.suspicion > 2): 
     jump discovered_end
   if (== $data.civilian_eager_influence > 2): 
@@ -1255,67 +1258,152 @@ civilian_eager_end:
   play music civilian
   wait 500
   play sound motif_gloria
+  "Gloria stands before the Executor, head bowed as they take the Vow Of Leadership. <br>The Executor tabs them on each shoulder with their sword as you step back into your stasis pod, your purpose served. "
+  talk executor positive "People of Sclera, your new leader-Gloria Hewcore-Schist!"
+  talk civilian_eager positive "Thank you all for putting your faith in me, I promise you I'll work every day to represent the Scleran people as best I can, with a united council and transparency throughout!"
+  "The crowd errupts with applause as the pod closes around you."
+  "12 more cycles...you wonder what home will look like by then..."
+  wait 2000
   jump timekeeper
 
 civilian_icon_end:
+  add data.time 1
   play music civilian
   wait 500
   play sound motif_dod
-  add data.time 1
+  "Dod stands before the Executor, head bowed as they take the Vow Of Leadership. <br>The Executor tabs them on each shoulder with their sword as you step back into your stasis pod, your purpose served."
+  talk executor positive "People of Sclera, your new leader, Dod Millet-Arkose!"
+  talk civilian_icon positive "I never expected this, and I certainly never asked for this, but I can promise you all this. We will be liberated or I will be dead!"
+  "Dod raises a fist and the crowd explodes with a mix of cheers and jeers as your pod closes around you."
+  "12 more cycles...you wonder what home will look like by then..."
+  wait 2000
   jump timekeeper
 
 merchant_bartender_end:
+  add data.time 1
   play music merchants
   wait 500
   play sound motif_karl
-  add data.time 1
+  "Karl stands before the Executor, head bowed as they take the Vow Of Leadership. <br>The Executor tabs them on each shoulder with their sword as you step back into your stasis pod, your purpose served."
+  talk executor positive "People of Sclera, your new leader, Karl Sera-Gabbro!"
+  talk merchant_bartender positive "People of Sclera, my friends, my associates and those I'm yet to meet. I welcome you all to an era of new experiences, free trade, and half-price drinks tonight only!"
+  "The crowd erupts as your pod closes around you."
+  "12 more cycles...you wonder what home will look like by then..."
+  wait 2000
   jump timekeeper
 
 merchant_business_end:
+  add data.time 1
   play music merchants
   wait 500
   play sound motif_delilah
-  add data.time 1
+  "Delilah stands before the Executor, head bowed as they take the Vow Of Leadership. <br>The Executor tabs them on each shoulder with their sword as you step back into your stasis pod, your purpose served."
+  talk executor positive "People of Sclera, your new leader, Delilah Smythe!"
+  talk merchant_business positive "I look forward to ushering in an era of opportunity and growth for the planet of Sclera. That is all."
+  "Scattered polite applause fills the chamber as your pod closes around you."
+  "12 more cycles...you wonder what home will look like by then..."
+  wait 2000
   jump timekeeper
 
 military_hero_end:
+  add data.time 1
   play music military
   wait 500
   play sound motif_isaiah
-  add data.time 1
+  "Isaiah stands before the Executor, head bowed as they take the Vow Of Leadership. <br>The Executor tabs them on each shoulder with their sword as you step back into your stasis pod, your purpose served."
+  talk executor positive "People of Sclera, your new leader-Isaiah Shackle!"
+  talk military_hero positive "I will repeat the vow I took on the first day of my career. I will protect Sclera from all attackers both foreign and domestic, upon my life."
+  "The crowd erupts in cheers for The Violet Blade as your pod closes around you."
+  "12 more cycles...you wonder what home will look like by then..."
+  wait 2000
   jump timekeeper
 
 military_officer_end:
+  add data.time 1
   play music military
   wait 500
   play sound motif_jac
-  add data.time 1
+  "Jac stands before the Executor, head bowed as they take the Vow Of Leadership. <br>The Executor tabs them on each shoulder with their sword as you step back into your stasis pod, your purpose served."
+  talk executor positive "People of Sclera, your new leader, Jac Peril!"
+  talk military_officer positive "Today a new era of order and justice begins, people of Sclera!"
+  play music end_neg
+  "Some polite clapping while concerned looks are exchanged. As your pod closes around you, you see someone throw a shoe at the stage."
+  "12 more cycles...you wonder what home will look like by then..."
+  wait 2000
   jump timekeeper
 
 noble_lady_end:
+  add data.time 1
   play music nobility
   wait 500
   play sound motif_cerys
-  add data.time 1
+  "Cerys stands before the Executor, head bowed as they take the Vow Of Leadership. <br>The Executor tabs them on each shoulder with their sword as you step back into your stasis pod, your purpose served."
+  talk executor positive "People of Sclera, your new leader, Lady Cerys D'Linear!"
+  talk noble_lady positive "People of Sclera, brace yourselves for a bold new vision for our home. There is much work to do!"
+    "Applause fills the room as Cerys begins a...slideshow? You catch a glimpse of a pie chart as your pod closes around you."
+    "12 more cycles...you wonder what home will look like by then..."
+  wait 2000
   jump timekeeper
 
 noble_lord_end:
+  add data.time 1
   play music nobility
   wait 500
   play sound motif_alun
-  add data.time 1
+  "Alun stands before the Executor, head bowed as they take the Vow Of Leadership. <br>The Executor tabs them on each shoulder with their sword as you step back into your stasis pod, your purpose served."
+  talk executor positive "People of Sclera, your new leader , Alun D'Linear!"
+  talk noble_lord positive "Thank you everyone, it is my hope that I can represent you all with more integrity than you may have come to expect from House D'Linear."
+  "Scattered applause and some puzzled looks as your pod closes around you."
+  "12 more cycles...you wonder what home will look like by then..."
+  wait 2000
   jump timekeeper
 
 discovered_end:
   add data.time 1
   play music end_neg
+  wait 500
+    "Alun stands before the Executor, head bowed as they take the Vow Of Leadership. <br>The Executor tabs them on each shoulder with their sword as you step back into your stasis pod, your purpose served."
+  play sound motif_executor
+  talk executor positive "People of Sclera, your new leader , Alun D'Linear!"
+  talk noble_lord positive "Thank you everyone, it is my hope that I can represent you all with more integrity than you may have come to expect from House D'Linear."
+  "Scattered applause and some puzzled looks as your pod closes around you."
+  "12 more cycles...you wonder what home will look like by then..."
+  wait 2000
+  "...but then you awake within The Garden oncemore. Bleary-eyed, you rise from your marble slab."
+  play sound motif_executor
+  talk executor idle "...I'm disappointed in you, Facilitator."
+  play sound motif_executor
+  talk executor negative "How did you change your assignment to your home planet? Did you think we wouldn't notice?!"
+  play sound motif_executor
+  talk executor negative "I suppose it doesn't matter now."
+  stop music
+  play sound motif_executor
+  talk executor idle "Goodbye."
   jump timekeeper
-
+  wait 2000
 ending_flop:
   add data.time 1
   play music end_neg
+  wait 500
+    "Alun stands before the Executor, head bowed as they take the Vow Of Leadership. <br>The Executor tabs them on each shoulder with their sword as you step back into your stasis pod, your purpose served."
+  play sound motif_executor
+  talk executor positive "People of Sclera, your new leader , Alun D'Linear!"
+  talk noble_lord positive "Thank you everyone, it is my hope that I can represent you all with more integrity than you may have come to expect from House D'Linear."
+  "Scattered applause and some puzzled looks as your pod closes around you."
+  "12 more cycles...you wonder what home will look like by then..."
+  wait 2000
+  "...but then you awake within The Garden oncemore. Bleary-eyed, you rise from your marble slab."
+  play sound motif_executor
+  talk executor idle "...I'm disappointed in you, Facilitator."
+  play sound motif_executor
+  talk executor negative "You failed to isolate a viable candidate, so I was forced to put that useless fool in charge."
+  play sound motif_executor
+  talk executor negative "I suppose it doesn't matter now."
+  stop music
+  play sound motif_executor
+  talk executor idle "Goodbye."
   jump timekeeper
-
+  wait 2000
 civilian_eager_1:
   add data.civilian_eager_progress 1
   "Gloria Hewcore-Schist makes herself known before you even have a chance to say hello."
@@ -1332,7 +1420,7 @@ civilian_eager_1:
   talk civilian_eager idle "Ah, yes-I know it's a bit unusual but we have a whole section in the bylaws on how to handle this, you know? Divine appointment by the Corroborance kind of doesn't align with the Sclera Miner's Liberation Front's whole...deal-but it's not like we can challenge it directly so we've come up with a process to do harm mitigation as best we can."
   talk player idle "That's very...considered."
   talk civilian_eager idle "Isn't it just? Got to make do with what you have, like I always say. Anyway, delightful to meet you but I have to get going, I'm already running late for my next meeting."
-  "...and just like that she took off running."
+  "...and just like that she took off running.<br>"
   jump timekeeper
 
 civilian_eager_2:
@@ -1349,7 +1437,7 @@ civilian_eager_2:
   "She looks forlorn for just a moment, fiddling with a paperclip, before finding her resolve."
   talk civilian_eager idle "Anyway, back to work-huh? I have my duties and you have yours."
   "You catch a glimpse at her notifications feed-just a continuous stream of messages and pings."
-  "You leave her to it."
+  "You leave her to it.<br>"
   jump timekeeper
 
 civilian_eager_3:
@@ -1368,7 +1456,7 @@ civilian_eager_3:
   talk player idle "As long as my duty demands..."
   "She cracks a smile."
   talk civilian_eager idle "For my first order as Supreme Overchancellor or whatever I'm definitely outlawing that nonsense."
-  talk player idle "As nice as that might be...I think that's probably heresy."
+  talk player idle "As nice as that might be...I think that's probably heresy.<br>"
   jump timekeeper
 
 civilian_eager_4:
@@ -1393,7 +1481,7 @@ civilian_eager_4:
       add data.suspicion 1
     "I don't think that would be appropriate.":
       talk civilian_eager negative "Oh. That's a real shame. I was hoping you could help..."
-  "Gloria's terminal rings and she mouths Got to take this, sorry before picking up the call."
+  "Gloria's terminal rings and she mouths Got to take this, sorry before picking up the call.<br>"
   jump timekeeper
 
 civilian_eager_5:
@@ -1411,7 +1499,7 @@ civilian_eager_5:
   "Something was clearly wrong with you being assigned here but you let yourself enjoy the nostalgia for a while."
   "Gloria comes to a halt outside a tenement building and pushes her hair out of her face."
   talk civilian_eager positive "Right, that's my stop. Wasn't that good? The air's not so bad out here, eh?"
-  "You take the long way back. It's good to be home."
+  "You take the long way back. It's good to be home.<br>"
   jump timekeeper
 
 civilian_eager_6:
@@ -1430,10 +1518,10 @@ civilian_eager_6:
   choice: 
     talk civilian_eager idle "Could you do that for me?"
     "I can try.":
-      talk civilian_eager positive "Thank you, thank you so much!"
+      talk civilian_eager positive "Thank you, thank you so much!<br>"
       add data.civilian_eager_influence 1
     "I can't do that, we aren't supposed to have any contact with home and it would be too much risk...":
-      talk civilian_eager negative "Coward, then what are you doing here?!"
+      talk civilian_eager negative "Coward, then what are you doing here?!<br>"
       add data.suspicion 1
   jump timekeeper
 
@@ -1444,25 +1532,28 @@ civilian_eager_7:
   talk player idle "Travelling light today?"
   talk civilian_eager positive "Haha, yeah. I can let things build up a bit for today. This is important, you know? Got to be focussed. Whatever happens next, we need to be ready to move as one."
   "She stops walking and looks up, to the stars above the sinkhole city."
-  talk civilian_eager positive "I know my sister's up there somewhere. Gotta make sure things are good and organised when she gets back home. You know?"
+  talk civilian_eager positive "I know my sister's up there somewhere. Gotta make sure things are good and organised when she gets back home. You know?<br>"
   jump timekeeper
 
 civilian_icon_1:
   add data.civilian_icon_progress 1
   play sound motif_dod
   talk civilian_icon idle ""
+  "<br>"
   jump timekeeper
 
 civilian_icon_2:
   add data.civilian_icon_progress 1
   play sound motif_dod
   talk civilian_icon idle ""  
+  "<br>"
   jump timekeeper
 
 civilian_icon_3:
   add data.civilian_icon_progress 1
   play sound motif_dod
   talk civilian_icon idle ""  
+  "<br>"
   jump timekeeper
 
 civilian_icon_4:
@@ -1475,13 +1566,14 @@ civilian_icon_4:
       talk civilian_icon idle ""
     "":
       talk civilian_icon idle ""
-  ""
+  "<br>"
   jump timekeeper
 
 civilian_icon_5:
   add data.civilian_icon_progress 1
   play sound motif_dod
   talk civilian_icon idle ""
+  "<br>"
   jump timekeeper
 
 civilian_icon_6:
@@ -1494,13 +1586,14 @@ civilian_icon_6:
       talk civilian_icon idle ""
     "":
       talk civilian_icon idle ""
-  ""
+  "<br>"
   jump timekeeper
 
 civilian_icon_7:
   add data.civilian_icon_progress 1
   play sound motif_dod
   talk civilian_icon idle ""
+  "<br>"
   jump timekeeper
 
 merchant_bartender_1:
@@ -1526,7 +1619,7 @@ merchant_bartender_1:
       talk merchant_bartender idle "No problem at all, you should try a Babylon Soda! A real local treat if I say so myself."
   "The familiar tang of the canteloupe soda immediately transports you back to your youth, playing tag in the service tunnels not far from here."
   talk merchant_bartender positive "Nothing like it, eh? Huhuheh!"
-  talk merchant_bartender idle "I hope you'll come see me over here, I can't really make it over to the chambers too often."
+  talk merchant_bartender idle "I hope you'll come see me over here, I can't really make it over to the chambers too often.<br>"
   jump timekeeper
 
 merchant_bartender_2:
@@ -1545,7 +1638,7 @@ merchant_bartender_2:
   talk merchant_bartender idle "I suppose it's not like old Berwyn D'linear kept his nose clean, even by noble standards."
   "You're taken aback. They would speak so coarsely of the newly-dead?"
   "They lean in close over the bar."
-  talk merchant_bartender positive "I should know, I have his receipts."
+  talk merchant_bartender positive "I should know, I have his receipts.<br>"
   jump timekeeper
 
 merchant_bartender_3:
@@ -1570,7 +1663,7 @@ merchant_bartender_3:
   "He lights his cigarette, holding all the cards."
   talk player idle "You can't let anyone know, I don't even understand why they sent me here!"
   "A deep drag."
-  talk merchant_bartender idle "Of course, because we're good friends. Us Sclerans have gotta look out for eachother, right? Now get out of here. Your drinks are on me."
+  talk merchant_bartender idle "Of course, because we're good friends. Us Sclerans have gotta look out for eachother, right? Now get out of here. Your drinks are on me.<br>"
   jump timekeeper
 
 merchant_bartender_4:
@@ -1591,7 +1684,7 @@ merchant_bartender_4:
       add data.suspicion 1
       talk merchant_bartender negative "That's a terrible shame, if I'm being honest with you, Facilitator."
   "Their demeanour shifts as they roll their shoulders."
-  talk merchant_bartender idle "Anyways, I'll be seeing you around. Swing on by Café Diamante  some time."
+  talk merchant_bartender idle "Anyways, I'll be seeing you around. Swing on by Café Diamante some time.<br>"
   jump timekeeper
 
 merchant_bartender_5:
@@ -1606,7 +1699,7 @@ merchant_bartender_5:
   "You are about to take a seat at one of the side tables when one of the bartenders with a full tray of glasses in her other hand taps you on the shoulder."
   "Mr Sera-Gabbro would like to see you tomorrow, he has business to discuss."
   "Mr Sera-Gabbro would also recommend you make yourself scarce tonight, things are about to get loud."
-  "You take their advice. You're half-way up the street when you hear gunshots and screams."
+  "You take their advice. You're half-way up the street when you hear gunshots and screams.<br>"
   jump timekeeper
 
 merchant_bartender_6:
@@ -1625,7 +1718,7 @@ merchant_bartender_6:
     "I can't do that for you...":
       talk merchant_bartender negative "You should be careful, you know...it's much better to be cooperative. It's just good business."
       add data.suspicion 1
-  talk merchant_bartender idle "Now get out of here! You got important work to do as a totally unbiased Facilitator, don't you?"
+  talk merchant_bartender idle "Now get out of here! You got important work to do as a totally unbiased Facilitator, don't you?<br>"
   jump timekeeper
 
 merchant_bartender_7:
@@ -1638,25 +1731,28 @@ merchant_bartender_7:
   "He pulls a bottle from below the bar."
   talk merchant_bartender idle "I ain't going nowhere, but if I can give these people a taste of somewhere better-"
   "He pops the cork and pours out two glasses of a glittering purple syrup."
-  talk merchant_bartender positive "-damn right I'm gonna do it."
+  talk merchant_bartender positive "-damn right I'm gonna do it.<br>"
   jump timekeeper
 
 merchant_business_1:
   add data.merchant_business_progress 1
   play sound motif_delilah
   talk merchant_business idle ""
+  "<br>"
   jump timekeeper
 
 merchant_business_2:
   add data.merchant_business_progress 1
   play sound motif_delilah
   talk merchant_business idle ""
+  "<br>"
   jump timekeeper
 
 merchant_business_3:
   add data.merchant_business_progress 1
   play sound motif_delilah
   talk merchant_business idle ""
+  "<br>"
   jump timekeeper
 
 merchant_business_4:
@@ -1669,13 +1765,14 @@ merchant_business_4:
       talk merchant_business idle ""
     "":
       talk merchant_business idle ""
-  ""
+  "<br>"
   jump timekeeper
 
 merchant_business_5:
   add data.merchant_business_progress 1
   play sound motif_delilah
   talk merchant_business idle ""
+  "<br>"
   jump timekeeper
 
 merchant_business_6:
@@ -1688,13 +1785,14 @@ merchant_business_6:
       talk merchant_business idle ""
     "":
       talk merchant_business idle ""
-  ""
+  "<br>"
   jump timekeeper
 
 merchant_business_7:
   add data.merchant_business_progress 1
   play sound motif_delilah
   talk merchant_business idle ""
+  "<br>"
   jump timekeeper
 
 military_hero_1:
@@ -1719,7 +1817,7 @@ military_hero_1:
   talk military_hero idle "I hope that's all it is."
   "They seem genuinely concerned."
   talk military_hero idle "A pleasure to meet you Facilitator, but I have synaptic therapy to attend."
-  "They snap to attention and flash you a cheeky grin with their salute before turning on heel and leaving the chamber."
+  "They snap to attention and flash you a cheeky grin with their salute before turning on heel and leaving the chamber.<br>"
   jump timekeeper
 
 military_hero_2:
@@ -1742,7 +1840,7 @@ military_hero_2:
       talk player idle "You routed 3 regiments of Calladian Mercenaries with only your sword that day. I'd say that's above and beyond."
       "They shrug off the compliment and return to their monitors."
   talk military_hero idle "If that will be all Facilitator, I'd rather not wax nostalgic today."
-  "You excuse yourself. The chair makes a terrible squeal again."
+  "You excuse yourself. The chair makes a terrible squeal again.<br>"
   jump timekeeper
 
 military_hero_3:
@@ -1773,7 +1871,7 @@ military_hero_3:
     "I don't think that would be appropriate.":
       add data.suspicion 1
       talk military_hero idle "Ah, naturally. I'm sorry to trouble you with this."
-  talk military_hero idle "Anyway, I should get back to my work. Thank you for you time, Facilitator."
+  talk military_hero idle "Anyway, I should get back to my work. Thank you for you time, Facilitator.<br>"
   jump timekeeper
 
 military_hero_4:
@@ -1791,7 +1889,7 @@ military_hero_4:
       talk military_hero idle "Spare me the flattery, I get enough of that."
     "You're doing no good exhausted, you should rest.":
       talk military_hero idle "...I just need to check this sector over one more time."
-  "You leave them to their work."
+  "You leave them to their work.<br>"
   jump timekeeper
 
 military_hero_5:
@@ -1806,7 +1904,7 @@ military_hero_5:
   talk military_hero idle "I would, this wound is important to me. My troops need to know I understand the cost of battle."
   talk player idle "I understand. Please know we may need to revisit this if you are selected."
   "Isaiah stares you down."
-  talk player idle "Thank you for your time."
+  talk player idle "Thank you for your time.<br>"
   jump timekeeper
 
 military_hero_6:
@@ -1834,7 +1932,7 @@ military_hero_6:
       add data.military_hero_influence 1
       "<PLACEHOLDER>"
   "They stand up from the table."
-  talk military_hero idle "We've got a rehearsal for the Leadership ceremony in 20 minutes, I'll see you there."
+  talk military_hero idle "We've got a rehearsal for the Leadership ceremony in 20 minutes, I'll see you there.<br>"
   jump timekeeper
 
 military_hero_7:
@@ -1852,25 +1950,28 @@ military_hero_7:
   talk military_hero idle "It should have never been on us to hold that position for so long. If that's what it takes to make someone like me a hero, I don't know..."
   talk military_hero idle "I'm not sure it was worth it."
   "They put down the shrapnel and pull a cigarette out from behind their ear."
-  talk military_hero idle "You can pass that along to the Executor, I guess. Thanks for listening to an old dog's lament."
+  talk military_hero idle "You can pass that along to the Executor, I guess. Thanks for listening to an old dog's lament.<br>"
   jump timekeeper
 
 military_officer_1:
   add data.military_officer_progress 1
   play sound motif_jac
   talk military_officer idle ""
+  "<br>"
   jump timekeeper
 
 military_officer_2:
   add data.military_officer_progress 1
   play sound motif_jac
   talk military_officer idle ""
+  "<br>"
   jump timekeeper
 
 military_officer_3:
   add data.military_officer_progress 1
   play sound motif_jac
   talk military_officer idle ""
+  "<br>"
   jump timekeeper
 
 military_officer_4:
@@ -1883,13 +1984,14 @@ military_officer_4:
       talk military_officer idle ""
     "":
       talk military_officer idle ""
-  ""
+  "<br>"
   jump timekeeper
 
 military_officer_5:
   add data.military_officer_progress 1
   play sound motif_jac
   talk military_officer idle ""
+  "<br>"
   jump timekeeper
 
 military_officer_6:
@@ -1902,13 +2004,14 @@ military_officer_6:
       talk military_officer idle ""
     "":
       talk military_officer idle ""
-  ""
+  "<br>"
   jump timekeeper
 
 military_officer_7:
   add data.military_officer_progress 1
   play sound motif_jac
   talk military_officer idle ""
+  "<br>"
   jump timekeeper
 
 noble_lady_1:
@@ -1922,9 +2025,8 @@ noble_lady_1:
   "So no love was lost between her and her father then..."
   talk noble_lady idle "You really should join me at the D'Linear compound, dear Facilitator. I'm inviting some much more...scintilating company than you'll encounter stuck in this chamber."
   talk player idle "I'll keep that in mind but-"
-  "And just like that, she's swept away to talk with someone else..."
+  "And just like that, she's swept away to talk with someone else...<br>"
   jump timekeeper
-
 noble_lady_2:
   add data.noble_lady_progress 1
   "The D'Linear compound sits a few streets over from the chamber, ivy coating the serious outer walls."
@@ -1942,7 +2044,7 @@ noble_lady_2:
   talk player idle "Oh, and why is that?"
   talk noble_lady idle "He lacks vision, I really do think he would just settle for maintaining the status quo Father established."
   talk player idle "And you have greater plans?"
-  talk noble_lady idle "Oh yes, very much so. Certainly no more of that brawling business from last night."
+  talk noble_lady idle "Oh yes, very much so. Certainly no more of that brawling business from last night.<br>"
   jump timekeeper
 
 noble_lady_3:
@@ -1961,7 +2063,7 @@ noble_lady_3:
   talk player idle "The simulations are excellent but in my experience, people are resistant to such sweeping change-even for the better."
   "She shoots you a glare-once again her mask falters for a moment."
   talk noble_lady idle "Thank you Facilitator, I will keep that in mind."
-  "A tap on your shoulder and you are escorted out."
+  "A tap on your shoulder and you are escorted out.<br>"
   jump timekeeper
 
 noble_lady_4:
@@ -1984,7 +2086,7 @@ noble_lady_4:
       talk noble_lady idle "Of course you can, don't dance too close to the fire now."
       add data.suspicion 2
   "She puts you down and turns to leave."
-  talk noble_lady idle "I'll be in touch."
+  talk noble_lady idle "I'll be in touch.<br>"
   jump timekeeper
 
 noble_lady_5:
@@ -1996,7 +2098,7 @@ noble_lady_5:
   "The mannequin flashes red as she scores a point, then returns to it's ready stance."
   talk noble_lady idle "-you really should work with me rather than against me."
   "She makes a grand lunge forward and pierces the mannequin in the face."
-  talk noble_lady idle "I just want what's best for everyone."
+  talk noble_lady idle "I just want what's best for everyone.<br>"
   jump timekeeper
 
 noble_lady_6:
@@ -2015,11 +2117,11 @@ noble_lady_6:
       add data.noble_lady_influence 1
       talk noble_lady idle "Splendid, so glad we could see eye-to-eye."
       talk noble_lady idle "My little bird told me, it was The Will Of The Executor that you be sent here specifically."
-      talk noble_lady idle "Not much you can do with that I suppose, but at least it's a little peace of mind." 
+      talk noble_lady idle "Not much you can do with that I suppose, but at least it's a little peace of mind.<br>" 
     "I'm not going to break my vow of impartiality for you!":
       add data.suspicion 2
       talk noble_lady idle "That's foolish, unfortunate, and altogether ill-considered."
-      talk noble_lady idle "I wish you the best of luck, Facilitator. Stay safe."
+      talk noble_lady idle "I wish you the best of luck, Facilitator. Stay safe.<br>"
   jump timekeeper
 
 noble_lady_7:
@@ -2028,25 +2130,28 @@ noble_lady_7:
   talk noble_lady idle "-and so yes, I suppose we should consider an extension to Burgeon Ward given the demographics will naturally shift over-"
   "Lady Cerys D'Linear is holding court, surrounded by merchants, bureacrats, and civic planners. Undeniably in her element."
   "Her eyes meet yours across the chamber floor and you're struck by the impression that, regardless how this leadership contest resolves, she will make a significant difference to the people of Planet Sclera-for better or for worse."
-  "She turns away and returns to her congregation." 
+  "She turns away and returns to her congregation.<br>" 
   jump timekeeper
 
 noble_lord_1:
   add data.noble_lord_progress 1
   play sound motif_alun
   talk noble_lord idle ""
+  "<br>"
   jump timekeeper
 
 noble_lord_2:
   add data.noble_lord_progress 1
   play sound motif_alun
   talk noble_lord idle ""
+  "<br>"
   jump timekeeper
 
 noble_lord_3:
   add data.noble_lord_progress 1
   play sound motif_alun
   talk noble_lord idle ""
+  "<br>"
   jump timekeeper
 
 noble_lord_4:
@@ -2059,13 +2164,14 @@ noble_lord_4:
       talk noble_lord idle ""
     "":
       talk noble_lord idle ""
-  ""
+  "<br>"
   jump timekeeper
 
 noble_lord_5:
   add data.noble_lord_progress 1
   play sound motif_alun
   talk noble_lord idle ""
+  "<br>"
   jump timekeeper
 
 noble_lord_6:
@@ -2078,17 +2184,18 @@ noble_lord_6:
       talk noble_lord idle ""
     "":
       talk noble_lord idle ""
-  ""
+  "<br>"
   jump timekeeper
 
 noble_lord_7:
   add data.noble_lord_progress 1
   play sound motif_alun
   talk noble_lord idle ""
+  "<br>"
   jump timekeeper
 
 credits:
-  "An Arcane Rituals game"
+  "An Arcane Rituals game for Brackeys 2025.2"
   "Thank You For Playing"
   "Art: Lada"
   "Music: Teddy"

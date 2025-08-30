@@ -82,3 +82,11 @@ characters:
       negative: "cerys_negative.png"
     style:
       color: "purple"
+  executor:
+    name: "The Executor"
+    sprites:
+      idle: "executor_idle.png"
+      positive: "executor_positive.png"
+      negative: "executor_negative.png"
+    style:
+      color: "SlateBlue"
