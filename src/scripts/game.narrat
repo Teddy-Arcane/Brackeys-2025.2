@@ -1120,7 +1120,7 @@ crisis_1:
   play music crisis
   "In the evening, the chamber becomes quiet-only a few functionaries and other staff are milling around."
   "Before returning to your pod for the night you open up your local news feeds and skim around."
-  "You open a feed tagged with BREAKING NEWS"
+  "You open a feed tagged with <b><i>Breaking News</i></b>"
   "There appears to be some sort of labour dispute in one of Sclera's deep mining caverns. A rabble of miners stand with protest signs decrying their unfair treatment, pay, safety."
   "They appear to be surrounded by local security forces, riot shields and stun lances deployed."
   " One of the protestors trips and falls forward towards them."
@@ -1220,7 +1220,7 @@ crisis_6:
   choice:
     "This is a chance to swing opinion. Who do you gift the meteorite to?"
     "The gemcutter, resplendent in finery":
-      "A camera flashes, as he holds the stone aloft. <i> Sclera's Tear A Mark Of Prosperity </i>, the feeds declare the next morning."    
+      "A camera flashes, as he holds the stone aloft. <br><b><i> Sclera's Tear A Mark Of Prosperity </i></b><br> the feeds declare the next morning."    
       add data.merchant_bartender_influence 1
       add data.merchant_business_influence 1
       "[Karl & Delilah Gain Influence]"
@@ -2116,7 +2116,8 @@ noble_lady_6:
     "...ok, tell me what you know":
       add data.noble_lady_influence 1
       talk noble_lady idle "Splendid, so glad we could see eye-to-eye."
-      talk noble_lady idle "My little bird told me, it was The Will Of The Executor that you be sent here specifically."
+      talk noble_lady idle "My little bird told me, it was the will of the Grand Clement at Murtagh Point that you be sent here specifically."
+      talk noble_lady positive "Whatever did you do to upset them so much?s"
       talk noble_lady idle "Not much you can do with that I suppose, but at least it's a little peace of mind.<br>" 
     "I'm not going to break my vow of impartiality for you!":
       add data.suspicion 2
@@ -2135,67 +2136,95 @@ noble_lady_7:
 
 noble_lord_1:
   add data.noble_lord_progress 1
+  "You spot Alun's entourage before you spot the man himself. He's preceeded by a butler, flanked by bodyguards, and a PA trails behind."
+  "You never saw much of Alun's father when you were a kid, but they carry themselves very differently. Where Lord Berwyn D'linear was imperious Alun is frail."
   play sound motif_alun
-  talk noble_lord idle ""
-  "<br>"
+  talk noble_lord positive "Ah, hello Facilitator. A pleasure."
+  "A handway to his people and the disperse throughout the chamber."
+  talk noble_lord negative "I'm afraid you catch me at a rather delicate time, what with papa's death and my very...ambitious little sister, I am being perhaps overcautious."
+  talk noble_lord positive "But enough of that, you must tell me of your travels. I am to believe you were at Calypso IV? Terrible bloody business."
+  "Over the next few hours he picks your brain for information about the politics as if it were bread to a starving man.<br>"
   jump timekeeper
 
 noble_lord_2:
   add data.noble_lord_progress 1
+  "Alun invites you to his personal office at the chamber. The room is dominated by a bronze statue of his father in dust-pilot gear, planting the flag of Sclera."
   play sound motif_alun
-  talk noble_lord idle ""
-  "<br>"
+  talk noble_lord negative "An awful thing, mother's idea."
+  talk player idle "It's certainly...imposing."
+  talk noble_lord idle "Yes, I suppose that's rather the point though. Symbology is half of all nobility, you know. <br>Father had the face for it, I don't really think I do."
+    choice:"Have you considered"
+      "a big bushy moustache?":
+      "a new hat?":
+  talk noble_lord positive "You think that would do it?"
+  "You didn't take a Vow of Style...<br>"
   jump timekeeper
 
 noble_lord_3:
   add data.noble_lord_progress 1
   play sound motif_alun
-  talk noble_lord idle ""
+  talk noble_lord positive "Facilitator, you must join me at the theatre tonight!"
+  talk player idle "Of course, my lord."
+  "~Hours pass~"
+  "This was a mistake. You're trapped in a box along with his entire entourage while Alun loudly snores through the final act of <i>Tyrion's Ire</i><br>The glares from the crowd are piercing."
+  add data.suspicion 1
   "<br>"
   jump timekeeper
 
 noble_lord_4:
   add data.noble_lord_progress 1
   play sound motif_alun
-  talk noble_lord idle ""
-    choice:
-    talk noble_lord idle ""
-    "":
-      talk noble_lord idle ""
-    "":
-      talk noble_lord idle ""
-  "<br>"
+  talk noble_lord negative "You know, he could be a real bastard sometimes."
+  talk player idle "My lord?"
+  "Alun rises unsteadily from his armchair, somehow not spilling a drop of brandy from his newly overfilled glass."
+  talk noble_lord idle "Just a total prick, honestly."
+  "He brandishes it at the statue."
+  talk noble_lord idle "I lost track of how many secrets he kept, how many lies-schemes and whatnot. I just kept my head down an-and read my bloody books, didn't I?"
+  talk player idle "My lord..."
+  talk noble_lord positive "Oh damn it all, I'm a mess. Leave me now. <i>All of you!</i>"
+  "You share a knowing look with the PA as she scrambles to gather up the day's documents from her desk.<br>"
   jump timekeeper
 
 noble_lord_5:
   add data.noble_lord_progress 1
+  "You spend some time looking for Alun, and return to your stasis pod empty handed."
   play sound motif_alun
-  talk noble_lord idle ""
-  "<br>"
+  talk noble_lord negative "...and another thing, are the banners ready for the ceremony-it's very soon you know!"
+  "He strides across the chamber, clipboard in hand, directing a crew of assistants who follow in his wake.<br>He looks almost manic, dark rings beneath his eyes."
+  talk noble_lord idle "Ah, Facilitator. I must apolgise for my...behaviour the other day. Unbecoming, for one of my station."
+  talk noble_lord idle "It can be terribly easy to forget that we of the Noble Houses thrive only by the grace of The Corroborance itself, and in some ways I rather showed myself up in front of my better."
+  "Before you can correct him on the finer points of the theological hierarchy, he's gone.<br>"
   jump timekeeper
 
 noble_lord_6:
   add data.noble_lord_progress 1
+  "You find Alun in his office, haphazardly pulling a curtain over the statue of his father."
   play sound motif_alun
-  talk noble_lord idle ""
+  talk noble_lord idle "Expensive bloody thing to cover up but I couldn't stand to look at him-at it any longer."
+  talk player idle "That's understandable, he cast a long shadow."
   choice:
-    talk noble_lord idle ""
-    "":
-      talk noble_lord idle ""
-    "":
-      talk noble_lord idle ""
-  "<br>"
+    "You knew my father?"
+    "When I was a child...":
+      add data.suspicion 1
+      talk noble_lord idle "Is that so? He was so often away cavorting..."
+    "We met once. I forget where.":
+      talk noble_lord idle "Devil of a man to forget..."
+  talk noble_lord idle "Well, regardless, I need to get out of that shadow and the first step in doing that is not staring at his face every day. "
+  add data.noble_lord_influence 1
+  "You take your leave after a long conversation on parents, leadership, and crying.<br>"
   jump timekeeper
 
 noble_lord_7:
   add data.noble_lord_progress 1
   play sound motif_alun
-  talk noble_lord idle ""
-  "<br>"
+  talk noble_lord idle "I must thank you for your council this past week. It has really recentered me. Should I win the leadership or not, this is the dawn of a new era for me."
+  "He places a hand on you shoulder and leans in close.<br>"
+  talk noble_lord idle "Fine work, Child of Sclera."
+  "Your veins run icy cold, but he pats you on the work warmly and saunters off."
   jump timekeeper
 
 credits:
-  "An Arcane Rituals game for Brackeys 2025.2"
+  "An Arcane Rituals game for Brackeys Jam 2025.2"
   "Thank You For Playing"
   "Art: Lada"
   "Music: Teddy"
