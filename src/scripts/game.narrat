@@ -1301,7 +1301,7 @@ merchant_business_end:
   talk executor positive "People of Sclera, your new leader, Delilah Smythe!"
   talk merchant_business positive "I look forward to ushering in an era of opportunity and growth for the planet of Sclera. That is all."
   "Scattered polite applause fills the chamber as your pod closes around you."
-  "12 more cycles...you wonder what home will look like by then..."
+  "12 more cycles...you wonder what home will look like by then...<br>...at least you'll have a hell of a retirement package waiting..."
   wait 2000
   jump timekeeper
 
@@ -1736,63 +1736,96 @@ merchant_bartender_7:
 
 merchant_business_1:
   add data.merchant_business_progress 1
+  "You're sat outside an office atop a towering office building. <br>In the elevator advertisements for 'Guache Flush' and 'Spirarilazone Cream' played alongside offworld retirement plans and high calibre personal defense weaponry. <br>When you arrived a receptionist offered you a coffee in a polystyrene cup and said he'd be right back. <br>That was 25 minutes ago."
+  "The office doors open."
   play sound motif_delilah
-  talk merchant_business idle ""
-  "<br>"
+  talk merchant_business positive "So sorry to keep you waiting, Facilitator."
+  "The look on her face says she's anything but."
+  talk merchant_business idle "Welcome to Planet Sclera, the rocky planet with the best ratio of resources to citizens in this quadrant."
+  talk player idle "That's certainly one way to look at it."
+  talk merchant_business positive "Rife with opportunities, I would say."
+  "Her PA projects 3d crystalline renders of various charts and stock graphs."
+  talk merchant_business positive "As you can see, since we moved our operations in and revitalised the fast-casual retail sector, average prosperity per key metrics has shot up. <br>What's good for business is good for everyone. Wouldn't you agree, Facilitator?"
+  "Her smile could cut glass."
+  talk merchant_business positive "I look forward to doing <i>good business</> together.<br>"
   jump timekeeper
 
 merchant_business_2:
   add data.merchant_business_progress 1
+  "Delilah has invited you into her office this time. A semicircle of wallnut and velour and brass. <br>The very air smells expensive, never mind the view down over the entirety of Credence City."
   play sound motif_delilah
-  talk merchant_business idle ""
-  "<br>"
+  talk merchant_business idle "Have you heard of Trillia 9, Facilitor?"
+  talk player idle "Who hasn't-mass industrial negligence led to planetwide drought. Millions lost their homes."
+  talk merchant_business positive "Very good. Corporation turns peoples livelihoods to literal dust. It's a story with some real spice to it.<br> Where do you suppose those people went?"
+  talk player idle "I must confess, I don't know."
+  talk merchant_business idle "I do. Because I made them new homes on Trillia 6. Nobody's ever heard about that. Why do you suppose that is?"
+  "She paces over to the window."
+  talk merchant_business negative "You don't always have to be afraid of the offer made with a smile, you know.<br>"
   jump timekeeper
 
 merchant_business_3:
   add data.merchant_business_progress 1
-  play sound motif_delilah
-  talk merchant_business idle ""
-  "<br>"
+  "You decide to do some research on the past explots of Delilah Smythe. Lots of business journal article with headlines like 'Prodigy At Centerline Inc' and 'The Next Generation Is Now, Old Man'. A Younger Delilah, just as determined but with a less keen edge."
+  "You bring up some more results for the Trillia System. Details of the drought and evacuation. <br>Some words on the political climate on Trillia 2 that you mark for later."
+  "...<b>Centerline Inc in landmark Hydrocontouring deal, to open plant on Trillia 9</b>"
+  "<b>Prodigy Smythe Departs Centerline for independent venture</b>"
+  "<b>Smythe Economics to invest in Trillia 6 housing market</b>"
   jump timekeeper
 
 merchant_business_4:
   add data.merchant_business_progress 1
   play sound motif_delilah
-  talk merchant_business idle ""
-    choice:
-    talk merchant_business idle ""
-    "":
-      talk merchant_business idle ""
-    "":
-      talk merchant_business idle ""
-  "<br>"
+  talk merchant_business idle "You wanted to have a one-on-one? I'm a very busy woman."
+  talk player idle "Did you orchestrate the Trillia disaster?"
+  talk merchant_business negative "No."
+  "She adjusts her glasses."
+  talk merchant_business idle "I just saw which way things were going and acted accordingly.<br>Those greedy fools at Centerline had no vision, they just wanted to ravage the planet and leave it for dead.<br>I couldn't stop them, but I could...massage the situation to my benefit."
+  talk player idle "You made a fortune indebting desperate people."
+  talk merchant_business positive "I did, and I would do it again in a heartbeat."
+  "You're stunned by her candour."
+  talk merchant_business idle "People lose their homes every day. I didn't crisp their planet, I just anticipated the markets.<br>Now if you don't mind..."
+  talk merchant_business positive "I have hot yoga in 5 minutes.<br>"
   jump timekeeper
-
 merchant_business_5:
   add data.merchant_business_progress 1
+  "Delilah sits at one end of a floating glass boardroom table, and you at the other. <br>An assistant places down a pitcher of water and some polystyrene cups."
   play sound motif_delilah
-  talk merchant_business idle ""
-  "<br>"
+  talk merchant_business idle "You've proven yourself to me, you know."
+  talk player idle "That whole thing was some sort of initiation?"
+  talk merchant_business idle "I don't do business without all the variables at play."
+  talk merchant_business positive "Lets change the world, Facilitator!"
+  "Silence in the room."
+  talk merchant_business idle "Ok, I'll drop the theatrics a little. Let me put it this way.<br>You've got a secret. I've got a need. I'm not going to threaten you."
+  talk merchant_business positive "I'm going to make a deal. You get me this Leadership gig, I don't tell a soul what I know. <br>You come back here once your Vow is expired? I'll set you up real nice."
+  "You're completely dumbfounded, this wasn't how you expected this conversation to go."
+  talk merchant_business positive "I'll let you sleep on it. Call me.<br>"
   jump timekeeper
 
 merchant_business_6:
   add data.merchant_business_progress 1
+  "Your terminal buzzes in your pocket."
   play sound motif_delilah
-  talk merchant_business idle ""
+  talk merchant_business idle "Ring ring, hello Facilita-"
+  "A synthetic voice interupts"
+  "THIS IS A SECURE LINE. THIS CALL IS NOT BEING RECORDED. IT IS AN OFFENSE TO RECORD THIS CALL. DO NOT DISCUSS THIS CALL WITHOUT LEGAL REPRESENTATION FROM A SMYTHE ECONOMICS APPROVED LAWYER"
+  talk merchant_business positive "-and so I hope you will agree it's to both our benefits."
     choice:
-    talk merchant_business idle ""
-    "":
-      talk merchant_business idle ""
-    "":
-      talk merchant_business idle ""
+    "What do you say, do we have a deal?"
+    "Deal":
+      talk merchant_business positive "Fab."
+      "*Click*<br>"
+      add data.merchant_business_influence 4
+    "No Deal":
+      talk merchant_business negative "..."
+      "*Click*<br>"
+      add data.suspicion 2
   "<br>"
   jump timekeeper
 
 merchant_business_7:
   add data.merchant_business_progress 1
   play sound motif_delilah
-  talk merchant_business idle ""
-  "<br>"
+  talk merchant_business idle "This is Delilah. Please leave a message after the tone.<br>"
   jump timekeeper
 
 military_hero_1:
