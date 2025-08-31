@@ -1037,10 +1037,10 @@ intro:
   "And then you emerge from the pod in the manner rehearsed, stepping forward into a deep bow."
   "The Chamber Of Governance is much as you remembered it from when you took your vows. White composite stone carved into sweeping curves forming a vaulted ceiling. <br>The room is filled with dignitaries, nobles and such-all of them watching as you step out of your stasis pod."
   "As you do, a projection crackles into being alongside you."
-  talk executor idle "People of Sclera, hear this now and be silent that you may hear the word of the One Grand Truth-that of The Corroborance!"
-  talk executor idle "7 days hence, your appointed leader, Berwyn of House D'linear, passed away. <br>In that moment, the rites of succession began and I dispatched my Facilitator, who now stands before you."
-  talk executor idle "They are here to prepare for my arrival, and to impartially inspect those among your populace who have the most influence, that they might best serve as our representative. <br>Remember well that though the Corroborance endorses the Noble Houses, all are eligible for this position."
-  talk executor idle "7 days from now, I will arrive to pass judgement. Be ready."
+  talk executor holo "People of Sclera, hear this now and be silent that you may hear the word of the One Grand Truth-that of The Corroborance!"
+  talk executor holo "7 days hence, your appointed leader, Berwyn of House D'linear, passed away. <br>In that moment, the rites of succession began and I dispatched my Facilitator, who now stands before you."
+  talk executor holo "They are here to prepare for my arrival, and to impartially inspect those among your populace who have the most influence, that they might best serve as our representative. <br>Remember well that though the Corroborance endorses the Noble Houses, all are eligible for this position."
+  talk executor holo "7 days from now, I will arrive to pass judgement. Be ready."
   "The projection fades. <br>The taste of the air here is a familiar stale in your mouth as you nod your way through perfunctory introductions."
   "You were really home on Sclera, where you took the Vow of Impartial Service so many years ago."
   "How could you possibly be balanced in deciding who should rule your home! <br> The Corroborance was so meticulous, always triple-checks and fastidious forms-"
@@ -1414,7 +1414,7 @@ ending_flop:
   talk executor negative "I suppose it doesn't matter now."
   stop music
   play sound motif_executor
-  talk executor idle "Goodbye."
+  talk executor idle "Goodbye.<br>"
   jump timekeeper
   wait 2000
 civilian_eager_1:
@@ -1550,63 +1550,100 @@ civilian_eager_7:
 
 civilian_icon_1:
   add data.civilian_icon_progress 1
+  add dat.civilian_icon_influence 1
   play sound motif_dod
-  talk civilian_icon idle ""
-  "<br>"
+  talk civilian_icon negative "Where are you taking me?!"
+  "Dod Millet-Arkose appeared in your candidates list last night, his sentiment score had shot all the way up after he punched out 2 riot guards."
+  talk civilian_icon negative "Get your damn hands off me!"
+  "Clearly nobody had told him that was why he had been escorted from his cell early."
+  talk player idle "Guards, you are dismissed."
+  "They stare at you, dumbfounded."
+  talk player idle "Do you question my judgement?"
+  "They oblige, and drop Dod to the ground."
+  talk civilian_icon negative "What in the hell is going on?"
+  talk player idle "Are you familiar with the Corroborance leadership process, Mr Millet-Arkose?"
+  talk civilian_icon idle "Just a big popularity contest, isn't it?"
+  talk player idle "After your performance last night, you are very popular Dod."
+  "His jaw drops, and you're impressed to see his dog-end cigarette was somehow still holding on."
+  talk civilian_icon positive "You can't be serious..."
+  talk player idle "It's true. I've arranged your release. You're free to go."
+  talk civilian_icon positive "Well then I've got...things to do. I'll be seeing more of you?"
+  talk player idle "Almost certainly."
+  "With a little nod, the people's champion saunters off.<br>"
   jump timekeeper
 
 civilian_icon_2:
   add data.civilian_icon_progress 1
   play sound motif_dod
-  talk civilian_icon idle ""  
-  "<br>"
+  talk civilian_icon idle "Hey, Facilitator!"  
+  "Dod's at your desk. He's still not wearing a shirt. He meets your eye"
+  talk civilian_icon positive "Oh this. I was talking to some of the crew, they said this was better for the image or something."
+  talk player idle "Smart crew, people's champions like yourself tend to do well the present authentically."
+  talk civilian_icon positive "Yeah, some of them at least."
+  talk player idle "I can go over some other pointers if you would like."
+  "Visible relief on his face."
+  talk civilian_icon positive "That would be...so great.<br>"
   jump timekeeper
 
 civilian_icon_3:
   add data.civilian_icon_progress 1
   play sound motif_dod
-  talk civilian_icon idle ""  
-  "<br>"
+  talk civilian_icon idle "Thanks for the tips the other day. You got some time spare?"
+  "They're perceptibly more confident than they were before, as you walk with him to the elevator shaft into Sclera's mining tunnels."
+  talk civilian_icon negative "Mind your head here, I logged that loose bar 3 weeks ago.<br>Hey Jay! Can we at least get some vis-tape on this?"
+  "A confirmation from an unseen 'Jay' and you continue on your way."
+  talk civilian_icon idle "You know, they're good folks down here-just really doing their best to do good work."
+  talk player idle "Do you get much trouble from the Mining Syndicates?"
+  "Laughter rings from all around."
+  talk civilian_icon idle "Nothing but.<br>"
   jump timekeeper
 
 civilian_icon_4:
   add data.civilian_icon_progress 1
+  "You receive a message from one of Dod's colleagues with his habitation tower address. <br>'He's having doubts, could you go see him'."
   play sound motif_dod
-  talk civilian_icon idle ""
+  talk civilian_icon negative "Leave me be!"
     choice:
-    talk civilian_icon idle ""
-    "":
-      talk civilian_icon idle ""
-    "":
-      talk civilian_icon idle ""
-  "<br>"
+    "You knock at the door again"
+    "Open up, Dod!":
+    "You're Jer Millet-Arkose's kid, right?":
+      add data.civilian_icon_influence 1
+      add data.suspicion 1
+      talk civilian_icon idle "...now how could you know that, unless you were...a local?"
+  "The door clicks open."
+  talk civilian_icon negative "I can't do this, I'm not built for it."
+  talk player idle "Let me offer you council, Dod. I believe you can do this.<br>"
   jump timekeeper
 
 civilian_icon_5:
   add data.civilian_icon_progress 1
+  "Dod's apartment is small but well-kept, if a little spartan. A wooden dog statue sits on his coffee table."
   play sound motif_dod
-  talk civilian_icon idle ""
-  "<br>"
+  talk civilian_icon idle "...that makes sense."
+  talk civilian_icon idle "If I can bring the people together and provide a sufficient irritant force, we could negotiate for better terms with the Mining Syndicates."
+  talk civilian_icon positive "I'll try that 'speaking to the mirror' trick as well, that makes sense.<br>"
   jump timekeeper
 
 civilian_icon_6:
   add data.civilian_icon_progress 1
   play sound motif_dod
-  talk civilian_icon idle ""
-    choice:
-    talk civilian_icon idle ""
-    "":
-      talk civilian_icon idle ""
-    "":
-      talk civilian_icon idle ""
-  "<br>"
+  talk civilian_icon idle "Comrades, though you may have seen me strike out at the guards that day, that was a momentary flash. Together, we can form the fires that will burn our names into the future!"
+  "A bit flowery, you'll have to tell him to reign it in a little."
+  "You're in the mess hall for this sector's mining crews. This is the third one you've stopped at today."
+  talk civilian_icon positive "Are you with me, friends?!?"
+  "<b>'Yeah!</b>'<br>"
+  add data.civilian_icon_influence 1
   jump timekeeper
 
 civilian_icon_7:
   add data.civilian_icon_progress 1
   play sound motif_dod
-  talk civilian_icon idle ""
-  "<br>"
+  talk civilian_icon idle "There's one thing I don't get-The Corroborance lets you have all this-all this leeway?"
+  "You're both sat at the bar of a grubby little restaurant with a name like 'Rigleys' or something."
+  talk player idle "So, you see-here's the thing. The Corroborance doesn't care. Legitimately, they don't. As long as they have a single point of contact and the planets don't descend into chaos."
+  "Dod pops open a bag of peanuts and offers you some."
+  talk player idle "I think that's why they've been so succesful. The rules in general are very loose, except for where they're...very strict."
+  talk civilian_icon positive "If it means you can help more folks like use, I don't think you've got such a bad gig- you know that, Facilitator?"
   jump timekeeper
 
 merchant_bartender_1:

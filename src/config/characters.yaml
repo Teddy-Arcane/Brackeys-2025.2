@@ -86,6 +86,7 @@ characters:
     name: "The Executor"
     sprites:
       idle: "executor_idle.png"
+      holo: "executor_holo.png"
       positive: "executor_positive.png"
       negative: "executor_negative.png"
     style:
