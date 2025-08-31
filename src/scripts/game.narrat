@@ -1054,7 +1054,7 @@ intro:
     "The attendant from the banquet at Incisor 7?":
       "How could you have known that was the wrong fork!"
   "Regardless, you find yourself in mortal danger. You will have to keep your origin under wraps both here and in your report. <br>The Corroborance doesn't state it explicitly, but an expected part of your role is also to assure that there is a clear candidate, so you are expected to push in one direction or another."
-  "A curse or a gift, you have the potential to shape your home going forward."  
+  "A curse or a gift, you have the potential to shape your home going forward."
   add data.time 1
   jump timekeeper
 
@@ -1382,6 +1382,7 @@ discovered_end:
   "Scattered applause and some puzzled looks as your pod closes around you."
   "12 more cycles...you wonder what home will look like by then..."
   wait 2000
+  set_screen darkgarden
   "...but then you awake within The Garden once more. Bleary-eyed, you rise from your marble slab."
   play sound motif_executor
   talk executor idle "...I'm disappointed in you, Facilitator."
@@ -1405,6 +1406,7 @@ ending_flop:
   "Scattered applause and some puzzled looks as your pod closes around you."
   "12 more cycles...you wonder what home will look like by then..."
   wait 2000
+  set_screen darkgarden
   "...but then you awake within The Garden once more. Bleary-eyed, you rise from your marble slab."
   play sound motif_executor
   talk executor idle "...I'm disappointed in you, Facilitator."
@@ -1993,7 +1995,7 @@ military_hero_5:
 military_hero_6:
   add data.military_hero_progress 1
   "You meet with Isaiah for coffee at a little street cafe outside the chamber."
-  "The familiar bustle of accents and smells  sets you at ease."
+  "The familiar bustle of accents and smells sets you at ease."
   play sound motif_isaiah
   talk military_hero idle "I'm surprised, most folks take a while to acclimate to the air down here. Sticks to your tongue, doesn't it?"
   "You brush this off, but Isaiah looks you up and down with a keen eye." 
@@ -2013,7 +2015,7 @@ military_hero_6:
       talk military_hero idle "That's a real shame, but rules are rules I suppose."
     "...of course, thank you.":
       add data.military_hero_influence 1
-      "<PLACEHOLDER>"
+      "You pocket the box."
   "They stand up from the table."
   talk military_hero idle "We've got a rehearsal for the Leadership ceremony in 20 minutes, I'll see you there."
   jump timekeeper

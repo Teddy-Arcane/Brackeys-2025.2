@@ -9,3 +9,5 @@ screens:
     background: img/backgrounds/dark.png
   garden:
     background: img/backgrounds/garden.png
+  darkgarden:
+    background: img/backgrounds/darkgarden.png
