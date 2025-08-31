@@ -21,58 +21,70 @@ main:
 
 timekeeper:
   play music garden
+  set_screen garden
   if (== $data.time 0):
     jump intro
   if (== $data.time 1):
+    set_screen light
     jump morning_1
   if (== $data.time 2):
+    set_screen light
     jump afternoon_1
   if (== $data.time 3):
+    set_screen dark
     jump crisis_1
-    jump _1
   if (== $data.time 4):
+    set_screen light
     jump morning_2
   if (== $data.time 5):
     jump afternoon_2
   if (== $data.time 6):
+    set_screen dark
     jump crisis_2
-    jump _2
   if (== $data.time 7):
+    set_screen light
     jump morning_3
   if (== $data.time 8):
+    set_screen light
     jump afternoon_3
   if (== $data.time 9):
+    set_screen dark
     jump crisis_3
-    jump _3
   if (== $data.time 10):
+    set_screen light
     jump morning_4
   if (== $data.time 11):
     jump afternoon_4
   if (== $data.time 12):
+    set_screen dark
     jump crisis_4
-    jump _4
   if (== $data.time 13):
+    set_screen light
     jump morning_5
   if (== $data.time 14):
     jump afternoon_5
   if (== $data.time 15):
+    set_screen dark
     jump crisis_5
-    jump _5
   if (== $data.time 16):
+    set_screen light
     jump morning_6
   if (== $data.time 17):
+    set_screen light
     jump afternoon_6
   if (== $data.time 18):
+    set_screen dark
     jump crisis_6
-    jump _6
   if (== $data.time 19):
+    set_screen light
     jump morning_7
   if (== $data.time 20):
+    set_screen dark
     jump crisis_7
-    jump _7
   if (== $data.time 21):
     jump endgame
   if (== $data.time 22):
+    set_screen garden
     jump credits
 
 get_stage_morning_1:
@@ -1018,6 +1030,7 @@ intro:
   "This couldn't be happening. Somehow, despite the odds, they had brought you home."
   "It had to be a mistake. Nobody could know. How would they have- <br>If they found out, they'd have you killed for their mistake."
   "Your hands start shaking, and a cold sweat breaks even in this place where your body isn't..."
+  set_screen light
   "Juddering for a few minutes as you enter the atmosphere, The Garden flickers out leaving you in a chill almost-darkness within your pod."
   "You pat yourself down and smooth out any creases in your vestments as moist, breathable air is pumped in."
   "More shaking announces your landing. Industrial machinery screams, the click-clack of heels on stone floor, the roar of a distant crowd..."
@@ -1470,7 +1483,7 @@ civilian_eager_4:
   "She pulls another sheaf of paper out from underneath her mug before taking a sip."
   talk civilian_eager positive "Anyway, what brings you to my office today?"
   talk player idle "I need to gather more information on your organisation, the Sclera Miner's Liberation Front. The Corroborance does allow for group rule but they insist on a figurehead for diplomatic reasons. Tell me more about the Front and their goals."
-  talk civilian_eager idle "Ah, of course. We were founded 8 years back and it's really exploded since then. Most of the populace here in Credence City are either miners or dust pilots, and we represent both groups as well as non-guild engineers, and just last week we absorbed the dockworkers union. All in all we directly represent about 67.4% of all workers based on Sclera."
+  talk civilian_eager idle "Ah, of course. We were founded 8 years back and it's really exploded since then. Most of the populace here in Credence City are either miners or dust-pilots, and we represent both groups as well as non-guild engineers, and just last week we absorbed the dockworkers union. All in all we directly represent about 67.4% of all workers based on Sclera."
   talk player idle "Impressive."
   talk civilian_eager idle "Yeah, and exhausting. Actually, I hate to ask, but you could do me a massive favour. Would you mind looking in the official records for a Eustace Gyr-Varve? He holds a seat on the board, but well-"
   choice:
@@ -1493,7 +1506,7 @@ civilian_eager_5:
   talk civilian_eager idle "Just in a loop around the Ward, you need to get out of these chambers and see the city more! That and I have 20 minutes spare."
   "And like that you're being dragged by the hand out of the chambers and onto the street, her bag of documents flopping awkwardly along behind her."
   "You whip past old haunts like the Cinema-now Café Diamante, where you saw your first scary movie."
-  "The Museum Of The Storm-full of dust pilot paraphenalia and old dust-ships from the early days of the settlement."
+  "The Museum Of The Storm-full of dust-pilot paraphenalia and old dust-ships from the early days of the settlement."
   "The market, where vendors try to flog carts of fruit that used to pass for fresh before you saw a real fruit tree on Calypso IV."
   "You didn't think you'd get to see any of this again, certainly not so soon."
   "Something was clearly wrong with you being assigned here but you let yourself enjoy the nostalgia for a while."
@@ -1989,61 +2002,94 @@ military_hero_7:
 military_officer_1:
   add data.military_officer_progress 1
   play sound motif_jac
-  talk military_officer idle ""
-  "<br>"
+  talk military_officer idle "Right this way, Facilitator, if you please."
+  "Officer Peril leads you down a series of corridors in the chamber and through multiple locked doors.<br>Eventually you come to a small plain room, slightly faded Scleran banners adorn the wall. <br>Peril takes a seat behind the desk."
+  talk military_officer idle "Please, do sit down."
+  "You oblige."
+  talk military_officer idle "I'll be candid with you, Facilitator. I detest you and your ilk."
+  talk player idle "The Corroborance?"
+  talk military_officer idle "Not specifically. Just any unchecked, unilateral power."
+  "He meticulously flips through sheafs of papers, not making eye contact."
+  talk military_officer idle "With that being said, I fully intend to co-operate with the process.<br>"
   jump timekeeper
 
 military_officer_2:
   add data.military_officer_progress 1
-  play sound motif_jac
-  talk military_officer idle ""
-  "<br>"
+  "You're back in Officer Peril's dingy office. You're beginning to wonder how this odious little man made it onto your shortlist."
+  play sound motif_jac 
+  talk military_officer idle "You know, this planet used to have real leadership. Before the Mining Syndicates, before the Corroborance insisted we leash ourselves to their fence..."
+  talk military_officer positive "The time of dust, Facilitator. We had real warriors then. Men who led by a code. They'd set out onto the surface to recover whatever scrap they could."
+  talk military_officer idle "Times were harder then, but things were right. Things were ordered."
+  talk player idle "Forgive me, but this sounds like wanton nostalgia."
+  "He glowers at you from under the brim of his hat."
+  talk military_officer negative "Watch yourself, Corroborant."
   jump timekeeper
 
 military_officer_3:
   add data.military_officer_progress 1
+  add data.military_officer_influence 5
+  "Initially you were relieved that you weren't meeting Officer Peril in his terrible little office again. You're not sure this is better."
   play sound motif_jac
-  talk military_officer idle ""
-  "<br>"
+  talk military_officer positive "Do you see, Facilitator. I do not stand alone, I stand with brothers in arms. Ready to oust the invader and "
+  "You've been handcuffed to a very large man and escorted into a cavern beneath the chambers. There must be hundreds of soldiers in here, all looking up to Peril has he spouts his jingoistic drivel."
+  "Some time later, you're blindfolded and led back to the chamber."
+  talk military_officer positive "As you can see, Facilitator-I am more than a worthy candidate."
   jump timekeeper
 
 military_officer_4:
   add data.military_officer_progress 1
   play sound motif_jac
-  talk military_officer idle ""
-    choice:
-    talk military_officer idle ""
-    "":
-      talk military_officer idle ""
-    "":
-      talk military_officer idle ""
-  "<br>"
+  "These are always the worst candidates to collect information on. Back in his dreadful office oncemore..."
+  talk military_officer idle "...and so really, it's the duty of the man of the house to-"
+  "Mercifully he's interrupted by a rap at the door."
+  talk military_hero idle "Jac, are the preperations made for the ceremony? The guard rotations seem to be missing-"
+  "Isaiah is clearly surprised to see you here."
+  talk military_hero idle "Facilitator, a pleasure. I hope I'm not interrupting anything."
+  "You jump at the chance to excuse yourself."
   jump timekeeper
 
 military_officer_5:
   add data.military_officer_progress 1
+  "The winds rip at your hood, the roaring storm barely kept at bay by the canopy on the dust-ship's cabin."
   play sound motif_jac
-  talk military_officer idle ""
-  "<br>"
+  talk military_officer negatve "I'd almost say you were avoiding me, Facilitator"
+  "Somehow he's even more insufferable over the radio."
+  talk military_hero idle "That said, I'm glad you agreed to come to the surface-to see the real Sclera in all her beauty."
+  "The ship bounds over a dune and he falls to his knees, white dust coating his uniform."
+  "For brief moments, the storm thins and you can see the true vastness of the sky. This may be your home but you've never seen it like this."
+  talk military_hero positive "You see now how Sclera is so uninhibited. It breeds a stronger, more resilient people."
+  "...you can't risk this man coming to rule over your home...can you?"
   jump timekeeper
 
 military_officer_6:
   add data.military_officer_progress 1
-  play sound motif_jac
-  talk military_officer idle ""
-    choice:
-    talk military_officer idle ""
-    "":
-      talk military_officer idle ""
-    "":
-      talk military_officer idle ""
-  "<br>"
+  "You rap upon the door to Peril's office.<br>No answer."
+  "You knock again.<br>A hurried squeaking of a drawer."
+  play sound motif_isaiah
+  talk military_hero negative "Facilitator! Thank goodness..."
+  talk military_hero idle "I think we need to talk about Jac- that is, Officer Peril."
+  "An understatement."
+  talk military_hero idle "I know what he's planning and I'm hoping you do as well. I can't just let that stand."
+  talk military_hero idle "Take this transponder, and tomorrow I need you to lead him away from here.<br>Click it twice and I'll be there. You know what has to be done."
+  "There's an undeniable conviction in his eyes."
   jump timekeeper
 
 military_officer_7:
   add data.military_officer_progress 1
+  "A tiny disused office in the far corner of the chambers. A street-facing window."
   play sound motif_jac
-  talk military_officer idle ""
+  talk military_officer idle "I really don't have time for this, you know!"
+    choice:
+    "Moment of truth."
+    "Click the transponder twice.":
+      talk military_officer idle "What's that, a little-"
+      "<i>~Fwee-Crack!~</i>"
+      "Officer Jac Peril is no more. The body slumps to the floor."      
+      add data.military_officer_influence -10
+    "Do nothing":
+      talk military_officer negative "Why are you squirming? This is ridiculous"
+      "He turns to leave."
+      talk military_officer positive "I'll see you at my ceremony tomorrow."
   "<br>"
   jump timekeeper
 

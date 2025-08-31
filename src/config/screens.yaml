@@ -3,3 +3,9 @@ screens:
     background: img/backgrounds/curtain.webp
   game:
     background: img/backgrounds/map.webp
+  light:
+    background: img/backgrounds/light.png
+  dark:
+    background: img/backgrounds/dark.png
+  garden:
+    background: img/backgrounds/garden.png
