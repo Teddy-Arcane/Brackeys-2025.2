@@ -7,28 +7,28 @@ files:
   # with `music play <name>`
   crisis:
     loop: true
-    src: "audio/drones/Crisis.ogg"
+    src: "audio/Drones/Crisis.ogg"
   garden:
     loop: true
-    src: "audio/drones/Garden.ogg"
+    src: "audio/Drones/Garden.ogg"
   nobility:
     loop: true
-    src: "audio/drones/Nobility.ogg"
+    src: "audio/Drones/Nobility.ogg"
   military:
     loop: true
-    src: "audio/drones/Military.ogg"
+    src: "audio/Drones/Military.ogg"
   merchants:
     loop: true
-    src: "audio/drones/Merchants.ogg"
+    src: "audio/Drones/Merchants.ogg"
   civilian:
     loop: true
-    src: "audio/drones/Civilians.ogg"
+    src: "audio/Drones/Civilians.ogg"
   end_pos:
     loop: true
     src: "audio/Navidson.ogg"
   end_neg:
     loop: true
-    src: "audio/drones/EndNeg.ogg"
+    src: "audio/Drones/EndNeg.ogg"
   # motifs - these are character motifs, designed to be played the
   # first time a character appears in a scene, these are played with
   # `sound play <soundname>`.
@@ -36,41 +36,41 @@ files:
   # dissonant as fuck!
   motif_intrigue_c:
     loop: false
-    src: "audio/misc/Intrigue_C.ogg"
+    src: "audio/Misc/Intrigue_C.ogg"
   motif_intrigue_e:
     loop: false
-    src: "audio/misc/Intrigue_E.ogg"
+    src: "audio/Misc/Intrigue_E.ogg"
   motif_executor:
     loop: false
-    src: "audio/motifs/Executor.ogg"
+    src: "audio/Motifs/Executor.ogg"
   motif_alun:
     loop: false
-    src: "audio/motifs/FeebleLord.ogg"
+    src: "audio/Motifs/FeebleLord.ogg"
   motif_cerys:
     loop: false
-    src: "audio/motifs/SchemingLady.ogg"
+    src: "audio/Motifs/SchemingLady.ogg"
   motif_karl:
     loop: false
-    src: "audio/motifs/Bartender.ogg"
+    src: "audio/Motifs/Bartender.ogg"
   motif_delilah:
     loop: false
-    src: "audio/motifs/BusinessSuit.ogg"
+    src: "audio/Motifs/BusinessSuit.ogg"
   motif_isaiah:
     loop: false
-    src: "audio/motifs/FolkHero.ogg"
+    src: "audio/Motifs/FolkHero.ogg"
   motif_jac:
     loop: false
-    src: "audio/motifs/Officer.ogg"
+    src: "audio/Motifs/Officer.ogg"
   motif_dod:
     loop: false
-    src: "audio/motifs/ReluctantIcon.ogg"
+    src: "audio/Motifs/ReluctantIcon.ogg"
   motif_gloria:
     loop: false
-    src: "audio/motifs/EagerOrganizer.ogg"
+    src: "audio/Motifs/EagerOrganizer.ogg"
   # misc shit
   ui-click:
     loop: false
-    src: audio/misc/click.wav
+    src: "audio/Misc/click.wav"
     volume: 0.5
 options:
   defaultMusic: menu_music
