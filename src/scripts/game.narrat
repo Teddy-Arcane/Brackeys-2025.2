@@ -79,11 +79,8 @@ timekeeper:
     set_screen light
     jump morning_7
   if (== $data.time 20):
-    set_screen dark
-    jump crisis_7
-  if (== $data.time 21):
     jump endgame
-  if (== $data.time 22):
+  if (== $data.time 21):
     set_screen garden
     jump credits
 
@@ -522,7 +519,106 @@ get_stage_morning_6:
       if (== $data.merchant_bartender_progress 6): 
         jump merchant_bartender_7
     "Delilah Smythe, Interplanetary Financier":
-      play music merchant
+      play music merchants
+      if (== $data.merchant_business_progress 0): 
+        jump merchant_business_1
+      if (== $data.merchant_business_progress 1): 
+        jump merchant_business_2
+      if (== $data.merchant_business_progress 2): 
+        jump merchant_business_3
+      if (== $data.merchant_business_progress 3): 
+        jump merchant_business_4
+      if (== $data.merchant_business_progress 4): 
+        jump merchant_business_5
+      if (== $data.merchant_business_progress 5): 
+        jump merchant_business_6
+      if (== $data.merchant_business_progress 6): 
+        jump merchant_business_7
+    "Officer Jac Peril":
+      play music military
+      if (== $data.military_officer_progress 0): 
+        jump military_officer_1
+      if (== $data.military_officer_progress 1): 
+        jump military_officer_2
+      if (== $data.military_officer_progress 2): 
+        jump military_officer_3
+      if (== $data.military_officer_progress 3): 
+        jump military_officer_4
+      if (== $data.military_officer_progress 4): 
+        jump military_officer_5
+      if (== $data.military_officer_progress 5): 
+        jump military_officer_6
+      if (== $data.military_officer_progress 6): 
+        jump military_officer_7
+    "Lady Cerys D'Linear":
+      play music nobility
+      if (== $data.noble_lady_progress 0): 
+        jump noble_lady_1
+      if (== $data.noble_lady_progress 1): 
+        jump noble_lady_2
+      if (== $data.noble_lady_progress 2): 
+        jump noble_lady_3
+      if (== $data.noble_lady_progress 3): 
+        jump noble_lady_4
+      if (== $data.noble_lady_progress 4): 
+        jump noble_lady_5
+      if (== $data.noble_lady_progress 5): 
+        jump noble_lady_6
+      if (== $data.noble_lady_progress 6): 
+        jump noble_lady_7
+get_stage_morning_7:
+  choice:
+    "Who will you speak with?"
+    "Gloria Hewcore-Schist, Union Representative":
+      play music civilian
+      if (== $data.civilian_eager_progress 0): 
+        jump civilian_eager_1
+      if (== $data.civilian_eager_progress 1): 
+        jump civilian_eager_2
+      if (== $data.civilian_eager_progress 2): 
+        jump civilian_eager_3
+      if (== $data.civilian_eager_progress 3): 
+        jump civilian_eager_4
+      if (== $data.civilian_eager_progress 4): 
+        jump civilian_eager_5
+      if (== $data.civilian_eager_progress 5): 
+        jump civilian_eager_6
+      if (== $data.civilian_eager_progress 6): 
+        jump civilian_eager_7
+    "Dod Millet-Arkose, People's Champion":
+      play music civilian
+      if (== $data.civilian_icon_progress 0): 
+        jump civilian_icon_1
+      if (== $data.civilian_icon_progress 1): 
+        jump civilian_icon_2
+      if (== $data.civilian_icon_progress 2): 
+        jump civilian_icon_3
+      if (== $data.civilian_icon_progress 3): 
+        jump civilian_icon_4
+      if (== $data.civilian_icon_progress 4): 
+        jump civilian_icon_5
+      if (== $data.civilian_icon_progress 5): 
+        jump civilian_icon_6
+      if (== $data.civilian_icon_progress 6): 
+        jump civilian_icon_7
+    "Karl Sera-Gabbro, Local Businessman":
+      play music merchants
+      if (== $data.merchant_bartender_progress 0): 
+        jump merchant_bartender_1
+      if (== $data.merchant_bartender_progress 1): 
+        jump merchant_bartender_2
+      if (== $data.merchant_bartender_progress 2): 
+        jump merchant_bartender_3
+      if (== $data.merchant_bartender_progress 3): 
+        jump merchant_bartender_4
+      if (== $data.merchant_bartender_progress 4): 
+        jump merchant_bartender_5
+      if (== $data.merchant_bartender_progress 5): 
+        jump merchant_bartender_6
+      if (== $data.merchant_bartender_progress 6): 
+        jump merchant_bartender_7
+    "Delilah Smythe, Interplanetary Financier":
+      play music merchants
       if (== $data.merchant_business_progress 0): 
         jump merchant_business_1
       if (== $data.merchant_business_progress 1): 
@@ -905,7 +1001,7 @@ get_stage_afternoon_5:
       if (== $data.civilian_icon_progress 6): 
         jump civilian_icon_7
     "Karl Sera-Gabbro, Local Businessman":
-      play music merchant
+      play music merchants
       if (== $data.merchant_bartender_progress 0): 
         jump merchant_bartender_1
       if (== $data.merchant_bartender_progress 1): 
@@ -1091,7 +1187,7 @@ morning_6:
 morning_7:
   add data.time 1
   "Morning comes. Succession day."
-  jump endgame
+  jump get_stage_morning_7
 
 afternoon_1:
   add data.time 1
@@ -1246,25 +1342,26 @@ crisis_6:
 
 endgame:
   "The Day Of Succession has come, the chamber is decked out with banners bearing the mark of The Corroborance. Soldiers in formation, nobles in their finery."
-  if (== $data.suspicion > 2): 
+  if (> $data.suspicion 2): 
     jump discovered_end
-  if (== $data.civilian_eager_influence > 2): 
+  elseif (> $data.civilian_eager_influence 2): 
     jump civilian_eager_end
-  if (== $data.civilian_icon_influence > 2): 
+  elseif (> $data.civilian_icon_influence 2): 
     jump civilian_icon_end
-  if (== $data.merchant_bartender_influence > 2): 
+  elseif (> $data.merchant_bartender_influence 2): 
     jump merchant_bartender_end
-  if (== $data.merchant_business_influence > 2): 
+  elseif (> $data.merchant_business_influence 2): 
     jump merchant_business_end
-  if (== $data.military_hero_influence > 2): 
+  elseif (> $data.military_hero_influence 2): 
     jump military_hero_end
-  if (== $data.military_officer_influence > 2): 
+  elseif (> $data.military_officer_influence 2): 
     jump military_officer_end
-  if (== $data.noble_lady_influence > 2): 
+  elseif (> $data.noble_lady_influence 2): 
     jump noble_lady_end
-  if (== $data.noble_lord_influence > 2): 
+  elseif (> $data.noble_lord_influence 2): 
     jump noble_lord_end
-  jump ending_flop
+  else:
+    jump ending_flop
 
 civilian_eager_end:
   add data.time 1
@@ -1395,6 +1492,7 @@ discovered_end:
   talk executor idle "Goodbye."
   jump timekeeper
   wait 2000
+
 ending_flop:
   add data.time 1
   play music end_neg
@@ -1419,6 +1517,7 @@ ending_flop:
   talk executor idle "Goodbye."
   jump timekeeper
   wait 2000
+
 civilian_eager_1:
   add data.civilian_eager_progress 1
   "Gloria Hewcore-Schist makes herself known before you even have a chance to say hello."
